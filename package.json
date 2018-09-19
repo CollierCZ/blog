@@ -8,6 +8,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "change-case": "^3.0.2",
     "emotion": "^9.2.9",
     "emotion-server": "^9.2.9",
     "gatsby": "next",
@@ -17,11 +18,13 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^2.1.1",
     "kentico-cloud-delivery": "^4.0.2",
+    "node-fetch": "^2.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.9",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
+    "rxjs": "^6.1.0",
     "typography": "^0.16.17",
     "typography-theme-kirkham": "^0.16.3"
   }
