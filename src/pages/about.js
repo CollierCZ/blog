@@ -5,8 +5,7 @@ export default ({ data }) => (
   <Layout>
     <h1>About Me</h1>
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      I'm a person and will tell you more soon.
     </p>
   </Layout>
 )
