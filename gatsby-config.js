@@ -1,7 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Collier`,
-  },
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,

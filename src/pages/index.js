@@ -15,12 +15,12 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          {data.site.siteMetadata.title}
+          A title
         </h1>
         {data.allKenticoCloudItemArticle.edges.map(({ node }) => (
           <div key={node.fields.slug}>
           <Link
-            to={`../article/${node.fields.slug}`}
+            to={`/article/${node.fields.slug}`}
             className={css`
               text-decoration: none;
               color: inherit;
@@ -48,12 +48,7 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }    
+  query articlesQuery {
     allKenticoCloudItemArticle {
       edges {
         node {

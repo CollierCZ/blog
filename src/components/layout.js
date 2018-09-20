@@ -1,23 +1,12 @@
 import React from "react"
 import { css } from "react-emotion"
 
-import { StaticQuery, Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
 export default ({ children }) => (
     
-  <StaticQuery
-  query={graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `}
-  render={data => (
   <div
     className={css`
       margin: 0 auto;
@@ -34,7 +23,7 @@ export default ({ children }) => (
           font-style: normal;
         `}
       >
-        {data.site.siteMetadata.title}
+        Home
       </h3>
     </Link>
     <Link
@@ -47,6 +36,4 @@ export default ({ children }) => (
     </Link>
     {children}
     </div>
-    )}
-  />
 )
