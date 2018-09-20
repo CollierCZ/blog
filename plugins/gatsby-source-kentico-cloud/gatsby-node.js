@@ -1,8 +1,8 @@
 const deliveryClient = require(`kentico-cloud-delivery`)
 const normalize = require(`./normalize`)
 
-exports.sourceNodes = async ({ boundActionCreators, createNodeId }, { kcProjectId, kcLanguageCodenames }) => {
-  const { createNode } = boundActionCreators;
+exports.sourceNodes = async ({ actions, createNodeId }, { kcProjectId, kcLanguageCodenames }) => {
+  const { createNode } = actions;
   console.log(`sourceNodes executes`);
 
   const client = new deliveryClient.DeliveryClient({
