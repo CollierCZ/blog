@@ -1,0 +1,15 @@
+.article-template .article-header,
+.page-template .article-header {
+    margin-bottom: 3.4rem;
+}
+
+/* ==========================================================================
+       Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+    .article-template .article-header,
+    .page-template .article-header {
+        margin-bottom: 2rem;
+    }
+}

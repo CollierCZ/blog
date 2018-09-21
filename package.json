@@ -13,6 +13,7 @@
     "emotion": "^9.2.9",
     "emotion-server": "^9.2.9",
     "gatsby": "next",
+    "gatsby-pagination": "^1.1.0",
     "gatsby-plugin-emotion": "^2.0.0-rc.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-typography": "^1.7.19",
