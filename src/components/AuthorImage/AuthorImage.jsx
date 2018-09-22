@@ -3,7 +3,9 @@ import "./AuthorImage.css";
 
 class AuthorImage extends React.Component {
   render() {
-    const { name, image, url } = this.props.author;
+    const name = this.props.author.name.value;
+    const image = this.props.author.picture.value[0].url;
+    const url = this.props.author.url.value;
     if (image) {
       return (
         <figure className="author-image">

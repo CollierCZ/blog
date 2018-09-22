@@ -7,7 +7,7 @@ class ArticleDate extends React.Component {
     const { date } = this.props;
     return (
       <time
-        className="post-date"
+        className="article-date"
         dateTime={moment(new Date(date)).format("YYYY-MM-DD")}
       >
         {moment(new Date(date)).format("DD MMMM YYYY")}

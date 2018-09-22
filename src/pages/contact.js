@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/SiteWrapper"
+import Layout from "../layouts/SiteWrapper/SiteWrapper"
 
 export default () => (
   <Layout>

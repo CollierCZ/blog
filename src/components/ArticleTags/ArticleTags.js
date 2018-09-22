@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import "./ArticleTags.css";
 
 class ArticleTags extends Component {
   render() {
     const { prefix, tags } = this.props;
     if (tags) {
+      let tagArray = tags.split(",");
       return (
-        /*
-        <span>
+                <span>
           {prefix}
-          {tags.map((tag, index, arr) => (
+          {tagArray.map((tag, index, arr) => (
             <span key={tag}>
               <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
                 {tag}
@@ -19,8 +19,7 @@ class ArticleTags extends Component {
               {index !== arr.length - 1 ? ", " : ""}
             </span>
           ))}
-        </span>*/
-        <span></span>
+        </span>
       );
     }
     return null;

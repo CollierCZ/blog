@@ -73,7 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
         createPage,
         edges: result.data.allKenticoCloudItemArticle.edges,
         component: indexPage,
-        limit: 10
+        limit: 2
       });
 
       createLinkedPages({
@@ -81,7 +81,7 @@ exports.createPages = ({ graphql, actions }) => {
         edges: result.data.allKenticoCloudItemArticle.edges,
         component: articlePage,
         edgeParser: edge => ({
-          path: edge.node.fields.slug,
+          path: `/articles/${edge.node.fields.slug}/`,
           context: {
             slug: edge.node.fields.slug
           }
@@ -116,15 +116,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
       });*/
 
-      result.data.allKenticoCloudItemHome.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: indexPage,
-          context: {
-            slug: node.fields.slug
-          },
-        })
-      });
       result.data.allKenticoCloudItemAbout.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,

@@ -1,4 +1,4 @@
-.post-date {
+.article-date {
     display: inline-block;
     margin-left: 8px;
     padding-left: 12px;
@@ -13,7 +13,7 @@
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-    .post-date {
+    .article-date {
         display: none;
     }
 }

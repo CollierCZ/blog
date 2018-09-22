@@ -43,7 +43,7 @@
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-    .post-footer .author-image {
+    .article-footer .author-image {
         top: -60px;
     }
 

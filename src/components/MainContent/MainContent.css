@@ -1,0 +1,7 @@
+/* Stop elements, such as img wider than the article content, from
+   creating horizontal scroll - slight hack due to imperfections
+   with browser width % calculations and rounding */
+.article-template .content,
+.page-template .content {
+    overflow: hidden;
+}

@@ -1,0 +1,22 @@
+.article  {
+    display: flex;
+    padding-bottom: 0;
+}
+.article-details {
+    display:flex;
+    flex-direction: column;
+    margin-left:1.5em;
+}
+.article-teaser img
+{
+    border-radius: 50%;
+    width:150px;
+}
+
+.article-details h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+.article-details .article-meta{
+    margin:0;
+}
