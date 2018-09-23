@@ -1,20 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
-import "./AuthorInfo.css";
-import AuthorMeta from "../AuthorMeta/AuthorMeta";
 import AuthorLink from "../AuthorLink/AuthorLink";
-
-const Bio = props => {
-  const { bio, moreArticlesUrl } = props;
-  if (bio) {
-    return <div className="author-bio" dangerouslySetInnerHTML={{ __html: bio}} />;
-  }
-  return (
-    <p>
-      Read <Link to={moreArticlesUrl}>more articles</Link> by this author.
-    </p>
-  );
-};
+import "./AuthorInfo.css";
 
 class AuthorInfo extends React.Component {
   render() {
@@ -26,13 +12,13 @@ class AuthorInfo extends React.Component {
     const authorInfoUrl = prefix ? `${prefix}/${id}` : id;
     if (image) {
       return (
-        <section className="author">
+        <React.Fragment>
           <h4>
             <AuthorLink url={authorInfoUrl} name={name} />
           </h4>
-          <Bio bio={bio} moreArticlesUrl={authorInfoUrl} />
-          <AuthorMeta />
-        </section>
+          <div className="author-bio" dangerouslySetInnerHTML={{ __html: bio}}>
+          </div>
+        </React.Fragment>
       );
     }
     return null;
