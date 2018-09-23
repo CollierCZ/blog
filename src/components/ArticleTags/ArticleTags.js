@@ -7,11 +7,10 @@ class ArticleTags extends Component {
   render() {
     const { prefix, tags } = this.props;
     if (tags) {
-      let tagArray = tags.split(",");
       return (
                 <span>
           {prefix}
-          {tagArray.map((tag, index, arr) => (
+          {tags.map((tag, index, arr) => (
             <span key={tag}>
               <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
                 {tag}

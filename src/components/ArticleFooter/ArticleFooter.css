@@ -6,13 +6,23 @@
     border-top: #ebf2f6 1px solid;
 }
 
+.article-footer .author {
+    display:grid
+}
+
 .article-footer h4 {
     font-size: 1.8rem;
     margin: 0;
+    grid-column: 1;
+}
+
+.article-footer .author-bio {
+    grid-column: 3;
+    text-align:right;
 }
 
 .article-footer p {
-    margin: 1rem 0;
+    margin: 0;
     font-size: 1.4rem;
     line-height: 1.75em;
 }

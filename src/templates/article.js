@@ -10,9 +10,10 @@ import MenuButton from "../components/MenuButton/MenuButton";
 import Drawer from "../components/Drawer/Drawer";
 import Navigation from "../components/Navigation/Navigation";
 import MainContent from "../components/MainContent/MainContent";
+import ArticleCategory from "../components/ArticleCategory/ArticleCategory";
+import ArticleDate from "../components/ArticleDate/ArticleDate";
 import ArticleHeader from "../components/ArticleHeader/ArticleHeader";
 import ArticleFormatting from "../components/ArticleFormatting/ArticleFormatting";
-import ArticleDate from "../components/ArticleDate/ArticleDate";
 import ArticleFooter from "../components/ArticleFooter/ArticleFooter";
 import AuthorImage from "../components/AuthorImage/AuthorImage";
 import AuthorInfo from "../components/AuthorInfo/AuthorInfo";
@@ -28,12 +29,12 @@ function parseArticle(article, slug) {
   return result;
 }
 
-/*const formatReadNext = value => ({
-  path: value.fields.slug,
+const formatReadNext = value => ({
+  path: `/articles/${value.fields.slug}`,
   title: value.title.value,
   cover: value.teaser.value[0].url,
   excerpt: value.metadata__description.value
-});*/
+});
 
 class ArticleTemplate extends React.Component {
   state = {
@@ -65,13 +66,15 @@ class ArticleTemplate extends React.Component {
   render() {
     const { data } = this.props;
     const { slug, next, prev } = this.props.pageContext;
+    const nextSlug = next.split("/")[2];
+    const prevSlug = prev.split("/")[2];
     const articleNode = this.props.data.article;
     const article = parseArticle(articleNode, slug);
     const className = article.article_class ? article.article_class : "article";
     const config = this.props.data.config;
     const authorData = article.authors[0];
-    /*const getNextData = () => (next ? formatReadNext(data.next) : null);
-    const getPrevData = () => (prev ? formatReadNext(data.prev) : null);*/
+    const getNextData = () => (nextSlug ? formatReadNext(data.next) : null);
+    const getPrevData = () => (prevSlug ? formatReadNext(data.prev) : null);
 
     return (
       <Drawer className="article-template" isOpen={this.state.menuOpen}>
@@ -80,7 +83,6 @@ class ArticleTemplate extends React.Component {
         </Helmet>
         <SEO articlePath={slug} articleNode={articleNode} seoConfig={config} articleSEO />
 
-        {/* The blog navigation links */}
         <Navigation config={config} onClose={this.handleOnClose} />
 
         <Layout>
@@ -98,8 +100,9 @@ class ArticleTemplate extends React.Component {
               <ArticleHeader>
                 <h1 className="article-title">{article.title.value}</h1>
                 <section className="article-meta">
-                  <ArticleDate date={article.publish_date.datetime} />
-                  <ArticleTags prefix=" on " tags={article.metadata__keywords.value} />
+                  <ArticleDate prefix="Published " date={article.publish_date.datetime} />
+                  <ArticleCategory prefix=" in " category={article.fields.category} />
+                  <ArticleTags prefix=" on " tags={article.fields.tags} />
                 </section>
               </ArticleHeader>
 
@@ -114,12 +117,11 @@ class ArticleTemplate extends React.Component {
               </ArticleFooter>
             </ArticleFormatting>
           </MainContent>
-          {/*<ReadNext next={getNextData()} prev={getPrevData()} />/*}
-
-          {/* The tiny footer at the very bottom */}
+          {<ReadNext next={getNextData()} prev={getPrevData()} />}
+          
           <Footer
             copyrightYear={article.publish_date.datetime}
-            copyrightLabel={article.authors[0].name.value}
+            author={authorData.name.value}
           />
         </Layout>
       </Drawer>
@@ -128,7 +130,7 @@ class ArticleTemplate extends React.Component {
 }
   
   export const query = graphql`
-  query articleQuery($slug: String!, $next: String, $prev: String) {
+  query articleQuery($slug: String!, $nextSlug: String, $prevSlug: String) {
     config: kenticoCloudItemHome{
       title {
         value
@@ -154,6 +156,11 @@ class ArticleTemplate extends React.Component {
       }
     },
     article: kenticoCloudItemArticle(fields: { slug: { eq: $slug } })  {
+      fields {
+        slug
+        tags
+        category
+      }
       title {
         value
       }
@@ -181,9 +188,6 @@ class ArticleTemplate extends React.Component {
           value
         }
       }
-      metadata__keywords {
-        value
-      }
       metadata__description {
         value
       }
@@ -192,7 +196,7 @@ class ArticleTemplate extends React.Component {
       }
     }
     # prev Article data
-    prev: kenticoCloudItemArticle(fields: { slug: { eq: $prev } }) {
+    prev: kenticoCloudItemArticle(fields: { slug: { eq: $prevSlug } }) {
       metadata__description {
         value
       }
@@ -202,12 +206,14 @@ class ArticleTemplate extends React.Component {
       fields {
         slug
       }
-      metadata__description {
-        value
+      teaser {
+        value {
+          url
+        }
       }
     }
     # next Article data
-    next: kenticoCloudItemArticle(fields: { slug: { eq: $next } }) {
+    next: kenticoCloudItemArticle(fields: { slug: { eq: $nextSlug } }) {
       metadata__description {
         value
       }
@@ -216,9 +222,6 @@ class ArticleTemplate extends React.Component {
       }
       fields {
         slug
-      }
-      metadata__description {
-        value
       }
       teaser {
         value {

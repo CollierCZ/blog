@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import ArticleListing from "../components/ArticleListing/ArticleListing"
+import ArticleListing from "../components/ArticleListing/ArticleListing";
 import BlogLogo from "../components/BlogLogo/BlogLogo"
-import Drawer from "../components/Drawer/Drawer"
-import Layout from "../layouts/SiteWrapper/SiteWrapper"
+import Drawer from "../components/Drawer/Drawer";
+import Layout from "../layouts/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
 import MenuButton from "../components/MenuButton/MenuButton";
@@ -13,12 +13,10 @@ import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import SEO from "../components/SEO/SEO";
-import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import "../layouts/index.css"
 
 
-
-class IndexTemplate extends React.Component {
+class CategoryTemplate extends React.Component {
   state = {
     menuOpen: false
   };
@@ -46,6 +44,7 @@ class IndexTemplate extends React.Component {
   };
   render() {
     const {
+      category,
       page,
       pages,
       total,
@@ -55,17 +54,15 @@ class IndexTemplate extends React.Component {
     } = this.props.pageContext;
     const nodes = this.props.data.articles.edges;
     const config = this.props.data.config;
-    const socialUrls = config.socialmedia.value.split(",");
 
   return (
-    <Drawer className="home-template" isOpen={this.state.menuOpen}>
-        <Helmet title={config.siteTitle} />
+    <Drawer isOpen={this.state.menuOpen}>
+      <Helmet title={`Articles in "${category}" | ${config.siteTitle}`} />
         <SEO articleEdges={nodes} seoConfig={config} />
 
-        {/* The blog navigation links */}
         <Navigation config={config} onClose={this.handleOnClose} />
         <Layout>
-          <MainHeader cover={config.splash_image.value[0].url}>
+          <MainHeader className="category-head">
                 <MainNav overlay={config.splash_image.value[0].url}>
                   <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
                   <MenuButton
@@ -75,24 +72,11 @@ class IndexTemplate extends React.Component {
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
-                    <PageTitle text={config.title.value} />
-                    <PageDescription text={config.metadata__description.value} />
-                    <SocialMediaIcons
-                      urls={socialUrls}
-                      color="currentColor"
-                    />
+                    <PageTitle text={category} />
+                  <PageDescription
+                    text={category.description || `A ${total}-post collection`} />
                   </div>
                 </div>
-                <Link
-                  className="scroll-down icon-arrow-left"
-                  to="#content"
-                  data-offset="-45"
-                  spy="true"
-                  smooth="true"
-                  duration={500}
-                >
-                  <span className="hidden">Scroll Down</span>
-                </Link>
               </MainHeader>
           <div>
           <PaginatedContent
@@ -113,7 +97,7 @@ class IndexTemplate extends React.Component {
 }
 
 export const query = graphql`
-  query indexQuery {
+  query categoryQuery ($category: String) {
     config: kenticoCloudItemHome{
       title {
         value
@@ -139,8 +123,9 @@ export const query = graphql`
       }
     },
     articles: allKenticoCloudItemArticle (
-        sort: { fields: [publish_date___datetime], order: DESC }
-      ) {
+            sort: { fields: [publish_date___datetime], order: DESC }
+            filter: { fields: { category: { in: [$category] } } }
+        ) {
       edges {
         node {
           fields {
@@ -184,4 +169,4 @@ export const query = graphql`
   }
 ` 
 
-export default IndexTemplate;
+export default CategoryTemplate;

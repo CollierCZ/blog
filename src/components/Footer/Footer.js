@@ -3,12 +3,11 @@ import "./Footer.css";
 
 class Footer extends Component {
   render() {
-    const { label } = this.props.copyrightLabel;
     const { year } = this.props.copyrightYear;
     return (
       <footer className="site-footer clearfix">
         <section className="copyright">
-          &copy;{" "}{year || new Date().getFullYear()}{` ${label}`}
+          &copy;{" "}{year || new Date().getFullYear()}{" "}{this.props.author}
         </section>
       </footer>
     );

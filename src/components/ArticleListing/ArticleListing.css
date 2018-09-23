@@ -1,6 +1,6 @@
-.article  {
+.article-listing .article  {
     display: flex;
-    padding-bottom: 0;
+    padding-bottom: 1em;
 }
 .article-details {
     display:flex;
@@ -19,4 +19,12 @@
 }
 .article-details .article-meta{
     margin:0;
+}
+
+.article-meta .article-date{
+    margin-left: 0px;
+    padding-left: 0px;
+    border-left: none;
+    text-transform: none;
+    font-size: inherit;
 }

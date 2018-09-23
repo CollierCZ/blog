@@ -7,7 +7,7 @@ import AuthorLink from "../AuthorLink/AuthorLink";
 const Bio = props => {
   const { bio, moreArticlesUrl } = props;
   if (bio) {
-    return <div dangerouslySetInnerHTML={{ __html: bio}} />;
+    return <div className="author-bio" dangerouslySetInnerHTML={{ __html: bio}} />;
   }
   return (
     <p>
