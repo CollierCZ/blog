@@ -1,4 +1,9 @@
 module.exports = {
+siteMetadata: {
+  title: `GatsbyJS`,
+  description: `Blazing fast modern site generator for React`,
+  siteUrl: `https://www.gatsbyjs.org`
+},
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
@@ -24,6 +29,61 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allKenticoCloudItemArticle } }) => {
+              return allKenticoCloudItemArticle.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  description: edge.node.metadata__description.value,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.body.value }],
+                })
+              })
+            },
+            query: `
+              {
+                allKenticoCloudItemArticle(
+                  limit: 10,
+                  sort: { fields: [publish_date___datetime], order: DESC }
+                ) {
+                  edges {
+                    node {
+                      metadata__description {
+                        value
+                      }
+                      publish_date {
+                        datetime
+                      }
+                      body {
+                        value
+                      }
+                      fields { slug }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+          },
+        ],
+      },
     }
   ]
 }
