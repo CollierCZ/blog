@@ -1,9 +1,9 @@
 module.exports = {
-siteMetadata: {
-  title: `GatsbyJS`,
-  description: `Blazing fast modern site generator for React`,
-  siteUrl: `https://www.gatsbyjs.org`
-},
+  siteMetadata: {
+    siteUrl: "https://colliercz.github.io/",
+    title: "Aaron Collier",
+    description: "Educator, editor, elucidator"
+  },
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
@@ -33,33 +33,24 @@ siteMetadata: {
     {
       resolve: `gatsby-plugin-feed`,
       options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
         feeds: [
           {
-            serialize: ({ query: { site, allKenticoCloudItemArticle } }) => {
+            serialize: ({ query: { kenticoCloudItemHome, allKenticoCloudItemArticle } }) => {
               return allKenticoCloudItemArticle.edges.map(edge => {
                 return Object.assign({}, edge.node, {
+                  title: edge.node.title.value,
                   description: edge.node.metadata__description.value,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.body.value }],
+                  categories: edge.node.fields.tags,
+                  date: edge.node.publish_date.datetime,
+                  url: kenticoCloudItemHome.base_url.value + "/articles" + edge.node.fields.slug,
+                  guid: kenticoCloudItemHome.base_url.value + "/articles" +  edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.body.value }]
                 })
               })
             },
             query: `
               {
-                allKenticoCloudItemArticle(
+                allKenticoCloudItemArticle (
                   limit: 10,
                   sort: { fields: [publish_date___datetime], order: DESC }
                 ) {
@@ -74,8 +65,19 @@ siteMetadata: {
                       body {
                         value
                       }
-                      fields { slug }
+                      fields { 
+                        slug
+                        tags
+                      }
+                      title {
+                        value
+                      }
                     }
+                  }
+                },
+                kenticoCloudItemHome {
+                  base_url {
+                    value
                   }
                 }
               }
