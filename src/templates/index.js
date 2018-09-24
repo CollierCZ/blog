@@ -13,7 +13,8 @@ import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import SEO from "../components/SEO/SEO";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
-import "../layouts/index.css"
+import SubscribeButton from "../components/SubscribeButton/SubscribeButton";
+import "../layouts/index.css";
 
 
 
@@ -71,6 +72,7 @@ class IndexTemplate extends React.Component {
                       urls={socialUrls}
                       color="currentColor"
                     />
+                    <SubscribeButton url={config.base_url.value + "rss.xml"} />
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">

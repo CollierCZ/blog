@@ -5,6 +5,7 @@
     background: none !important; /* Makes sure there is never a background */
     border: none !important; /* Makes sure there is never a border */
     margin-right: 1rem;
+    border-radius: 3px;
 }
 
 .blog-logo img {
@@ -14,7 +15,7 @@
     display: block;
     height: 40px;
     padding: 0;
-    width: auto;
+    width: 40px;
 }
 
 /* ==========================================================================
@@ -23,7 +24,8 @@
 
 @media only screen and (max-width: 900px) {
     .blog-logo img {
-        padding: 4px 0;
+        height: 35px;
+        width: 35px;
     }
 }
 
@@ -33,10 +35,11 @@
 
 @media only screen and (max-width: 500px) {
     .blog-logo {
-        padding: 5px;
+        margin: 1rem;
     }
 
     .blog-logo img {
         height: 30px;
+        width: 30px;
     }
 }

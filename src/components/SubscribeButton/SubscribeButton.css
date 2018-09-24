@@ -1,1 +1,53 @@
-/** empty css file for component consistency **/
+.subscribe-button {
+    box-sizing: border-box;
+    display: block;
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin: 0 1rem;
+    color: #111; /* Overides `.nav a:link, .nav a:visited` colour */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #fff;
+    transition: all ease 0.3s;
+}
+
+.subscribe-button::before {
+    font-size: 23px;
+}
+
+.subscribe-button:hover {
+    background-color: #000000ff;
+    color: #ffffffff;
+}
+
+
+/* ==========================================================================
+       Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+    .subscribe-button {
+        width: 35px;
+        height: 35px;
+    }
+    .subscribe-button::before {
+        font-size: 19px;
+    }
+}
+
+/* ==========================================================================
+       Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+    .subscribe-button {
+        margin: 1rem;
+        height: 30px;
+        width: 30px;
+    }
+    .subscribe-button::before {
+        font-size: 16px;
+    }
+}
