@@ -5,6 +5,7 @@ import ArticleDate from "../ArticleDate/ArticleDate";
 import ArticleFormatting from "../ArticleFormatting/ArticleFormatting";
 import ArticleHeader from "../ArticleHeader/ArticleHeader";
 import ArticleTags from "../ArticleTags/ArticleTags";
+import ArticleTeaser from "../ArticleTeaser/ArticleTeaser";
 import "./ArticleListing.css";
 
 
@@ -29,32 +30,30 @@ class ArticleListing extends React.Component {
         {/* This is the article loop - each article will be output using this markup */}
         {ArticleList.map(article => {
           const { category, cover, description, path, publish_date, tags, title } = article;
-          const className = article.article_class ? article.article_class : "article";
+          const className = article.article_class ? article.article_class : "article-card";
 
           return (
             <ArticleFormatting className={className} key={title}>
-            <div className="article-teaser">
-            <img src={cover} alt="" />
-            </div>
-            <div className="article-details">
-              <ArticleHeader>
-                <h2 className="article-title">
-                  <Link to={`/articles/${path}`}>{title}</Link>
-                </h2>
-              </ArticleHeader>
-              <section className="article-description">
-                <p>
-                  {description}{" "}
-                  <Link className="read-more" to={`/articles/${path}`}>
-                    &raquo;
-                  </Link>
-                </p>
-              </section>
-              <footer className="article-meta">
-                <ArticleDate prefix="Published " date={publish_date} />
-                <ArticleCategory prefix=" in " category={category} />
-                <ArticleTags prefix=" on " tags={tags} />
-              </footer>
+              <ArticleTeaser cover={cover} link={`/articles/${path}`} />
+              <div className="article-details">
+                <Link className="article-link" to={`/articles/${path}`}>
+                  <ArticleHeader>
+                    <h2 className="article-title">
+                      {title}
+                    </h2>
+                  </ArticleHeader>
+                  <section className="article-description">
+                    <p>
+                      {description}{" "}
+                        &raquo;
+                    </p>
+                  </section>
+                </Link>
+                <footer className="article-meta">
+                  <ArticleDate prefix="Published " date={publish_date} />
+                  <ArticleCategory prefix=" in " category={category} />
+                  <ArticleTags prefix=" on " tags={tags} />
+                </footer>
               </div>
             </ArticleFormatting>
           );

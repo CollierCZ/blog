@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Helmet from "react-helmet";
 import ArticleListing from "../components/ArticleListing/ArticleListing"
 import BlogLogo from "../components/BlogLogo/BlogLogo"
@@ -7,7 +7,6 @@ import Drawer from "../components/Drawer/Drawer"
 import Layout from "../layouts/SiteWrapper/SiteWrapper"
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
-import MenuButton from "../components/MenuButton/MenuButton";
 import Navigation from "../components/Navigation/Navigation";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
@@ -59,7 +58,7 @@ class IndexTemplate extends React.Component {
 
   return (
     <Drawer className="home-template" isOpen={this.state.menuOpen}>
-        <Helmet title={config.siteTitle} />
+        <Helmet title={config.title.value} />
         <SEO articleEdges={nodes} seoConfig={config} />
 
         {/* The blog navigation links */}
@@ -68,31 +67,17 @@ class IndexTemplate extends React.Component {
           <MainHeader cover={config.splash_image.value[0].url}>
                 <MainNav overlay={config.splash_image.value[0].url}>
                   <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
-                  <MenuButton
-                    navigation={true}
-                    onClick={this.handleOnClick}
-                  />
+                    <SocialMediaIcons
+                      urls={socialUrls}
+                      color="currentColor"
+                    />
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
                     <PageTitle text={config.title.value} />
                     <PageDescription text={config.metadata__description.value} />
-                    <SocialMediaIcons
-                      urls={socialUrls}
-                      color="currentColor"
-                    />
                   </div>
                 </div>
-                <Link
-                  className="scroll-down icon-arrow-left"
-                  to="#content"
-                  data-offset="-45"
-                  spy="true"
-                  smooth="true"
-                  duration={500}
-                >
-                  <span className="hidden">Scroll Down</span>
-                </Link>
               </MainHeader>
           <div>
           <PaginatedContent

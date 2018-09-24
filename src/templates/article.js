@@ -86,7 +86,7 @@ class ArticleTemplate extends React.Component {
         <Navigation config={config} onClose={this.handleOnClose} />
 
         <Layout>
-          <MainHeader className="article-head" cover={article.teaser.value[0].url}>
+          <MainHeader className="article-header" cover={article.teaser.value[0].url}>
             <MainNav>
               <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
               <MenuButton

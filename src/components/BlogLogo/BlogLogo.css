@@ -11,8 +11,8 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    height: 38px;
-    padding: 1px 0 5px;
+    height: 40px;
+    padding: 0;
     width: auto;
 }
 
