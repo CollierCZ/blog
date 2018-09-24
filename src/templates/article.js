@@ -6,7 +6,6 @@ import SEO from "../components/SEO/SEO";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
 import Drawer from "../components/Drawer/Drawer";
 import Navigation from "../components/Navigation/Navigation";
 import MainContent from "../components/MainContent/MainContent";
@@ -89,10 +88,6 @@ class ArticleTemplate extends React.Component {
           <MainHeader className="article-header" cover={article.teaser.value[0].url}>
             <MainNav>
               <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
-              <MenuButton
-                navigation={true}
-                onClick={this.handleOnClick}
-              />
             </MainNav>
           </MainHeader>
           <MainContent>

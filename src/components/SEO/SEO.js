@@ -13,17 +13,16 @@ class SEO extends Component {
     let image;
     let articleURL;
     if (articleSEO) {
-      ({ title } = articleNode.title.value);
-      description = articleNode.metadata__description;
+      title = articleNode.title.value;
+      description = articleNode.metadata__description.value;
       image = articleNode.teaser.value[0].url;
-      articleURL = urljoin(config.base_url.value, articlePath);
+      articleURL = urljoin(config.base_url.value, "/articles", articlePath);
     } else {
       title = config.title.value;
       description = config.metadata__description.value;
       image = config.blog_logo.value[0].url;
     }
 
-    image = urljoin(config.base_url.value, image);
     const blogURL = config.base_url.value;
     const schemaOrgJSONLD = [
       {

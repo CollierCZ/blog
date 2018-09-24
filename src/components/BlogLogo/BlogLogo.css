@@ -6,6 +6,7 @@
     border: none !important; /* Makes sure there is never a border */
     margin-right: 1rem;
     border-radius: 3px;
+    transition: all ease 0.3s;
 }
 
 .blog-logo img {
