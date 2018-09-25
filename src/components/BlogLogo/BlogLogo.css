@@ -18,6 +18,10 @@
     padding: 0;
     width: 40px;
 }
+.blog-logo:hover {
+    transition: all .5s ease;
+    transform: scale(1.1);
+}
 
 /* ==========================================================================
        Media Queries - Smaller than 900px
