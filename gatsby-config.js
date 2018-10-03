@@ -16,17 +16,7 @@ module.exports = {
           "default"
         ],
         queryConfig: {
-          usePreviewMode: false,
-          linkResolver: link => {
-            if (link.type === 'mvp') {
-              return `/mvp/${urlSlug}`;
-            }
-          },
-          richTextResolver: item => {
-            if (item.system.type == 'actor') {
-              return `<a href="/mvp/${item.urlSlug}">${item.name}</a>`;
-            }
-          }
+          usePreviewMode: false
         }
       }
     },

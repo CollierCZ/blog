@@ -60,16 +60,16 @@ div.page-template .article-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9eabb3;
+    color: #4a4a4a;
 }
 
 .article-meta a {
-    color: #9eabb3;
+    color: #4a4a4a;
     text-decoration: none;
 }
 
 .article-meta a:hover {
-    color: #9eabb3;
+    color: #4a4a4a;
     text-decoration: underline;
 }
 

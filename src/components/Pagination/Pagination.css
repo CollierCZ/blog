@@ -5,12 +5,12 @@
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
-    color: #9eabb3;
+    color: #4a4a4a;
     text-align: center;
 }
 
 .pagination a {
-    color: #9eabb3;
+    color: #4a4a4a;
     transition: all 0.2s ease;
 }
 
