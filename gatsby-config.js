@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl,
     title: config.title,
+    author: "Aaron Collier",
     description: config.description,
     icon: config.icon
   },
