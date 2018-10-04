@@ -1,8 +1,11 @@
+const config = require("./data/config");
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://colliercz.github.io/",
-    title: "Aaron Collier",
-    description: "Educator, editor, elucidator"
+    siteUrl: config.siteUrl,
+    title: config.title,
+    description: config.description,
+    icon: config.icon
   },
   plugins: [
     `gatsby-transformer-remark`,
@@ -20,6 +23,21 @@ module.exports = {
         }
       }
     },
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options:  {
+          name: config.title,
+          short_name: config.title,
+          description: config.description,
+          start_url: "/",
+          background_color: "#bf9b63",
+          theme_color: "#f3cc91",
+          display: "minimal-ui",
+          icon: config.icon
+        }    
+    },
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-feed`,
       options: {
