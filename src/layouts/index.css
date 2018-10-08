@@ -185,9 +185,6 @@ th { padding: 0; }
 
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost::before {
-    content: "\f600";
-}
 
 .icon-feed::before {
     content: "\f601";

@@ -1,11 +1,11 @@
-/* The details of your blog. Defined in ghost/settings/ */
+/* The details of your blog */
 .page-title {
     margin: 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    color: #000;
+    color: #ffffff;
 }
 
 .no-cover .page-title {

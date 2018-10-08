@@ -17,10 +17,11 @@
     height: 40px;
     padding: 0;
     width: 40px;
+    border-radius: 50%;
 }
-.blog-logo:hover {
-    transition: all .5s ease;
-    transform: scale(1.1);
+.blog-logo img:hover {
+    filter: invert(100%);
+    transition: 0.5s;
 }
 
 /* ==========================================================================
