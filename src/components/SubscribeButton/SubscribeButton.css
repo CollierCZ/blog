@@ -8,14 +8,14 @@
     color: #111; /* Overides `.nav a:link, .nav a:visited` colour */
     text-align: center;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 50%;
     background: #fff;
     transition: all ease 0.3s;
 }
 
 .subscribe-button[class*="icon-"]::before {
-    font-size: 23px;
-    line-height: 1.75;
+    font-size: 21px;
+    line-height: 1.9;
 }
 
 .subscribe-button:hover {
@@ -34,8 +34,8 @@
         height: 35px;
     }
     .subscribe-button[class*="icon-"]::before {
-        font-size: 19px;
-        line-height: 1.75;
+        font-size: 17px;
+        line-height: 2;
     }
 }
 
@@ -50,7 +50,7 @@
         width: 30px;
     }
     .subscribe-button[class*="icon-"]::before {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .main-nav.overlay .subscribe-button:hover {

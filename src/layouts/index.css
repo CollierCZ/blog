@@ -248,6 +248,10 @@ body {
     text-rendering: geometricPrecision;
 }
 
+.sr-only {
+    display:none;
+}
+
 ::-moz-selection {
     background: #d6edff;
 }
