@@ -7,7 +7,7 @@ export default ({ data }) => {
   return (
   <Layout>
     <h1>{about.elements.title.value}</h1>
-    <div dangerouslySetInnerHTML={{ __html: about.body.value }} />
+    <div dangerouslySetInnerHTML={{ __html: about.elements.body.value }} />
   </Layout>
 )
 }
