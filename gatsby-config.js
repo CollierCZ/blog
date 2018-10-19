@@ -47,12 +47,12 @@ module.exports = {
             serialize: ({ query: { kenticoCloudItemHome, allKenticoCloudItemArticle } }) => {
               return allKenticoCloudItemArticle.edges.map(edge => {
                 return Object.assign({}, edge.node, {
-                  title: edge.node.title.value,
-                  description: edge.node.metadata__description.value,
+                  title: edge.node.elements.title.value,
+                  description: edge.node.elements.metadata__description.value,
                   categories: edge.node.fields.tags,
-                  date: edge.node.publish_date.value,
-                  url: kenticoCloudItemHome.base_url.value + "articles/" + edge.node.fields.slug,
-                  guid: kenticoCloudItemHome.base_url.value + "articles/" +  edge.node.fields.slug
+                  date: edge.node.elements.publish_date.value,
+                  url: kenticoCloudItemHome.elements.base_url.value + "articles/" + edge.node.fields.slug,
+                  guid: kenticoCloudItemHome.elements.base_url.value + "articles/" +  edge.node.fields.slug
                 })
               })
             },
