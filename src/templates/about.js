@@ -15,14 +15,16 @@ export default ({ data }) => {
 export const query = graphql`
 query aboutQuery($slug: String!) {
   kenticoCloudItemAbout(fields: { slug: { eq: $slug } })  {
-    title {
-      value
-    }
-    body {
-      value
-    }
     system {
-      lastModified   
+      last_modified   
+    }
+    elements {
+      title {
+        value
+      }
+      body {
+        value
+      }
     }
   }
 }

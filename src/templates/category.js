@@ -53,7 +53,7 @@ class CategoryTemplate extends React.Component {
       next
     } = this.props.pageContext;
     const nodes = this.props.data.articles.edges;
-    const config = this.props.data.config;
+    const config = this.props.data.config.elements;
 
   return (
     <Drawer isOpen={this.state.menuOpen}>
@@ -99,31 +99,33 @@ class CategoryTemplate extends React.Component {
 export const query = graphql`
   query categoryQuery ($category: String) {
     config: kenticoCloudItemHome{
-      title {
-        value
-      }
-      splash_image {
-        value {
-          url
+      elements {
+        title {
+          value
         }
-      }
-      blog_logo {
-        value {
-          url
+        splash_image {
+          value {
+            url
+          }
         }
-      }
-      metadata__description {
-        value
-      }
-      socialmedia {
-        value
-      }
-      base_url {
-        value
+        blog_logo {
+          value {
+            url
+          }
+        }
+        metadata__description {
+          value
+        }
+        socialmedia {
+          value
+        }
+        base_url {
+          value
+        }
       }
     },
     articles: allKenticoCloudItemArticle (
-            sort: { fields: [publish_date___datetime], order: DESC }
+            sort: { fields: [elements___publish_date___value], order: DESC }
             filter: { fields: { category: { in: [$category] } } }
         ) {
       edges {
@@ -133,35 +135,22 @@ export const query = graphql`
             tags
             category
           }
-          metadata__description {
-            value
-          }
-          title {
-            value
-          }
-          teaser {
-            value {
-              url
+          elements {
+            metadata__description {
+              value
             }
-          }
-          publish_date {
-            datetime
-          }
-          authors {
-            picture {
+            title {
+              value
+            }
+            teaser {
               value {
                 url
               }
             }
-            short_bio {
+            publish_date {
               value
             }
-            name {
-              value
-            }
-            url {
-              value
-            }
+            
           }
         }
       }

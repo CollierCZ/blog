@@ -50,7 +50,7 @@ module.exports = {
                   title: edge.node.title.value,
                   description: edge.node.metadata__description.value,
                   categories: edge.node.fields.tags,
-                  date: edge.node.publish_date.datetime,
+                  date: edge.node.publish_date.value,
                   url: kenticoCloudItemHome.base_url.value + "articles/" + edge.node.fields.slug,
                   guid: kenticoCloudItemHome.base_url.value + "articles/" +  edge.node.fields.slug
                 })
@@ -60,32 +60,36 @@ module.exports = {
               {
                 allKenticoCloudItemArticle (
                   limit: 10,
-                  sort: { fields: [publish_date___datetime], order: DESC }
+                  sort: { fields: [elements___publish_date___value], order: DESC }
                 ) {
                   edges {
                     node {
-                      metadata__description {
-                        value
-                      }
-                      publish_date {
-                        datetime
-                      }
-                      body {
-                        value
+                      elements {
+                        metadata__description {
+                          value
+                        }
+                        publish_date {
+                          value
+                        }
+                        body {
+                          value
+                        }
+                        title {
+                          value
+                        }
                       }
                       fields { 
                         slug
                         tags
                       }
-                      title {
-                        value
-                      }
                     }
                   }
                 },
                 kenticoCloudItemHome {
-                  base_url {
-                    value
+                  elements {
+                    base_url {
+                      value
+                    }
                   }
                 }
               }

@@ -16,26 +16,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: node.url.value
+      value: node.elements.url.value
     })
 
     if (node.internal.type === `${kcItemTypeIdentifier}${articleTypeIdentifier}`) {
       createNodeField({
         node,
         name: `tags`,
-        value: node.metadata__keywords.value.split(",")
+        value: node.elements.metadata__keywords.value.split(",")
       })
 
       createNodeField({
         node,
         name: `category`,
-        value: node.categories.value[0].name
-      })
-
-      createNodeField({
-        node,
-        name: `author`,
-        value: node.authors[0].name.value
+        value: node.elements.categories.value[0].name
       })
     }
   }

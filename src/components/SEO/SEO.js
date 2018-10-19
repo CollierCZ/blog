@@ -13,9 +13,9 @@ class SEO extends Component {
     let image;
     let articleURL;
     if (articleSEO) {
-      title = articleNode.title.value;
-      description = articleNode.metadata__description.value;
-      image = articleNode.teaser.value[0].url;
+      title = articleNode.elements.title.value;
+      description = articleNode.elements.metadata__description.value;
+      image = articleNode.elements.teaser.value[0].url;
       articleURL = urljoin(config.base_url.value, "/articles", articlePath, "/");
     } else {
       title = config.title.value;

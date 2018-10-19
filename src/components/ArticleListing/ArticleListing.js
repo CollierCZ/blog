@@ -13,12 +13,12 @@ import "./ArticleListing.css";
 const getArticleList = (articleEdges) =>
   articleEdges.map(articleEdge => ({
     category: articleEdge.node.fields.category,
-    cover: articleEdge.node.teaser.value[0].url,
-    description: articleEdge.node.metadata__description.value,
+    cover: articleEdge.node.elements.teaser.value[0].url,
+    description: articleEdge.node.elements.metadata__description.value,
     path: articleEdge.node.fields.slug,
-    publish_date: articleEdge.node.publish_date.datetime,
+    publish_date: articleEdge.node.elements.publish_date.value,
     tags: articleEdge.node.fields.tags,
-    title: articleEdge.node.title.value
+    title: articleEdge.node.elements.title.value
   }));
 
 class ArticleListing extends React.Component {
