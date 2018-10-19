@@ -6,7 +6,7 @@ export default ({ data }) => {
   const about = data.kenticoCloudItemAbout
   return (
   <Layout>
-    <h1>{about.title.value}</h1>
+    <h1>{about.elements.title.value}</h1>
     <div dangerouslySetInnerHTML={{ __html: about.body.value }} />
   </Layout>
 )
