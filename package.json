@@ -5,8 +5,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "change-case": "^3.0.2",
@@ -53,8 +52,5 @@
     "typography": "^0.16.17",
     "typography-theme-kirkham": "^0.16.3",
     "url-join": "^4.0.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.0"
   }
 }

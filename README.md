@@ -4,5 +4,3 @@ A blog built in [Gatsby](https://www.gatsbyjs.org/) with content pulled from [Ke
 ## Running in development
 `gatsby develop`
 
-## Deploying to GitHub Pages
-`npm run deploy`
