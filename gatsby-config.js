@@ -1,13 +1,15 @@
+const config = require("./data/config");
+
 module.exports = {
+  siteMetadata: {
+    siteUrl: config.siteUrl,
+    title: config.title,
+    author: "Aaron Collier",
+    description: config.description,
+    icon: config.icon
+  },
   plugins: [
-    `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-kentico-cloud`,
@@ -18,19 +20,84 @@ module.exports = {
           "default"
         ],
         queryConfig: {
-          usePreviewMode: false,
-          linkResolver: link => {
-            if (link.type === 'mvp') {
-              return `/mvp/${urlSlug}`;
-            }
-          },
-          richTextResolver: item => {
-            if (item.system.type == 'actor') {
-              return `<a href="/mvp/${item.urlSlug}">${item.name}</a>`;
-            }
-          }
+          usePreviewMode: false
         }
       }
+    },
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options:  {
+          name: config.title,
+          short_name: config.title,
+          description: config.description,
+          start_url: "/",
+          background_color: "#bf9b63",
+          theme_color: "#f3cc91",
+          display: "minimal-ui",
+          icon: config.icon
+        }    
+    },
+    "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { kenticoCloudItemHome, allKenticoCloudItemArticle } }) => {
+              return allKenticoCloudItemArticle.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  title: edge.node.elements.title.value,
+                  description: edge.node.elements.metadata__description.value,
+                  categories: edge.node.fields.tags,
+                  date: edge.node.elements.publish_date.value,
+                  url: kenticoCloudItemHome.elements.base_url.value + "articles/" + edge.node.fields.slug,
+                  guid: kenticoCloudItemHome.elements.base_url.value + "articles/" +  edge.node.fields.slug
+                })
+              })
+            },
+            query: `
+              {
+                allKenticoCloudItemArticle (
+                  limit: 10,
+                  sort: { fields: [elements___publish_date___value], order: DESC }
+                ) {
+                  edges {
+                    node {
+                      elements {
+                        metadata__description {
+                          value
+                        }
+                        publish_date {
+                          value
+                        }
+                        body {
+                          value
+                        }
+                        title {
+                          value
+                        }
+                      }
+                      fields { 
+                        slug
+                        tags
+                      }
+                    }
+                  }
+                },
+                kenticoCloudItemHome {
+                  elements {
+                    base_url {
+                      value
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+          },
+        ],
+      },
     }
   ]
 }
