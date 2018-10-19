@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$articleAuthor\" is never used in operation \"articleQuery\".","locations":[{"line":5,"column":3}]}],"pageContext":{"slug":"third-article","total":3,"prev":"/articles/article2/","next":"/articles/all-about-education/"}}

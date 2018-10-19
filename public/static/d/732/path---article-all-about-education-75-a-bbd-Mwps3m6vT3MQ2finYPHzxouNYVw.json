@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$slugStep2\" is never used in operation \"articleQuery\".","locations":[{"line":2,"column":3}]}],"pageContext":{"templateNameStep2":"article","slugStep2":"all-about-education"}}

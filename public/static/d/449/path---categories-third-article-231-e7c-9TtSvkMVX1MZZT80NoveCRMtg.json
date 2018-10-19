@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$next\" is never used in operation \"articleQuery\".","locations":[{"line":3,"column":3}]},{"message":"Variable \"$prev\" is never used in operation \"articleQuery\".","locations":[{"line":4,"column":3}]}],"pageContext":{"slug":"third-article","total":3,"prev":"/categories/article2/","next":"/categories/all-about-education/"}}
