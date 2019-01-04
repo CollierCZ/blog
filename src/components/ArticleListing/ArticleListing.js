@@ -16,7 +16,7 @@ const getArticleList = (articleEdges) =>
     cover: articleEdge.node.elements.teaser.value[0].url,
     description: articleEdge.node.elements.metadata__description.value,
     path: articleEdge.node.fields.slug,
-    publish_date: articleEdge.node.elements.publish_date.value,
+    date: articleEdge.node.fields.date,
     tags: articleEdge.node.fields.tags,
     title: articleEdge.node.elements.title.value
   }));
@@ -29,7 +29,7 @@ class ArticleListing extends React.Component {
       <div className="article-listing">
         {/* This is the article loop - each article will be output using this markup */}
         {ArticleList.map(article => {
-          const { category, cover, description, path, publish_date, tags, title } = article;
+          const { category, cover, description, path, date, tags, title } = article;
           const className = article.article_class ? article.article_class : "article-card";
 
           return (
@@ -50,7 +50,7 @@ class ArticleListing extends React.Component {
                   </section>
                 </Link>
                 <footer className="article-meta">
-                  <ArticleDate prefix="Published " date={publish_date} />
+                  <ArticleDate prefix="Published " date={date} />
                   <ArticleCategory prefix=" in " category={category} />
                   <ArticleTags prefix=" on " tags={tags} />
                 </footer>

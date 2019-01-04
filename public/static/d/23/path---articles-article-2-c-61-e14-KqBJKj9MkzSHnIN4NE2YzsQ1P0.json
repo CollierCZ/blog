@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$prevSlug\" is never used in operation \"articleQuery\".","locations":[{"line":4,"column":3}]}],"pageContext":{"slug":"article2","total":4,"prev":"/articles/all-about-education/","next":"/articles/third-article/"}}

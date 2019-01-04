@@ -16,7 +16,7 @@ export const query = graphql`
 query aboutQuery($slug: String!) {
   kenticoCloudItemAbout(fields: { slug: { eq: $slug } })  {
     system {
-      last_modified   
+      lastModified   
     }
     elements {
       title {

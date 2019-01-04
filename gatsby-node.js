@@ -1,15 +1,81 @@
-const path = require(`path`);
-const _ = require("lodash");
 const {
   createLinkedPages,
   createPaginationPages
 } = require("gatsby-pagination");
+const _ = require("lodash");
+const moment = require("moment");
+const path = require(`path`);
+
 const kcItemTypeIdentifier = `KenticoCloudItem`;
 const articleTypeIdentifier = `Article`;
 const paginationLimit = 3;
+const postNodes = [];
+
+function addSiblingNodes(createNodeField) {
+  postNodes.sort(
+    ({ fields: { date: date1 } }, { fields: { date: date2 } }) => {
+      const dateA = moment(date1, "YYYY-MM-DD");
+      const dateB = moment(date2, "YYYY-MM-DD");
+
+      if (dateA.isBefore(dateB)) return 1;
+
+      if (dateB.isBefore(dateA)) return -1;
+
+      return 0;
+    }
+  );
+  for (let i = 0; i < postNodes.length; i += 1) {
+    const nextID = i + 1 < postNodes.length ? i + 1 : 0;
+    const prevID = i - 1 > 0 ? i - 1 : postNodes.length - 1;
+    const currNode = postNodes[i];
+    const nextNode = postNodes[nextID];
+    const prevNode = postNodes[prevID];
+    createNodeField({
+      node: currNode,
+      name: "nextSlug",
+      value: nextNode.fields.slug
+    });
+    createNodeField({
+      node: currNode,
+      name: "nextTitle",
+      value: nextNode.elements.title.value
+    });
+    createNodeField({
+      node: currNode,
+      name: "nextCover",
+      value: nextNode.elements.teaser.value[0].url
+    });
+    createNodeField({
+      node: currNode,
+      name: "nextExcerpt",
+      value: nextNode.elements.metadata__description.value
+    });
+
+    createNodeField({
+      node: currNode,
+      name: "prevSlug",
+      value: prevNode.fields.slug
+    });
+    createNodeField({
+      node: currNode,
+      name: "prevTitle",
+      value: prevNode.elements.title.value
+    });
+    createNodeField({
+      node: currNode,
+      name: "prevCover",
+      value: prevNode.elements.teaser.value[0].url
+    });
+    createNodeField({
+      node: currNode,
+      name: "prevExcerpt",
+      value: prevNode.elements.metadata__description.value
+    });
+  }
+}
 
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
   if (node.internal.type.match(/KenticoCloudItem/)) {
@@ -31,7 +97,23 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         name: `category`,
         value: node.elements.categories.value[0].name
       })
+
+      createNodeField({
+        node,
+        name: `date`,
+        value: node.elements.publish_date.datetime
+      })
+      postNodes.push(node);
     }
+  }
+};
+
+
+exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
+  const { name } = type;
+  const { createNodeField } = actions;
+  if (name === `${kcItemTypeIdentifier}${articleTypeIdentifier}`) {
+    addSiblingNodes(createNodeField);
   }
 };
 

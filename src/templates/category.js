@@ -125,7 +125,7 @@ export const query = graphql`
       }
     },
     articles: allKenticoCloudItemArticle (
-            sort: { fields: [elements___publish_date___value], order: DESC }
+            sort: { fields: [fields___date], order: DESC }
             filter: { fields: { category: { in: [$category] } } }
         ) {
       edges {
@@ -134,6 +134,7 @@ export const query = graphql`
             slug
             tags
             category
+            date
           }
           elements {
             metadata__description {
@@ -146,9 +147,6 @@ export const query = graphql`
               value {
                 url
               }
-            }
-            publish_date {
-              value
             }
             
           }

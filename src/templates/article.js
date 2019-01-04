@@ -28,13 +28,6 @@ function parseArticle(article, slug) {
   return result;
 }
 
-const formatReadNext = value => ({
-  path: `/articles/${value.fields.slug}`,
-  title: value.elements.title.value,
-  cover: value.elements.teaser.value[0].url,
-  excerpt: value.elements.metadata__description.value
-});
-
 class ArticleTemplate extends React.Component {
   state = {
     menuOpen: false
@@ -63,18 +56,24 @@ class ArticleTemplate extends React.Component {
   };
 
   render() {
-    const { data } = this.props;
-    const { slug, next, prev } = this.props.pageContext;
-    const nextSlug = next.split("/")[2];
-    const prevSlug = prev.split("/")[2];
+    const { slug } = this.props.pageContext;
     const articleNode = this.props.data.article;
     const article = parseArticle(articleNode, slug);
     const className = article.article_class ? article.article_class : "article";
     const config = this.props.data.config.elements;
     const authorData = this.props.data.author.elements;
-    const getNextData = () => (nextSlug ? formatReadNext(data.next) : null);
-    const getPrevData = () => (prevSlug ? formatReadNext(data.prev) : null);
-    const articleAuthor = article.elements.authors.name;
+    const nextData = {
+      path: `/articles/${article.fields.nextSlug}`,
+      title: article.fields.nextTitle,
+      cover: article.fields.nextCover,
+      excerpt: article.fields.nextExcerpt
+    };
+    const prevData = {
+      path: `/articles/${article.fields.prevSlug}`,
+      title: article.fields.prevTitle,
+      cover: article.fields.prevCover,
+      excerpt: article.fields.prevExcerpt
+    };
 
     return (
       <Drawer className="article-template" isOpen={this.state.menuOpen}>
@@ -96,7 +95,7 @@ class ArticleTemplate extends React.Component {
               <ArticleHeader>
                 <h1 className="article-title">{article.elements.title.value}</h1>
                 <section className="article-meta">
-                  <ArticleDate prefix="Published " date={article.elements.publish_date.value} />
+                  <ArticleDate prefix="Published " date={article.fields.date} />
                   <ArticleCategory prefix=" in " category={article.fields.category} />
                   <ArticleTags prefix=" on " tags={article.fields.tags} />
                 </section>
@@ -113,10 +112,10 @@ class ArticleTemplate extends React.Component {
               </ArticleFooter>
             </ArticleFormatting>
           </MainContent>
-          {<ReadNext next={getNextData()} prev={getPrevData()} />}
+          {<ReadNext next={nextData} prev={prevData} />}
           
           <Footer
-            copyrightYear={article.elements.publish_date.value}
+            copyrightYear={article.fields.date}
             author={authorData.name.value}
           />
         </Layout>
@@ -126,7 +125,7 @@ class ArticleTemplate extends React.Component {
 }
   
   export const query = graphql`
-  query articleQuery($slug: String!, $nextSlug: String, $prevSlug: String, $articleAuthor: String) {
+  query articleQuery($slug: String!, $articleAuthor: String) {
     config: kenticoCloudItemHome{
       elements {
         title {
@@ -176,6 +175,16 @@ class ArticleTemplate extends React.Component {
         slug
         tags
         category
+        date
+        nextSlug
+        prevSlug
+        nextTitle
+        nextCover
+        nextExcerpt
+        prevSlug
+        prevTitle
+        prevCover
+        prevExcerpt
       }
       elements {
         title {
@@ -190,53 +199,13 @@ class ArticleTemplate extends React.Component {
           }
         }
         authors {
-          value
-        }
-        
-        metadata__description {
-          value
-        }
-        publish_date {
-          value
-        }
-      }
-    }
-    # prev Article data
-    prev: kenticoCloudItemArticle(fields: { slug: { eq: $prevSlug } }) {
-      elements {
-        metadata__description {
-          value
-        }
-        title {
-          value
-        }
-        teaser {
-          value {
-            url
+          system {
+            name
           }
-        }
-      }
-      fields {
-        slug
-      }
-    }
-    # next Article data
-    next: kenticoCloudItemArticle(fields: { slug: { eq: $nextSlug } }) {
-      elements {
+        }     
         metadata__description {
           value
         }
-        title {
-          value
-        }
-        teaser {
-          value {
-            url
-          }
-        }
-      }
-      fields {
-        slug
       }
     }
   }

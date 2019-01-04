@@ -15,7 +15,7 @@ export const query = graphql`
 query authorQuery($slug: String!) {
   kenticoCloudItemAuthor(fields: { slug: { eq: $slug } })  {
     system {
-      last_modified   
+      lastModified   
     }
   }
 }

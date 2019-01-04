@@ -14,9 +14,10 @@ module.exports = {
     {
       resolve: `gatsby-source-kentico-cloud`,
       options: {
-        kcDeliveryEndpointUrl: "https://deliver.kenticocloud.com",
-        kcProjectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
-        kcLanguageCodenames: [
+        deliveryClientConfig: {
+          projectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
+        },
+        languageCodenames: [
           "default"
         ],
         queryConfig: {
@@ -47,12 +48,12 @@ module.exports = {
             serialize: ({ query: { kenticoCloudItemHome, allKenticoCloudItemArticle } }) => {
               return allKenticoCloudItemArticle.edges.map(edge => {
                 return Object.assign({}, edge.node, {
-                  title: edge.node.elements.title.value,
-                  description: edge.node.elements.metadata__description.value,
+                  title: edge.node.elements.title,
+                  description: edge.node.elements.metadata__description,
                   categories: edge.node.fields.tags,
-                  date: edge.node.elements.publish_date.value,
-                  url: kenticoCloudItemHome.elements.base_url.value + "articles/" + edge.node.fields.slug,
-                  guid: kenticoCloudItemHome.elements.base_url.value + "articles/" +  edge.node.fields.slug
+                  date: edge.node.fields.date,
+                  url: kenticoCloudItemHome.elements.base_url + "articles/" + edge.node.fields.slug,
+                  guid: kenticoCloudItemHome.elements.base_url + "articles/" +  edge.node.fields.slug
                 })
               })
             },
@@ -60,15 +61,12 @@ module.exports = {
               {
                 allKenticoCloudItemArticle (
                   limit: 10,
-                  sort: { fields: [elements___publish_date___value], order: DESC }
+                  sort: { fields: [fields___date], order: DESC }
                 ) {
                   edges {
                     node {
                       elements {
                         metadata__description {
-                          value
-                        }
-                        publish_date {
                           value
                         }
                         body {
@@ -81,6 +79,7 @@ module.exports = {
                       fields { 
                         slug
                         tags
+                        date
                       }
                     }
                   }
