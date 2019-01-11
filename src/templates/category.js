@@ -7,7 +7,6 @@ import Drawer from "../components/Drawer/Drawer";
 import Layout from "../layouts/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
-import MenuButton from "../components/MenuButton/MenuButton";
 import Navigation from "../components/Navigation/Navigation";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
@@ -65,10 +64,6 @@ class CategoryTemplate extends React.Component {
           <MainHeader className="category-head">
                 <MainNav overlay={config.splash_image.value[0].url}>
                   <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
-                  <MenuButton
-                    navigation={true}
-                    onClick={this.handleOnClick}
-                  />
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
