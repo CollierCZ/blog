@@ -1,7 +1,4 @@
-const {
-  createLinkedPages,
-  createPaginationPages
-} = require("gatsby-pagination");
+const createPaginatedPages = require("gatsby-paginate");
 const _ = require("lodash");
 const moment = require("moment");
 const path = require(`path`);
@@ -177,24 +174,10 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
         }
 
-        createPaginationPages({
-          createPage,
+        createPaginatedPages({
+          createPage: createPage,
           edges: result.data.allKenticoCloudItemArticle.edges,
-          component: indexPage,
-          limit: paginationLimit
-        });
-
-        createLinkedPages({
-          createPage,
-          edges: result.data.allKenticoCloudItemArticle.edges,
-          component: articlePage,
-          edgeParser: edge => ({
-            path: `/articles/${edge.node.fields.slug}/`,
-            context: {
-              slug: edge.node.fields.slug
-            }
-          }),
-          circular: true
+          pageTemplate: indexPage
         });
 
         const tagSet = new Set();
@@ -203,6 +186,14 @@ exports.createPages = ({ graphql, actions }) => {
         const categoryMap = new Map();
 
         result.data.allKenticoCloudItemArticle.edges.forEach(({ node }) => {
+          createPage({
+            path: `/articles/${node.fields.slug}/`,
+            component: articlePage,
+            context: {
+              slug: node.fields.slug
+            }
+          })
+
           if (node.fields.tags) {
             node.fields.tags.forEach(tag => {
               tagSet.add(tag);
@@ -221,32 +212,26 @@ exports.createPages = ({ graphql, actions }) => {
           }
         });
 
-        const tagFormatter = tag => route =>
-          `/tags/${_.kebabCase(tag)}/${route !== 1 ? route : ""}`;
         const tagList = Array.from(tagSet);
         tagList.forEach(tag => {
-          createPaginationPages({
-            createPage,
+          createPaginatedPages({
+            createPage: createPage,
             edges: tagMap.get(tag),
-            component: tagPage,
-            pathFormatter: tagFormatter(tag),
-            limit: paginationLimit,
+            pageTemplate: tagPage,
+            pathPrefix: `tags/${tag}`,
             context: {
               tag
             }
           });
         });
-
-        const categoryFormatter = category => route =>
-          `/category/${_.kebabCase(category)}/${route !== 1 ? route : ""}`;
+          
         const categoryList = Array.from(categorySet);
         categoryList.forEach(category => {
-          createPaginationPages({
-            createPage,
-            edges: categoryMap.get(category),
-            component: categoryPage,
-            pathFormatter: categoryFormatter(category),
-            limit: paginationLimit,
+          createPaginatedPages({
+            createPage: createPage,
+            edges:  categoryMap.get(category),
+            pageTemplate: categoryPage,
+            pathPrefix: `category/${category}`,
             context: {
               category
             }
