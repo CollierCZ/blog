@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import ArticleListing from "../components/ArticleListing/ArticleListing";
 import BlogLogo from "../components/BlogLogo/BlogLogo"
 import Drawer from "../components/Drawer/Drawer";
+import Footer from "../components/Footer/Footer";
 import Layout from "../layouts/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
@@ -85,6 +86,7 @@ class CategoryTemplate extends React.Component {
             <ArticleListing articleEdges={nodes} />
             </PaginatedContent>
           </div>
+          <Footer author="Aaron Collier" />
         </Layout>
       </Drawer>
     )

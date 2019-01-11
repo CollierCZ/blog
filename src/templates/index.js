@@ -94,7 +94,7 @@ class IndexTemplate extends React.Component {
             <ArticleListing articleEdges={nodes} />
             </PaginatedContent>
           </div>
-          <Footer copyrightYear="2018" author="Aaron Collier" />
+          <Footer author="Aaron Collier" />
         </Layout>
       </Drawer>
     )

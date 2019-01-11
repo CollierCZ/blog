@@ -115,7 +115,6 @@ class ArticleTemplate extends React.Component {
           {<ReadNext next={nextData} prev={prevData} />}
           
           <Footer
-            copyrightYear={article.fields.date}
             author={authorData.name.value}
           />
         </Layout>
