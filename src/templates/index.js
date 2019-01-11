@@ -73,7 +73,7 @@ class IndexTemplate extends React.Component {
                       urls={socialUrls}
                       color="currentColor"
                     />
-                    <SubscribeButton url={config.base_url.value + "rss.xml"} />
+                    <SubscribeButton url={config.base_url.value + "/rss.xml"} />
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
