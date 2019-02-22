@@ -219,7 +219,7 @@ exports.createPages = ({ graphql, actions }) => {
             createPage: createPage,
             edges: tagMap.get(tag),
             pageTemplate: tagPage,
-            pathPrefix: `tags/${tag}`,
+            pathPrefix: `tags/${_.kebabCase(tag.trim())}`,
             context: {
               tag
             }
@@ -232,7 +232,7 @@ exports.createPages = ({ graphql, actions }) => {
             createPage: createPage,
             edges:  categoryMap.get(category),
             pageTemplate: categoryPage,
-            pathPrefix: `category/${category}`,
+            pathPrefix: `category/${_.kebabCase(category.trim())}`,
             context: {
               category
             }
