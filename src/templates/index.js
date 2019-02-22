@@ -20,31 +20,6 @@ import "../layouts/index.css";
 
 
 class IndexTemplate extends React.Component {
-  state = {
-    menuOpen: false
-  };
-
-  handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  };
-
-  handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
-
-  openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
-
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
   render() {
     const {
       page,
@@ -59,11 +34,10 @@ class IndexTemplate extends React.Component {
     const socialUrls = config.socialmedia.value.split(",");
 
   return (
-    <Drawer className="home-template" isOpen={this.state.menuOpen}>
+    <Drawer className="home-template">
         <Helmet title={config.title.value}><html lang="en-US"></html><link rel="icon" type="image/png" href={config.blog_logo.value[0].url}></link></Helmet>
         <SEO articleEdges={nodes} seoConfig={config} />
 
-        {/* The blog navigation links */}
         <Navigation config={config} onClose={this.handleOnClose} />
         <Layout>
           <MainHeader cover={config.splash_image.value[0].url}>
