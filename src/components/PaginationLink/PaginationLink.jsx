@@ -9,6 +9,13 @@ class PaginationLink extends React.Component {
       if (this.props.className) {
         className = `${className} ${this.props.className}`;
       }
+      var url
+      if (this.props.url === 1) {
+        url = ""
+      }
+      else {
+        url = this.props.url.toString()
+      }
 
       // Clone this.props and then delete Component specific
       // props so we can spread the rest into the img.
@@ -19,7 +26,7 @@ class PaginationLink extends React.Component {
       delete rest.url;
 
       return (
-        <Link to={this.props.url} {...rest} className={className}>
+        <Link to={"/"+url} {...rest} className={className}>
           {this.props.text}
         </Link>
       );

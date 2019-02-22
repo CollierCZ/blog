@@ -23,7 +23,8 @@ const getArticleList = (articleEdges) =>
 
 class ArticleListing extends React.Component {
   render() {
-    const ArticleList = getArticleList(this.props.articleEdges);
+    const { count, index } = this.props;
+    const ArticleList = getArticleList(this.props.articleEdges.slice((index-1)*count,(index-1)+count));
 
     return (
       <div className="article-listing">

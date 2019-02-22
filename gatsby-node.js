@@ -177,6 +177,7 @@ exports.createPages = ({ graphql, actions }) => {
         createPaginatedPages({
           createPage: createPage,
           edges: result.data.allKenticoCloudItemArticle.edges,
+          pageLength: paginationLimit,
           pageTemplate: indexPage
         });
 

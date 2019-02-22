@@ -10,6 +10,7 @@ class PaginatedContent extends React.Component {
     if (page > 1) {
       className = `${className} paged`;
     }
+
     return (
       <MainContent className={className}>
         {/* Previous/next page links - only displayed on page 2+ */}
