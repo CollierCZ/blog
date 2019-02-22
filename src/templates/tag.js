@@ -17,31 +17,6 @@ import "../layouts/index.css"
 
 
 class TagTemplate extends React.Component {
-  state = {
-    menuOpen: false
-  };
-
-  handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  };
-
-  handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
-
-  openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
-
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
   render() {
     const {
       tag,
@@ -52,19 +27,12 @@ class TagTemplate extends React.Component {
       prev,
       next
     } = this.props.pageContext;
-    console.log({
-      page,
-      pages,
-      total,
-      limit,
-      prev,
-      next
-    });
+    console.log(this.props.pageContext);
     const nodes = this.props.data.articles.edges;
     const config = this.props.data.config.elements;
 
   return (
-    <Drawer isOpen={this.state.menuOpen}>
+    <Drawer>
       <Helmet title={`Articles tagged as "${tag}" | ${config.siteTitle}`} />
         <SEO articleEdges={nodes} seoConfig={config} />
 
@@ -102,7 +70,7 @@ class TagTemplate extends React.Component {
 }
 
 export const query = graphql`
-  query tagQuery ($tag: String) {
+  query tagQuery {
     config: kenticoCloudItemHome{
       elements {
         title {
@@ -131,7 +99,6 @@ export const query = graphql`
     },
     articles: allKenticoCloudItemArticle (
             sort: { fields: [fields___date], order: DESC }
-            filter: { fields: { tags: { in: [$tag] } } }
         ) {
       edges {
         node {
