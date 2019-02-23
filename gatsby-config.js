@@ -51,8 +51,8 @@ module.exports = {
                   description: edge.node.elements.metadata__description.value,
                   categories: edge.node.fields.tags,
                   date: edge.node.fields.date,
-                  url: kenticoCloudItemHome.elements.base_url.value + "articles/" + edge.node.fields.slug,
-                  guid: kenticoCloudItemHome.elements.base_url.value + "articles/" +  edge.node.fields.slug
+                  url: kenticoCloudItemHome.elements.base_url.value + "/articles/" + edge.node.fields.slug,
+                  guid: kenticoCloudItemHome.elements.base_url.value + "/articles/" +  edge.node.fields.slug
                 })
               })
             },
