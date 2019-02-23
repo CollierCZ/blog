@@ -7,7 +7,6 @@ import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
 import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
 import MainContent from "../components/MainContent/MainContent";
 import ArticleCategory from "../components/ArticleCategory/ArticleCategory";
 import ArticleDate from "../components/ArticleDate/ArticleDate";
@@ -55,8 +54,6 @@ class ArticleTemplate extends React.Component {
           <title>{`${article.elements.title.value} | ${config.title.value}`}</title>
         </Helmet>
         <SEO articlePath={slug} articleNode={articleNode} />
-
-        <Navigation config={config} onClose={this.handleOnClose} />
 
         <Layout>
           <MainHeader className="article-header" cover={article.elements.teaser.value[0].url}>

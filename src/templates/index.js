@@ -8,7 +8,6 @@ import Footer from "../components/Footer/Footer";
 import Layout from "../layouts/SiteWrapper/SiteWrapper"
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
-import Navigation from "../components/Navigation/Navigation";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
@@ -45,8 +44,6 @@ class IndexTemplate extends React.Component {
     <Drawer className="home-template">
         <Helmet title={config.title.value}><html lang="en-US"></html><link rel="icon" type="image/png" href={config.blog_logo.value[0].url}></link></Helmet>
         <SEO />
-
-        <Navigation config={config} />
         <Layout>
           <MainHeader cover={config.splash_image.value[0].url}>
                 <MainNav overlay={config.splash_image.value[0].url}>
