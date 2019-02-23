@@ -1,20 +1,35 @@
-import React, { Component } from "react";
-import { Link } from "gatsby";
+import React from "react";
+import { Link, graphql, StaticQuery } from "gatsby";
 import "./BlogLogo.css";
 
-class BlogLogo extends Component {
-  render() {
-    const { logo, url, title } = this.props;
-    if (logo) {
+const BlogLogo = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        kenticoCloudItemHome{
+          elements {
+            title {
+              value
+            }
+            blog_logo {
+              assets {
+                url
+              }
+            }
+          }
+        }
+      }
+    `}
+    render = {data => {
       return (
-        <Link className="blog-logo" to={url || "/"}>
+        <Link className="blog-logo" to={"/"}>
           {/* style={{ boxShadow: "none" }}> */}
-          <img src={logo} alt={title} />
+          <img src={data.kenticoCloudItemHome.elements.blog_logo.assets[0].url} alt={data.kenticoCloudItemHome.elements.title.value} />
         </Link>
-      );
+      )
     }
-    return null;
   }
-}
+  />
+)
 
 export default BlogLogo;

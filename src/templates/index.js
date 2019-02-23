@@ -45,22 +45,22 @@ class IndexTemplate extends React.Component {
         <Helmet title={config.title.value}><html lang="en-US"></html><link rel="icon" type="image/png" href={config.blog_logo.value[0].url}></link></Helmet>
         <SEO />
         <Layout>
-          <MainHeader cover={config.splash_image.value[0].url}>
-                <MainNav overlay={config.splash_image.value[0].url}>
-                  <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
-                    <SocialMediaIcons
-                      urls={socialUrls}
-                      color="currentColor"
-                    />
-                    <SubscribeButton url={config.base_url.value + "/rss.xml"} />
-                </MainNav>
-                <div className="vertical">
-                  <div className="main-header-content inner">
-                    <PageTitle text={config.title.value} />
-                    <PageDescription text={config.metadata__description.value} />
-                  </div>
-                </div>
-              </MainHeader>
+          <MainHeader>
+            <MainNav>
+              <BlogLogo />
+              <SocialMediaIcons
+                urls={socialUrls}
+                color="currentColor"
+              />
+              <SubscribeButton />
+            </MainNav>
+            <div className="vertical">
+              <div className="main-header-content inner">
+                <PageTitle />
+                <PageDescription />
+              </div>
+            </div>
+          </MainHeader>
           <div>
           <PaginatedContent
                 page={index}
@@ -83,19 +83,6 @@ export const query = graphql`
     config: kenticoCloudItemHome{
       elements {
         title {
-          value
-        }
-        splash_image {
-          value {
-            url
-          }
-        }
-        blog_logo {
-          value {
-            url
-          }
-        }
-        metadata__description {
           value
         }
         socialmedia {

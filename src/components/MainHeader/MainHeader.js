@@ -1,3 +1,4 @@
+import { graphql, StaticQuery } from "gatsby";
 import React from "react";
 import classNames from "classnames";
 import "./MainHeader.css";
@@ -6,22 +7,31 @@ class MainHeader extends React.Component {
   render() {
     const { children, cover } = this.props;
 
-    const classes = classNames("main-header", this.props.className, {
-      "no-cover": !cover
-    });
-
-    const getStyle = () => {
-      if (cover) {
-        return { backgroundImage: `url("${cover}")` };
-      }
-      return null;
-    };
+    const classes = classNames("main-header", this.props.className);
 
     return (
-      <header className={classes} style={getStyle()}>
-        {children}
-      </header>
-    );
+    <StaticQuery
+      query={graphql`
+        query {
+          kenticoCloudItemHome{
+            elements {
+              splash_image {
+                assets {
+                  url
+                }
+              }
+            }
+          }
+        }
+      `}
+      render = {data => {
+        return (
+        <header className={classes} style={{backgroundImage: `url("`+(cover ? cover : data.kenticoCloudItemHome.elements.splash_image.assets[0].url)+`")`}}>
+          {children}
+        </header>
+        )
+      }}
+    />)
   }
 }
 
