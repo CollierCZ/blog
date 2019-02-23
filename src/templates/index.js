@@ -46,7 +46,7 @@ class IndexTemplate extends React.Component {
         <Helmet title={config.title.value}><html lang="en-US"></html><link rel="icon" type="image/png" href={config.blog_logo.value[0].url}></link></Helmet>
         <SEO articleEdges={nodes} seoConfig={config} />
 
-        <Navigation config={config} onClose={this.handleOnClose} />
+        <Navigation config={config} />
         <Layout>
           <MainHeader cover={config.splash_image.value[0].url}>
                 <MainNav overlay={config.splash_image.value[0].url}>
