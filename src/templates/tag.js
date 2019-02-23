@@ -41,7 +41,7 @@ class TagTemplate extends React.Component {
   return (
     <Drawer>
       <Helmet title={`Articles tagged as "${tag}" | ${config.siteTitle}`} />
-        <SEO articleEdges={nodes} seoConfig={config} />
+        <SEO />
 
         <Navigation config={config} onClose={this.handleOnClose} />
         <Layout>

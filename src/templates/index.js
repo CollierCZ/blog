@@ -44,7 +44,7 @@ class IndexTemplate extends React.Component {
   return (
     <Drawer className="home-template">
         <Helmet title={config.title.value}><html lang="en-US"></html><link rel="icon" type="image/png" href={config.blog_logo.value[0].url}></link></Helmet>
-        <SEO articleEdges={nodes} seoConfig={config} />
+        <SEO />
 
         <Navigation config={config} />
         <Layout>

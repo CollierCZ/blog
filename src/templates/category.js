@@ -41,7 +41,7 @@ class CategoryTemplate extends React.Component {
   return (
     <Drawer>
       <Helmet title={`Articles in "${category}" | ${config.siteTitle}`} />
-        <SEO articleEdges={nodes} seoConfig={config} />
+        <SEO />
 
         <Navigation config={config} onClose={this.handleOnClose} />
         <Layout>

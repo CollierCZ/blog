@@ -1,3 +1,4 @@
+import { graphql, StaticQuery } from "gatsby"
 import React, { Component } from "react";
 import Helmet from "react-helmet";
 import urljoin from "url-join";
@@ -5,35 +6,56 @@ import urljoin from "url-join";
 
 
 class SEO extends Component {
-  render() {
-    const config = this.props.seoConfig;
-    const { articleNode, articlePath, articleSEO } = this.props;
-    let title;
-    let description;
-    let image;
-    let articleURL;
-    if (articleSEO) {
-      title = articleNode.elements.title.value;
-      description = articleNode.elements.metadata__description.value;
-      image = articleNode.elements.teaser.value[0].url;
-      articleURL = urljoin(config.base_url.value, "/articles", articlePath, "/");
-    } else {
-      title = config.title.value;
-      description = config.metadata__description.value;
-      image = config.blog_logo.value[0].url;
+  render () {  
+  const { articleNode, articlePath } = this.props;
+  return (
+  <StaticQuery
+  query={graphql`
+    query {
+      kenticoCloudItemHome{
+        elements {
+          title {
+            value
+          }
+          splash_image {
+            value {
+              url
+            }
+          }
+          blog_logo {
+            value {
+              url
+            }
+          }
+          metadata__description {
+            value
+          }
+          socialmedia {
+            value
+          }
+          base_url {
+            value
+          }
+        }
+      }
     }
-
-    const blogURL = config.base_url.value;
+  `}
+  render = {data => {
+    const title = articleNode ? articleNode.elements.title.value : data.kenticoCloudItemHome.elements.title.value;
+    const description = articleNode ? articleNode.elements.metadata__description.value : data.kenticoCloudItemHome.elements.metadata__description.value;
+    const image = articleNode ? articleNode.elements.teaser.value[0].url : data.kenticoCloudItemHome.elements.blog_logo.value[0].url;
+    const blogURL = data.kenticoCloudItemHome.elements.base_url.value;
+    const articleURL = articleNode ? urljoin(blogURL, "/articles", articlePath, "/") : null;
     const schemaOrgJSONLD = [
       {
         "@context": "http://schema.org",
         "@type": "WebSite",
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ""
+        alternateName: ""
       }
     ];
-    if (articleSEO) {
+    if (articleNode) {
       schemaOrgJSONLD.push(
         {
           "@context": "http://schema.org",
@@ -55,7 +77,7 @@ class SEO extends Component {
           "@type": "BlogPosting",
           url: blogURL,
           name: title,
-          alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
+          alternateName: "",
           headline: title,
           image: {
             "@type": "ImageObject",
@@ -77,8 +99,8 @@ class SEO extends Component {
         </script>
 
         {/* OpenGraph tags */}
-        <meta property="og:url" content={articleSEO ? articleURL : blogURL} />
-        {articleSEO ? <meta property="og:type" content="article" /> : null}
+        <meta property="og:url" content={articleURL ? articleURL : blogURL} />
+        {articleURL ? <meta property="og:type" content="article" /> : null}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
@@ -103,6 +125,7 @@ class SEO extends Component {
       </Helmet>
     );
   }
+  } />)}
 }
 
 export default SEO;
