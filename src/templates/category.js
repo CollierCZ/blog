@@ -17,46 +17,29 @@ import "../layouts/index.css"
 
 
 class CategoryTemplate extends React.Component {
-  state = {
-    menuOpen: false
-  };
-
-  handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  };
-
-  handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
-
-  openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
-
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
   render() {
     const {
-      category,
-      page,
-      pages,
-      total,
-      limit,
-      prev,
-      next
+      category,      
+      first,
+      group,
+      index,
+      last,
+      pageCount
     } = this.props.pageContext;
+    var next = 0
+    var prev = 0
+    if (!last) {
+      next = index + 1;
+    }
+    if (!first) {
+      prev = index - 1
+    }
+
     const nodes = this.props.data.articles.edges;
     const config = this.props.data.config.elements;
 
   return (
-    <Drawer isOpen={this.state.menuOpen}>
+    <Drawer>
       <Helmet title={`Articles in "${category}" | ${config.siteTitle}`} />
         <SEO articleEdges={nodes} seoConfig={config} />
 
@@ -70,20 +53,18 @@ class CategoryTemplate extends React.Component {
                   <div className="main-header-content inner">
                     <PageTitle text={category} />
                   <PageDescription
-                    text={category.description || `A ${total}-post collection`} />
+                    text={category.description || `Articles in the ${category} category`} />
                   </div>
                 </div>
               </MainHeader>
           <div>
           <PaginatedContent
-                page={page}
-                pages={pages}
-                total={total}
-                limit={limit}
-                prev={prev}
+                page={index}
+                pages={pageCount}
                 next={next}
+                prev={prev}
               >
-            <ArticleListing articleEdges={nodes} />
+            <ArticleListing articleEdges={nodes} index={index} count={group.length} />
             </PaginatedContent>
           </div>
           <Footer author="Aaron Collier" />
