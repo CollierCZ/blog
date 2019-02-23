@@ -19,15 +19,22 @@ import "../layouts/index.css"
 class TagTemplate extends React.Component {
   render() {
     const {
-      tag,
-      page,
-      pages,
-      total,
-      limit,
-      prev,
-      next
+      tag,      
+      first,
+      group,
+      index,
+      last,
+      pageCount
     } = this.props.pageContext;
-    console.log(this.props.pageContext);
+    var next = 0
+    var prev = 0
+    if (!last) {
+      next = index + 1;
+    }
+    if (!first) {
+      prev = index - 1
+    }
+
     const nodes = this.props.data.articles.edges;
     const config = this.props.data.config.elements;
 
@@ -46,20 +53,18 @@ class TagTemplate extends React.Component {
                   <div className="main-header-content inner">
                     <PageTitle text={tag} />
                   <PageDescription
-                    text={tag.description || `A ${total}-post collection`} />
+                    text={tag.description || `Articles tagged with ${tag}`} />
                   </div>
                 </div>
               </MainHeader>
           <div>
           <PaginatedContent
-                page={page}
-                pages={pages}
-                total={total}
-                limit={limit}
-                prev={prev}
+                page={index}
+                pages={pageCount}
                 next={next}
+                prev={prev}
               >
-            <ArticleListing articleEdges={nodes} />
+            <ArticleListing articleEdges={nodes} index={index} count={group.length} />
             </PaginatedContent>
           </div>
           <Footer author="Aaron Collier" />
