@@ -70,7 +70,7 @@ class TagTemplate extends React.Component {
 }
 
 export const query = graphql`
-  query tagQuery ($tag: String) {
+  query ($tag: String!) {
     config: kenticoCloudItemHome{
       elements {
         title {

@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$pagePrefix\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"group":[{"fields":{"slug":"brno","tags":["brno"," czech"," city"],"category":"Education"}}],"pathPrefix":"tags/czech","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"tag":" czech"}}}
