@@ -70,7 +70,7 @@ class TagTemplate extends React.Component {
 }
 
 export const query = graphql`
-  query tagQuery {
+  query tagQuery ($tag: String) {
     config: kenticoCloudItemHome{
       elements {
         title {
@@ -99,6 +99,7 @@ export const query = graphql`
     },
     articles: allKenticoCloudItemArticle (
             sort: { fields: [fields___date], order: DESC }
+            filter: { fields: { tags: { in: [$tag] } } }
         ) {
       edges {
         node {

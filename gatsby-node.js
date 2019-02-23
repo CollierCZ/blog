@@ -213,7 +213,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         });
 
-        const tagList = Array.from(tagSet);/*
+        const tagList = Array.from(tagSet);
         tagList.forEach(tag => {
           createPaginatedPages({
             createPage: createPage,
@@ -224,9 +224,9 @@ exports.createPages = ({ graphql, actions }) => {
               tag
             }
           });
-        });*/
+        });
           
-        const categoryList = Array.from(categorySet);
+        const categoryList = Array.from(categorySet); 
         categoryList.forEach(category => {
           createPaginatedPages({
             createPage: createPage,
