@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Helmet from "react-helmet";
 import ArticleListing from "../components/ArticleListing/ArticleListing";
 import BlogLogo from "../components/BlogLogo/BlogLogo"
 import Drawer from "../components/Drawer/Drawer";
@@ -39,7 +38,6 @@ class CategoryTemplate extends React.Component {
 
   return (
     <Drawer>
-      <Helmet title={`Articles in "${category}" | ${config.siteTitle}`} />
         <SEO />
         <Layout>
           <MainHeader className="category-head">

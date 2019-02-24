@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Helmet from "react-helmet";
 import ArticleListing from "../components/ArticleListing/ArticleListing";
 import BlogLogo from "../components/BlogLogo/BlogLogo"
 import Drawer from "../components/Drawer/Drawer";
@@ -39,7 +38,6 @@ class TagTemplate extends React.Component {
 
   return (
     <Drawer>
-      <Helmet title={`Articles tagged as "${tag}" | ${config.siteTitle}`} />
         <SEO />
         <Layout>
           <MainHeader className="tag-head">

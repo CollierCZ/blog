@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../layouts/SiteWrapper/SiteWrapper";
-import Helmet from "react-helmet";
 import SEO from "../components/SEO/SEO";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
@@ -50,9 +49,6 @@ class ArticleTemplate extends React.Component {
 
     return (
       <Drawer className="article-template">
-        <Helmet>
-          <title>{`${article.elements.title.value} | ${config.title.value}`}</title>
-        </Helmet>
         <SEO articlePath={slug} articleNode={articleNode} />
 
         <Layout>

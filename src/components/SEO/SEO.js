@@ -18,12 +18,12 @@ class SEO extends Component {
             value
           }
           splash_image {
-            value {
+            assets {
               url
             }
           }
           blog_logo {
-            value {
+            assets {
               url
             }
           }
@@ -43,8 +43,9 @@ class SEO extends Component {
   render = {data => {
     const title = articleNode ? articleNode.elements.title.value : data.kenticoCloudItemHome.elements.title.value;
     const description = articleNode ? articleNode.elements.metadata__description.value : data.kenticoCloudItemHome.elements.metadata__description.value;
-    const image = articleNode ? articleNode.elements.teaser.value[0].url : data.kenticoCloudItemHome.elements.blog_logo.value[0].url;
+    const image = articleNode ? articleNode.elements.teaser.value[0].url : data.kenticoCloudItemHome.elements.splash_image.assets[0].url;
     const blogURL = data.kenticoCloudItemHome.elements.base_url.value;
+    const logo = data.kenticoCloudItemHome.elements.blog_logo.assets[0].url;
     const articleURL = articleNode ? urljoin(blogURL, "/articles", articlePath, "/") : null;
     const schemaOrgJSONLD = [
       {
@@ -88,7 +89,12 @@ class SEO extends Component {
       );
     }
     return (
-      <Helmet>
+      <Helmet
+        title={articleNode ? title + " | " + data.kenticoCloudItemHome.elements.title.value : title}
+        link={[
+          { rel: 'shortcut icon', type: 'image/png', href: `${logo}` }
+      ]}
+      >
         {/* General tags */}
         <meta name="description" content={description} />
         <meta name="image" content={image} />

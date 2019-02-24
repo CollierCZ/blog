@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Helmet from "react-helmet";
 import ArticleListing from "../components/ArticleListing/ArticleListing"
 import BlogLogo from "../components/BlogLogo/BlogLogo"
 import Drawer from "../components/Drawer/Drawer"
@@ -42,7 +41,6 @@ class IndexTemplate extends React.Component {
 
   return (
     <Drawer className="home-template">
-        <Helmet title={config.title.value}><html lang="en-US"></html><link rel="icon" type="image/png" href={config.blog_logo.value[0].url}></link></Helmet>
         <SEO />
         <Layout>
           <MainHeader>
