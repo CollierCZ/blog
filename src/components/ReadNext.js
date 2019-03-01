@@ -7,7 +7,6 @@ const ReadNextStory = props => {
   const { article, text } = props;
   if (article) {
     const { path, cover, title, excerpt } = article;
-    console.log(text)
     const classes = classNames("read-next-story", props.className);
     return (
       <Link className={classes} 
