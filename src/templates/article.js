@@ -1,22 +1,21 @@
-import React from "react";
 import { graphql } from "gatsby";
+import ArticleCategory from "../components/ArticleCategory";
+import ArticleDate from "../components/ArticleDate";
+import ArticleHeader from "../components/ArticleHeader";
+import ArticleFormatting from "../components/ArticleFormatting";
+import ArticleFooter from "../components/ArticleFooter";
+import ArticleTags from "../components/ArticleTags";
+import AuthorImage from "../components/AuthorImage";
+import AuthorInfo from "../components/AuthorInfo";
+import BlogLogo from "../components/BlogLogo";
+import { css } from '@emotion/core'
+import Footer from "../components/Footer";
 import Layout from "../layouts/SiteWrapper/SiteWrapper";
-import SEO from "../components/SEO/SEO";
-import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
-import BlogLogo from "../components/BlogLogo/BlogLogo";
-import Drawer from "../components/Drawer/Drawer";
-import MainContent from "../components/MainContent/MainContent";
-import ArticleCategory from "../components/ArticleCategory/ArticleCategory";
-import ArticleDate from "../components/ArticleDate/ArticleDate";
-import ArticleHeader from "../components/ArticleHeader/ArticleHeader";
-import ArticleFormatting from "../components/ArticleFormatting/ArticleFormatting";
-import ArticleFooter from "../components/ArticleFooter/ArticleFooter";
-import AuthorImage from "../components/AuthorImage/AuthorImage";
-import AuthorInfo from "../components/AuthorInfo/AuthorInfo";
-import ReadNext from "../components/ReadNext/ReadNext";
-import ArticleTags from "../components/ArticleTags/ArticleTags";
-import Footer from "../components/Footer/Footer";
+import MainHeader from "../components/MainHeader";
+import MainNav from "../components/MainNav";
+import React from "react";
+import ReadNext from "../components/ReadNext";
+import SEO from "../components/SEO";
 
 function parseArticle(article, slug) {
   const result = article;
@@ -48,44 +47,75 @@ class ArticleTemplate extends React.Component {
     };
 
     return (
-      <Drawer className="article-template">
+      <>
         <SEO articlePath={slug} articleNode={articleNode} />
 
         <Layout>
-          <MainHeader className="article-header" cover={article.elements.teaser.value[0].url}>
+          <MainHeader headStyle="big" cover={article.elements.teaser.value[0].url}>
             <MainNav>
               <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
             </MainNav>
           </MainHeader>
-          <MainContent>
-            <ArticleFormatting className={className}>
-              <ArticleHeader>
-                <h1 className="article-title">{article.elements.title.value}</h1>
-                <section className="article-meta">
-                  <ArticleDate prefix="Published " date={article.fields.date} />
-                  <ArticleCategory prefix=" in " category={article.fields.category} />
-                  <ArticleTags prefix=" on " tags={article.fields.tags} />
-                </section>
-              </ArticleHeader>
-
+          <ArticleFormatting className={className}>
+            <ArticleHeader>
+              <h1 className="article-title"
+                css={css`
+                font-size: 5rem;
+                margin-bottom: 0;
+                @media only screen and (max-width: 900px) {
+                  font-size: 4.5rem;
+                }
+                @media only screen and (max-width: 500px) {
+                  font-size: 2.8rem;
+                }
+                `}
+              >{article.elements.title.value}</h1>
               <section
-                className="article-content"
-                dangerouslySetInnerHTML={{ __html: articleNode.elements.body.value }}
-              />
+                css={css`
+                  display: block;
+                  margin: 0;
+                  font-family: "Open Sans", sans-serif;
+                  font-size: 1.5rem;
+                  line-height: 2.2rem;
+                  color: #4a4a4a;
+                  a {
+                    color: #4a4a4a;
+                    text-decoration: none;
+                  }
+                  
+                  a:hover {
+                    color: #4a4a4a;
+                    text-decoration: underline;
+                  }
+                  @media only screen and (max-width: 500px) {
+                    font-size: 1.3rem;
+                    margin-top: 1rem;
+                  }
+                `}
+              >
+                <ArticleDate prefix="Published " date={article.fields.date} />
+                <ArticleCategory prefix=" in " category={article.fields.category} />
+                <ArticleTags prefix=" on " tags={article.fields.tags} />
+              </section>
+            </ArticleHeader>
 
-              <ArticleFooter>
-                <AuthorImage author={authorData} />
-                <AuthorInfo prefix="/author" author={authorData} />
-              </ArticleFooter>
-            </ArticleFormatting>
-          </MainContent>
+            <section
+              className="article-content"
+              dangerouslySetInnerHTML={{ __html: articleNode.elements.body.value }}
+            />
+
+            <ArticleFooter>
+              <AuthorImage author={authorData} />
+              <AuthorInfo author={authorData} />
+            </ArticleFooter>
+          </ArticleFormatting>
           {<ReadNext next={nextData} prev={prevData} />}
           
           <Footer
             author={authorData.name.value}
           />
         </Layout>
-      </Drawer>
+      </>
     );
   }
 }

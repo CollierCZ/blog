@@ -1,16 +1,15 @@
-import React from "react";
-import { graphql } from "gatsby";
-import ArticleListing from "../components/ArticleListing/ArticleListing";
-import BlogLogo from "../components/BlogLogo/BlogLogo"
-import Drawer from "../components/Drawer/Drawer";
-import Footer from "../components/Footer/Footer";
-import Layout from "../layouts/SiteWrapper/SiteWrapper";
-import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
-import PageTitle from "../components/PageTitle/PageTitle";
-import PageDescription from "../components/PageDescription/PageDescription";
-import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
-import SEO from "../components/SEO/SEO";
+import React from "react"
+import { graphql } from "gatsby"
+import ArticleListing from "../components/ArticleListing"
+import BlogLogo from "../components/BlogLogo"
+import Footer from "../components/Footer"
+import Layout from "../layouts/SiteWrapper/SiteWrapper"
+import MainHeader from "../components/MainHeader"
+import MainNav from "../components/MainNav"
+import PageTitle from "../components/PageTitle"
+import PageDescription from "../components/PageDescription"
+import PaginatedContent from "../components/PaginatedContent"
+import SEO from "../components/SEO"
 import "../layouts/index.css"
 
 
@@ -37,21 +36,21 @@ class TagTemplate extends React.Component {
     const config = this.props.data.config.elements;
 
   return (
-    <Drawer>
+    <>
         <SEO />
         <Layout>
-          <MainHeader className="tag-head">
-                <MainNav overlay={config.splash_image.value[0].url}>
-                  <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
-                </MainNav>
-                <div className="vertical">
-                  <div className="main-header-content inner">
-                    <PageTitle text={tag} />
-                  <PageDescription
-                    text={tag.description || `Articles tagged with ${tag}`} />
-                  </div>
-                </div>
-              </MainHeader>
+          <MainHeader headStyle="small">
+            <MainNav>
+              <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
+            </MainNav>
+            <div className="vertical">
+              <div className="main-header-content inner">
+                <PageTitle text={tag} />
+              <PageDescription
+                text={tag.description || `Articles tagged with ${tag}`} />
+              </div>
+            </div>
+          </MainHeader>
           <div>
           <PaginatedContent
                 page={index}
@@ -64,7 +63,7 @@ class TagTemplate extends React.Component {
           </div>
           <Footer author="Aaron Collier" />
         </Layout>
-      </Drawer>
+      </>
     )
   }
 }

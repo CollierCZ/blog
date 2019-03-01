@@ -1,18 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ArticleListing from "../components/ArticleListing/ArticleListing"
-import BlogLogo from "../components/BlogLogo/BlogLogo"
-import Drawer from "../components/Drawer/Drawer"
-import Footer from "../components/Footer/Footer";
+import ArticleListing from "../components/ArticleListing"
+import BlogLogo from "../components/BlogLogo"
+import Footer from "../components/Footer";
 import Layout from "../layouts/SiteWrapper/SiteWrapper"
-import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
-import PageTitle from "../components/PageTitle/PageTitle";
-import PageDescription from "../components/PageDescription/PageDescription";
-import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
-import SEO from "../components/SEO/SEO";
-import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
-import SubscribeButton from "../components/SubscribeButton/SubscribeButton";
+import MainHeader from "../components/MainHeader";
+import MainNav from "../components/MainNav";
+import PageTitle from "../components/PageTitle";
+import PageDescription from "../components/PageDescription";
+import PaginatedContent from "../components/PaginatedContent";
+import SEO from "../components/SEO";
+import SocialMediaIcons from "../components/SocialMediaIcons";
+import SubscribeButton from "../components/SubscribeButton";
 import "../layouts/index.css";
 
 
@@ -40,10 +39,10 @@ class IndexTemplate extends React.Component {
     const socialUrls = config.socialmedia.value.split(",");
 
   return (
-    <Drawer className="home-template">
+    <>
         <SEO />
         <Layout>
-          <MainHeader>
+          <MainHeader headStyle="medium">
             <MainNav>
               <BlogLogo />
               <SocialMediaIcons
@@ -71,7 +70,7 @@ class IndexTemplate extends React.Component {
           </div>
           <Footer author="Aaron Collier" />
         </Layout>
-      </Drawer>
+      </>
     )
   }
 }
