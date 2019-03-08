@@ -15,6 +15,7 @@ import MainHeader from "../components/MainHeader";
 import MainNav from "../components/MainNav";
 import React from "react";
 import ReadNext from "../components/ReadNext";
+import RichText from "../components/RichText/RichText"
 import SEO from "../components/SEO";
 
 function parseArticle(article, slug) {
@@ -101,7 +102,12 @@ class ArticleTemplate extends React.Component {
 
             <section
               className="article-content"
-              dangerouslySetInnerHTML={{ __html: articleNode.elements.body.value }}
+            />
+            <RichText
+              content={article.elements.body.value}
+              images={article.elements.body.images}
+              links={article.elements.body.links}
+              linkedItems={article.elements.body.linked_items}
             />
 
             <ArticleFooter>
@@ -188,6 +194,22 @@ class ArticleTemplate extends React.Component {
         }
         body {
           value
+          links {
+            linkId
+            type
+            urlSlug
+          }
+          images {
+            imageId
+            url
+          }
+          linked_items {
+            id
+            system {
+              type
+              codename
+            }
+          }
         }
         teaser {
           value {
