@@ -60,7 +60,6 @@ class ArticleTemplate extends React.Component {
             <ArticleHeader>
               <h1 className="article-title"
                 css={css`
-                font-size: 5rem;
                 margin-bottom: 0;
                 @media only screen and (max-width: 900px) {
                   font-size: 4.5rem;
@@ -99,9 +98,6 @@ class ArticleTemplate extends React.Component {
               </section>
             </ArticleHeader>
 
-            <section
-              className="article-content"
-            />
             <RichText
               content={article.elements.body.value}
               images={article.elements.body.images}

@@ -120,7 +120,6 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {    
     const indexPage = path.resolve("src/templates/index.js");
     const articlePage = path.resolve("src/templates/article.js");
-    const aboutPage = path.resolve("src/templates/about.js");
     const tagPage = path.resolve("src/templates/tag.js");
     const categoryPage = path.resolve("src/templates/category.js");
     const authorPage = path.resolve("src/templates/author.js");
@@ -140,15 +139,6 @@ exports.createPages = ({ graphql, actions }) => {
           }
         },
         allKenticoCloudItemHome {
-          edges {
-            node {
-              fields {
-                slug
-              }
-            }
-          }
-        },
-        allKenticoCloudItemAbout {
           edges {
             node {
               fields {
@@ -238,17 +228,8 @@ exports.createPages = ({ graphql, actions }) => {
             }
           });
         });
-
-
-        result.data.allKenticoCloudItemAbout.edges.forEach(({ node }) => {
-          createPage({
-            path: node.fields.slug,
-            component: aboutPage,
-            context: {
-              slug: node.fields.slug
-            },
-          })
-        });
+        
+        
         result.data.allKenticoCloudItemAuthor.edges.forEach(({ node }) => {
           createPage({
             path: node.fields.slug,
