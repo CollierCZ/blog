@@ -11,7 +11,7 @@ class AuthorInfo extends React.Component {
       return (
         <>
           <h4>
-            <Link to={url}>{name}</Link>
+            <Link to={"/"+url}>{name}</Link>
           </h4>
           <div className="author-bio" dangerouslySetInnerHTML={{ __html: bio}}>
           </div>

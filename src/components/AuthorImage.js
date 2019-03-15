@@ -42,7 +42,7 @@ class AuthorImage extends React.Component {
               border-radius: 100%;
               background-image: url("${image}");
             `}
-            to={url}
+            to={"/"+url}
           >
             <span className="hidden">{`${name}'s Picture`}</span>
           </Link>
