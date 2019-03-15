@@ -41,13 +41,14 @@ class SEO extends Component {
     }
   `}
   render = {data => {
-    const title = articleNode ? articleNode.elements.title.value : data.kenticoCloudItemHome.elements.title.value;
+    const siteTitle = data.kenticoCloudItemHome.elements.title.value;
+    const title = articleNode ? articleNode.elements.title.value : '';
     const description = articleNode ? articleNode.elements.metadata__description.value : data.kenticoCloudItemHome.elements.metadata__description.value;
     const image = articleNode ? articleNode.elements.teaser.value[0].url : data.kenticoCloudItemHome.elements.splash_image.assets[0].url;
     const blogURL = data.kenticoCloudItemHome.elements.base_url.value;
     const logo = data.kenticoCloudItemHome.elements.blog_logo.assets[0].url;
     const articleURL = articleNode ? urljoin(blogURL, "/articles", articlePath, "/") : null;
-    const schemaOrgJSONLD = [
+    var schemaOrgJSONLD = [
       {
         "@context": "http://schema.org",
         "@type": "WebSite",
@@ -89,13 +90,13 @@ class SEO extends Component {
       );
     }
     return (
-      <Helmet
-        title={articleNode ? title + " | " + data.kenticoCloudItemHome.elements.title.value : title}
+      <Helmet defaultTitle={siteTitle} titleTemplate={"%s | " + siteTitle}
         link={[
           { rel: 'shortcut icon', type: 'image/png', href: `${logo}` }
       ]}
       >
         {/* General tags */}
+        <title lang="en">{title}</title>
         <meta name="description" content={description} />
         <meta name="image" content={image} />
 
@@ -104,7 +105,6 @@ class SEO extends Component {
           {JSON.stringify(schemaOrgJSONLD)}
         </script>
 
-        {/* OpenGraph tags */}
         <meta property="og:url" content={articleURL ? articleURL : blogURL} />
         {articleURL ? <meta property="og:type" content="article" /> : null}
         <meta property="og:title" content={title} />
@@ -117,7 +117,6 @@ class SEO extends Component {
           />
         */}
 
-        {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
          {/* no Twitter creator
           <meta
