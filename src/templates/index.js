@@ -79,13 +79,7 @@ export const query = graphql`
   query indexQuery {
     config: kenticoCloudItemHome{
       elements {
-        title {
-          value
-        }
         socialmedia {
-          value
-        }
-        base_url {
           value
         }
       }

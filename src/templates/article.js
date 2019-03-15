@@ -32,7 +32,6 @@ class ArticleTemplate extends React.Component {
     const articleNode = this.props.data.article;
     const article = parseArticle(articleNode, slug);
     const className = article.article_class ? article.article_class : "article";
-    const config = this.props.data.config.elements;
     const authorData = this.props.data.author.elements;
     const nextData = {
       path: `/articles/${article.fields.nextSlug}`,
@@ -54,7 +53,7 @@ class ArticleTemplate extends React.Component {
         <Layout>
           <MainHeader headStyle="big" cover={article.elements.teaser.value[0].url}>
             <MainNav>
-              <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
+              <BlogLogo />
             </MainNav>
           </MainHeader>
           <ArticleFormatting className={className}>
@@ -128,32 +127,6 @@ class ArticleTemplate extends React.Component {
   
   export const query = graphql`
   query articleQuery($slug: String!, $articleAuthor: String) {
-    config: kenticoCloudItemHome{
-      elements {
-        title {
-          value
-        }
-        splash_image {
-          value {
-            url
-          }
-        }
-        blog_logo {
-          value {
-            url
-          }
-        }
-        metadata__description {
-          value
-        }
-        socialmedia {
-          value
-        }
-        base_url {
-          value
-        }
-      }
-    },
     author: kenticoCloudItemAuthor (system: {codename: { eq: $articleAuthor} } ) {
       elements {
         picture {

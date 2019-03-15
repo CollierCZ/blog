@@ -33,7 +33,6 @@ class CategoryTemplate extends React.Component {
     }
 
     const nodes = this.props.data.articles.edges;
-    const config = this.props.data.config.elements;
 
   return (
     <>
@@ -41,7 +40,7 @@ class CategoryTemplate extends React.Component {
         <Layout>
           <MainHeader headStyle="small">
             <MainNav>
-              <BlogLogo logo={config.blog_logo.value[0].url} title={config.title.value} />
+              <BlogLogo />
             </MainNav>
             <div className="vertical">
               <div className="main-header-content inner">
@@ -70,32 +69,6 @@ class CategoryTemplate extends React.Component {
 
 export const query = graphql`
   query categoryQuery ($category: String) {
-    config: kenticoCloudItemHome{
-      elements {
-        title {
-          value
-        }
-        splash_image {
-          value {
-            url
-          }
-        }
-        blog_logo {
-          value {
-            url
-          }
-        }
-        metadata__description {
-          value
-        }
-        socialmedia {
-          value
-        }
-        base_url {
-          value
-        }
-      }
-    },
     articles: allKenticoCloudItemArticle (
             sort: { fields: [fields___date], order: DESC }
             filter: { fields: { category: { in: [$category] } } }
