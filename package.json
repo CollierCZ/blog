@@ -11,7 +11,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "emotion": "^9.2.9",
-    "gatsby": "^2.1.17",
+    "gatsby": "^2.7.5",
     "gatsby-image": "^2.0.0",
     "gatsby-link": "^2.0.12",
     "gatsby-paginate": "CollierCZ/gatsby-paginate",
@@ -23,10 +23,11 @@
     "gatsby-plugin-nprogress": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.1.2",
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-remark-autolink-headers": "^2.0.7",
     "gatsby-remark-images": "^2.0.1",
-    "gatsby-source-kentico-cloud": "^3.0.0",
+    "gatsby-source-kentico-cloud": "^3.1.0",
     "html-react-parser": "^0.6.2",
     "kentico-cloud-delivery": "^4.0.2",
     "lodash": "^4.17.11",
@@ -38,5 +39,10 @@
     "react-social-icons": "^2.7.0",
     "rxjs": "^6.4.0",
     "url-join": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-graphql": "^3.0.3",
+    "eslint-plugin-react": "^7.13.0"
   }
 }
