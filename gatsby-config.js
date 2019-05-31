@@ -9,6 +9,33 @@ module.exports = {
     icon: config.icon
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options:  {
+          name: config.title,
+          short_name: config.title,
+          description: config.description,
+          start_url: "/",
+          background_color: "#bf9b63",
+          theme_color: "#f3cc91",
+          display: "minimal-ui",
+          icon: config.icon
+        }    
+    },
+    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-remote-images",
+      options: {
+        
+      }
+    },
+    "gatsby-plugin-sitemap",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-kentico-cloud`,
@@ -24,27 +51,6 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        // Accepts all options defined by `babel-plugin-emotion` plugin.
-      },
-    },
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options:  {
-          name: config.title,
-          short_name: config.title,
-          description: config.description,
-          start_url: "/",
-          background_color: "#bf9b63",
-          theme_color: "#f3cc91",
-          display: "minimal-ui",
-          icon: config.icon
-        }    
-    },
-    "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-feed`,
       options: {
