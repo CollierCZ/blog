@@ -29,12 +29,6 @@ module.exports = {
         }    
     },
     "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-remote-images",
-      options: {
-        
-      }
-    },
     "gatsby-plugin-sitemap",
     `gatsby-plugin-react-helmet`,
     {
