@@ -5,7 +5,7 @@ import React from 'react'
 class AuthorImage extends React.Component {
   render() {
     const name = this.props.author.name.value;
-    const image = this.props.author.picture.value[0].url;
+    const image = this.props.author.picture.value[0].url+'?w=100&h=100';
     const url = this.props.author.url ? this.props.author.url.value : '';
     if (image && url) {
       return (
