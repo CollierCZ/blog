@@ -17,7 +17,7 @@ const getArticleList = (articleEdges) =>
     description: articleEdge.node.elements.metadata__description.value,
     path: articleEdge.node.fields.slug,
     date: articleEdge.node.fields.date,
-    tags: articleEdge.node.elements.metadata__keywords.value.split(','),
+    tags: articleEdge.node.fields.tags,
     title: articleEdge.node.elements.title.value
   }));
   

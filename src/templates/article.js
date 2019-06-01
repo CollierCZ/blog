@@ -87,7 +87,7 @@ class ArticleTemplate extends React.Component {
               >
                 <ArticleDate prefix="Published " date={article.fields.date} />
                 <ArticleCategory prefix=" in " category={article.elements.categories.value[0].name} />
-                <ArticleTags prefix=" on " tags={article.elements.metadata__keywords.value.split(',')} />
+                <ArticleTags prefix=" on " tags={article.fields.tags} />
               </section>
             </ArticleHeader>
 
@@ -137,12 +137,10 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
   article: kenticoCloudItemArticle(fields: { slug: { eq: $slug } })  {
     fields {
       date
+      tags
     }
     elements {
       title {
-        value
-      }
-      metadata__keywords {
         value
       }
       categories {
@@ -187,12 +185,10 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
   nextarticle: kenticoCloudItemArticle(fields: { slug: { eq: $nextSlug } })  {
     fields {
       slug
+      tags
     }
     elements {
       title {
-        value
-      }
-      metadata__keywords {
         value
       }
       metadata__description {
@@ -213,12 +209,10 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
   prevarticle: kenticoCloudItemArticle(fields: { slug: { eq: $prevSlug } })  {
     fields {
       slug
+      tags
     }
     elements {
       title {
-        value
-      }
-      metadata__keywords {
         value
       }
       metadata__description {

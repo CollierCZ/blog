@@ -78,12 +78,10 @@ export const query = graphql`
           fields {
             slug
             date
+            tags
           }
           elements {
             metadata__description {
-              value
-            }
-            metadata__keywords {
               value
             }
             categories {

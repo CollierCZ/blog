@@ -23,6 +23,11 @@ exports.onCreateNode = ({ node, actions }) => {
         name: `date`,
         value: node.elements.publish_date.datetime
       })
+      createNodeField({
+        node,
+        name: `tags`,
+        value: node.elements.metadata__keywords.value.split(',')
+      })
     }
   }
 };
@@ -45,9 +50,6 @@ exports.createPages = async ({ graphql, actions }) => {
               metadata__description {
                 value
               }
-              metadata__keywords {
-                value
-              }
               categories {
                 value {
                   name
@@ -65,6 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               date
               slug
+              tags
             }
           }
         }
@@ -125,8 +128,8 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     );
     articleEdges.forEach((edge, i) => {
-      if (edge.node.elements.metadata__keywords.value) {
-        let tags = edge.node.elements.metadata__keywords.value.split(",");
+      if (edge.node.fields.tags) {
+        let tags = edge.node.fields.tags;
         tags.forEach(tag => {
           tagSet.add(tag);
           const array = tagMap.has(tag) ? tagMap.get(tag) : [];
