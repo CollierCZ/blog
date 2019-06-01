@@ -37,7 +37,7 @@ class IndexTemplate extends React.Component {
     const nodes = this.props.data.articles.edges;
     const config = this.props.data.config.elements;
     const socialUrls = config.socialmedia.value.split(",");
-
+    
   return (
     <>
         <SEO />
@@ -91,13 +91,19 @@ export const query = graphql`
         node {
           fields {
             slug
-            tags
-            category
             date
           }
           elements {
             metadata__description {
               value
+            }
+            metadata__keywords {
+              value
+            }
+            categories {
+              value {
+                name
+              }
             }
             title {
               value

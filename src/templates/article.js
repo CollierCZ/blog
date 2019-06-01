@@ -18,37 +18,30 @@ import ReadNext from "../components/ReadNext";
 import RichText from "../components/RichText/RichText"
 import SEO from "../components/SEO";
 
-function parseArticle(article, slug) {
-  const result = article;
-  if (!result.id) {
-    result.id = slug;
-  }
-  return result;
-}
-
 class ArticleTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext;
-    const articleNode = this.props.data.article;
-    const article = parseArticle(articleNode, slug);
+    const article = this.props.data.article;
+    const nextArticle = this.props.data.nextarticle;
+    const prevArticle = this.props.data.prevarticle;
     const className = article.article_class ? article.article_class : "article";
     const authorData = this.props.data.author.elements;
     const nextData = {
-      path: `/articles/${article.fields.nextSlug}`,
-      title: article.fields.nextTitle,
-      cover: article.fields.nextCover,
-      excerpt: article.fields.nextExcerpt
+      path: `/articles/${nextArticle.fields.nextSlug}`,
+      title: nextArticle.elements.title.value,
+      cover: nextArticle.elements.teaser.value[0].url,
+      excerpt: nextArticle.elements.metadata__description.value
     };
     const prevData = {
-      path: `/articles/${article.fields.prevSlug}`,
-      title: article.fields.prevTitle,
-      cover: article.fields.prevCover,
-      excerpt: article.fields.prevExcerpt
+      path: `/articles/${prevArticle.fields.prevSlug}`,
+      title: prevArticle.elements.title.value,
+      cover: prevArticle.elements.teaser.value[0].url,
+      excerpt: prevArticle.elements.metadata__description.value
     };
 
     return (
       <>
-        <SEO articlePath={slug} articleNode={articleNode} />
+        <SEO articlePath={slug} articleNode={article} />
 
         <Layout>
           <MainHeader headStyle="big" cover={article.elements.teaser.value[0].url}>
@@ -93,8 +86,8 @@ class ArticleTemplate extends React.Component {
                 `}
               >
                 <ArticleDate prefix="Published " date={article.fields.date} />
-                <ArticleCategory prefix=" in " category={article.fields.category} />
-                <ArticleTags prefix=" on " tags={article.fields.tags} />
+                <ArticleCategory prefix=" in " category={article.elements.categories.value[0].name} />
+                <ArticleTags prefix=" on " tags={article.elements.metadata__keywords.value.split(',')} />
               </section>
             </ArticleHeader>
 
@@ -121,81 +114,129 @@ class ArticleTemplate extends React.Component {
   }
 }
   
-  export const query = graphql`
-  query articleQuery($slug: String!, $articleAuthor: String) {
-    author: kenticoCloudItemAuthor (system: {codename: { eq: $articleAuthor} } ) {
-      elements {
-        picture {
-          value {
-            url
-          }
-        }
-        short_bio {
-          value
-        }
-        name {
-          value
-        }
-        url {
-          value
+export const query = graphql`
+query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $prevSlug: String) {
+  author: kenticoCloudItemAuthor (system: {codename: { eq: $articleAuthor} } ) {
+    elements {
+      picture {
+        value {
+          url
         }
       }
-    },
-    article: kenticoCloudItemArticle(fields: { slug: { eq: $slug } })  {
-      fields {
-        slug
-        tags
-        category
-        date
-        nextSlug
-        prevSlug
-        nextTitle
-        nextCover
-        nextExcerpt
-        prevSlug
-        prevTitle
-        prevCover
-        prevExcerpt
+      short_bio {
+        value
       }
-      elements {
-        title {
-          value
+      name {
+        value
+      }
+      url {
+        value
+      }
+    }
+  },
+  article: kenticoCloudItemArticle(fields: { slug: { eq: $slug } })  {
+    fields {
+      date
+    }
+    elements {
+      title {
+        value
+      }
+      metadata__keywords {
+        value
+      }
+      categories {
+        value {
+          name
         }
-        body {
-          value
-          links {
-            linkId
-            type
-            urlSlug
-          }
-          images {
-            imageId
-            url
-          }
-          linked_items {
-            id
-            system {
-              type
-              codename
-            }
-          }
+      }
+      body {
+        value
+        links {
+          linkId
+          type
+          urlSlug
         }
-        teaser {
-          value {
-            url
-          }
+        images {
+          imageId
+          url
         }
-        authors {
+        linked_items {
+          id
           system {
-            name
+            type
+            codename
           }
-        }     
-        metadata__description {
-          value
+        }
+      }
+      teaser {
+        value {
+          url
+        }
+      }
+      authors {
+        system {
+          name
+        }
+      }     
+      metadata__description {
+        value
+      }
+    }
+  },
+  nextarticle: kenticoCloudItemArticle(fields: { slug: { eq: $nextSlug } })  {
+    fields {
+      slug
+    }
+    elements {
+      title {
+        value
+      }
+      metadata__keywords {
+        value
+      }
+      metadata__description {
+        value
+      }
+      categories {
+        value {
+          name
+        }
+      }
+      teaser {
+        value {
+          url
+        }
+      }
+    }
+  },
+  prevarticle: kenticoCloudItemArticle(fields: { slug: { eq: $prevSlug } })  {
+    fields {
+      slug
+    }
+    elements {
+      title {
+        value
+      }
+      metadata__keywords {
+        value
+      }
+      metadata__description {
+        value
+      }
+      categories {
+        value {
+          name
+        }
+      }
+      teaser {
+        value {
+          url
         }
       }
     }
   }
+}
 `
   
 export default ArticleTemplate;

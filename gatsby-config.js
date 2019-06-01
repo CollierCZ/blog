@@ -55,7 +55,7 @@ module.exports = {
                 return Object.assign({}, edge.node, {
                   title: edge.node.elements.title.value,
                   description: edge.node.elements.metadata__description.value,
-                  categories: edge.node.fields.tags,
+                  categories: edge.node.elements.metadata__description.value.split(','),
                   date: edge.node.fields.date,
                   url: kenticoCloudItemHome.elements.base_url.value + "/articles/" + edge.node.fields.slug,
                   guid: kenticoCloudItemHome.elements.base_url.value + "/articles/" +  edge.node.fields.slug
@@ -74,6 +74,9 @@ module.exports = {
                         metadata__description {
                           value
                         }
+                        metadata__keywords {
+                          value
+                        }
                         body {
                           value
                         }
@@ -83,7 +86,6 @@ module.exports = {
                       }
                       fields { 
                         slug
-                        tags
                         date
                       }
                     }

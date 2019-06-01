@@ -12,14 +12,15 @@ import React from "react"
 
 const getArticleList = (articleEdges) =>
   articleEdges.map(articleEdge => ({
-    category: articleEdge.node.fields.category,
+    category: articleEdge.node.elements.categories.value[0].name,
     cover: articleEdge.node.elements.teaser.value[0].url,
     description: articleEdge.node.elements.metadata__description.value,
     path: articleEdge.node.fields.slug,
     date: articleEdge.node.fields.date,
-    tags: articleEdge.node.fields.tags,
+    tags: articleEdge.node.elements.metadata__keywords.value.split(','),
     title: articleEdge.node.elements.title.value
   }));
+  
 
 class ArticleListing extends React.Component {
   render() {
@@ -37,7 +38,7 @@ class ArticleListing extends React.Component {
         {ArticleList.map(article => {
           const { category, cover, description, path, date, tags, title } = article;
           const className = article.article_class ? article.article_class : "article-card";
-
+          
           return (
             <ArticleFormatting className={className} 
               css={css`
@@ -73,7 +74,10 @@ class ArticleListing extends React.Component {
                       {title}
                     </h2>
                   </ArticleHeader>
-                  <section className="article-description">
+                  <section className="article-description" css={css`
+                    line-height:1em;
+                    font-size:0.8em;
+                  `}>
                     <p>
                       {description}{" "}
                         &raquo;
@@ -85,8 +89,8 @@ class ArticleListing extends React.Component {
                     display: block;
                     margin: 0;
                     font-family: "Open Sans", sans-serif;
-                    font-size: 1.5rem;
-                    line-height: 2.2rem;
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
                     color: #4a4a4a;
                     a {
                       color: #4a4a4a;

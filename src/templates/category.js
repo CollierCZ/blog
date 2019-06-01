@@ -71,19 +71,25 @@ export const query = graphql`
   query categoryQuery ($category: String) {
     articles: allKenticoCloudItemArticle (
             sort: { fields: [fields___date], order: DESC }
-            filter: { fields: { category: { in: [$category] } } }
+            filter: {elements: {categories: {value: {elemMatch: {name: {in: [$category] }}}}}}
         ) {
       edges {
         node {
           fields {
             slug
-            tags
-            category
             date
           }
           elements {
             metadata__description {
               value
+            }
+            metadata__keywords {
+              value
+            }
+            categories {
+              value {
+                name
+              }
             }
             title {
               value
@@ -93,7 +99,6 @@ export const query = graphql`
                 url
               }
             }
-            
           }
         }
       }
