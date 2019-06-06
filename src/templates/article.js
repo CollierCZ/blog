@@ -27,13 +27,13 @@ class ArticleTemplate extends React.Component {
     const className = article.article_class ? article.article_class : "article";
     const authorData = this.props.data.author.elements;
     const nextData = {
-      path: `/articles/${nextArticle.fields.nextSlug}`,
+      path: `/articles/${this.props.pageContext.nextSlug}`,
       title: nextArticle.elements.title.value,
       cover: nextArticle.elements.teaser.value[0].url,
       excerpt: nextArticle.elements.metadata__description.value
     };
     const prevData = {
-      path: `/articles/${prevArticle.fields.prevSlug}`,
+      path: `/articles/${this.props.pageContext.prevSlug}`,
       title: prevArticle.elements.title.value,
       cover: prevArticle.elements.teaser.value[0].url,
       excerpt: prevArticle.elements.metadata__description.value

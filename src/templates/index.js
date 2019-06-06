@@ -91,6 +91,7 @@ export const query = graphql`
         node {
           fields {
             slug
+            tags
             date
           }
           elements {
