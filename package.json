@@ -36,7 +36,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-social-icons": "^2.7.0",
+    "react-social-icons": "^4.1.0",
     "rxjs": "^6.5.2",
     "url-join": "^4.0.0"
   },
