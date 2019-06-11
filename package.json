@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
+    "classnames": "^2.2.6",
     "emotion": "^10.0.9",
     "gatsby": "^2.9.0",
     "gatsby-image": "^2.0.0",
@@ -36,7 +37,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-social-icons": "^2.7.0",
+    "react-social-icons": "^4.1.0",
     "rxjs": "^6.5.2",
     "url-join": "^4.0.0"
   },
