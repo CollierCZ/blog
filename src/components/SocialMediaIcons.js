@@ -13,10 +13,8 @@ class SocialMediaIcons extends React.Component {
             margin: 0;
             .social-svg {
               text-align: center;
-              color: rgb(255, 255, 255, 0.8);
             }
             .social-svg:hover {
-              color: #bbc7cc;
               background: white;
             }
           `}
