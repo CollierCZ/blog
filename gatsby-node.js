@@ -166,7 +166,10 @@ exports.createPages = async ({ graphql, actions }) => {
       createPage: createPage,
       edges: articleEdges,
       pageLength: paginationLimit,
-      pageTemplate: indexPage
+      pageTemplate: indexPage,
+      context: {
+        slug:"home"
+      }
     });
     
     tagSet.forEach(tag => {
