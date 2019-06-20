@@ -166,7 +166,9 @@ exports.createPages = async ({ graphql, actions }) => {
       createPage: createPage,
       edges: articleEdges,
       pageLength: paginationLimit,
-      pageTemplate: indexPage
+      pageTemplate: indexPage,
+      buildPath: (index) =>
+        index > 1 ? `/${index}` : `/`
     });
     
     tagSet.forEach(tag => {
