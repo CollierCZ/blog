@@ -28,7 +28,7 @@
     "gatsby-remark-autolink-headers": "^2.1.0",
     "gatsby-remark-images": "^3.1.0",
     "gatsby-source-kentico-cloud": "^3.1.0",
-    "html-react-parser": "^0.7.1",
+    "html-react-parser": "^0.8.0",
     "kentico-cloud-delivery": "^5.7.2",
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.4",
