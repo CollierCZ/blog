@@ -85,8 +85,9 @@ export const query = graphql`
       }
     },
     articles: allKenticoCloudItemArticle (
-        sort: { fields: [fields___date], order: DESC }
-      ) {
+      filter: {elements: {publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}}
+      sort: { fields: [fields___date], order: DESC }
+    ) {
       edges {
         node {
           fields {
