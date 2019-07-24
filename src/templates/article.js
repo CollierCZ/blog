@@ -65,7 +65,7 @@ class ArticleTemplate extends React.Component {
               <section
                 css={css`
                   display: block;
-                  margin: 0;
+                  margin: 0 0 1rem;
                   font-family: "Open Sans", sans-serif;
                   font-size: 1.5rem;
                   line-height: 2.2rem;

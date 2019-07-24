@@ -18,13 +18,13 @@ class ArticleFooter extends React.Component {
         }
 
         h4 {
-          font-size: 1.8rem;
+          font-size: 2rem;
           margin: 0;
         }
       
         p {
           margin: 1rem 0;
-          font-size: 1.4rem;
+          font-size: 1.8rem;
           line-height: 1.75em;
         }
     

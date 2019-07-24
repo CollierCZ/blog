@@ -64,6 +64,10 @@ class ArticleListing extends React.Component {
                 <Link className="article-link" 
                   css={css`
                     text-decoration: none;
+                    :hover{
+                      font-weight: inherit;
+                      letter-spacing: inherit;
+                    }
                   `}
                   to={`/articles/${path}`}
                 >

@@ -26,7 +26,6 @@ class PageDescription extends React.Component {
                 font-size: 2rem;
                 line-height: 1.5em;
                 font-weight: 400;
-                font-family: "Merriweather", serif;
                 letter-spacing: 0.01rem;
                 color: #ffffff;
                 @media only screen and (max-width: 900px) {
