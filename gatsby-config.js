@@ -66,7 +66,8 @@ module.exports = {
               {
                 allKenticoCloudItemArticle (
                   limit: 10,
-                  sort: { fields: [fields___date], order: DESC }
+                  sort: { fields: [fields___date], order: DESC },
+                  filter: {elements: {publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}}
                 ) {
                   edges {
                     node {
