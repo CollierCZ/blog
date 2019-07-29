@@ -14,7 +14,7 @@
     "emotion": "^10.0.14",
     "gatsby": "^2.13.41",
     "gatsby-image": "^2.2.6",
-    "gatsby-paginate": "1.1.0",
+    "gatsby-paginate": "1.1.1",
     "gatsby-plugin-catch-links": "^2.1.2",
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-feed": "^2.3.5",
