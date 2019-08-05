@@ -9,7 +9,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.14",
+    "@emotion/core": "^10.0.15",
     "classnames": "^2.2.6",
     "emotion": "^10.0.14",
     "gatsby": "^2.13.41",
