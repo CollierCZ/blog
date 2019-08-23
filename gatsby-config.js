@@ -51,16 +51,14 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { kenticoCloudItemHome, allKenticoCloudItemArticle } }) => {
-              return allKenticoCloudItemArticle.edges.map(edge => {
-                return Object.assign({}, edge.node, {
+              return allKenticoCloudItemArticle.edges.map(edge => ({
                   title: edge.node.elements.title.value,
                   description: edge.node.elements.metadata__description.value,
                   categories: edge.node.fields.tags,
                   date: edge.node.fields.date,
                   url: kenticoCloudItemHome.elements.base_url.value + "/articles/" + edge.node.fields.slug,
                   guid: kenticoCloudItemHome.elements.base_url.value + "/articles/" +  edge.node.fields.slug
-                })
-              })
+              }))
             },
             query: `
               {
@@ -99,7 +97,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: "/rss.xml"
           },
         ],
       },
