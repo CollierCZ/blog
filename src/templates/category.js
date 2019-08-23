@@ -71,7 +71,7 @@ export const query = graphql`
   query categoryQuery ($category: String) {
     articles: allKenticoCloudItemArticle (
             sort: { fields: [fields___date], order: DESC }
-            filter: {elements: {categories: {value: {elemMatch: {name: {in: [$category] }}}}}}
+            filter: {elements: {categories: {value: {elemMatch: {name: {in: [$category] }}}},publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}}
         ) {
       edges {
         node {
