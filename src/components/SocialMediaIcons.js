@@ -23,7 +23,7 @@ class SocialMediaIcons extends React.Component {
               icon = faGithub
               label = "github"
             }
-            else if (url === 'https://collier.cz/rss.xml') {
+            else if (url.endsWith('rss.xml')) {
               icon = faRss
               label = "rss"
             }
