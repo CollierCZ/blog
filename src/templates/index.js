@@ -11,7 +11,6 @@ import PageDescription from "../components/PageDescription";
 import PaginatedContent from "../components/PaginatedContent";
 import SEO from "../components/SEO";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import SubscribeButton from "../components/SubscribeButton";
 import "../layouts/index.css";
 
 
@@ -48,7 +47,6 @@ class IndexTemplate extends React.Component {
               <SocialMediaIcons
                 urls={socialUrls}
               />
-              <SubscribeButton />
             </MainNav>
             <div className="vertical">
               <div className="main-header-content inner">

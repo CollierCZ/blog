@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import React from "react"
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -22,7 +22,11 @@ class SocialMediaIcons extends React.Component {
             else if (url.startsWith('https://github')) {
               icon = faGithub
               label = "github"
-          }
+            }
+            else if (url === 'https://collier.cz/rss.xml') {
+              icon = faRss
+              label = "rss"
+            }
 
             return (
             <a
