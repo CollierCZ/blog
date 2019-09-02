@@ -47,7 +47,6 @@ class IndexTemplate extends React.Component {
               <BlogLogo />
               <SocialMediaIcons
                 urls={socialUrls}
-                color="currentColor"
               />
               <SubscribeButton />
             </MainNav>
