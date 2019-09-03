@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$pagePrefix\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"group":[{"fields":{"slug":"article2","tags":["fggf"],"category":"Technology"}}],"pathPrefix":"tags/fggf","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"tag":"fggf"}}}

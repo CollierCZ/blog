@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$nextSlug\" of required type \"String!\" was not provided.","locations":[{"line":3,"column":3}]},{"message":"Variable \"$prevSlug\" of required type \"String!\" was not provided.","locations":[{"line":4,"column":3}]}],"pageContext":{"slug":"third-article","total":4,"prev":"/articles/article2/","next":"/articles/brno/"}}

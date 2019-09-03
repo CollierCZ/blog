@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$slug\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"group":[{"fields":{"slug":"all-about-education","tags":["education"," theory"," practice "],"category":"Education"}}],"pathPrefix":"tags/education","first":true,"last":true,"index":1,"pageCount":1,"additionalContext":{"tag":"education"}}}
