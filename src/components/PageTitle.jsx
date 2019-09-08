@@ -28,6 +28,7 @@ class PageTitle extends React.Component {
                 font-weight: 700;
                 font-family: "Open Sans", sans-serif;
                 color: #ffffff;
+                text-shadow: 1px 1px #000;
                 @media only screen and (max-width: 900px) {
                   font-size: 4rem;
                   letter-spacing: -1px;
