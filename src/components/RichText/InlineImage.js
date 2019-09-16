@@ -4,12 +4,14 @@ import React from 'react'
 const InlineImage = ({ description, url }) => {
   return (
     <picture>
-        <source srcSet={url}
-                media="(min-width: 900px)" />
-        <source srcSet={url+'?h=0.5&w=0.5&fit=scale'}
+    <source srcSet={url}
+            media="(min-width: 1200px)" />
+            <source srcSet={url+'?w=720&fit=scale'}
+                    media="(min-width: 900px)" />
+        <source srcSet={url+'?w=500&fit=scale'}
                 media="(min-width: 500px)" />
         <img
-            src={url+'?h=0.25&w=0.25&fit=scale'}
+            src={url+'?w=320&fit=scale'}
             alt={description}
         />
     </picture>
