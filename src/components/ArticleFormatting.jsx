@@ -9,7 +9,7 @@ class ArticleFormatting extends React.Component {
       css={css`
         position: relative;
         width: 80%;
-        max-width: 710px;
+        max-width: 1200px;
         margin: 0 auto 4rem auto;
         padding-bottom: 0;
         border: none;
