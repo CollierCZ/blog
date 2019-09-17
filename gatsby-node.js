@@ -10,7 +10,7 @@ const paginationLimit = 6;
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type.match(/KenticoCloudItem/)) {
+  if (node.internal.type.match(kcItemTypeIdentifier)) {
     createNodeField({
       node,
       name: `slug`,

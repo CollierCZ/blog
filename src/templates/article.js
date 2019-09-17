@@ -173,10 +173,19 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
           url
         }
         linked_items {
-          id
-          system {
-            type
-            codename
+          ... on KenticoCloudItemQuote {
+            system {
+              codename
+              type
+            }
+            elements {
+              quote {
+                resolvedHtml
+              }
+              source {
+                resolvedHtml
+              }
+            }
           }
         }
       }

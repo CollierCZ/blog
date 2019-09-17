@@ -58,8 +58,8 @@ return (
     );
   }
 
-  // Replace inline linked items.
-if (domNode.name === 'object' && domNode.attribs['data-rel'] === 'link') {
+  // Replace inline linked items and components.
+if (domNode.name === 'object' && domNode.attribs['data-type'] === 'item') {
     const codename = get(domNode, 'attribs["data-codename"]') || null
     const linkedItem = linkedItems.find(item => item.system.codename === codename)
 
