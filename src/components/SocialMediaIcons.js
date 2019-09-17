@@ -68,19 +68,20 @@ class SocialMediaIcons extends React.Component {
                 css={css`
                   color: #000000ff;
                   vertical-align: middle;
-                  font-size: 1.5em;
+                  font-size: 3rem;
+                  padding-bottom: 0.2rem;
 
                   :hover {
                     color: white;
                   }
 
                   @media only screen and (max-width: 900px) {
-                    font-size: 1.4em;
-                    padding-bottom: 4px;
+                    font-size: 2.75rem;
+                    padding-bottom: 0.5rem;
                   }
                   @media only screen and (max-width: 500px) {
-                    font-size: 1.25em;
-                    padding-bottom: 10px;
+                    font-size: 2.25rem;
+                    padding-bottom: 1rem;
                   }
                 `}
                 
