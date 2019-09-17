@@ -59,6 +59,7 @@ class ArticleTemplate extends React.Component {
               <h1 className="article-title"
                 css={css`
                 margin-bottom: 0;
+                font-size: 5rem;
                 @media only screen and (max-width: 900px) {
                   font-size: 4.5rem;
                 }
@@ -72,7 +73,7 @@ class ArticleTemplate extends React.Component {
                   display: block;
                   margin: 0 0 1rem;
                   font-family: "Open Sans", sans-serif;
-                  font-size: 1.5rem;
+                  font-size: 1rem;
                   line-height: 2.2rem;
                   color: #4a4a4a;
                   a {

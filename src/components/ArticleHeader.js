@@ -6,7 +6,6 @@ class ArticleHeader extends React.Component {
     const { children } = this.props;
     return <header
       css={css`
-        font-size: 5rem;
         margin-bottom: 3.4rem;
         @media only screen and (max-width: 500px) {
             margin-bottom: 2rem;
