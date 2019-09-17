@@ -17,10 +17,12 @@ import React from "react";
 import ReadNext from "../components/ReadNext";
 import RichText from "../components/RichText/RichText"
 import SEO from "../components/SEO";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 class ArticleTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext;
+    const socialUrls = this.props.data.config.elements.socialmedia.value.split(",");;
     const article = this.props.data.article;
     const nextArticle = this.props.data.nextarticle;
     const prevArticle = this.props.data.prevarticle;
@@ -47,6 +49,9 @@ class ArticleTemplate extends React.Component {
           <MainHeader headStyle="big" cover={article.elements.teaser.value[0].url}>
             <MainNav>
               <BlogLogo />
+              <SocialMediaIcons
+                urls={socialUrls}
+              />
             </MainNav>
           </MainHeader>
           <ArticleFormatting className={className}>
@@ -116,6 +121,13 @@ class ArticleTemplate extends React.Component {
   
 export const query = graphql`
 query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $prevSlug: String) {
+  config: kenticoCloudItemHome{
+    elements {
+      socialmedia {
+        value
+      }
+    }
+  },
   author: kenticoCloudItemAuthor (system: {codename: { eq: $articleAuthor} } ) {
     elements {
       picture {
