@@ -16,7 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
     "emotion": "^10.0.17",
-    "gatsby": "^2.15.14",
+    "gatsby": "^2.15.26",
     "gatsby-image": "^2.2.18",
     "gatsby-paginate": "1.1.1",
     "gatsby-plugin-catch-links": "^2.1.9",
