@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="clearfix"
+  css={
+    Object {
+      "map": undefined,
+      "name": "liw7hn",
+      "next": undefined,
+      "styles": "
+          position: relative;
+          margin: 1rem 0 0;
+          padding: 1rem 15px;
+          font-family: \\"Open Sans\\", sans-serif;
+          font-size: 1rem;
+          line-height: 1.75em;
+          color: #bbc7cc;
+          @media only screen and (max-width: 500px) {
+            margin-top: 0;
+          }
+          a {
+            color: #bbc7cc;
+            text-decoration: none;
+            font-weight: bold;
+          }
+          a:hover {
+            color: #bbc7cc;
+            border-bottom: #bbc7cc 1px solid;
+          }
+        ",
+    }
+  }
+>
+  <section
+    css={
+      Object {
+        "map": undefined,
+        "name": "1odwksc",
+        "next": undefined,
+        "styles": "float:left;",
+      }
+    }
+  >
+    © 2018–
+    2019
+     
+    Aaron Collier
+    .
+  </section>
+  <section
+    css={
+      Object {
+        "map": undefined,
+        "name": "6n7j50",
+        "next": undefined,
+        "styles": "display:inline;",
+      }
+    }
+  >
+    Theme based on 
+    <a
+      href="https://github.com/TryGhost/Casper"
+    >
+      Casper
+    </a>
+    . Powered by 
+    <a
+      href="https://www.gatsbyjs.org/"
+    >
+      Gatsby
+    </a>
+    .
+  </section>
+</footer>
+`;

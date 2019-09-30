@@ -3,6 +3,7 @@ import React from "react"
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import PropTypes from 'prop-types'
 
 
 class SocialMediaIcons extends React.Component {
@@ -94,5 +95,18 @@ class SocialMediaIcons extends React.Component {
     return null;
   }
 }
+
+
+
+SocialMediaIcons.propTypes = {
+  urls: PropTypes.arrayOf(
+    PropTypes.string.isRequired
+  ),
+};
+
+SocialMediaIcons.defaultProps = {
+  urls: ["https://collier.cz/rss"]
+};
+
 
 export default SocialMediaIcons;

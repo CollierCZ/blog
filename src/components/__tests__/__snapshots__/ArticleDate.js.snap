@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleDate renders correctly 1`] = `
+<span>
+  <time
+    css={
+      Object {
+        "map": undefined,
+        "name": "1322fc7",
+        "next": undefined,
+        "styles": "
+            display: inline-block;
+            white-space: nowrap;
+            font-size: inherit;
+            padding: 0;
+            margin: 0;
+            border: none;
+            @media only screen and (max-width: 500px) {
+              display: none;
+            }
+          ",
+      }
+    }
+    dateTime="2019-06-03"
+  >
+    03 June 2019
+  </time>
+</span>
+`;

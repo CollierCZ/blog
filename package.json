@@ -6,7 +6,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
@@ -45,8 +46,13 @@
     "url-join": "^4.0.1"
   },
   "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.17",
     "eslint": "^5.16.0",
     "eslint-plugin-graphql": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3"
+    "eslint-plugin-react": "^7.14.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.10.1"
   }
 }
