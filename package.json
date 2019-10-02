@@ -38,7 +38,7 @@
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
     "moment": "^2.24.0",
-    "react": "^16.9.0",
+    "react": "^16.10.1",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-social-icons": "^4.1.0",
