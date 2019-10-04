@@ -1,15 +1,19 @@
 dependencies:
   '@babel/core': 7.6.2
   '@babel/polyfill': 7.6.0
+  '@babel/runtime': 7.6.2
   '@emotion/core': 10.0.20_react@16.10.2
   '@fortawesome/fontawesome-svg-core': 1.2.25
   '@fortawesome/free-brands-svg-icons': 5.11.2
   '@fortawesome/free-solid-svg-icons': 5.11.2
   '@fortawesome/react-fontawesome': 0.1.5_5885eed1a490594be93fe146e65f3d8f
+  '@mikaelkristiansson/domready': 1.0.9
+  '@reach/router': 1.2.1_react-dom@16.10.2+react@16.10.2
   classnames: 2.2.6
   emotion: 10.0.17
   gatsby: 2.15.29_7fe8e194c5ece6624c05cb4f19ed6d3d
   gatsby-image: 2.2.24
+  gatsby-link: 2.2.18_3413158412170e674d8d4ae4fc71fe9d
   gatsby-paginate: 1.1.1
   gatsby-plugin-catch-links: 2.1.12_gatsby@2.15.29
   gatsby-plugin-emotion: 4.1.9_a9d833f8ebe198cae211994fc758080f
@@ -21,6 +25,7 @@ dependencies:
   gatsby-plugin-react-helmet: 3.1.10_4925a3b77353d8e59372efa569be2041
   gatsby-plugin-sharp: 2.2.28_gatsby@2.15.29
   gatsby-plugin-sitemap: 2.2.16_gatsby@2.15.29
+  gatsby-react-router-scroll: 2.1.11_3413158412170e674d8d4ae4fc71fe9d
   gatsby-remark-autolink-headers: 2.1.13_gatsby@2.15.29
   gatsby-remark-images: 3.1.25_82878940f19774a3cf3db21c1ffc6ad1
   gatsby-source-kentico-cloud: 3.1.0_gatsby@2.15.29
@@ -28,12 +33,18 @@ dependencies:
   kentico-cloud-delivery: 6.2.0_rxjs@6.5.3
   lodash: 4.17.15
   lodash-webpack-plugin: 0.11.5
+  minimatch: 3.0.4
+  mitt: 1.1.3
   moment: 2.24.0
+  pify: 4.0.1
+  prop-types: 15.7.2
   react: 16.10.2
   react-dom: 16.10.2_react@16.10.2
+  react-error-overlay: 6.0.3
   react-helmet: 5.2.1_react@16.10.2
   react-social-icons: 4.1.0_react@16.10.2
   rxjs: 6.5.3
+  shallow-compare: 1.2.2
 devDependencies:
   babel-jest: 24.9.0_@babel+core@7.6.2
   babel-preset-gatsby: 0.2.17_@babel+core@7.6.2
@@ -11323,6 +11334,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
+  /react-error-overlay/6.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-bOUvMWFQVk5oz8Ded9Xb7WVdEi3QGLC8tH7HmYP0Fdp4Bn3qw0tRFmr5TW6mvahzvmrK4a6bqWGfCevBflP+Xw==
   /react-fast-compare/2.0.4:
     dev: false
     resolution:
@@ -14278,11 +14293,14 @@ packages:
 specifiers:
   '@babel/core': ^7.6.2
   '@babel/polyfill': ^7.6.0
+  '@babel/runtime': ^7.6.2
   '@emotion/core': ^10.0.17
   '@fortawesome/fontawesome-svg-core': ^1.2.25
   '@fortawesome/free-brands-svg-icons': ^5.11.2
   '@fortawesome/free-solid-svg-icons': ^5.11.2
   '@fortawesome/react-fontawesome': ^0.1.5
+  '@mikaelkristiansson/domready': ^1.0.9
+  '@reach/router': ^1.2.1
   babel-jest: ^24.9.0
   babel-preset-gatsby: ^0.2.17
   classnames: ^2.2.6
@@ -14292,6 +14310,7 @@ specifiers:
   eslint-plugin-react: ^7.15.1
   gatsby: ^2.15.28
   gatsby-image: ^2.2.23
+  gatsby-link: ^2.2.18
   gatsby-paginate: 1.1.1
   gatsby-plugin-catch-links: ^2.1.12
   gatsby-plugin-emotion: ^4.1.9
@@ -14303,6 +14322,7 @@ specifiers:
   gatsby-plugin-react-helmet: ^3.1.10
   gatsby-plugin-sharp: ^2.2.27
   gatsby-plugin-sitemap: ^2.2.14
+  gatsby-react-router-scroll: ^2.1.11
   gatsby-remark-autolink-headers: ^2.1.13
   gatsby-remark-images: ^3.1.23
   gatsby-source-kentico-cloud: ^3.1.0
@@ -14312,10 +14332,16 @@ specifiers:
   kentico-cloud-delivery: ^6.2.0
   lodash: ^4.17.15
   lodash-webpack-plugin: ^0.11.4
+  minimatch: ^3.0.4
+  mitt: ^1.1.3
   moment: ^2.24.0
+  pify: ^4.0.1
+  prop-types: ^15.7.2
   react: ^16.9.0
   react-dom: ^16.9.0
+  react-error-overlay: ^6.0.3
   react-helmet: ^5.2.1
   react-social-icons: ^4.1.0
   react-test-renderer: ^16.10.1
   rxjs: ^6.5.3
+  shallow-compare: ^1.2.2
