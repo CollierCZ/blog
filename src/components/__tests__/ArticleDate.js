@@ -8,7 +8,7 @@ const urlArray = ["mailto:aaron@collier.cz","https://github.com/CollierCZ","http
 describe("ArticleDate", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<ArticleDate date="2019-06-03T00:00:00Z" />)
+      .create(<ArticleDate date="2019-06-03T00:00:00Z" prefix="Published " />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

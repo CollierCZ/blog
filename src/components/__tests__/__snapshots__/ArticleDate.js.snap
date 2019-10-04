@@ -2,6 +2,7 @@
 
 exports[`ArticleDate renders correctly 1`] = `
 <span>
+  Published 
   <time
     css={
       Object {

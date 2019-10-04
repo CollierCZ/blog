@@ -43,7 +43,7 @@ exports[`SocialMediaIcons renders correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-envelope fa-w-16 social-media-icon"
+      className="svg-inline--fa fa-envelope fa-w-16 fa-null fa-rotate-null fa-pull-null social-media-icon"
       css={
         Object {
           "map": undefined,
@@ -126,7 +126,7 @@ exports[`SocialMediaIcons renders correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-github fa-w-16 social-media-icon"
+      className="svg-inline--fa fa-github fa-w-16 fa-null fa-rotate-null fa-pull-null social-media-icon"
       css={
         Object {
           "map": undefined,
@@ -209,7 +209,7 @@ exports[`SocialMediaIcons renders correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-rss fa-w-14 social-media-icon"
+      className="svg-inline--fa fa-rss fa-w-14 fa-null fa-rotate-null fa-pull-null social-media-icon"
       css={
         Object {
           "map": undefined,

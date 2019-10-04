@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleCategory renders correctly 1`] = `
+<span>
+   in 
+  <span>
+    <a
+      href="/category/education"
+    >
+      Education
+    </a>
+  </span>
+</span>
+`;

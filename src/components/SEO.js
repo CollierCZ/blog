@@ -2,7 +2,6 @@ import { graphql, StaticQuery } from "gatsby"
 import React from "react";
 import Helmet from "react-helmet";
 import PropTypes from 'prop-types';
-import urljoin from "url-join";
 
 
 
@@ -16,7 +15,7 @@ export const PureSEO = ({ data, articleProps }) => {
   const image = articleNode ? articleNode.elements.teaser.value[0].url : data.kenticoCloudItemHome.elements.splash_image.assets[0].url;
   const blogURL = data.kenticoCloudItemHome.elements.base_url.value;
   const logo = data.kenticoCloudItemHome.elements.blog_logo.assets[0].url;
-  const articleURL = articleNode ? urljoin(blogURL, "/articles", articlePath, "/") : null;
+  const articleURL = articleNode ? blogURL+"/articles/"+articlePath+"/" : null;
   var schemaOrgJSONLD = [
     {
       "@context": "http://schema.org",
