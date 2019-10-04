@@ -6,6 +6,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
+    "prebuild": "[[ $CI = true ]] && npx pnpm@3 install --store=node_modules/.pnpm-store || echo skiping pnpm install",
     "serve": "gatsby serve",
     "test": "jest"
   },
