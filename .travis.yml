@@ -1,9 +1,3 @@
 language: node_js
 node_js:
 - "stable"
-cache:
-  npm: false
-before_install:
-  - curl -L https://unpkg.com/@pnpm/self-installer | node
-install:
-  - pnpm install
