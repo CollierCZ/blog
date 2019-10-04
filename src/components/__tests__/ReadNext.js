@@ -8,12 +8,22 @@ const article = {
     path: "how-i-built-and-deployed-this-site-for-free",
     excerpt: "How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service."
 }
-
+const articleNoCover = {
+  title: "How I built and deployed this site for free",
+  path: "how-i-built-and-deployed-this-site-for-free",
+  excerpt: "How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service."
+}
 
 describe("ReadNext", () => {
-  it("renders correctly", () => {
+  it("renders correctly with articles with and without covers", () => {
     const tree = renderer
-      .create(<ReadNext next={article} prev={article} />)
+      .create(<ReadNext next={article} prev={articleNoCover} />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+  it("renders correctly when empty", () => {
+    const tree = renderer
+      .create(<ReadNext />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

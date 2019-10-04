@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleCategory renders correctly 1`] = `
+exports[`ArticleCategory renders a category correctly 1`] = `
 <span>
    in 
   <span>
@@ -12,3 +12,5 @@ exports[`ArticleCategory renders correctly 1`] = `
   </span>
 </span>
 `;
+
+exports[`ArticleCategory renders correctly when empty 1`] = `null`;

@@ -6,7 +6,6 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "postbuild": "mv public docs",
     "serve": "gatsby serve",
     "test": "jest"
   },

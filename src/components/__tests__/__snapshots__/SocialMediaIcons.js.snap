@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SocialMediaIcons renders correctly 1`] = `
+exports[`SocialMediaIcons renders correctly when empty 1`] = `null`;
+
+exports[`SocialMediaIcons renders correctly with URLs 1`] = `
 <div>
   <a
     aria-label="mailto"

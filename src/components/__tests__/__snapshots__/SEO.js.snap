@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SEO renders correctly 1`] = `null`;
+exports[`SEO renders correctly with article data 1`] = `null`;
+
+exports[`SEO renders correctly with no article data 1`] = `null`;

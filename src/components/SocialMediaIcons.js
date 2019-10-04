@@ -104,9 +104,5 @@ SocialMediaIcons.propTypes = {
   ),
 };
 
-SocialMediaIcons.defaultProps = {
-  urls: ["https://collier.cz/rss"]
-};
-
 
 export default SocialMediaIcons;
