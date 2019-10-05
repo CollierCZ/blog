@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleFormating renders correctly 1`] = `
+<header
+  css={
+    Object {
+      "map": undefined,
+      "name": "onsyne",
+      "next": undefined,
+      "styles": "
+        margin-bottom: 3.4rem;
+        @media only screen and (max-width: 500px) {
+            margin-bottom: 2rem;
+        }
+      ",
+    }
+  }
+>
+  <Component />
+</header>
+`;

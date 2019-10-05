@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleFooter renders correctly 1`] = `
+<footer
+  className="article-footer"
+  css={
+    Object {
+      "map": undefined,
+      "name": "328aps",
+      "next": undefined,
+      "styles": "
+        position: relative;
+        margin: 6rem 0 0;
+        padding: 3rem 0 0;
+        border-top: #ebf2f6 1px solid;
+        @media only screen and (max-width: 500px) {
+          padding: 5rem 0 3rem;
+          text-align: center;
+        }
+
+        h4 {
+          font-size: 2rem;
+          margin: 0;
+        }
+      
+        p {
+          margin: 1rem 0;
+          font-size: 1.8rem;
+          line-height: 1.75em;
+        }
+    
+        h4 a {
+          color: #2e2e2e;
+          text-decoration: none;
+        }
+    
+        h4 a:hover {
+          text-decoration: underline;
+        }
+      ",
+    }
+  }
+>
+  <Component />
+</footer>
+`;

@@ -13,6 +13,6 @@ module.exports = {
     },
     setupFiles: [`<rootDir>/loadershim.js`],
     collectCoverage: true,
-    snapshotSerializers: [`enzyme-to-json/serializer`],
+    snapshotSerializers: [`jest-emotion`,`enzyme-to-json/serializer`],
     setupFiles: [`./src/setUpTests.js`],
   }
