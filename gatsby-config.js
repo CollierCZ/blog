@@ -97,7 +97,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml"
+            output: "/rss.xml",
+            title: "Feed for collier.cz"
           },
         ],
       },

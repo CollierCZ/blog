@@ -1,8 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Listing from "../components/Listing"
-import "../layouts/index.css"
-
+import React from "react";
+import { graphql } from "gatsby";
+import Listing from "../components/Listing";
+import "../layouts/index.css";
 
 class TagTemplate extends React.Component {
   render() {
@@ -14,20 +13,17 @@ class TagTemplate extends React.Component {
       last,
       pageCount
     } = this.props.pageContext;
-    const nodes = this.props.data.articles.edges;
-    const socialUrls = this.props.data.config.elements.socialmedia.value.split(",");
-    const headStyle = "small";
 
     const info = {
       tag: tag,
-      headStyle: headStyle,
+      headStyle: "small",
       first: first,
       group: group,
       index: index,
       last: last,
       pageCount: pageCount,
-      nodes: nodes,
-      socialUrls: socialUrls
+      nodes: this.props.data.articles.edges,
+      socialUrls: this.props.data.config.elements.socialmedia.value.split(",")
     }
     
   return (
