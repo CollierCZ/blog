@@ -1,5 +1,5 @@
 import React from "react"
-import renderer from "react-test-renderer"
+import { shallow } from "enzyme"
 import { PureSEO as SEO } from "../SEO"
 const homeQuery = {
   kenticoCloudItemHome: {
@@ -34,20 +34,34 @@ const homeQuery = {
     }
 }
 
+const articleProps= {
+  articlePath: "home",
+  articleNode: {
+    elements: {
+      title: {
+        value: "Home title"
+      },
+      metadata__description: {
+        value: "An interesting description"
+      },
+      teaser: {
+        value:[
+          {
+            url: "https://example.com"
+          }
+        ]
+      }
+    }
+  }
+}
+
 describe("SEO", () => {
   it("renders correctly with no article data", () => {
-    const tree = renderer
-      .create(<SEO basicInfo={homeQuery} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+    const component = shallow (<SEO basicInfo={homeQuery} />)
+    expect(component).toMatchSnapshot()
   })
   it("renders correctly with article data", () => {
-    const articleProps= {
-      articleSlug: "home"
-    }
-        const tree = renderer
-        .create(<SEO basicInfo={homeQuery} articleProps={articleProps} />)
-        .toJSON()
-    expect(tree).toMatchSnapshot()
+    const component = shallow (<SEO basicInfo={homeQuery} articleProps={articleProps} />)
+    expect(component).toMatchSnapshot()
   })
 })

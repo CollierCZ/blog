@@ -3,7 +3,7 @@ import React, { Component } from "react"
 import classNames from "classnames"
 import Link from "gatsby-link"
 
-const ReadNextStory = props => {
+export const ReadNextStory = props => {
   const { article, text } = props;
   if (article) {
     const { path, cover, title, excerpt } = article;

@@ -1,5 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SEO renders correctly with article data 1`] = `null`;
+exports[`SEO renders correctly with article data 1`] = `
+<HelmetWrapper
+  defaultTitle="Aaron Collier"
+  defer={true}
+  encodeSpecialCharacters={true}
+  link={
+    Array [
+      Object {
+        "href": "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/8af6ebfc-b92f-4603-90f5-5d3dda5d8c3d/quixote-small.jpg",
+        "rel": "shortcut icon",
+        "type": "image/png",
+      },
+    ]
+  }
+  titleTemplate="%s | Aaron Collier"
+>
+  <title
+    lang="en"
+  >
+    Home title
+  </title>
+  <meta
+    content="An interesting description"
+    name="description"
+  />
+  <meta
+    content="https://example.com"
+    name="image"
+  />
+  <script
+    type="application/ld+json"
+  >
+    [{"@context":"http://schema.org","@type":"WebSite","url":"https://collier.cz","name":"Home title","alternateName":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://collier.cz/articles/home/","name":"Home title","image":"https://example.com"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"https://collier.cz","name":"Home title","alternateName":"","headline":"Home title","image":{"@type":"ImageObject","url":"https://example.com"},"description":"An interesting description"}]
+  </script>
+  <meta
+    content="https://collier.cz/articles/home/"
+    property="og:url"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+  <meta
+    content="Home title"
+    property="og:title"
+  />
+  <meta
+    content="An interesting description"
+    property="og:description"
+  />
+  <meta
+    content="https://example.com"
+    property="og:image"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="Home title"
+    name="twitter:title"
+  />
+  <meta
+    content="An interesting description"
+    name="twitter:description"
+  />
+  <meta
+    content="https://example.com"
+    name="twitter:image"
+  />
+</HelmetWrapper>
+`;
 
-exports[`SEO renders correctly with no article data 1`] = `null`;
+exports[`SEO renders correctly with no article data 1`] = `
+<HelmetWrapper
+  defaultTitle="Aaron Collier"
+  defer={true}
+  encodeSpecialCharacters={true}
+  link={
+    Array [
+      Object {
+        "href": "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/8af6ebfc-b92f-4603-90f5-5d3dda5d8c3d/quixote-small.jpg",
+        "rel": "shortcut icon",
+        "type": "image/png",
+      },
+    ]
+  }
+  titleTemplate="%s | Aaron Collier"
+>
+  <title
+    lang="en"
+  />
+  <meta
+    content="Articles and interesting things."
+    name="description"
+  />
+  <meta
+    content="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/259d5f15-d354-4701-a299-91cbb7cdf8ce/the-trees-in-the-fall-2052252_640.jpg"
+    name="image"
+  />
+  <script
+    type="application/ld+json"
+  >
+    [{"@context":"http://schema.org","@type":"WebSite","url":"https://collier.cz","name":"","alternateName":""}]
+  </script>
+  <meta
+    content="https://collier.cz"
+    property="og:url"
+  />
+  <meta
+    content=""
+    property="og:title"
+  />
+  <meta
+    content="Articles and interesting things."
+    property="og:description"
+  />
+  <meta
+    content="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/259d5f15-d354-4701-a299-91cbb7cdf8ce/the-trees-in-the-fall-2052252_640.jpg"
+    property="og:image"
+  />
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content=""
+    name="twitter:title"
+  />
+  <meta
+    content="Articles and interesting things."
+    name="twitter:description"
+  />
+  <meta
+    content="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/259d5f15-d354-4701-a299-91cbb7cdf8ce/the-trees-in-the-fall-2052252_640.jpg"
+    name="twitter:image"
+  />
+</HelmetWrapper>
+`;

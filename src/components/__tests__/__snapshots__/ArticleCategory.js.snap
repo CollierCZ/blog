@@ -3,14 +3,17 @@
 exports[`ArticleCategory renders a category correctly 1`] = `
 <span>
    in 
-  <span>
-    <a
-      href="/category/education"
+  <span
+    key="Education"
+  >
+    <mockConstructor
+      key="Education"
+      to="/category/education"
     >
       Education
-    </a>
+    </mockConstructor>
   </span>
 </span>
 `;
 
-exports[`ArticleCategory renders correctly when empty 1`] = `null`;
+exports[`ArticleCategory renders correctly when empty 1`] = `""`;

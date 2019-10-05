@@ -32,7 +32,14 @@ exports[`ReadNext renders correctly when empty 1`] = `
         ",
     }
   }
-/>
+>
+  <ReadNextStory
+    text="Read This Next"
+  />
+  <ReadNextStory
+    text="You Might Enjoy"
+  />
+</aside>
 `;
 
 exports[`ReadNext renders correctly with articles with and without covers 1`] = `
@@ -68,14 +75,41 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
     }
   }
 >
-  <a
-    className="read-next-story"
-    css={
+  <ReadNextStory
+    article={
       Object {
-        "map": undefined,
-        "name": "k1hdfg",
-        "next": undefined,
-        "styles": "
+        "cover": "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/38bbc989-70ab-4661-92cf-11efafa5ab09/sunset-219354_1920.jpg",
+        "excerpt": "How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.",
+        "path": "how-i-built-and-deployed-this-site-for-free",
+        "title": "How I built and deployed this site for free",
+      }
+    }
+    text="Read This Next"
+  />
+  <ReadNextStory
+    article={
+      Object {
+        "excerpt": "How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.",
+        "path": "how-i-built-and-deployed-this-site-for-free",
+        "title": "How I built and deployed this site for free",
+      }
+    }
+    text="You Might Enjoy"
+  />
+</aside>
+`;
+
+exports[`ReadNextStory renders correctly when empty 1`] = `""`;
+
+exports[`ReadNextStory renders correctly with articles with cover 1`] = `
+<ForwardRef
+  className="read-next-story"
+  css={
+    Object {
+      "map": undefined,
+      "name": "k1hdfg",
+      "next": undefined,
+      "styles": "
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -115,19 +149,17 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
             transition: all 0.5s ease;
         }
         ",
-      }
     }
-    href="/how-i-built-and-deployed-this-site-for-free"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-  >
-    <article
-      css={
-        Object {
-          "map": undefined,
-          "name": "1b87112",
-          "next": undefined,
-          "styles": "
+  }
+  to="how-i-built-and-deployed-this-site-for-free"
+>
+  <article
+    css={
+      Object {
+        "map": undefined,
+        "name": "1b87112",
+        "next": undefined,
+        "styles": "
             position: relative;
             width: 80%;
             max-width: 710px;
@@ -155,53 +187,56 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
               transition: all 0.5s ease;
             }
           ",
-        }
       }
-    >
-      <h2
-        css={
-          Object {
-            "map": undefined,
-            "name": "1pqt7h3",
-            "next": undefined,
-            "styles": "
+    }
+  >
+    <h2
+      css={
+        Object {
+          "map": undefined,
+          "name": "1pqt7h3",
+          "next": undefined,
+          "styles": "
               margin-top: 1rem;
               color: #fff;
             ",
-          }
         }
-      >
-        How I built and deployed this site for free
-      </h2>
-      <p
-        css={
-          Object {
-            "map": undefined,
-            "name": "f42olz",
-            "next": undefined,
-            "styles": "
+      }
+    >
+      How I built and deployed this site for free
+    </h2>
+    <p
+      css={
+        Object {
+          "map": undefined,
+          "name": "f42olz",
+          "next": undefined,
+          "styles": "
               margin: 0;
               color: rgba(255, 255, 255 0.8);
               @media only screen and (max-width: 500px) {
                 display:none;
               }
             ",
-          }
         }
-      >
-        How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
-        …
-      </p>
-    </article>
-  </a>
-  <a
-    className="read-next-story"
-    css={
-      Object {
-        "map": undefined,
-        "name": "lqrpp4",
-        "next": undefined,
-        "styles": "
+      }
+    >
+      How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
+      …
+    </p>
+  </article>
+</ForwardRef>
+`;
+
+exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
+<ForwardRef
+  className="read-next-story"
+  css={
+    Object {
+      "map": undefined,
+      "name": "lqrpp4",
+      "next": undefined,
+      "styles": "
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -241,19 +276,17 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
             transition: all 0.5s ease;
         }
         ",
-      }
     }
-    href="/how-i-built-and-deployed-this-site-for-free"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-  >
-    <article
-      css={
-        Object {
-          "map": undefined,
-          "name": "1rjpsb3",
-          "next": undefined,
-          "styles": "
+  }
+  to="how-i-built-and-deployed-this-site-for-free"
+>
+  <article
+    css={
+      Object {
+        "map": undefined,
+        "name": "1b87112",
+        "next": undefined,
+        "styles": "
             position: relative;
             width: 80%;
             max-width: 710px;
@@ -270,7 +303,7 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
                 line-height: 1.65em;
             }
             ::before {
-              content: \\"You Might Enjoy\\";
+              content: \\"Read This Next\\";
               padding: 4px 10px 5px;
               text-transform: uppercase;
               font-size: 1.1rem;
@@ -281,44 +314,43 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
               transition: all 0.5s ease;
             }
           ",
-        }
       }
-    >
-      <h2
-        css={
-          Object {
-            "map": undefined,
-            "name": "1pqt7h3",
-            "next": undefined,
-            "styles": "
+    }
+  >
+    <h2
+      css={
+        Object {
+          "map": undefined,
+          "name": "1pqt7h3",
+          "next": undefined,
+          "styles": "
               margin-top: 1rem;
               color: #fff;
             ",
-          }
         }
-      >
-        How I built and deployed this site for free
-      </h2>
-      <p
-        css={
-          Object {
-            "map": undefined,
-            "name": "f42olz",
-            "next": undefined,
-            "styles": "
+      }
+    >
+      How I built and deployed this site for free
+    </h2>
+    <p
+      css={
+        Object {
+          "map": undefined,
+          "name": "f42olz",
+          "next": undefined,
+          "styles": "
               margin: 0;
               color: rgba(255, 255, 255 0.8);
               @media only screen and (max-width: 500px) {
                 display:none;
               }
             ",
-          }
         }
-      >
-        How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
-        …
-      </p>
-    </article>
-  </a>
-</aside>
+      }
+    >
+      How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
+      …
+    </p>
+  </article>
+</ForwardRef>
 `;

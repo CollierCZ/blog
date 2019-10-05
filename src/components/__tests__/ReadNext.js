@@ -1,6 +1,6 @@
 import React from "react"
-import renderer from "react-test-renderer"
-import ReadNext from "../ReadNext"
+import { shallow } from "enzyme"
+import ReadNext, { ReadNextStory } from "../ReadNext"
 
 const article = {
     title: "How I built and deployed this site for free",
@@ -16,15 +16,26 @@ const articleNoCover = {
 
 describe("ReadNext", () => {
   it("renders correctly with articles with and without covers", () => {
-    const tree = renderer
-      .create(<ReadNext next={article} prev={articleNoCover} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+    const component = shallow(<ReadNext next={article} prev={articleNoCover} />)
+    expect(component).toMatchSnapshot()
   })
   it("renders correctly when empty", () => {
-    const tree = renderer
-      .create(<ReadNext />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+    const component = shallow(<ReadNext />)
+    expect(component).toMatchSnapshot()
+  })
+})
+
+describe("ReadNextStory", () => {
+  it("renders correctly with articles with cover", () => {
+    const component = shallow(<ReadNextStory article={article} text="Read This Next" />)
+    expect(component).toMatchSnapshot()
+  })
+  it("renders correctly with articles with no cover", () => {
+    const component = shallow(<ReadNextStory article={articleNoCover} text="Read This Next" />)
+    expect(component).toMatchSnapshot()
+  })
+  it("renders correctly when empty", () => {
+    const component = shallow(<ReadNextStory />)
+    expect(component).toMatchSnapshot()
   })
 })
