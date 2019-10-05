@@ -1,5 +1,5 @@
+const { slugify } = require("./src/utilities/slugify")
 const createPaginatedPages = require("gatsby-paginate");
-const _ = require("lodash");
 const moment = require("moment");
 const path = require(`path`);
 
@@ -176,7 +176,7 @@ exports.createPages = async ({ graphql, actions }) => {
         createPage: createPage,
         edges: tagMap.get(tag),
         pageTemplate: tagPage,
-        pathPrefix: `tags/${_.kebabCase(tag.trim())}`,
+        pathPrefix: `tags/${slugify(tag)}`,
         context: {
           tag
         }
@@ -188,7 +188,7 @@ exports.createPages = async ({ graphql, actions }) => {
         createPage: createPage,
         edges:  categoryMap.get(category),
         pageTemplate: categoryPage,
-        pathPrefix: `category/${_.kebabCase(category.trim())}`,
+        pathPrefix: `category/${slugify(category)}`,
         context: {
           category
       }

@@ -13,6 +13,7 @@ export const PureSEO = ({ basicInfo, articleProps }) => {
   const blogURL = basicInfo.kenticoCloudItemHome.elements.base_url.value;
   const logo = basicInfo.kenticoCloudItemHome.elements.blog_logo.assets[0].url;
   const articleURL = articleNode ? blogURL+"/articles/"+articlePath+"/" : null;
+
   var schemaOrgJSONLD = [
     {
       "@context": "http://schema.org",

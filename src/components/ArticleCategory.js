@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import _ from "lodash"
+import React, { Component } from "react"
 import { Link } from "gatsby"
+import { slugify } from "../utilities/slugify"
 
 class ArticleCategory extends Component {
   render() {
@@ -10,7 +10,7 @@ class ArticleCategory extends Component {
                 <span>
           {prefix}
           <span key={category}>
-            <Link key={category} to={`/category/${_.kebabCase(category)}`}>
+            <Link key={category} to={`/category/${slugify(category)}`}>
               {category}
             </Link>
           </span>

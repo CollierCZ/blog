@@ -1,5 +1,4 @@
 import parseHTML from 'html-react-parser'
-import get from 'lodash/get'
 import InlineImage from './InlineImage'
 import InternalLink from './InternalLink'
 import LinkedItem from './LinkedItem'
@@ -8,8 +7,8 @@ import React from 'react'
 
 const RichText = ({ content, images, links, linkedItems }) => {
     if (!content || !content.length) {
-        return null;
-      }
+      return null;
+    }
     // Parse HTML as React components, replacing any content items.
     const children = parseHTML(content, {
         replace: domNode => replaceNode(domNode, images, links, linkedItems),
@@ -31,7 +30,7 @@ export default RichText;
 function replaceNode(domNode, images, links, linkedItems) {
   // Replace inline assets.
 if (domNode.name === "figure") {
-    const id = get(domNode, 'attribs["data-asset-id"]') || null
+    const id = domNode.attribs["data-asset-id"] || null
     const image = images.find(image => image.imageId === id)
 
 return (
@@ -44,8 +43,8 @@ return (
 
   // Replace internal links.
 if (domNode.name === 'a' && domNode.attribs['data-item-id']) {
-    const content = get(domNode, 'children[0].data') || null
-    const id = get(domNode, 'attribs["data-item-id"]') || null
+    const content = domNode.children[0].data || null
+    const id = domNode.attribs["data-item-id"] || null
     const link = links.find(link => link.linkId === id);
 
 return (
@@ -60,7 +59,7 @@ return (
 
   // Replace inline linked items and components.
 if (domNode.name === 'object' && domNode.attribs['data-type'] === 'item') {
-    const codename = get(domNode, 'attribs["data-codename"]') || null
+    const codename = domNode.attribs["data-codename"] || null
     const linkedItem = linkedItems.find(item => item.system.codename === codename)
 
     return <LinkedItem linkedItem={linkedItem} />;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import _ from "lodash";
 import { Link } from "gatsby";
+import { slugify } from "../utilities/slugify";
 
 class ArticleTags extends Component {
   render() {
@@ -11,7 +11,7 @@ class ArticleTags extends Component {
           {prefix}
           {tags.map((tag, index, arr) => (
             <span key={tag}>
-              <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
+              <Link key={tag} to={`/tags/${slugify(tag)}`}>
                 {tag}
               </Link>
               {index !== arr.length - 1 ? ", " : ""}
