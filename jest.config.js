@@ -14,5 +14,5 @@ module.exports = {
     setupFiles: [`<rootDir>/loadershim.js`],
     collectCoverage: true,
     snapshotSerializers: [`enzyme-to-json/serializer`],
-    setupFiles: [`./src/setupTests.js`],
+    setupFiles: [`./src/setUpTests.js`],
   }
