@@ -205,52 +205,10 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
     }
   },
   nextarticle: kenticoCloudItemArticle(fields: { slug: { eq: $nextSlug } })  {
-    fields {
-      slug
-      tags
-    }
-    elements {
-      title {
-        value
-      }
-      metadata__description {
-        value
-      }
-      categories {
-        value {
-          name
-        }
-      }
-      teaser {
-        value {
-          url
-        }
-      }
-    }
+    ...ArticleListFragment
   },
   prevarticle: kenticoCloudItemArticle(fields: { slug: { eq: $prevSlug } })  {
-    fields {
-      slug
-      tags
-    }
-    elements {
-      title {
-        value
-      }
-      metadata__description {
-        value
-      }
-      categories {
-        value {
-          name
-        }
-      }
-      teaser {
-        value {
-          url
-        }
-      }
-    }
+    ...ArticleListFragment
   }
 }
 `

@@ -38,44 +38,14 @@ class IndexTemplate extends React.Component {
 export const query = graphql`
   query indexQuery {
     config: kenticoCloudItemHome{
-      elements {
-        socialmedia {
-          value
-        }
-      }
+      ...SocialMediaFragment
     },
     articles: allKenticoCloudItemArticle (
-      filter: {elements: {publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}}
-      sort: { fields: [fields___date], order: DESC }
+      sort: { fields: [fields___date], order: DESC } 
     ) {
       edges {
         node {
-          fields {
-            slug
-            tags
-            date
-          }
-          elements {
-            metadata__description {
-              value
-            }
-            metadata__keywords {
-              value
-            }
-            categories {
-              value {
-                name
-              }
-            }
-            title {
-              value
-            }
-            teaser {
-              value {
-                url
-              }
-            }            
-          }
+          ...ArticleListFragment
         }
       }
     }

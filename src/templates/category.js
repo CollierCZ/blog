@@ -35,41 +35,15 @@ class CategoryTemplate extends React.Component {
 export const query = graphql`
   query categoryQuery ($category: String) {
     config: kenticoCloudItemHome{
-      elements {
-        socialmedia {
-          value
-        }
-      }
+      ...SocialMediaFragment
     },
     articles: allKenticoCloudItemArticle (
-            sort: { fields: [fields___date], order: DESC }
-            filter: {elements: {categories: {value: {elemMatch: {name: {in: [$category] }}}},publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}}
-        ) {
+      sort: { fields: [fields___date], order: DESC }
+      filter: {elements: {categories: {value: {elemMatch: {name: {in: [$category] }}}}}}
+    ) {
       edges {
         node {
-          fields {
-            slug
-            date
-            tags
-          }
-          elements {
-            metadata__description {
-              value
-            }
-            categories {
-              value {
-                name
-              }
-            }
-            title {
-              value
-            }
-            teaser {
-              value {
-                url
-              }
-            }
-          }
+          ...ArticleListFragment
         }
       }
     }

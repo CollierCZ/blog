@@ -36,41 +36,15 @@ class TagTemplate extends React.Component {
 export const query = graphql`
   query ($tag: String!) {
     config: kenticoCloudItemHome{
-      elements {
-        socialmedia {
-          value
-        }
-      }
+      ...SocialMediaFragment
     },
     articles: allKenticoCloudItemArticle (
             sort: { fields: [fields___date], order: DESC }
-            filter: { fields: {tags: {in: [$tag] } }, elements: {publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}} 
+            filter: { fields: {tags: {in: [$tag] } } } 
         ) {
       edges {
         node {
-          fields {
-            slug
-            date
-            tags
-          }
-          elements {
-            metadata__description {
-              value
-            }
-            categories {
-              value {
-                name
-              }
-            }
-            title {
-              value
-            }
-            teaser {
-              value {
-                url
-              }
-            }            
-          }
+          ...ArticleListFragment
         }
       }
     }
