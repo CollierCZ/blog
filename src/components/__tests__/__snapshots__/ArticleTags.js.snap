@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleTags renders correctly when empty 1`] = `""`;
+
+exports[`ArticleTags renders tags correctly 1`] = `
+<span>
+   on 
+  <span
+    key="documentation"
+  >
+    <mockConstructor
+      key="documentation"
+      to="/tags/documentation"
+    >
+      documentation
+    </mockConstructor>
+    , 
+  </span>
+  <span
+    key="UX"
+  >
+    <mockConstructor
+      key="UX"
+      to="/tags/ux"
+    >
+      UX
+    </mockConstructor>
+    , 
+  </span>
+  <span
+    key="experience mapping"
+  >
+    <mockConstructor
+      key="experience mapping"
+      to="/tags/experience-mapping"
+    >
+      experience mapping
+    </mockConstructor>
+  </span>
+</span>
+`;
