@@ -6,16 +6,7 @@ const BlogLogo = () => {
   const data = useStaticQuery(graphql`
     query {
       kenticoCloudItemHome{
-        elements {
-          title {
-            value
-          }
-          blog_logo {
-            assets {
-              url
-            }
-          }
-        }
+        ...MetadataFragment
       }
     }
   `)
