@@ -187,6 +187,38 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
               }
             }
           }
+          ... on KenticoCloudItemShowcase {
+            elements {
+              url {
+                value
+              }
+              name {
+                value
+              }
+              items {
+                elements {
+                  name {
+                    value
+                  }
+                  short_description {
+                    value
+                  }
+                  teaser {
+                    value {
+                      url
+                    }
+                  }
+                  link {
+                    value
+                  }
+                }
+              }
+            }
+            system {
+              codename
+              type
+            }
+          }
         }
       }
       teaser {
