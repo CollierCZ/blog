@@ -196,12 +196,15 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
                 value
               }
               items {
+                fields {
+                  slug
+                }
                 elements {
                   name {
                     value
                   }
                   short_description {
-                    value
+                    resolvedHtml
                   }
                   teaser {
                     value {
