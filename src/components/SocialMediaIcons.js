@@ -70,7 +70,7 @@ class SocialMediaIcons extends React.Component {
                   color: #000000ff;
                   vertical-align: middle;
                   font-size: 3rem;
-                  padding-bottom: 0.2rem;
+                  margin-bottom: -0.5rem;
 
                   :hover {
                     color: white;

@@ -50,13 +50,13 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
       css={
         Object {
           "map": undefined,
-          "name": "cohqm2",
+          "name": "1f7q7vc",
           "next": undefined,
           "styles": "
                   color: #000000ff;
                   vertical-align: middle;
                   font-size: 3rem;
-                  padding-bottom: 0.2rem;
+                  margin-bottom: -0.5rem;
 
                   :hover {
                     color: white;
@@ -148,13 +148,13 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
       css={
         Object {
           "map": undefined,
-          "name": "cohqm2",
+          "name": "1f7q7vc",
           "next": undefined,
           "styles": "
                   color: #000000ff;
                   vertical-align: middle;
                   font-size: 3rem;
-                  padding-bottom: 0.2rem;
+                  margin-bottom: -0.5rem;
 
                   :hover {
                     color: white;
@@ -246,13 +246,13 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
       css={
         Object {
           "map": undefined,
-          "name": "cohqm2",
+          "name": "1f7q7vc",
           "next": undefined,
           "styles": "
                   color: #000000ff;
                   vertical-align: middle;
                   font-size: 3rem;
-                  padding-bottom: 0.2rem;
+                  margin-bottom: -0.5rem;
 
                   :hover {
                     color: white;

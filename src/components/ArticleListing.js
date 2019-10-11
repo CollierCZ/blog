@@ -8,8 +8,6 @@ import { css } from '@emotion/core'
 import { Link } from "gatsby"
 import React from "react"
 
-
-
 const getArticleList = (articleEdges) =>
   articleEdges.map(articleEdge => ({
     category: articleEdge.node.elements.categories.value[0].name,
@@ -34,7 +32,6 @@ class ArticleListing extends React.Component {
           flex-wrap:wrap;
         `}
       >
-        {/* This is the article loop - each article will be output using this markup */}
         {ArticleList.map(article => {
           const { category, cover, description, path, date, tags, title } = article;
           const className = article.article_class ? article.article_class : "article-card";
