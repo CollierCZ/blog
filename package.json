@@ -20,7 +20,7 @@
     "@mikaelkristiansson/domready": "^1.0.9",
     "classnames": "^2.2.6",
     "emotion": "^10.0.17",
-    "gatsby": "^2.15.28",
+    "gatsby": "^2.16.1",
     "gatsby-image": "^2.2.23",
     "gatsby-link": "^2.2.18",
     "gatsby-paginate": "1.1.1",
