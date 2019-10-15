@@ -44,7 +44,7 @@ class AuthorImage extends React.Component {
             `}
             to={"/"+url}
           >
-            <span className="hidden">{`${name}'s Picture`}</span>
+            <span className="sr-only">{`${name}'s Picture`}</span>
           </Link>
         </figure>
       );

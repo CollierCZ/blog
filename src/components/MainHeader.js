@@ -50,8 +50,11 @@ class MainHeader extends React.Component {
             background: #222 no-repeat center center;
             background-size: cover;
             overflow: hidden;
-            .inner {
-              width: 80%;
+            .main-header-content {
+              width: 100%;
+              margin: 0 auto;
+              display: table-cell;
+              vertical-align: middle;
             }
             @media only screen and (max-width: 900px) {
               -webkit-box-sizing: border-box;
