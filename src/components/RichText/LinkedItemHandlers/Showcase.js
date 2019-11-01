@@ -84,6 +84,7 @@ const ShowcaseItem = ({showcaseItem}) => {
           css={css`
             text-align: center;
             font-size: 2.5rem;
+            text-decoration: none;
           `}
         >{item.name.value}</h2>
         <div 

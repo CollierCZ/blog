@@ -39,7 +39,6 @@ class MainHeader extends React.Component {
         return (
         <header
           className={classes}
-          style={{backgroundImage: `url("`+(cover ? cover : data.kontentItemHome.elements.splash_image.value[0].url)+`")`}}
           css={css`
             position: relative;
             display: table;
@@ -47,9 +46,9 @@ class MainHeader extends React.Component {
             height: ${height}vh;
             min-height: 180px;
             text-align: center;
-            background: #222 no-repeat center center;
-            background-size: cover;
             overflow: hidden;
+            background: url(${cover ? cover : data.kontentItemHome.elements.splash_image.value[0].url}) #000 no-repeat center;
+            background-size: cover;
             .main-header-content {
               width: 100%;
               margin: 0 auto;

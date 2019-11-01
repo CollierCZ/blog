@@ -9,8 +9,4 @@ describe("SocialMediaIcons", () => {
     const component = shallow (<SocialMediaIcons urls={urlArray} />)
     expect(component).toMatchSnapshot()
   })
-  it("renders correctly when empty", () => {
-    const component = shallow (<SocialMediaIcons />)
-    expect(component).toMatchSnapshot()
-  })
 })

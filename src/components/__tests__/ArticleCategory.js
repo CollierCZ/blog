@@ -7,8 +7,4 @@ describe("ArticleCategory", () => {
     const component = shallow (<ArticleCategory category="Education" prefix=" in " />);
     expect(component).toMatchSnapshot()
   })
-  it("renders correctly when empty", () => {
-    const component = shallow (<ArticleCategory prefix=" in " />);
-    expect(component).toMatchSnapshot()
-  })
 })

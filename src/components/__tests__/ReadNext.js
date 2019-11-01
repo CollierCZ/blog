@@ -19,10 +19,6 @@ describe("ReadNext", () => {
     const component = shallow(<ReadNext next={article} prev={articleNoCover} />)
     expect(component).toMatchSnapshot()
   })
-  it("renders correctly when empty", () => {
-    const component = shallow(<ReadNext />)
-    expect(component).toMatchSnapshot()
-  })
 })
 
 describe("ReadNextStory", () => {
@@ -32,10 +28,6 @@ describe("ReadNextStory", () => {
   })
   it("renders correctly with articles with no cover", () => {
     const component = shallow(<ReadNextStory article={articleNoCover} text="Read This Next" />)
-    expect(component).toMatchSnapshot()
-  })
-  it("renders correctly when empty", () => {
-    const component = shallow(<ReadNextStory />)
     expect(component).toMatchSnapshot()
   })
 })

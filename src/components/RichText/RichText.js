@@ -19,9 +19,9 @@ const RichText = ({ content, images, links, linkedItems }) => {
 
 RichText.propTypes = {
   content: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.object).isRequired,
-  links: PropTypes.arrayOf(PropTypes.object).isRequired,
-  linkedItems: PropTypes.arrayOf(PropTypes.object).isRequired,
+  images: PropTypes.arrayOf(PropTypes.object),
+  links: PropTypes.arrayOf(PropTypes.object),
+  linkedItems: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default RichText;

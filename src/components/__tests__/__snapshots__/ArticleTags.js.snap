@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleTags renders correctly when empty 1`] = `""`;
-
 exports[`ArticleTags renders tags correctly 1`] = `
 <span>
    on 
