@@ -27,12 +27,8 @@ const Listing = ({context, data, headStyle}) => {
 
   var next = 0
   var prev = 0
-  if (!last) {
-    next = index + 1;
-  }
-  if (!first) {
-    prev = index - 1
-  }
+  if (!last) { next = index + 1; }
+  if (!first) { prev = index - 1 }
 
   return (
     <>
