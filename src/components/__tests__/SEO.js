@@ -1,6 +1,8 @@
 import React from "react"
 import { shallow } from "enzyme"
 import { PureSEO as SEO } from "../SEO"
+import { simpleShallowRender } from "../../utilities/testHelpers"
+
 const homeQuery = {
   kontentItemHome: {
       elements: {
@@ -57,11 +59,9 @@ const articleProps= {
 
 describe("SEO", () => {
   it("renders correctly with no article data", () => {
-    const component = shallow (<SEO basicInfo={homeQuery} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<SEO basicInfo={homeQuery} />)
   })
   it("renders correctly with article data", () => {
-    const component = shallow (<SEO basicInfo={homeQuery} articleProps={articleProps} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<SEO basicInfo={homeQuery} articleProps={articleProps} />)
   })
 })

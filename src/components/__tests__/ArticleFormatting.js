@@ -1,10 +1,10 @@
 import React from "react"
 import { shallow } from "enzyme"
 import ArticleFormatting from "../ArticleFormatting"
+import { simpleShallowRender } from "../../utilities/testHelpers"
 
 describe("ArticleFormatting", () => {
   it("renders correctly", () => {
-    const component = shallow (<ArticleFormatting children={{test: "value1"}} />);
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ArticleFormatting children={{test: "value1"}} />)
   })
 })

@@ -101,7 +101,7 @@ export const ReadNextStory = ({article, text}) => {
 
 const articleProps = {
   path: string.isRequired,
-  cover: string.isRequired,
+  cover: string,
   title: string.isRequired,
   excerpt: string.isRequired
 }

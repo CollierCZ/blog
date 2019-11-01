@@ -1,6 +1,7 @@
 import React from "react"
 import { shallow } from "enzyme"
 import ReadNext, { ReadNextStory } from "../ReadNext"
+import { simpleShallowRender } from "../../utilities/testHelpers"
 
 const article = {
     title: "How I built and deployed this site for free",
@@ -16,18 +17,15 @@ const articleNoCover = {
 
 describe("ReadNext", () => {
   it("renders correctly with articles with and without covers", () => {
-    const component = shallow(<ReadNext next={article} prev={articleNoCover} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ReadNext next={article} prev={articleNoCover} />)
   })
 })
 
 describe("ReadNextStory", () => {
   it("renders correctly with articles with cover", () => {
-    const component = shallow(<ReadNextStory article={article} text="Read This Next" />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ReadNextStory article={article} text="Read This Next" />)
   })
   it("renders correctly with articles with no cover", () => {
-    const component = shallow(<ReadNextStory article={articleNoCover} text="Read This Next" />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ReadNextStory article={articleNoCover} text="Read This Next" />)
   })
 })

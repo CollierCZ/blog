@@ -1,10 +1,10 @@
 import React from "react"
 import { shallow } from "enzyme"
 import Footer from "../Footer"
+import { simpleShallowRender } from "../../utilities/testHelpers"
 
 describe("Footer", () => {
   it("renders correctly", () => {
-    const component = shallow (<Footer author="Aaron Collier" />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<Footer author="Aaron Collier" />)
   })
 })
