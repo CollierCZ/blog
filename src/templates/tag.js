@@ -3,33 +3,8 @@ import { graphql } from "gatsby";
 import Listing from "../components/Listing";
 import "../layouts/index.css";
 
-class TagTemplate extends React.Component {
-  render() {
-    const {
-      tag,
-      first,
-      group,
-      index,
-      last,
-      pageCount
-    } = this.props.pageContext;
-
-    const info = {
-      tag: tag,
-      headStyle: "small",
-      first: first,
-      group: group,
-      index: index,
-      last: last,
-      pageCount: pageCount,
-      nodes: this.props.data.articles.edges,
-      socialUrls: this.props.data.config.elements.socialmedia.value.split(",")
-    }
-    
-  return (
-    <Listing info={info} />
-    )
-  }
+const TagTemplate = ({data, pageContext}) =>  {    
+  return <Listing data={data} context={pageContext} headStyle="small" />
 }
 
 

@@ -3,36 +3,8 @@ import { graphql } from "gatsby"
 import Listing from "../components/Listing"
 import "../layouts/index.css";
 
-
-
-class IndexTemplate extends React.Component {
-  render() {
-    const {
-      first,
-      group,
-      index,
-      last,
-      pageCount
-    } = this.props.pageContext;
-    const nodes = this.props.data.articles.edges;
-    const socialUrls = this.props.data.config.elements.socialmedia.value.split(",");
-    const headStyle = "medium";
-
-    const info = {
-      headStyle: headStyle,
-      first: first,
-      group: group,
-      index: index,
-      last: last,
-      pageCount: pageCount,
-      nodes: nodes,
-      socialUrls: socialUrls
-    }
-    
-  return (
-    <Listing info={info} />
-    )
-  }
+const IndexTemplate = ({data, pageContext}) => {
+  return <Listing data={data} context={pageContext} headStyle="medium"  />
 }
 
 export const query = graphql`
