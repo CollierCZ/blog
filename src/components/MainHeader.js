@@ -24,10 +24,10 @@ class MainHeader extends React.Component {
     <StaticQuery
       query={graphql`
         query {
-          kenticoCloudItemHome{
+          kontentItemHome{
             elements {
               splash_image {
-                assets {
+                value {
                   url
                 }
               }
@@ -39,7 +39,6 @@ class MainHeader extends React.Component {
         return (
         <header
           className={classes}
-          style={{backgroundImage: `url("`+(cover ? cover : data.kenticoCloudItemHome.elements.splash_image.assets[0].url)+`")`}}
           css={css`
             position: relative;
             display: table;
@@ -47,11 +46,14 @@ class MainHeader extends React.Component {
             height: ${height}vh;
             min-height: 180px;
             text-align: center;
-            background: #222 no-repeat center center;
-            background-size: cover;
             overflow: hidden;
-            .inner {
-              width: 80%;
+            background: url(${cover ? cover : data.kontentItemHome.elements.splash_image.value[0].url}) #000 no-repeat center;
+            background-size: cover;
+            .main-header-content {
+              width: 100%;
+              margin: 0 auto;
+              display: table-cell;
+              vertical-align: middle;
             }
             @media only screen and (max-width: 900px) {
               -webkit-box-sizing: border-box;

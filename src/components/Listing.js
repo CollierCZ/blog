@@ -46,12 +46,10 @@ const Listing = (info) => {
                     urls={socialUrls}
                   />
                 </MainNav>
-                <div className="vertical">
-                  <div className="main-header-content inner">
+                  <div className="main-header-content">
                     <PageTitle text={additionalInfo} />
                     <PageDescription text={additionalDescription} />
                   </div>
-                </div>
               </MainHeader>
               <div>
               <PaginatedContent

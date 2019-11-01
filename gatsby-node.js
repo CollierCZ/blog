@@ -3,7 +3,7 @@ const createPaginatedPages = require("gatsby-paginate");
 const moment = require("moment");
 const path = require(`path`);
 
-const kcItemTypeIdentifier = `KenticoCloudItem`;
+const kcItemTypeIdentifier = `KontentItem`;
 const articleTypeIdentifier = `Article`;
 const paginationLimit = 6;
 
@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, actions }) => {
       createNodeField({
         node,
         name: `date`,
-        value: node.elements.publish_date.datetime
+        value: node.elements.publish_date.value
       })
       createNodeField({
         node,
@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const kcQueryResult = await graphql(
     `
     {
-      allKenticoCloudItemArticle {
+      allKontentItemArticle {
         edges {
           node {
             elements {
@@ -72,7 +72,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       },
-      allKenticoCloudItemHome {
+      allKontentItemHome {
         edges {
           node {
             fields {
@@ -81,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       },
-      allKenticoCloudItemAuthor {
+      allKontentItemAuthor {
         edges {
           node {
             fields {
@@ -99,7 +99,7 @@ exports.createPages = async ({ graphql, actions }) => {
       throw kcQueryResult.errors;
     }
 
-    kcQueryResult.data.allKenticoCloudItemAuthor.edges.forEach(({ node }) => {
+    kcQueryResult.data.allKontentItemAuthor.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: authorPage,
@@ -109,7 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     });
 
-    const articleEdges = kcQueryResult.data.allKenticoCloudItemArticle.edges;
+    const articleEdges = kcQueryResult.data.allKontentItemArticle.edges;
 
     let tagSet = new Set();
     let tagMap = new Map();

@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
-    "@emotion/core": "^10.0.21",
+    "@emotion/core": "^10.0.22",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
+    "@kentico/gatsby-source-kontent": "4.0.0-beta1",
     "@mikaelkristiansson/domready": "^1.0.9",
     "classnames": "^2.2.6",
     "emotion": "^10.0.17",
@@ -35,7 +36,6 @@
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-remark-autolink-headers": "^2.1.16",
     "gatsby-remark-images": "^3.1.28",
-    "gatsby-source-kentico-cloud": "^3.1.0",
     "html-react-parser": "^0.9.1",
     "kentico-cloud-delivery": "^6.2.0",
     "moment": "^2.24.0",
@@ -44,7 +44,8 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-social-icons": "^4.1.0",
-    "rxjs": "^6.5.3"
+    "rxjs": "^6.5.3",
+    "sharp": "^0.23.2"
   },
   "devDependencies": {
     "babel-jest": "^24.9.0",

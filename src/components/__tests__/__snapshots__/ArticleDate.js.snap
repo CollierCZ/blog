@@ -7,19 +7,20 @@ exports[`ArticleDate renders correctly 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "1322fc7",
+        "name": "1uhx81d",
         "next": undefined,
         "styles": "
-            display: inline-block;
-            white-space: nowrap;
-            font-size: inherit;
-            padding: 0;
-            margin: 0;
-            border: none;
-            @media only screen and (max-width: 500px) {
-              display: none;
-            }
-          ",
+          display: inline-block;
+          white-space: nowrap;
+          font-size: inherit;
+          padding: 0;
+          margin: 0;
+          border: none;
+          @media only screen and (max-width: 500px) {
+            display: none;
+          }
+        ",
+        "toString": [Function],
       }
     }
     dateTime="2019-06-03"

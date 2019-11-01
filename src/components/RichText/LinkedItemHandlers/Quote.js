@@ -5,12 +5,12 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Quote = ({quote}) => {
-  const source = quote.elements.source.resolvedHtml
-    ? `<footer>${quote.elements.source.resolvedHtml}</footer>`
+  const source = quote.elements.source.resolvedData.html
+    ? `<footer>${quote.elements.source.resolvedData.html}</footer>`
     : "";
   const quoteText = source
-    ? quote.elements.quote.resolvedHtml + source
-    : quote.elements.quote.resolvedHtml;
+    ? quote.elements.quote.resolvedData.html + source
+    : quote.elements.quote.resolvedData.html;
   return (
     <div
       css={css`

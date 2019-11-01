@@ -122,14 +122,14 @@ class ArticleTemplate extends React.Component {
   
 export const query = graphql`
 query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $prevSlug: String) {
-  config: kenticoCloudItemHome{
+  config: kontentItemHome{
     elements {
       socialmedia {
         value
       }
     }
   },
-  author: kenticoCloudItemAuthor (system: {codename: { eq: $articleAuthor} } ) {
+  author: kontentItemAuthor (system: {codename: { eq: $articleAuthor} } ) {
     elements {
       picture {
         value {
@@ -147,7 +147,7 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
       }
     }
   },
-  article: kenticoCloudItemArticle(fields: { slug: { eq: $slug } })  {
+  article: kontentItemArticle(fields: { slug: { eq: $slug } })  {
     fields {
       date
       tags
@@ -173,46 +173,53 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
           url
         }
         linked_items {
-          ... on KenticoCloudItemQuote {
+          ... on KontentItemQuote {
             system {
               codename
               type
             }
             elements {
               quote {
-                resolvedHtml
+                resolvedData {
+                  html
+                }
               }
               source {
-                resolvedHtml
+                resolvedData {
+                  html
+                }
               }
             }
           }
-          ... on KenticoCloudItemShowcase {
+          ... on KontentItemShowcase {
             elements {
-              url {
-                value
-              }
-              name {
-                value
-              }
               items {
-                fields {
-                  slug
-                }
-                elements {
-                  name {
-                    value
+                linked_items {
+                  fields {
+                    slug
                   }
-                  short_description {
-                    resolvedHtml
-                  }
-                  teaser {
-                    value {
-                      url
+                  elements {
+                    name {
+                      value
                     }
-                  }
-                  link {
-                    value
+                    short_description {
+                      resolvedData {
+                        html
+                      }
+                      links {
+                        linkId
+                        type
+                        urlSlug
+                      }
+                    }
+                    teaser {
+                      value {
+                        url
+                      }
+                    }
+                    link {
+                      value
+                    }
                   }
                 }
               }
@@ -230,8 +237,10 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
         }
       }
       authors {
-        system {
-          name
+        linked_items {
+          system {
+            name
+          }
         }
       }     
       metadata__description {
@@ -239,10 +248,10 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
       }
     }
   },
-  nextarticle: kenticoCloudItemArticle(fields: { slug: { eq: $nextSlug } })  {
+  nextarticle: kontentItemArticle(fields: { slug: { eq: $nextSlug } })  {
     ...ArticleListFragment
   },
-  prevarticle: kenticoCloudItemArticle(fields: { slug: { eq: $prevSlug } })  {
+  prevarticle: kontentItemArticle(fields: { slug: { eq: $prevSlug } })  {
     ...ArticleListFragment
   }
 }

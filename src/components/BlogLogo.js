@@ -5,7 +5,7 @@ import { css } from '@emotion/core'
 const BlogLogo = () => {
   const data = useStaticQuery(graphql`
     query {
-      kenticoCloudItemHome{
+      kontentItemHome{
         ...MetadataFragment
       }
     }
@@ -25,8 +25,8 @@ const BlogLogo = () => {
         }
       `} to={"/"}>
       <img
-        src={data.kenticoCloudItemHome.elements.blog_logo.assets[0].url}
-        alt={data.kenticoCloudItemHome.elements.title.value} 
+        src={data.kontentItemHome.elements.blog_logo.value[0].url}
+        alt={data.kontentItemHome.elements.title.value} 
         css={css`
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;

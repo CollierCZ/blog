@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SocialMediaIcons renders correctly when empty 1`] = `""`;
-
 exports[`SocialMediaIcons renders correctly with URLs 1`] = `
 <div>
   <a
@@ -10,35 +8,36 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "1n6iv9h",
+        "name": "1bepzvy",
         "next": undefined,
         "styles": "
-                    display: inline-block;
-                    margin: 0 1rem;
-                    width: 40px;
-                    height: 40px;
-                    background-color: white;
-                    z-index:2;  
-                    transition: all ease 0.3s;
-                    border-radius: 50%;
+                display: inline-block;
+                margin: 0 1rem;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                z-index:2;
+                transition: all ease 0.3s;
+                border-radius: 50%;
 
-                    :hover {
-                      background-color: #000000ff;
-                      color: white;
-                    }
-                    
-                    @media only screen and (max-width: 900px) {
-                      display: inline-block;
-                      width: 35px;
-                      height: 35px;
-                    }
-                    @media only screen and (max-width: 500px) {
-                      margin: 1rem;
-                      display: inline-block;
-                      width: 30px;
-                      height: 30px;
-                    }
-                  ",
+                :hover {
+                  background-color: #000000ff;
+                  color: white;
+                }
+                
+                @media only screen and (max-width: 900px) {
+                  display: inline-block;
+                  width: 35px;
+                  height: 35px;
+                }
+                @media only screen and (max-width: 500px) {
+                  margin: 1rem;
+                  display: inline-block;
+                  width: 30px;
+                  height: 30px;
+                }
+              ",
+        "toString": [Function],
       }
     }
     href="mailto:aaron@collier.cz"
@@ -50,27 +49,28 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
       css={
         Object {
           "map": undefined,
-          "name": "1f7q7vc",
+          "name": "13adqq6",
           "next": undefined,
           "styles": "
-                  color: #000000ff;
-                  vertical-align: middle;
-                  font-size: 3rem;
-                  margin-bottom: -0.5rem;
+              color: #000000ff;
+              vertical-align: middle;
+              font-size: 3rem;
+              margin-bottom: -0.5rem;
 
-                  :hover {
-                    color: white;
-                  }
+              :hover {
+                color: white;
+              }
 
-                  @media only screen and (max-width: 900px) {
-                    font-size: 2.75rem;
-                    padding-bottom: 0.5rem;
-                  }
-                  @media only screen and (max-width: 500px) {
-                    font-size: 2.25rem;
-                    padding-bottom: 1rem;
-                  }
-                ",
+              @media only screen and (max-width: 900px) {
+                font-size: 2.75rem;
+                padding-bottom: 0.5rem;
+              }
+              @media only screen and (max-width: 500px) {
+                font-size: 2.25rem;
+                padding-bottom: 1rem;
+              }
+            ",
+          "toString": [Function],
         }
       }
       fixedWidth={false}
@@ -108,35 +108,36 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "1n6iv9h",
+        "name": "1bepzvy",
         "next": undefined,
         "styles": "
-                    display: inline-block;
-                    margin: 0 1rem;
-                    width: 40px;
-                    height: 40px;
-                    background-color: white;
-                    z-index:2;  
-                    transition: all ease 0.3s;
-                    border-radius: 50%;
+                display: inline-block;
+                margin: 0 1rem;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                z-index:2;
+                transition: all ease 0.3s;
+                border-radius: 50%;
 
-                    :hover {
-                      background-color: #000000ff;
-                      color: white;
-                    }
-                    
-                    @media only screen and (max-width: 900px) {
-                      display: inline-block;
-                      width: 35px;
-                      height: 35px;
-                    }
-                    @media only screen and (max-width: 500px) {
-                      margin: 1rem;
-                      display: inline-block;
-                      width: 30px;
-                      height: 30px;
-                    }
-                  ",
+                :hover {
+                  background-color: #000000ff;
+                  color: white;
+                }
+                
+                @media only screen and (max-width: 900px) {
+                  display: inline-block;
+                  width: 35px;
+                  height: 35px;
+                }
+                @media only screen and (max-width: 500px) {
+                  margin: 1rem;
+                  display: inline-block;
+                  width: 30px;
+                  height: 30px;
+                }
+              ",
+        "toString": [Function],
       }
     }
     href="https://github.com/CollierCZ"
@@ -148,27 +149,28 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
       css={
         Object {
           "map": undefined,
-          "name": "1f7q7vc",
+          "name": "13adqq6",
           "next": undefined,
           "styles": "
-                  color: #000000ff;
-                  vertical-align: middle;
-                  font-size: 3rem;
-                  margin-bottom: -0.5rem;
+              color: #000000ff;
+              vertical-align: middle;
+              font-size: 3rem;
+              margin-bottom: -0.5rem;
 
-                  :hover {
-                    color: white;
-                  }
+              :hover {
+                color: white;
+              }
 
-                  @media only screen and (max-width: 900px) {
-                    font-size: 2.75rem;
-                    padding-bottom: 0.5rem;
-                  }
-                  @media only screen and (max-width: 500px) {
-                    font-size: 2.25rem;
-                    padding-bottom: 1rem;
-                  }
-                ",
+              @media only screen and (max-width: 900px) {
+                font-size: 2.75rem;
+                padding-bottom: 0.5rem;
+              }
+              @media only screen and (max-width: 500px) {
+                font-size: 2.25rem;
+                padding-bottom: 1rem;
+              }
+            ",
+          "toString": [Function],
         }
       }
       fixedWidth={false}
@@ -206,35 +208,36 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "1n6iv9h",
+        "name": "1bepzvy",
         "next": undefined,
         "styles": "
-                    display: inline-block;
-                    margin: 0 1rem;
-                    width: 40px;
-                    height: 40px;
-                    background-color: white;
-                    z-index:2;  
-                    transition: all ease 0.3s;
-                    border-radius: 50%;
+                display: inline-block;
+                margin: 0 1rem;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                z-index:2;
+                transition: all ease 0.3s;
+                border-radius: 50%;
 
-                    :hover {
-                      background-color: #000000ff;
-                      color: white;
-                    }
-                    
-                    @media only screen and (max-width: 900px) {
-                      display: inline-block;
-                      width: 35px;
-                      height: 35px;
-                    }
-                    @media only screen and (max-width: 500px) {
-                      margin: 1rem;
-                      display: inline-block;
-                      width: 30px;
-                      height: 30px;
-                    }
-                  ",
+                :hover {
+                  background-color: #000000ff;
+                  color: white;
+                }
+                
+                @media only screen and (max-width: 900px) {
+                  display: inline-block;
+                  width: 35px;
+                  height: 35px;
+                }
+                @media only screen and (max-width: 500px) {
+                  margin: 1rem;
+                  display: inline-block;
+                  width: 30px;
+                  height: 30px;
+                }
+              ",
+        "toString": [Function],
       }
     }
     href="https://collier.cz/rss.xml"
@@ -246,27 +249,28 @@ exports[`SocialMediaIcons renders correctly with URLs 1`] = `
       css={
         Object {
           "map": undefined,
-          "name": "1f7q7vc",
+          "name": "13adqq6",
           "next": undefined,
           "styles": "
-                  color: #000000ff;
-                  vertical-align: middle;
-                  font-size: 3rem;
-                  margin-bottom: -0.5rem;
+              color: #000000ff;
+              vertical-align: middle;
+              font-size: 3rem;
+              margin-bottom: -0.5rem;
 
-                  :hover {
-                    color: white;
-                  }
+              :hover {
+                color: white;
+              }
 
-                  @media only screen and (max-width: 900px) {
-                    font-size: 2.75rem;
-                    padding-bottom: 0.5rem;
-                  }
-                  @media only screen and (max-width: 500px) {
-                    font-size: 2.25rem;
-                    padding-bottom: 1rem;
-                  }
-                ",
+              @media only screen and (max-width: 900px) {
+                font-size: 2.75rem;
+                padding-bottom: 0.5rem;
+              }
+              @media only screen and (max-width: 500px) {
+                font-size: 2.25rem;
+                padding-bottom: 1rem;
+              }
+            ",
+          "toString": [Function],
         }
       }
       fixedWidth={false}

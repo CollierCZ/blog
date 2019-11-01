@@ -32,7 +32,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-kentico-cloud`,
+      resolve: `@kentico/gatsby-source-kontent`,
       options: {
         deliveryClientConfig: {
           projectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
@@ -50,22 +50,21 @@ module.exports = {
       options: {
         feeds: [
           {
-            serialize: ({ query: { kenticoCloudItemHome, allKenticoCloudItemArticle } }) => {
-              return allKenticoCloudItemArticle.edges.map(edge => ({
+            serialize: ({ query: { kontentItemHome, allKontentItemArticle } }) => {
+              return allKontentItemArticle.edges.map(edge => ({
                   title: edge.node.elements.title.value,
                   description: edge.node.elements.metadata__description.value,
                   categories: edge.node.fields.tags,
                   date: edge.node.fields.date,
-                  url: kenticoCloudItemHome.elements.base_url.value + "/articles/" + edge.node.fields.slug,
-                  guid: kenticoCloudItemHome.elements.base_url.value + "/articles/" +  edge.node.fields.slug
+                  url: kontentItemHome.elements.base_url.value + "/articles/" + edge.node.fields.slug,
+                  guid: kontentItemHome.elements.base_url.value + "/articles/" +  edge.node.fields.slug
               }))
             },
             query: `
               {
-                allKenticoCloudItemArticle (
+                allKontentItemArticle (
                   limit: 10,
-                  sort: { fields: [fields___date], order: DESC },
-                  filter: {elements: {publish_date: {datetime: {gte: "2019-06-03T00:00:00.000Z"}}}}
+                  sort: { fields: [fields___date], order: DESC }
                 ) {
                   edges {
                     node {
@@ -88,7 +87,7 @@ module.exports = {
                     }
                   }
                 },
-                kenticoCloudItemHome {
+                kontentItemHome {
                   elements {
                     base_url {
                       value

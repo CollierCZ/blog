@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 export const PureSEO = ({ basicInfo, articleProps }) => {
   const articleNode = articleProps ? articleProps.articleNode : null;
   const articlePath = articleProps ? articleProps.articlePath : null;
-  const siteTitle = basicInfo.kenticoCloudItemHome.elements.title.value;
+  const siteTitle = basicInfo.kontentItemHome.elements.title.value;
   const title = articleNode ? articleNode.elements.title.value : '';
-  const description = articleNode ? articleNode.elements.metadata__description.value : basicInfo.kenticoCloudItemHome.elements.metadata__description.value;
-  const image = articleNode ? articleNode.elements.teaser.value[0].url : basicInfo.kenticoCloudItemHome.elements.splash_image.assets[0].url;
-  const blogURL = basicInfo.kenticoCloudItemHome.elements.base_url.value;
-  const logo = basicInfo.kenticoCloudItemHome.elements.blog_logo.assets[0].url;
+  const description = articleNode ? articleNode.elements.metadata__description.value : basicInfo.kontentItemHome.elements.metadata__description.value;
+  const image = articleNode ? articleNode.elements.teaser.value[0].url : basicInfo.kontentItemHome.elements.splash_image.value[0].url;
+  const blogURL = basicInfo.kontentItemHome.elements.base_url.value;
+  const logo = basicInfo.kontentItemHome.elements.blog_logo.value[0].url;
   const articleURL = articleNode ? blogURL+"/articles/"+articlePath+"/" : null;
 
   var schemaOrgJSONLD = [
@@ -101,7 +101,7 @@ export const SEO = props => (
   <StaticQuery
   query={graphql`
     query {
-      kenticoCloudItemHome{
+      kontentItemHome{
         ...MetadataFragment
       }
     }

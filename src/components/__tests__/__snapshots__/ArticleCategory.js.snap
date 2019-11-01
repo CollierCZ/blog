@@ -15,5 +15,3 @@ exports[`ArticleCategory renders a category correctly 1`] = `
   </span>
 </span>
 `;
-
-exports[`ArticleCategory renders correctly when empty 1`] = `""`;

@@ -20,105 +20,102 @@ const getArticleList = (articleEdges) =>
   }));
   
 
-class ArticleListing extends React.Component {
-  render() {
-    const { count, index } = this.props;
-    const ArticleList = getArticleList(this.props.articleEdges.slice((index-1)*count,(index-1)+count));
+const ArticleListing = ({ articleEdges, count, index }) => {
+  const ArticleList = getArticleList(articleEdges.slice((index-1)*count,(index-1)+count));
 
-    return (
-      <div className="article-listing"
-        css={css`
-          display: flex;
-          flex-wrap:wrap;
-        `}
-      >
-        {ArticleList.map(article => {
-          const { category, cover, description, path, date, tags, title } = article;
-          const className = article.article_class ? article.article_class : "article-card";
-          
-          return (
-            <ArticleFormatting className={className} 
-              css={css`
-                flex:1 1 300px;
-                margin:3rem;
-                border-radius:4%;
-                box-shadow: 0rem 0rem 2rem grey;
+  return (
+    <div className="article-listing"
+      css={css`
+        display: flex;
+        flex-wrap:wrap;
+      `}
+    >
+      {ArticleList.map(article => {
+        const { category, cover, description, path, date, tags, title } = article;
+        const className = article.article_class ? article.article_class : "article-card";
+        
+        return (
+          <ArticleFormatting className={className} 
+            css={css`
+              flex:1 1 300px;
+              margin:3rem;
+              border-radius:4%;
+              box-shadow: 0rem 0rem 2rem grey;
+              transition: all .5s ease;
+              :hover {
                 transition: all .5s ease;
-                :hover {
-                  transition: all .5s ease;
-                  transform: translate3D(0,-1px,0) scale(1.02);
-                }
-              `}  
-              key={title}
-            >
-              <ArticleTeaser cover={cover} link={`/articles/${path}`} />
-              <div css={css`
-                display:flex;
-                flex-direction: column;
-                flex-grow:1;
-                padding: 2rem;
-              `}>
-                <Link className="article-link" 
-                  css={css`
-                    text-decoration: none;
-                    :hover{
-                      font-weight: inherit;
-                      letter-spacing: inherit;
-                    }
-                  `}
-                  to={`/articles/${path}`}
-                >
-                  <ArticleHeader>
-                    <h2 css={css`
-                      font-size: 2.5rem;
-                    `}>
-                      {title}
-                    </h2>
-                  </ArticleHeader>
-                  <section className="article-description" css={css`
-                    line-height:1em;
-                    font-size:0.8em;
+                transform: translate3D(0,-1px,0) scale(1.02);
+              }
+            `}  
+            key={title}
+          >
+            <ArticleTeaser cover={cover} link={`/articles/${path}`} />
+            <div css={css`
+              display:flex;
+              flex-direction: column;
+              flex-grow:1;
+              padding: 2rem;
+            `}>
+              <Link className="article-link" 
+                css={css`
+                  text-decoration: none;
+                  :hover{
+                    font-weight: inherit;
+                    letter-spacing: inherit;
+                  }
+                `}
+                to={`/articles/${path}`}
+              >
+                <ArticleHeader>
+                  <h2 css={css`
+                    font-size: 2.5rem;
                   `}>
-                    <p>
-                      {description}{" "}
-                        &raquo;
-                    </p>
-                  </section>
-                </Link>
-                <footer
-                  css={css`
-                    display: block;
-                    margin: 0;
-                    font-family: "Open Sans", sans-serif;
-                    font-size: 1.25rem;
-                    line-height: 1.5rem;
+                    {title}
+                  </h2>
+                </ArticleHeader>
+                <section className="article-description" css={css`
+                  line-height:1em;
+                  font-size:0.8em;
+                `}>
+                  <p>
+                    {description}{" "}
+                      &raquo;
+                  </p>
+                </section>
+              </Link>
+              <footer
+                css={css`
+                  display: block;
+                  margin: 0;
+                  font-family: "Open Sans", sans-serif;
+                  font-size: 1.25rem;
+                  line-height: 1.5rem;
+                  color: #4a4a4a;
+                  a {
                     color: #4a4a4a;
-                    a {
-                      color: #4a4a4a;
-                      text-decoration: none;
-                    }
-                    
-                    a:hover {
-                      color: #4a4a4a;
-                      text-decoration: underline;
-                    }
-                    @media only screen and (max-width: 500px) {
-                      font-size: 1.3rem;
-                      margin-top: 1rem;
-                    }
-                  `}
-                >
-                  <ArticleDate prefix="Published " date={date} />
-                  <ArticleCategory prefix=" in " category={category} />
-                  <ArticleTags prefix=" on " tags={tags} />
-                </footer>
-              </div>
-            </ArticleFormatting>
-          );
-        })}
-      </div>
-    );
-  }
+                    text-decoration: none;
+                  }
+                  
+                  a:hover {
+                    color: #4a4a4a;
+                    text-decoration: underline;
+                  }
+                  @media only screen and (max-width: 500px) {
+                    font-size: 1.3rem;
+                    margin-top: 1rem;
+                  }
+                `}
+              >
+                <ArticleDate prefix="Published " date={date} />
+                <ArticleCategory prefix=" in " category={category} />
+                <ArticleTags prefix=" on " tags={tags} />
+              </footer>
+            </div>
+          </ArticleFormatting>
+        );
+      })}
+    </div>
+  );
 }
 
 export default ArticleListing;

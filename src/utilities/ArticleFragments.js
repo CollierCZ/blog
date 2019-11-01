@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 
 export const ArticleListFragment = graphql`
-  fragment ArticleListFragment on KenticoCloudItemArticle {
+  fragment ArticleListFragment on KontentItemArticle {
     fields {
       slug
       tags
