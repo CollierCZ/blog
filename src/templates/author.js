@@ -44,7 +44,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query authorQuery($slug: String!) {
-  author: kenticoCloudItemAuthor(fields: { slug: { eq: $slug } })  {
+  author: kontentItemAuthor(fields: { slug: { eq: $slug } })  {
     elements {
       name {
         value

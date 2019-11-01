@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
-import { arrayOf, shape, string } from "prop-types";
+import { array, arrayOf, shape, string } from "prop-types";
 import React from "react";
+import RichText from "../RichText"
 
 const Showcase = ({showcase}) => (
   <div
@@ -9,7 +10,7 @@ const Showcase = ({showcase}) => (
       flex-wrap: wrap;
     `}
   >
-    {showcase.elements.items.map(showcaseItem => {
+    {showcase.elements.items.linked_items.map(showcaseItem => {
       return (
         <ShowcaseItem key={showcaseItem.fields.slug} showcaseItem={showcaseItem} />
       )
@@ -26,7 +27,10 @@ const showcaseItemProps = {
       value: string.isRequired
     }).isRequired,
     short_description: shape({
-      value: string.isRequired
+      resolvedData: shape ({
+        html: string.isRequired
+      }).isRequired,
+      links: array.isRequired
     }).isRequired,
     teaser: shape({
       value: arrayOf(
@@ -44,9 +48,11 @@ const showcaseItemProps = {
 Showcase.propTypes = {
   showcase: shape({
     elements: shape ({
-      items: arrayOf(
-        shape(showcaseItemProps).isRequired
-      ).isRequired
+      items: shape ({
+        linked_items: arrayOf(
+          shape(showcaseItemProps).isRequired
+        ).isRequired
+      }).isRequired
     }).isRequired
   }).isRequired
 };
@@ -54,41 +60,46 @@ Showcase.propTypes = {
 const ShowcaseItem = ({showcaseItem}) => {
   const item = showcaseItem.elements;
   return(
-    <a
-      href={item.link.value}
-      css={css`
-        flex:1 1 300px;
-        margin:3rem;
-        padding: 1rem;
-        border-radius:4%;
-        box-shadow: 0rem 0rem 2rem grey;
+    <div 
+    css={css`
+      flex:1 1 300px;
+      margin:3rem;
+      padding: 1rem;
+      border-radius:4%;
+      box-shadow: 0rem 0rem 2rem grey;
+      transition: all .5s ease;
+      text-decoration: none;
+      :hover {
+        color: inherit !important;
+        font-weight: inherit !important;
+        letter-spacing: inherit !important;
         transition: all .5s ease;
-        text-decoration: none;
-        :hover {
-          color: inherit !important;
-          font-weight: inherit !important;
-          letter-spacing: inherit !important;
-          transition: all .5s ease;
-          transform: translate3D(0,-1px,0) scale(1.02);
-        }
-      `}  
-    >
-      <h2
-        css={css`
-          text-align: center;
-          font-size: 2.5rem;
-        `}
-      >{item.name.value}</h2>
-      <div 
-        css={css`
-          background-size: cover;
-          width: 100%;
-          height: 200px;
-          background-image: url(${ item.teaser.value[0].url });
-        `}
+        transform: translate3D(0,-1px,0) scale(1.02);
+      }
+    `}>
+      <a
+        href={item.link.value}  
+      >
+        <h2
+          css={css`
+            text-align: center;
+            font-size: 2.5rem;
+          `}
+        >{item.name.value}</h2>
+        <div 
+          css={css`
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+            background-image: url(${ item.teaser.value[0].url });
+          `}
+        />
+      </a>
+      <RichText
+        content={item.short_description.resolvedData.html}
+        links={item.short_description.links}
       />
-      <div dangerouslySetInnerHTML={{ __html: item.short_description.resolvedHtml}} />
-    </a>
+    </div>
   )
 }
 

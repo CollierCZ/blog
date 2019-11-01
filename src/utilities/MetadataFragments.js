@@ -1,18 +1,18 @@
 import { graphql } from "gatsby"
 
 export const MetadataFragment = graphql `
-  fragment MetadataFragment on KenticoCloudItemHome {
+  fragment MetadataFragment on KontentItemHome {
     elements {
       title {
         value
       }
       splash_image {
-        assets {
+        value {
           url
         }
       }
       blog_logo {
-        assets {
+        value {
           url
         }
       }
@@ -30,7 +30,7 @@ export const MetadataFragment = graphql `
 `
 
 export const SocialMediaFragment = graphql `
-  fragment SocialMediaFragment on KenticoCloudItemHome {
+  fragment SocialMediaFragment on KontentItemHome {
     elements {
       socialmedia {
         value

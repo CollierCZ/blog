@@ -9,7 +9,7 @@ class PageDescription extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            kenticoCloudItemHome{
+            kontentItemHome{
               elements {
                 metadata__description {
                   value
@@ -36,7 +36,7 @@ class PageDescription extends React.Component {
                   font-size: 1.6rem;
                 }
               `}
-            >{text ? text : data.kenticoCloudItemHome.elements.metadata__description.value}</h2>
+            >{text ? text : data.kontentItemHome.elements.metadata__description.value}</h2>
             )
           }}
         />

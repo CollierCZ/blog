@@ -24,10 +24,10 @@ class MainHeader extends React.Component {
     <StaticQuery
       query={graphql`
         query {
-          kenticoCloudItemHome{
+          kontentItemHome{
             elements {
               splash_image {
-                assets {
+                value {
                   url
                 }
               }
@@ -39,7 +39,7 @@ class MainHeader extends React.Component {
         return (
         <header
           className={classes}
-          style={{backgroundImage: `url("`+(cover ? cover : data.kenticoCloudItemHome.elements.splash_image.assets[0].url)+`")`}}
+          style={{backgroundImage: `url("`+(cover ? cover : data.kontentItemHome.elements.splash_image.value[0].url)+`")`}}
           css={css`
             position: relative;
             display: table;

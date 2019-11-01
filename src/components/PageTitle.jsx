@@ -9,7 +9,7 @@ class PageTitle extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            kenticoCloudItemHome{
+            kontentItemHome{
               elements {
                 title {
                   value
@@ -37,7 +37,7 @@ class PageTitle extends React.Component {
                   font-size: 3rem;
                 }
               `}
-            >{text ? text : data.kenticoCloudItemHome.elements.title.value}</h1>
+            >{text ? text : data.kontentItemHome.elements.title.value}</h1>
           )
         }}
       />
