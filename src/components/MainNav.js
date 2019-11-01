@@ -5,9 +5,9 @@ const MainNav = ({children}) => {
   return <nav
     className="clearfix"
     css={css`
-      position: relative;
       padding: 35px 40px;
       margin: 0 0 30px;
+      position: relative;
       display:flex;
       position: absolute;
       top: 0;

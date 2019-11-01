@@ -29,12 +29,11 @@ export default RichText;
 /** Replace HTML DOM node with React component. */
 function replaceNode(domNode, images, links, linkedItems) {
   // Replace inline assets.
-if (domNode.name === "figure") {
+  if (domNode.name === "figure") {
     const id = domNode.attribs["data-asset-id"] || null
     const image = images.find(image => image.imageId === id)
-
-return (
-  <InlineImage
+    return (
+      <InlineImage
         description={image.description}
         url={image.url}
       />
@@ -42,26 +41,24 @@ return (
   }
 
   // Replace internal links.
-if (domNode.name === 'a' && domNode.attribs['data-item-id']) {
+  if (domNode.name === 'a' && domNode.attribs['data-item-id']) {
     const content = domNode.children[0].data || null
     const id = domNode.attribs["data-item-id"] || null
     const link = links.find(link => link.linkId === id);
-
-return (
-    <InternalLink
-        content={content}
-        linkId={link.linkId}
-        type={link.type}
-        urlSlug={link.urlSlug}
-      />
-    );
-  }
+    return (
+      <InternalLink
+          content={content}
+          linkId={link.linkId}
+          type={link.type}
+          urlSlug={link.urlSlug}
+        />
+      );
+    }
 
   // Replace inline linked items and components.
-if (domNode.name === 'object' && domNode.attribs['data-type'] === 'item') {
+  if (domNode.name === 'object' && domNode.attribs['data-type'] === 'item') {
     const codename = domNode.attribs["data-codename"] || null
     const linkedItem = linkedItems.find(item => item.system.codename === codename)
-
     return <LinkedItem linkedItem={linkedItem} />;
   }
 }

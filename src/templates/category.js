@@ -3,33 +3,8 @@ import { graphql } from "gatsby";
 import Listing from "../components/Listing";
 import "../layouts/index.css";
 
-class CategoryTemplate extends React.Component {
-  render() {
-    const {
-      category,
-      first,
-      group,
-      index,
-      last,
-      pageCount
-    } = this.props.pageContext;
-
-    const info = {
-      category: category,
-      headStyle: "small",
-      first: first,
-      group: group,
-      index: index,
-      last: last,
-      pageCount: pageCount,
-      nodes: this.props.data.articles.edges,
-      socialUrls: this.props.data.config.elements.socialmedia.value.split(",")
-    }
-    
-  return (
-    <Listing info={info} />
-    )
-  }
+const CategoryTemplate = ({data, pageContext}) => {  
+  return <Listing data={data} context={pageContext} headStyle="small" />
 }
 
 export const query = graphql`
