@@ -36,7 +36,7 @@
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-remark-autolink-headers": "^2.1.17",
     "gatsby-remark-images": "^3.1.30",
-    "html-react-parser": "^0.9.1",
+    "html-react-parser": "^0.10.0",
     "kentico-cloud-delivery": "^6.2.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
