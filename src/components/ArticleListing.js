@@ -31,8 +31,9 @@ const ArticleListing = ({ articleEdges, count, index }) => {
       `}
     >
       {ArticleList.map(article => {
-        const { category, cover, description, path, date, tags, title } = article;
+        const { category, description, path, date, tags, title } = article;
         const className = article.article_class ? article.article_class : "article-card";
+        const cover = article.cover+"?w=800&fit=clip"
         
         return (
           <ArticleFormatting className={className} 
