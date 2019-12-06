@@ -47,20 +47,9 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             elements {
-              metadata__description {
-                value
-              }
               categories {
                 value {
                   name
-                }
-              }
-              title {
-                value
-              }
-              teaser {
-                value {
-                  url
                 }
               }
             }
@@ -82,6 +71,15 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       },
       allKontentItemAuthor {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      },
+      allKontentItemCategory {
         edges {
           node {
             fields {
@@ -113,8 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     let tagSet = new Set();
     let tagMap = new Map();
-    let categorySet = new Set();
-    let categoryMap = new Map();
+    let categoryMap = {};
 
     articleEdges.sort((articleA,articleB) => { 
         const dateA = moment(articleA.node.fields.date, "YYYY-MM-DD");
@@ -129,7 +126,7 @@ exports.createPages = async ({ graphql, actions }) => {
     );
     articleEdges.forEach((edge, i) => {
       if (edge.node.fields.tags) {
-        let tags = edge.node.fields.tags;
+        const tags = edge.node.fields.tags;
         tags.forEach(tag => {
           tagSet.add(tag);
           const array = tagMap.has(tag) ? tagMap.get(tag) : [];
@@ -139,11 +136,10 @@ exports.createPages = async ({ graphql, actions }) => {
       }
   
       if (edge.node.elements.categories.value[0].name) {
-        const category =edge.node.elements.categories.value[0].name
-        categorySet.add(category);
-        const array = categoryMap.has(category) ? categoryMap.get(category) : [];
+        const category = slugify(edge.node.elements.categories.value[0].name)
+        const array = categoryMap[category] ? categoryMap[category] : [];
         array.push(edge.node);
-        categoryMap.set(category, array);
+        categoryMap[category] = array;
       }
 
       const nextID = i + 1 < articleEdges.length ? i + 1 : 0;
@@ -162,13 +158,12 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       });
     });
+
     createPaginatedPages({
       createPage: createPage,
       edges: articleEdges,
       pageLength: paginationLimit,
-      pageTemplate: indexPage,
-      buildPath: (index) =>
-        index > 1 ? `/${index}` : `/`
+      pageTemplate: indexPage
     });
     
     tagSet.forEach(tag => {
@@ -183,14 +178,15 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     });
 
-    categorySet.forEach(category => {
+    kcQueryResult.data.allKontentItemCategory.edges.forEach(category => {
+      const categoryName = category.node.fields.slug
       createPaginatedPages({
         createPage: createPage,
-        edges:  categoryMap.get(category),
+        edges:  categoryMap[categoryName],
         pageTemplate: categoryPage,
-        pathPrefix: `category/${slugify(category)}`,
+        pathPrefix: `category/${categoryName}`,
         context: {
-          category
+          categoryName
       }
     });
   })
