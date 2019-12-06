@@ -8,13 +8,28 @@ const CategoryTemplate = ({data, pageContext}) => {
 }
 
 export const query = graphql`
-  query categoryQuery ($category: String) {
+  query categoryQuery ($categoryName: String) {
+    header: kontentItemCategory(fields: {slug: {eq: $categoryName}}){
+      elements {
+        metadata__keywords {
+          value
+        }
+        metadata__description {
+          value
+        }
+        banner_image {
+          value {
+            url
+          }
+        }
+      }
+    },
     config: kontentItemHome{
       ...SocialMediaFragment
     },
     articles: allKontentItemArticle (
       sort: { fields: [fields___date], order: DESC }
-      filter: {elements: {categories: {value: {elemMatch: {name: {in: [$category] }}}}}}
+      filter: {elements: {categories: {value: {elemMatch: {codename: {eq: $categoryName }}}}}}
     ) {
       edges {
         node {

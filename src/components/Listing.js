@@ -23,7 +23,8 @@ const Listing = ({context, data, headStyle}) => {
   const nodes = data.articles.edges;
   const socialUrls = data.config.elements.socialmedia.value.split(",");
   const additionalInfo = context.tag ? context.tag : context.category ? context.category : null;
-  const additionalDescription = context.tag ? `Articles tagged with ${context.tag}`: context.category ? `Articles in the ${context.category} category` : null;
+  const additionalDescription = context.tag ? `Articles tagged with ${context.tag}`: data.header ? data.header.elements.metadata__description.value : null;
+  const cover = data.header ? data.header.elements.banner_image.value[0].url : null;
 
   var next = 0
   var prev = 0
@@ -34,7 +35,7 @@ const Listing = ({context, data, headStyle}) => {
     <>
       <SEO />
       <Layout>
-        <MainHeader headStyle={headStyle}>
+        <MainHeader cover={cover} headStyle={headStyle}>
           <MainNav>
             <BlogLogo />
             <SocialMediaIcons
