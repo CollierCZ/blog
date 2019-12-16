@@ -45,7 +45,7 @@
     "react-helmet": "^5.2.1",
     "react-social-icons": "^4.1.0",
     "rxjs": "^6.5.3",
-    "sharp": "^0.23.3"
+    "sharp": "^0.23.4"
   },
   "devDependencies": {
     "babel-jest": "^24.9.0",
