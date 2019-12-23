@@ -30,7 +30,7 @@
     "gatsby-plugin-feed": "^2.3.25",
     "gatsby-plugin-manifest": "^2.2.34",
     "gatsby-plugin-nprogress": "^2.1.17",
-    "gatsby-plugin-offline": "^3.0.29",
+    "gatsby-plugin-offline": "^3.0.30",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sharp": "^2.3.8",
     "gatsby-plugin-sitemap": "^2.2.22",
