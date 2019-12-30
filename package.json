@@ -20,7 +20,7 @@
     "@kentico/gatsby-source-kontent": "4.0.0-beta1",
     "@mikaelkristiansson/domready": "^1.0.9",
     "classnames": "^2.2.6",
-    "emotion": "^10.0.23",
+    "emotion": "^10.0.27",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.37",
     "gatsby-link": "^2.2.27",
