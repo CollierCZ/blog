@@ -190,30 +190,32 @@ query articleQuery($slug: String!, $articleAuthor: String, $nextSlug: String, $p
             elements {
               items {
                 linked_items {
-                  fields {
-                    slug
-                  }
-                  elements {
-                    name {
-                      value
+                  ... on KontentItemShowcasedThing {
+                    fields {
+                      slug
                     }
-                    short_description {
-                      resolvedData {
-                        html
+                    elements {
+                      name {
+                        value
                       }
-                      links {
-                        linkId
-                        type
-                        urlSlug
+                      short_description {
+                        resolvedData {
+                          html
+                        }
+                        links {
+                          linkId
+                          type
+                          urlSlug
+                        }
                       }
-                    }
-                    teaser {
-                      value {
-                        url
+                      teaser {
+                        value {
+                          url
+                        }
                       }
-                    }
-                    link {
-                      value
+                      link {
+                        value
+                      }
                     }
                   }
                 }
