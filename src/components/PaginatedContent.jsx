@@ -8,7 +8,7 @@ class PaginatedContent extends React.Component {
     this.state = (this.props.page === 1) ? {paged: false} : {paged:true};
   }
 
-  componentWillMount(){
+  componentDidUpdate(){
     if (this.props.page > 1) {
       this.setState({paged:true})
     }

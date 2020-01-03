@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorInfo renders correctly 1`] = `
+<Fragment>
+  <h4>
+    <mockConstructor
+      to="/aaron-collier"
+    >
+      Aaron Collier
+    </mockConstructor>
+  </h4>
+  <div
+    className="author-bio"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>Originally from <a href=\\"https://en.wikipedia.org/wiki/Lexington,_Massachusetts\\" data-new-window=\\"true\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Lexington</a> and now residing in <a href=\\"https://www.gotobrno.cz/en/\\" data-new-window=\\"true\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Brno</a>, Aaron is an educator, editor, and elucidator.</p>",
+      }
+    }
+  />
+</Fragment>
+`;
