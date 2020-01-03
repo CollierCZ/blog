@@ -1400,34 +1400,34 @@
   dependencies:
     core-js "^2.5.7"
 
-"@kentico/gatsby-source-kontent@4.0.0-beta1":
-  version "4.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-4.0.0-beta1.tgz#56be90a7816517ed7c62c45f64463a8cbf2ee686"
-  integrity sha512-7o55F72nL+I5FYYK0CX5a1lUfacIlS3xEaHfqFGTLQJm81YNQBtcVekI2BZ8otbbFx2uBz4an2LvRKit9UVlDA==
+"@kentico/gatsby-source-kontent@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-4.0.0.tgz#3be8bb6bbde6b64cc3b5a1c985a88abceaa9df1a"
+  integrity sha512-EQbtZffUvxh6pnMMb6RO3o3sOZEtU1Vho3AyQZWCzPZBEEUFr0hYEMiazlMs6udRrULpl6hFecjo6IW6Pqn/cA==
   dependencies:
-    "@kentico/kontent-delivery" "^7.0.1"
+    "@kentico/kontent-delivery" "^8.0.0"
     change-case "^3.1.0"
     flatted "^2.0.0"
     json-stringify-safe "^5.0.1"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     react "^16.8.3"
     react-dom "^16.8.3"
-    rxjs "^6.4.0"
+    rxjs "^6.5.3"
 
-"@kentico/kontent-core@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@kentico/kontent-core/-/kontent-core-3.1.0.tgz#8e8f3ac680282e10f5ccefc1cfd5dcdf5907d1ae"
-  integrity sha512-VL5VxJJ+7Abv0ONHXdstT5tFQ8ql55FzXJjx8W4xNazfIg2ezOw+o45xp3BZniYSc1KD56GrJd9Wh0vrFK0THw==
+"@kentico/kontent-core@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@kentico/kontent-core/-/kontent-core-5.0.1.tgz#b15a23e3ef0f8526a73643f9194c2d261e583185"
+  integrity sha512-POv48XnsYj1Azc5/zlkP82ZjpeiEMUFy84wYDmz8qM90KwoYAem9j3MNpzBBD36YlqYANB6zQzMlBMfQRQTfEg==
   dependencies:
     axios "0.19.0"
 
-"@kentico/kontent-delivery@^7.0.1":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@kentico/kontent-delivery/-/kontent-delivery-7.2.0.tgz#ecbd3f4ab9ab9788bc5146bf02f1bc9c5ea929b8"
-  integrity sha512-evUCedXH10vd6bjYhYdPHSCBXzWOLPT4MRyx1nRrTLsCXXbKreIbCQ4DdfjXMEt+Aj+wg/C6UPiHoYuew7M0eA==
+"@kentico/kontent-delivery@^8.0.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@kentico/kontent-delivery/-/kontent-delivery-8.2.0.tgz#6c3feb84e8d934a94c085210ceea492ed6eeb9c9"
+  integrity sha512-M7HBv18dCxDLpFRHRnjm2xcvBq9nD/LDuHBpfrwtr4beGJ+8QWr/u8AAhBJXM2uLKn4M/dt/f35HvzpPdRB/zA==
   dependencies:
-    "@kentico/kontent-core" "3.1.0"
-    parse5 "5.1.0"
+    "@kentico/kontent-core" "5.0.1"
+    parse5 "5.1.1"
     reflect-metadata "0.1.13"
 
 "@mikaelkristiansson/domready@^1.0.9":
@@ -10359,6 +10359,11 @@ parse5@5.1.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
   integrity sha512-fxNG2sQjHvlVAYmzBZS9YlDp6PTSSDwa98vkD4QgVDDCAo84z5X1t5XyJQ62ImdLXx5NdIIfihey6xpum9/gRQ==
 
+parse5@5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
+
 parse5@^3.0.1:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
@@ -12010,7 +12015,7 @@ rx-lite@*, rx-lite@^4.0.8:
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
   integrity sha1-Cx4Rr4vESDbwSmQH6S2kJGe3lEQ=
 
-rxjs@^6.4.0, rxjs@^6.5.4:
+rxjs@^6.4.0, rxjs@^6.5.3, rxjs@^6.5.4:
   version "6.5.4"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
   integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
