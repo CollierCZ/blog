@@ -1424,10 +1424,10 @@
   dependencies:
     core-js "^2.5.7"
 
-"@kentico/gatsby-source-kontent@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-4.0.0.tgz#3be8bb6bbde6b64cc3b5a1c985a88abceaa9df1a"
-  integrity sha512-EQbtZffUvxh6pnMMb6RO3o3sOZEtU1Vho3AyQZWCzPZBEEUFr0hYEMiazlMs6udRrULpl6hFecjo6IW6Pqn/cA==
+"@kentico/gatsby-source-kontent@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-4.2.0.tgz#ecbbde70d79551d2347f9066dde82de5833b85bf"
+  integrity sha512-hoPVeRRUFLHS4T8UkB2RagOrPuMmLXDP/ShMKcjy4qSWHws+gcBUWAztB/1zYvmA4Fbal1tUONLFBGHWjH53uQ==
   dependencies:
     "@kentico/kontent-delivery" "^8.0.0"
     change-case "^3.1.0"
