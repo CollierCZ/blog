@@ -32,7 +32,7 @@
     "gatsby-plugin-nprogress": "^2.1.17",
     "gatsby-plugin-offline": "^3.0.31",
     "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-sharp": "^2.3.10",
+    "gatsby-plugin-sharp": "^2.3.13",
     "gatsby-plugin-sitemap": "^2.2.25",
     "gatsby-remark-autolink-headers": "^2.1.23",
     "gatsby-remark-images": "^3.1.42",
