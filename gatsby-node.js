@@ -5,7 +5,7 @@ const path = require(`path`);
 
 const kcItemTypeIdentifier = `KontentItem`;
 const articleTypeIdentifier = `Article`;
-const paginationLimit = 2;
+const paginationLimit = 6;
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
