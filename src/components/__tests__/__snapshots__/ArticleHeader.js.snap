@@ -3,20 +3,13 @@
 exports[`ArticleFormating renders correctly 1`] = `
 <header
   css={
-    Object {
-      "map": undefined,
-      "name": "s1gkf2",
-      "next": undefined,
-      "styles": "
-      margin-bottom: 3.4rem;
-      @media only screen and (max-width: 500px) {
-          margin-bottom: 2rem;
-      }
+    Array [
+      "
+      margin-bottom: 16px;
     ",
-      "toString": [Function],
-    }
+    ]
   }
 >
-  <Component />
+  This is a test
 </header>
 `;

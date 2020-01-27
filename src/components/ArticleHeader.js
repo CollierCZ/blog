@@ -1,13 +1,10 @@
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
 import React from "react"
 
 const ArticleHeader = ({children}) => {
   return <header
     css={css`
-      margin-bottom: 3.4rem;
-      @media only screen and (max-width: 500px) {
-          margin-bottom: 2rem;
-      }
+      margin-bottom: 16px;
     `}
   >{children}</header>;
 }

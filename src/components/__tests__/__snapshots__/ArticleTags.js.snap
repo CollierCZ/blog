@@ -1,39 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArticleTags renders tags correctly 1`] = `
+.c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #252A31;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c0:hover,
+.c0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c0:hover .TextLink__IconContainer-sc-1bvlje4-0,
+.c0:active .TextLink__IconContainer-sc-1bvlje4-0 {
+  color: #00A991;
+}
+
+.c0:focus {
+  outline: none;
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c0:focus:not(:focus-visible) {
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c0:-moz-focusring,
+.c0:focus-visible {
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
 <span>
    on 
-  <span
-    key="documentation"
-  >
-    <mockConstructor
-      key="documentation"
-      to="/tags/documentation"
+  <span>
+     
+    <a
+      className="c0"
+      href="/tags/documentation"
+      onClick={[Function]}
+      rel=""
     >
       documentation
-    </mockConstructor>
+    </a>
     , 
   </span>
-  <span
-    key="UX"
-  >
-    <mockConstructor
-      key="UX"
-      to="/tags/ux"
+  <span>
+     
+    <a
+      className="c0"
+      href="/tags/ux"
+      onClick={[Function]}
+      rel=""
     >
       UX
-    </mockConstructor>
+    </a>
     , 
   </span>
-  <span
-    key="experience mapping"
-  >
-    <mockConstructor
-      key="experience mapping"
-      to="/tags/experience-mapping"
+  <span>
+     
+    <a
+      className="c0"
+      href="/tags/experience-mapping"
+      onClick={[Function]}
+      rel=""
     >
       experience mapping
-    </mockConstructor>
+    </a>
+    
   </span>
 </span>
 `;

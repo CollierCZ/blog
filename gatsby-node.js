@@ -1,11 +1,11 @@
-const { slugify } = require("./src/utilities/slugify")
+const { slugify } = require("./src/utilities/CaseHelpers")
 const createPaginatedPages = require("gatsby-paginate");
 const moment = require("moment");
 const path = require(`path`);
 
 const kcItemTypeIdentifier = `KontentItem`;
 const articleTypeIdentifier = `Article`;
-const paginationLimit = 6;
+const paginationLimit = 2;
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions

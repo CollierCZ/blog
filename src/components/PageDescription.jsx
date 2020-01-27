@@ -1,44 +1,22 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
-import { css } from '@emotion/core'
+import styled from "styled-components";
+import { Heading } from "@kiwicom/orbit-components";
+import { useSiteMetadata } from "../hooks/use-metadata";
 
-const PageDescription = ({text}) => {
+const StyledHeading = styled("div")`
+  text-shadow: 1px 1px #000;
+`;
+
+const PageDescription = ({ text }) => {
+  const siteMetadata = useSiteMetadata();
+
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          kontentItemHome{
-            elements {
-              metadata__description {
-                value
-              }
-            }
-          }
-        }
-      `}
-      render = {data => {
-        return (
-          <h2
-            css={css`
-              margin: 0;
-              font-size: 2rem;
-              line-height: 1.5em;
-              font-weight: 400;
-              letter-spacing: 0.01rem;
-              color: #ffffff;
-              @media only screen and (max-width: 900px) {
-                font-size: 1.8rem;
-                line-height: 1.5em;
-              }
-              @media only screen and (max-width: 500px) {
-                font-size: 1.6rem;
-              }
-            `}
-          >{text ? text : data.kontentItemHome.elements.metadata__description.value}</h2>
-          )
-        }}
-      />
-    )
-}
+    <StyledHeading>
+      <Heading element="h2" type="displaySubtitle" inverted>
+        {text ? text : siteMetadata.elements.metadata__description.value}
+      </Heading>
+    </StyledHeading>
+  );
+};
 
 export default PageDescription;

@@ -1,88 +1,70 @@
-import { css } from '@emotion/core'
 import React from "react"
-import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import PropTypes from 'prop-types'
+import { Email, Notification } from '@kiwicom/orbit-components/lib/icons'
+import { defaultTokens } from '@kiwicom/orbit-design-tokens'
+import styled, { css } from 'styled-components'
+
+
+
+const SocialMediaIconLink = styled.a`
+  display: inline-block;
+  margin: 0 0.5rem;
+  height: 44px;
+  width: 44px;
+  background-color: ${defaultTokens.paletteWhite};
+  color: ${defaultTokens.paletteInkNormal};
+  z-index:2;
+  transition: all ease 0.3s;
+  border-radius: 50%;
+
+  :hover {
+    background-color: ${defaultTokens.paletteInkNormal};
+    color: ${defaultTokens.paletteWhite};
+  }
+  * {
+    padding-top: 6px;
+  }
+`
 
 const SocialMediaIcons = ({urls}) => {
   let icon
   let label
   return (
-    <div>
+    <div css={css`
+    display:flex;
+    `}>
       {urls.map(url => {
         if (url.startsWith('mailto')) {
-          icon = faEnvelope
-          label = "mailto"
+          label = 'mailto'
+          icon = <Email size='large'/>
         }
         else if (url.startsWith('https://github')) {
-          icon = faGithub
           label = "github"
+          icon = <FontAwesomeIcon
+          icon={faGithub}
+          className="social-media-icon"
+          css={css`
+          width: 32px !important;
+          height: 32px;
+          `}
+        />
         }
         else if (url.endsWith('rss.xml')) {
-          icon = faRss
           label = "rss"
+          icon = <Notification size='large'/>
         }
 
         return (
-        <a
+          <SocialMediaIconLink
           href={url} 
           aria-label={label} 
           className='icon'
           key={url}
-          css={css`
-                display: inline-block;
-                margin: 0 1rem;
-                width: 40px;
-                height: 40px;
-                background-color: white;
-                z-index:2;
-                transition: all ease 0.3s;
-                border-radius: 50%;
-
-                :hover {
-                  background-color: #000000ff;
-                  color: white;
-                }
-                
-                @media only screen and (max-width: 900px) {
-                  display: inline-block;
-                  width: 35px;
-                  height: 35px;
-                }
-                @media only screen and (max-width: 500px) {
-                  margin: 1rem;
-                  display: inline-block;
-                  width: 30px;
-                  height: 30px;
-                }
-              `}
         >
-          <FontAwesomeIcon
-            icon={icon}
-            className="social-media-icon"
-            css={css`
-              color: #000000ff;
-              vertical-align: middle;
-              font-size: 3rem;
-              margin-bottom: -0.5rem;
-
-              :hover {
-                color: white;
-              }
-
-              @media only screen and (max-width: 900px) {
-                font-size: 2.75rem;
-                padding-bottom: 0.5rem;
-              }
-              @media only screen and (max-width: 500px) {
-                font-size: 2.25rem;
-                padding-bottom: 1rem;
-              }
-            `}
-            
-          />
-        </a>
+          {icon}
+        </SocialMediaIconLink>
       )})}
     </div>
   );

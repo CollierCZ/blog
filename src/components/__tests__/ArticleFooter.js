@@ -1,10 +1,9 @@
-import React from "react"
-import { shallow } from "enzyme"
-import ArticleFooter from "../ArticleFooter"
-import { simpleShallowRender } from "../../utilities/testHelpers"
+import React from "react";
+import ArticleFooter from "../ArticleFooter";
+import { simpleRenderer } from "../../utilities/testHelpers";
 
 describe("ArticleFooter", () => {
   it("renders correctly", () => {
-    simpleShallowRender(<ArticleFooter children={{test: "value1"}} />)
-  })
-})
+    simpleRenderer(<ArticleFooter children={'This is a test'} />);
+  });
+});

@@ -3,14 +3,11 @@
 exports[`ArticleFormatting renders correctly 1`] = `
 <article
   css={
-    Object {
-      "map": undefined,
-      "name": "1nomv4n",
-      "next": undefined,
-      "styles": "
+    Array [
+      "
       position: relative;
       width: 80%;
-      max-width: 1200px;
+      max-width: 80ch;
       margin: 0 auto 4rem auto;
       padding-bottom: 0;
       border: none;
@@ -25,10 +22,9 @@ exports[`ArticleFormatting renders correctly 1`] = `
         line-height: 1.65em;
       }
     ",
-      "toString": [Function],
-    }
+    ]
   }
 >
-  <Component />
+  This is a test
 </article>
 `;

@@ -1,7 +1,8 @@
-import { css } from "@emotion/core";
+import { css } from "styled-components";
 import { array, arrayOf, shape, string } from "prop-types";
 import React from "react";
 import RichText from "../RichText"
+import { Heading, Stack, Tile } from '@kiwicom/orbit-components'
 
 const Showcase = ({showcase}) => (
   <div
@@ -62,31 +63,17 @@ const ShowcaseItem = ({showcaseItem}) => {
   return(
     <div 
     css={css`
-      flex:1 1 300px;
-      margin:3rem;
-      padding: 1rem;
-      border-radius:4%;
-      box-shadow: 0rem 0rem 2rem grey;
-      transition: all .5s ease;
-      text-decoration: none;
-      :hover {
-        color: inherit !important;
-        font-weight: inherit !important;
-        letter-spacing: inherit !important;
-        transition: all .5s ease;
-        transform: translate3D(0,-1px,0) scale(1.02);
+      flex: 1 1 34ch;
+      margin: 16px;
+      > * {
+        width:100%;
+        height:100%;
       }
     `}>
-      <a
-        href={item.link.value}  
-      >
-        <h2
-          css={css`
-            text-align: center;
-            font-size: 2.5rem;
-            text-decoration: none;
-          `}
-        >{item.name.value}</h2>
+      <Tile
+        onClick={() => {document.location=item.link.value}}
+      ><Stack><Heading elment='h2'>
+            {item.name.value}</Heading>
         <div 
           css={css`
             background-size: cover;
@@ -94,12 +81,11 @@ const ShowcaseItem = ({showcaseItem}) => {
             height: 200px;
             background-image: url(${ item.teaser.value[0].url });
           `}
-        />
-      </a>
-      <RichText
+        /><RichText
         content={item.short_description.resolvedData.html}
         links={item.short_description.links}
-      />
+      /></Stack></Tile>
+      
     </div>
   )
 }

@@ -1,21 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorInfo renders correctly 1`] = `
-<Fragment>
-  <h4>
-    <mockConstructor
-      to="/aaron-collier"
+Array [
+  .c2 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.c2,
+.c2:link,
+.c2:visited {
+  color: #252A31;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c2:hover,
+.c2:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c2:hover .TextLink__IconContainer-sc-1bvlje4-0,
+.c2:active .TextLink__IconContainer-sc-1bvlje4-0 {
+  color: #00A991;
+}
+
+.c2:focus {
+  outline: none;
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c2:focus:not(:focus-visible) {
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c2:-moz-focusring,
+.c2:focus-visible {
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c3 a:not(.c1),
+.c3 a:not(.c1):link,
+.c3 a:not(.c1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c3 a:not(.c1):hover,
+.c3 a:not(.c1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #252A31;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+<h4
+    className="c0"
+  >
+    <a
+      className="c1 c2"
+      href="/aaron-collier"
+      onClick={[Function]}
+      rel=""
     >
       Aaron Collier
-    </mockConstructor>
-  </h4>
-  <div
-    className="author-bio"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<p>Originally from <a href=\\"https://en.wikipedia.org/wiki/Lexington,_Massachusetts\\" data-new-window=\\"true\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Lexington</a> and now residing in <a href=\\"https://www.gotobrno.cz/en/\\" data-new-window=\\"true\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Brno</a>, Aaron is an educator, editor, and elucidator.</p>",
-      }
-    }
-  />
-</Fragment>
+    </a>
+  </h4>,
+  .c2 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.c2,
+.c2:link,
+.c2:visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c2:hover,
+.c2:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c2:hover .TextLink__IconContainer-sc-1bvlje4-0,
+.c2:active .TextLink__IconContainer-sc-1bvlje4-0 {
+  color: #00A991;
+}
+
+.c2:focus {
+  outline: none;
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c2:focus:not(:focus-visible) {
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c2:-moz-focusring,
+.c2:focus-visible {
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c0 a:not(.c1),
+.c0 a:not(.c1):link,
+.c0 a:not(.c1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c0 a:not(.c1):hover,
+.c0 a:not(.c1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<p
+    className="c0"
+  >
+    Originally from 
+    <a
+      className="c1 c2"
+      href="https://en.wikipedia.org/wiki/Lexington,_Massachusetts"
+      rel=""
+    >
+      Lexington
+    </a>
+     and now residing in 
+    <a
+      className="c1 c2"
+      href="https://www.gotobrno.cz/en/"
+      rel=""
+    >
+      Brno
+    </a>
+    , Aaron is an educator, editor, and elucidator.
+  </p>,
+]
 `;

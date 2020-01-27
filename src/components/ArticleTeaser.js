@@ -1,25 +1,20 @@
-import { css } from '@emotion/core'
-import { Link } from "gatsby";
+import { css } from 'styled-components'
 import { string } from "prop-types";
 import React from "react"
 
-const ArticleTeaser = ({ cover, link }) => {
-  return <Link to={link}>
-      <div 
-        css={css`
-          background-size: cover;
-          width: 100%;
-          height: 200px;
-          border-radius: 8px 8px 0 0;
-          background-image: url("${ cover }");
-        `}
-      />
-    </Link>;
+const ArticleTeaser = ({ cover }) => {
+  return (
+    <div 
+      css={css`
+        width: 100%;
+        height: 200px;
+        background: url("${ cover }") center center no-repeat;
+      `}
+  />);
 }
 
 ArticleTeaser.propTypes = {
-  cover: string.isRequired,
-  link: string.isRequired
+  cover: string.isRequired
 }
 
 export default ArticleTeaser;

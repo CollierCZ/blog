@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
 
 const ArticleFormatting = ({ children, className }) => {
   return <article 
@@ -7,7 +7,7 @@ const ArticleFormatting = ({ children, className }) => {
     css={css`
       position: relative;
       width: 80%;
-      max-width: 1200px;
+      max-width: 80ch;
       margin: 0 auto 4rem auto;
       padding-bottom: 0;
       border: none;

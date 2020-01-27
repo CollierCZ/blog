@@ -1,98 +1,647 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ReadNext renders correctly with articles with and without covers 1`] = `
+.c5 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c4 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: 44px;
+  background: transparent;
+  color: #FFFFFF !important;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 16px;
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 700!important;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out !important;
+  transition: all 0.15s ease-in-out !important;
+  outline: 0;
+  margin-bottom: 8px;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+
+.c1:hover {
+  background: rgba(255,255,255,0.2);
+  color: #FFFFFF!important;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+
+.c1:hover .Button__IconContainer-sc-1brqp3f-0 {
+  color: #FFFFFF;
+}
+
+.c1:active {
+  background: rgba(255,255,255,0.2);
+  color: #FFFFFF!important;
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1:active .Button__IconContainer-sc-1brqp3f-0 {
+  color: #FFFFFF;
+}
+
+.c1:focus {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:focus:active {
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1:focus:not(:focus-visible) {
+  box-shadow: none;
+  background: transparent;
+}
+
+.c1:-moz-focusring,
+.c1:focus-visible {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:-moz-focusring:active,
+.c1:focus-visible:active {
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1 .Loading__StyledSpinner-sc-1psg3na-2 {
+  width: 24px;
+  height: 24px;
+}
+
+.c2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c0 > * {
+  margin: 0 0 16px 0!important;
+}
+
+.c0 > *:last-child {
+  margin: 0 !important;
+}
+
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+  .c2 {
+    min-width: 100%;
+    max-width: 1px;
+  }
+}
+
+@media (min-width:414px) {
+
+}
+
+@media (min-width:576px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:992px) {
+  .c0 > * {
+    margin: 0 0 16px 0!important;
+  }
+}
+
+@media (min-width:1200px) {
+
+}
+
 <aside
   css={
-    Object {
-      "map": undefined,
-      "name": "ibixhs",
-      "next": undefined,
-      "styles": "
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
+    Array [
+      "
         display: flex;
-        -webkit-box-align: stretch;
-        -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
         align-items: stretch;
-        margin-top: 10rem;
+        margin-top: 32px;
         @media only screen and (max-width: 900px) {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
           flex-direction: column;
-          margin-top: 4rem;
-        }
-        @media only screen and (max-width: 500px) {
-          margin-top: 2rem;
-          margin-bottom: 0.5rem;
         }
       ",
-      "toString": [Function],
-    }
+    ]
   }
 >
-  <ReadNextStory
-    article={
-      Object {
-        "cover": "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/38bbc989-70ab-4661-92cf-11efafa5ab09/sunset-219354_1920.jpg",
-        "excerpt": "How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.",
-        "path": "how-i-built-and-deployed-this-site-for-free",
-        "title": "How I built and deployed this site for free",
-      }
+  <a
+    className="read-next-story"
+    css={
+      Array [
+        "
+        display: flex;
+        flex-grow: 1;
+        min-width: 50%;
+        text-decoration: none;
+        position: relative;
+        background: #222 no-repeat center center;
+        background-size: cover;
+        overflow: hidden;
+        ",
+        "background-image: url(https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/38bbc989-70ab-4661-92cf-11efafa5ab09/sunset-219354_1920.jpg);",
+        " :hover::before {
+          background: rgba(0, 0, 0, 0.8);
+          transition: all 0.2s ease;
+        }
+        
+        /*darken the image */
+        ::before {
+          content: \\"\\";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.7);
+          transition: all 0.5s ease;
+        }
+      ",
+      ]
     }
-    text="Read This Next"
-  />
-  <ReadNextStory
-    article={
-      Object {
-        "excerpt": "How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.",
-        "path": "how-i-built-and-deployed-this-site-for-free",
-        "title": "How I built and deployed this site for free",
+    href="/how-i-built-and-deployed-this-site-for-free"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    <article
+      css={
+        Array [
+          "
+          position: relative;
+          width: 80%;
+          max-width: 710px;
+          margin: 52px auto;
+        ",
+        ]
       }
+    >
+      <div
+        className="c0"
+      >
+        <button
+          className="c1"
+          size="normal"
+          type="button"
+        >
+          <div
+            className="c2"
+          >
+            <div
+              className="c3"
+            >
+              Read This Next
+            </div>
+          </div>
+        </button>
+        <h2
+          className="c4"
+        >
+          How I built and deployed this site for free
+        </h2>
+        <p
+          className="c5"
+        >
+          How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
+          …
+        </p>
+      </div>
+    </article>
+  </a>
+  <a
+    className="read-next-story"
+    css={
+      Array [
+        "
+        display: flex;
+        flex-grow: 1;
+        min-width: 50%;
+        text-decoration: none;
+        position: relative;
+        background: #222 no-repeat center center;
+        background-size: cover;
+        overflow: hidden;
+        ",
+        " :hover::before {
+          background: rgba(0, 0, 0, 0.8);
+          transition: all 0.2s ease;
+        }
+        
+        /*darken the image */
+        ::before {
+          content: \\"\\";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.7);
+          transition: all 0.5s ease;
+        }
+      ",
+      ]
     }
-    text="You Might Enjoy"
-  />
+    href="/how-i-built-and-deployed-this-site-for-free"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    <article
+      css={
+        Array [
+          "
+          position: relative;
+          width: 80%;
+          max-width: 710px;
+          margin: 52px auto;
+        ",
+        ]
+      }
+    >
+      <div
+        className="c0"
+      >
+        <button
+          className="c1"
+          size="normal"
+          type="button"
+        >
+          <div
+            className="c2"
+          >
+            <div
+              className="c3"
+            >
+              You Might Enjoy
+            </div>
+          </div>
+        </button>
+        <h2
+          className="c4"
+        >
+          How I built and deployed this site for free
+        </h2>
+        <p
+          className="c5"
+        >
+          How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
+          …
+        </p>
+      </div>
+    </article>
+  </a>
 </aside>
 `;
 
 exports[`ReadNextStory renders correctly with articles with cover 1`] = `
-<ForwardRef
+.c5 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c4 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: 44px;
+  background: transparent;
+  color: #FFFFFF !important;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 16px;
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 700!important;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out !important;
+  transition: all 0.15s ease-in-out !important;
+  outline: 0;
+  margin-bottom: 8px;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+
+.c1:hover {
+  background: rgba(255,255,255,0.2);
+  color: #FFFFFF!important;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+
+.c1:hover .Button__IconContainer-sc-1brqp3f-0 {
+  color: #FFFFFF;
+}
+
+.c1:active {
+  background: rgba(255,255,255,0.2);
+  color: #FFFFFF!important;
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1:active .Button__IconContainer-sc-1brqp3f-0 {
+  color: #FFFFFF;
+}
+
+.c1:focus {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:focus:active {
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1:focus:not(:focus-visible) {
+  box-shadow: none;
+  background: transparent;
+}
+
+.c1:-moz-focusring,
+.c1:focus-visible {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:-moz-focusring:active,
+.c1:focus-visible:active {
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1 .Loading__StyledSpinner-sc-1psg3na-2 {
+  width: 24px;
+  height: 24px;
+}
+
+.c2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c0 > * {
+  margin: 0 0 16px 0!important;
+}
+
+.c0 > *:last-child {
+  margin: 0 !important;
+}
+
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+  .c2 {
+    min-width: 100%;
+    max-width: 1px;
+  }
+}
+
+@media (min-width:414px) {
+
+}
+
+@media (min-width:576px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:992px) {
+  .c0 > * {
+    margin: 0 0 16px 0!important;
+  }
+}
+
+@media (min-width:1200px) {
+
+}
+
+<a
   className="read-next-story"
   css={
-    Object {
-      "map": undefined,
-      "name": "z7x86v",
-      "next": undefined,
-      "styles": "
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
+    Array [
+      "
         display: flex;
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
         min-width: 50%;
         text-decoration: none;
         position: relative;
-        text-align: center;
-        color: #fff;
         background: #222 no-repeat center center;
         background-size: cover;
         overflow: hidden;
-        background-image: url(https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/38bbc989-70ab-4661-92cf-11efafa5ab09/sunset-219354_1920.jpg);
-        :hover::before {
+        ",
+      "background-image: url(https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/38bbc989-70ab-4661-92cf-11efafa5ab09/sunset-219354_1920.jpg);",
+      " :hover::before {
           background: rgba(0, 0, 0, 0.8);
           transition: all 0.2s ease;
         }
-        :hover article::before {
-          color: #222;
-          background: #fff;
-          transition: all 0.2s ease;
-        }
+        
         /*darken the image */
         ::before {
           content: \\"\\";
@@ -104,126 +653,299 @@ exports[`ReadNextStory renders correctly with articles with cover 1`] = `
           left: 0;
           background: rgba(0, 0, 0, 0.7);
           transition: all 0.5s ease;
-      }
+        }
       ",
-      "toString": [Function],
-    }
+    ]
   }
-  to="how-i-built-and-deployed-this-site-for-free"
+  href="/how-i-built-and-deployed-this-site-for-free"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
 >
   <article
     css={
-      Object {
-        "map": undefined,
-        "name": "1puo7nb",
-        "next": undefined,
-        "styles": "
+      Array [
+        "
           position: relative;
           width: 80%;
           max-width: 710px;
-          margin: 4rem auto;
-          padding-bottom: 4rem;
-          word-wrap: break-word;
-          @media only screen and (max-width: 500px) {
-            font-size: 0.95em;
-          }
-          @media only screen and (max-width: 500px) {
-              width: 100%;
-              margin: 2rem 16px;
-              padding-bottom: 2rem;
-              line-height: 1.65em;
-          }
-          ::before {
-            content: \\"Read This Next\\";
-            padding: 4px 10px 5px;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            font-family: \\"Open Sans\\", sans-serif;
-            color: rgba(255, 255, 255, 0.8);
-            border: rgba(255, 255, 255, 0.5) 1px solid;
-            border-radius: 4px;
-            transition: all 0.5s ease;
-          }
+          margin: 52px auto;
         ",
-        "toString": [Function],
-      }
+      ]
     }
   >
-    <h2
-      css={
-        Object {
-          "map": undefined,
-          "name": "hcs3xi",
-          "next": undefined,
-          "styles": "
-            margin-top: 1rem;
-            color: #fff;
-          ",
-          "toString": [Function],
-        }
-      }
+    <div
+      className="c0"
     >
-      How I built and deployed this site for free
-    </h2>
-    <p
-      css={
-        Object {
-          "map": undefined,
-          "name": "ba0s4t",
-          "next": undefined,
-          "styles": "
-            margin: 0;
-            color: rgba(255, 255, 255 0.8);
-            @media only screen and (max-width: 500px) {
-              display:none;
-            }
-          ",
-          "toString": [Function],
-        }
-      }
-    >
-      How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
-      …
-    </p>
+      <button
+        className="c1"
+        size="normal"
+        type="button"
+      >
+        <div
+          className="c2"
+        >
+          <div
+            className="c3"
+          >
+            Read This Next
+          </div>
+        </div>
+      </button>
+      <h2
+        className="c4"
+      >
+        How I built and deployed this site for free
+      </h2>
+      <p
+        className="c5"
+      >
+        How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
+        …
+      </p>
+    </div>
   </article>
-</ForwardRef>
+</a>
 `;
 
 exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
-<ForwardRef
+.c5 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c5 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c4 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: 44px;
+  background: transparent;
+  color: #FFFFFF !important;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 16px;
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 700!important;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out !important;
+  transition: all 0.15s ease-in-out !important;
+  outline: 0;
+  margin-bottom: 8px;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+
+.c1:hover {
+  background: rgba(255,255,255,0.2);
+  color: #FFFFFF!important;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+
+.c1:hover .Button__IconContainer-sc-1brqp3f-0 {
+  color: #FFFFFF;
+}
+
+.c1:active {
+  background: rgba(255,255,255,0.2);
+  color: #FFFFFF!important;
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1:active .Button__IconContainer-sc-1brqp3f-0 {
+  color: #FFFFFF;
+}
+
+.c1:focus {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:focus:active {
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1:focus:not(:focus-visible) {
+  box-shadow: none;
+  background: transparent;
+}
+
+.c1:-moz-focusring,
+.c1:focus-visible {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:-moz-focusring:active,
+.c1:focus-visible:active {
+  box-shadow: inset 0 0 0 1px #FFFFFF,inset 0 0 6px 3px rgba(37,42,49,0.15);
+}
+
+.c1 .Loading__StyledSpinner-sc-1psg3na-2 {
+  width: 24px;
+  height: 24px;
+}
+
+.c2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c0 > * {
+  margin: 0 0 16px 0!important;
+}
+
+.c0 > *:last-child {
+  margin: 0 !important;
+}
+
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+  .c2 {
+    min-width: 100%;
+    max-width: 1px;
+  }
+}
+
+@media (min-width:414px) {
+
+}
+
+@media (min-width:576px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:992px) {
+  .c0 > * {
+    margin: 0 0 16px 0!important;
+  }
+}
+
+@media (min-width:1200px) {
+
+}
+
+<a
   className="read-next-story"
   css={
-    Object {
-      "map": undefined,
-      "name": "1udos20",
-      "next": undefined,
-      "styles": "
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
+    Array [
+      "
         display: flex;
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
         min-width: 50%;
         text-decoration: none;
         position: relative;
-        text-align: center;
-        color: #fff;
         background: #222 no-repeat center center;
         background-size: cover;
         overflow: hidden;
-        
-        :hover::before {
+        ",
+      " :hover::before {
           background: rgba(0, 0, 0, 0.8);
           transition: all 0.2s ease;
         }
-        :hover article::before {
-          color: #222;
-          background: #fff;
-          transition: all 0.2s ease;
-        }
+        
         /*darken the image */
         ::before {
           content: \\"\\";
@@ -235,87 +957,56 @@ exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
           left: 0;
           background: rgba(0, 0, 0, 0.7);
           transition: all 0.5s ease;
-      }
+        }
       ",
-      "toString": [Function],
-    }
+    ]
   }
-  to="how-i-built-and-deployed-this-site-for-free"
+  href="/how-i-built-and-deployed-this-site-for-free"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
 >
   <article
     css={
-      Object {
-        "map": undefined,
-        "name": "1puo7nb",
-        "next": undefined,
-        "styles": "
+      Array [
+        "
           position: relative;
           width: 80%;
           max-width: 710px;
-          margin: 4rem auto;
-          padding-bottom: 4rem;
-          word-wrap: break-word;
-          @media only screen and (max-width: 500px) {
-            font-size: 0.95em;
-          }
-          @media only screen and (max-width: 500px) {
-              width: 100%;
-              margin: 2rem 16px;
-              padding-bottom: 2rem;
-              line-height: 1.65em;
-          }
-          ::before {
-            content: \\"Read This Next\\";
-            padding: 4px 10px 5px;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            font-family: \\"Open Sans\\", sans-serif;
-            color: rgba(255, 255, 255, 0.8);
-            border: rgba(255, 255, 255, 0.5) 1px solid;
-            border-radius: 4px;
-            transition: all 0.5s ease;
-          }
+          margin: 52px auto;
         ",
-        "toString": [Function],
-      }
+      ]
     }
   >
-    <h2
-      css={
-        Object {
-          "map": undefined,
-          "name": "hcs3xi",
-          "next": undefined,
-          "styles": "
-            margin-top: 1rem;
-            color: #fff;
-          ",
-          "toString": [Function],
-        }
-      }
+    <div
+      className="c0"
     >
-      How I built and deployed this site for free
-    </h2>
-    <p
-      css={
-        Object {
-          "map": undefined,
-          "name": "ba0s4t",
-          "next": undefined,
-          "styles": "
-            margin: 0;
-            color: rgba(255, 255, 255 0.8);
-            @media only screen and (max-width: 500px) {
-              display:none;
-            }
-          ",
-          "toString": [Function],
-        }
-      }
-    >
-      How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
-      …
-    </p>
+      <button
+        className="c1"
+        size="normal"
+        type="button"
+      >
+        <div
+          className="c2"
+        >
+          <div
+            className="c3"
+          >
+            Read This Next
+          </div>
+        </div>
+      </button>
+      <h2
+        className="c4"
+      >
+        How I built and deployed this site for free
+      </h2>
+      <p
+        className="c5"
+      >
+        How I built a modern static site at no cost using Gatsby and Kentico Kontent for Content as a Service.
+        …
+      </p>
+    </div>
   </article>
-</ForwardRef>
+</a>
 `;

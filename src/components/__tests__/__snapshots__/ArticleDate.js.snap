@@ -5,11 +5,8 @@ exports[`ArticleDate renders correctly 1`] = `
   Published 
   <time
     css={
-      Object {
-        "map": undefined,
-        "name": "1uhx81d",
-        "next": undefined,
-        "styles": "
+      Array [
+        "
           display: inline-block;
           white-space: nowrap;
           font-size: inherit;
@@ -20,8 +17,7 @@ exports[`ArticleDate renders correctly 1`] = `
             display: none;
           }
         ",
-        "toString": [Function],
-      }
+      ]
     }
     dateTime="2019-06-03"
   >

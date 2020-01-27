@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
 import { Link } from 'gatsby'
 import React from 'react'
 
