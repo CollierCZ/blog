@@ -1,85 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders correctly 1`] = `
+.c3 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.c3,
+.c3:link,
+.c3:visited {
+  color: #252A31;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c3:hover,
+.c3:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c3:hover .TextLink__IconContainer-sc-1bvlje4-0,
+.c3:active .TextLink__IconContainer-sc-1bvlje4-0 {
+  color: #00A991;
+}
+
+.c3:focus {
+  outline: none;
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c3:focus:not(:focus-visible) {
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c3:-moz-focusring,
+.c3:focus-visible {
+  background: rgba(95,115,140,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(95,115,140,0.1);
+}
+
+.c1 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5F738C;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.c1 a:not(.c2),
+.c1 a:not(.c2):link,
+.c1 a:not(.c2):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c1 a:not(.c2):hover,
+.c1 a:not(.c2):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c0 {
+  margin: 1rem 0 0;
+}
+
 <footer
-  className="clearfix"
-  css={
-    Object {
-      "map": undefined,
-      "name": "m9pb97",
-      "next": undefined,
-      "styles": "
-        position: relative;
-        margin: 1rem 0 0;
-        padding: 1rem 15px;
-        font-family: \\"Open Sans\\", sans-serif;
-        font-size: 1rem;
-        line-height: 1.75em;
-        color: #bbc7cc;
-        @media only screen and (max-width: 500px) {
-          margin-top: 0;
-        }
-        a {
-          color: #bbc7cc;
-          text-decoration: none;
-          font-weight: bold;
-        }
-        a:hover {
-          color: #bbc7cc;
-          border-bottom: #bbc7cc 1px solid;
-        }
-      ",
-      "toString": [Function],
-    }
-  }
+  className="c0"
 >
-  <section
-    css={
-      Object {
-        "map": undefined,
-        "name": "1odwksc",
-        "next": undefined,
-        "styles": "float:left;",
-        "toString": [Function],
-      }
-    }
+  <p
+    className="c1"
   >
     © 2018–
     2020
      
     Aaron Collier
-    .
-  </section>
-  <section
-    css={
-      Object {
-        "map": undefined,
-        "name": "6n7j50",
-        "next": undefined,
-        "styles": "display:inline;",
-        "toString": [Function],
-      }
-    }
-  >
-    Theme based on 
-    <a
-      href="https://github.com/TryGhost/Casper"
-    >
-      Casper
-    </a>
     . Powered by 
     <a
+      className="c2 c3"
       href="https://www.gatsbyjs.org/"
+      rel=""
     >
       Gatsby
     </a>
      and 
     <a
+      className="c2 c3"
       href="https://kontent.ai"
+      rel=""
     >
       Kentico Kontent
     </a>
     .
-  </section>
+  </p>
 </footer>
 `;

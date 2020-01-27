@@ -1,9 +1,8 @@
 import React from "react";
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
 
 const MainNav = ({children}) => {
   return <nav
-    className="clearfix"
     css={css`
       padding: 35px 40px;
       margin: 0 0 30px;

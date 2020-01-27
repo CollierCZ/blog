@@ -8,8 +8,8 @@ import ArticleTags from "../components/ArticleTags";
 import AuthorImage from "../components/AuthorImage";
 import AuthorInfo from "../components/AuthorInfo";
 import BlogLogo from "../components/BlogLogo";
-import { css } from '@emotion/core'
 import Footer from "../components/Footer";
+import { Heading,Text } from '@kiwicom/orbit-components'
 import Layout from "../layouts/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader";
 import MainNav from "../components/MainNav";
@@ -52,45 +52,12 @@ const ArticleTemplate = ({data,pageContext}) => {
         </MainHeader>
         <ArticleFormatting className={className}>
           <ArticleHeader>
-            <h1 className="article-title"
-              css={css`
-              margin-bottom: 0;
-              font-size: 5rem;
-              @media only screen and (max-width: 900px) {
-                font-size: 4.5rem;
-              }
-              @media only screen and (max-width: 500px) {
-                font-size: 2.8rem;
-              }
-              `}
-            >{article.elements.title.value}</h1>
-            <section
-              css={css`
-                display: block;
-                margin: 0 0 1rem;
-                font-family: "Open Sans", sans-serif;
-                font-size: 1rem;
-                line-height: 2.2rem;
-                color: #4a4a4a;
-                a {
-                  color: #4a4a4a;
-                  text-decoration: none;
-                }
-                
-                a:hover {
-                  color: #4a4a4a;
-                  text-decoration: underline;
-                }
-                @media only screen and (max-width: 500px) {
-                  font-size: 1.3rem;
-                  margin-top: 1rem;
-                }
-              `}
-            >
+            <Heading element='h1' type='display' spaceAfter="small">{article.elements.title.value}</Heading>
+            <Text spaceAfter="normal">
               <ArticleDate prefix="Published " date={article.fields.date} />
               <ArticleCategory prefix=" in " category={article.elements.categories.value[0].name} />
               <ArticleTags prefix=" on " tags={article.fields.tags} />
-            </section>
+            </Text>
           </ArticleHeader>
 
           <RichText

@@ -1,6 +1,7 @@
-import { css } from '@emotion/core'
-import Pagination from "./Pagination"
+import { css } from 'styled-components'
+import { Pagination } from '@kiwicom/orbit-components'
 import React from "react"
+import { navigate } from 'gatsby';
 
 class PaginatedContent extends React.Component {
   constructor(props) {
@@ -15,7 +16,12 @@ class PaginatedContent extends React.Component {
   }
 
   render() {
-    const { page, pages, prev, next, children } = this.props;
+    const { page, pageCount, children } = this.props;
+
+    const pageNavigate = (page) => {
+      page = (page === 1) ? '/' : page;
+      navigate(page)
+    }
 
     return (
       <>
@@ -25,13 +31,13 @@ class PaginatedContent extends React.Component {
             display: ${this.state.paged ? "block" : "none"};
           `}
         >
-          <Pagination page={page} pages={pages} prev={prev} next={next} />
+          <Pagination hideLabels={false} selectedPage={page} pageCount={pageCount} onPageChange={page => { pageNavigate(page)}} size="normal" />
         </div>
 
         {children}
 
         {/* Previous/next page links - displayed on every page */}
-        <Pagination page={page} pages={pages} prev={prev} next={next} />
+        <Pagination hideLabels={false} selectedPage={page} pageCount={pageCount} onPageChange={page => { pageNavigate(page)}} size="normal" />
       </>
     );
   }

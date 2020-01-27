@@ -1,10 +1,12 @@
-import React from "react"
-import { shallow } from "enzyme"
-import ArticleCategory from "../ArticleCategory"
-import { simpleShallowRender } from "../../utilities/testHelpers";
+import React from "react";
+import ArticleCategory from "../ArticleCategory";
+import { clickTextLink, simpleRenderer } from "../../utilities/testHelpers";
 
 describe("ArticleCategory", () => {
-  it("renders a category correctly", () => {
-    simpleShallowRender(<ArticleCategory category="Education" prefix=" in " />);
-  })
-})
+  it("renders correctly", () => {
+    simpleRenderer(<ArticleCategory category="Education" prefix=" in " />);
+  });
+  it("has a working link", () => {
+    clickTextLink(<ArticleCategory category="Education" prefix=" in " />);
+  });
+});

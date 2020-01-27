@@ -1,8 +1,10 @@
-import { graphql, StaticQuery } from "gatsby"
 import React from "react"
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
+import { useSiteMetadata } from "../hooks/use-metadata";
+import { string } from "prop-types";
 
-const MainHeader = ({ children, cover, headStyle }) => {
+export const PureMainHeader = ({props, siteMetadata}) => {
+  const { children, cover, headStyle } = props;
   var height;
   if (headStyle === "big") {
     height = 65;
@@ -15,22 +17,6 @@ const MainHeader = ({ children, cover, headStyle }) => {
   }
 
   return (
-  <StaticQuery
-    query={graphql`
-      query {
-        kontentItemHome{
-          elements {
-            splash_image {
-              value {
-                url
-              }
-            }
-          }
-        }
-      }
-    `}
-    render = {data => {
-      return (
       <header
         className="main-header"
         css={css`
@@ -41,7 +27,7 @@ const MainHeader = ({ children, cover, headStyle }) => {
           min-height: 180px;
           text-align: center;
           overflow: hidden;
-          background: url(${cover ? cover : data.kontentItemHome.elements.splash_image.value[0].url}) #000 no-repeat center;
+          background: url(${cover ? cover : siteMetadata.elements.splash_image.value[0].url}) #000 no-repeat center;
           background-size: cover;
           .main-header-content {
             width: 100%;
@@ -64,8 +50,16 @@ const MainHeader = ({ children, cover, headStyle }) => {
         {children}
       </header>
       )
-    }}
-  />)
 }
+
+export const MainHeader = props => {
+  const siteMetadata = useSiteMetadata();
+  return <PureMainHeader props={props} siteMetadata={siteMetadata} />;
+}
+
+MainHeader.propTypes = {
+  cover: string, 
+  headStyle: string.isRequired
+};
 
 export default MainHeader;

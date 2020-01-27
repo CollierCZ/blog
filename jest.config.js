@@ -11,7 +11,8 @@ module.exports = {
     globals: {
       __PATH_PREFIX__: ``,
     },
-    setupFiles: [`<rootDir>/loadershim.js`,`./src/setUpTests.js`],
+    setupFiles: [`<rootDir>/loadershim.js`],
     collectCoverage: true,
-    snapshotSerializers: [`enzyme-to-json/serializer`]
+    snapshotSerializers: [`enzyme-to-json/serializer`],
+    setupFilesAfterEnv: ['./src/setUpTests.js'],
   }

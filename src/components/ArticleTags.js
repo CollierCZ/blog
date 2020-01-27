@@ -1,29 +1,36 @@
 import React from "react";
-import { Link } from "gatsby";
+import { navigate } from "gatsby";
 import { arrayOf, string } from "prop-types";
-import { slugify } from "../utilities/slugify";
+import { slugify } from "../utilities/CaseHelpers";
+import { TextLink } from "@kiwicom/orbit-components";
 
 const ArticleTags = ({ prefix, tags }) => {
   return (
-            <span>
+    <span>
       {prefix}
       {tags.map((tag, index, arr) => (
         <span key={tag}>
-          <Link key={tag} to={`/tags/${slugify(tag)}`}>
+          {" "}
+          <TextLink
+            href={`/tags/${slugify(tag)}`}
+            type="secondary"
+            onClick={event => {
+              event.preventDefault();
+              navigate(`/tags/${slugify(tag)}`);
+            }}
+          >
             {tag}
-          </Link>
+          </TextLink>
           {index !== arr.length - 1 ? ", " : ""}
         </span>
       ))}
     </span>
   );
-}
+};
 
-ArticleTags.propTypes ={
+ArticleTags.propTypes = {
   prefix: string,
-  tags: arrayOf (
-    string.isRequired
-  ).isRequired
-}
+  tags: arrayOf(string.isRequired).isRequired
+};
 
 export default ArticleTags;

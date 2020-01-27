@@ -1,0 +1,714 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RichText correctly returns null on empty 1`] = `null`;
+
+exports[`RichText renders correctly with a heading 1`] = `
+Array [
+  .c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #252A31;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+<h2
+    className="c0"
+  >
+    An awesome heading
+  </h2>,
+  .c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<p
+    className="c0"
+  >
+    A video of a talk I gave
+  </p>,
+]
+`;
+
+exports[`RichText renders correctly with a linked item 1`] = `
+Array [
+  .c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<p
+    className="c0"
+  >
+    An intro to a component.
+  </p>,
+  "
+",
+  .c0 {
+  width: 32px;
+  height: 32px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.c1 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c2 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5F738C;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<div
+    css={
+      Array [
+        "
+        display: flex;
+        align-items: center;
+      ",
+      ]
+    }
+  >
+    <svg
+      className="c0"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M20.696 4.8H3.304C2.584 4.8 2 5.384 2 6.104V17.89a1.269 1.269 0 0 0 1.304 1.259h2.609v3.478a.435.435 0 0 0 .683.357l5.54-3.835h8.56c.72 0 1.304-.584 1.304-1.304V6.103c0-.72-.584-1.304-1.304-1.304zm-2.609 7.341a1.304 1.304 0 1 1-2.609 0 1.304 1.304 0 0 1 2.609 0zm-12.174 0a1.304 1.304 0 1 1 2.609 0 1.304 1.304 0 0 1-2.609 0zm4.783 0a1.304 1.304 0 1 1 2.608 0 1.304 1.304 0 0 1-2.608 0z"
+      />
+    </svg>
+    <blockquote>
+      <p
+        className="c1"
+      >
+        You never really understand a person until you consider things from [their] point of view — until you climb into [their] skin and walk around in it.
+      </p>
+      <footer>
+        <div
+          className="c2"
+        >
+          <p>
+            Atticus Finch in 
+            <cite>
+              To Kill a Mockingbird 
+            </cite>
+            by Harper Lee
+          </p>
+        </div>
+      </footer>
+    </blockquote>
+  </div>,
+]
+`;
+
+exports[`RichText renders correctly with a list with links 1`] = `
+.c3 {
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.c5 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.c5,
+.c5:link,
+.c5:visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c5:hover .TextLink__IconContainer-sc-1bvlje4-0,
+.c5:active .TextLink__IconContainer-sc-1bvlje4-0 {
+  color: #00A991;
+}
+
+.c5:focus {
+  outline: none;
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c5:focus:not(:focus-visible) {
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c5:-moz-focusring,
+.c5:focus-visible {
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c1 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.c1:last-child,
+.c1:last-of-type {
+  margin: 0;
+}
+
+.c1 .Text__StyledText-sc-19qtt4y-0 {
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 8px 0 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  height: 20px;
+}
+
+.c2 .CarrierLogo__StyledCarrierLogo-d4doc9-1 {
+  height: 16px;
+  width: 16px;
+}
+
+.c2 .CarrierLogo__StyledCarrierLogo-d4doc9-1 img {
+  height: 16px;
+  width: 16px;
+}
+
+.c2 svg {
+  height: 16px;
+  width: 16px;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  color: #252A31;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2"
+      size="normal"
+      type="primary"
+    >
+      <svg
+        className="c3"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="c4"
+    >
+      A video of a talk I gave at the 
+      <a
+        className="c5"
+        href="http://www.writethedocs.org/conf/prague/2019/"
+        rel=""
+      >
+        Write the Docs Prague 2019
+      </a>
+       conference.
+    </span>
+  </li>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2"
+      size="normal"
+      type="primary"
+    >
+      <svg
+        className="c3"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="c4"
+    >
+       Or read a text version of the talk.
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`RichText renders correctly with a simple list 1`] = `
+.c3 {
+  width: 24px;
+  height: 24px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.c1 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.c1:last-child,
+.c1:last-of-type {
+  margin: 0;
+}
+
+.c1 .Text__StyledText-sc-19qtt4y-0 {
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 8px 0 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  height: 20px;
+}
+
+.c2 .CarrierLogo__StyledCarrierLogo-d4doc9-1 {
+  height: 16px;
+  width: 16px;
+}
+
+.c2 .CarrierLogo__StyledCarrierLogo-d4doc9-1 img {
+  height: 16px;
+  width: 16px;
+}
+
+.c2 svg {
+  height: 16px;
+  width: 16px;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  color: #252A31;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2"
+      size="normal"
+      type="primary"
+    >
+      <svg
+        className="c3"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="c4"
+    >
+      A video of a talk I gave at the Write the Docs Prague 2019 conference.
+    </span>
+  </li>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2"
+      size="normal"
+      type="primary"
+    >
+      <svg
+        className="c3"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="c4"
+    >
+       Or read a text version of the talk.
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`RichText renders correctly with an image 1`] = `
+Array [
+  .c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<p
+    className="c0"
+  >
+    An awesome intro
+  </p>,
+  <picture>
+    <source
+      media="(min-width: 1500px)"
+      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=1200&fit=scale"
+    />
+    <source
+      media="(min-width: 720px)"
+      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=1100&fit=scale"
+    />
+    <source
+      media="(min-width: 400px)"
+      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=500&fit=scale"
+    />
+    <img
+      alt="A map of an experience of a plane trip from London To New York."
+      css={
+        Array [
+          "
+          max-width: 100%;
+        ",
+        ]
+      }
+      src="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=300&fit=scale"
+    />
+  </picture>,
+]
+`;
+
+exports[`RichText renders correctly with links 1`] = `
+.c2 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.c2,
+.c2:link,
+.c2:visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c2:hover,
+.c2:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c2:hover .TextLink__IconContainer-sc-1bvlje4-0,
+.c2:active .TextLink__IconContainer-sc-1bvlje4-0 {
+  color: #00A991;
+}
+
+.c2:focus {
+  outline: none;
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c2:focus:not(:focus-visible) {
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c2:-moz-focusring,
+.c2:focus-visible {
+  background: rgba(0,169,145,0.1);
+  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+}
+
+.c0 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c0 a:not(.c1),
+.c0 a:not(.c1):link,
+.c0 a:not(.c1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c0 a:not(.c1):hover,
+.c0 a:not(.c1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<p
+  className="c0"
+>
+  Read a 
+  <a
+    className="c1 c2"
+    href="/articles/seeing-your-docs-through-different-eyes"
+    onClick={[Function]}
+    rel=""
+  >
+    text version of the talk
+  </a>
+   I gave at the 
+  <a
+    className="c1 c2"
+    href="http://www.writethedocs.org/conf/prague/2019/"
+    rel=""
+  >
+    Write the Docs Prague 2019
+  </a>
+   conference.
+</p>
+`;

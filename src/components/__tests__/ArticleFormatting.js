@@ -1,10 +1,9 @@
-import React from "react"
-import { shallow } from "enzyme"
-import ArticleFormatting from "../ArticleFormatting"
-import { simpleShallowRender } from "../../utilities/testHelpers"
+import React from "react";
+import ArticleFormatting from "../ArticleFormatting";
+import { simpleRenderer } from "../../utilities/testHelpers";
 
 describe("ArticleFormatting", () => {
   it("renders correctly", () => {
-    simpleShallowRender(<ArticleFormatting children={{test: "value1"}} />)
-  })
-})
+    simpleRenderer(<ArticleFormatting children={'This is a test'} />);
+  });
+});

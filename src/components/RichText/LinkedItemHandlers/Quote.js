@@ -1,40 +1,62 @@
-import { css } from "@emotion/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import { css } from "styled-components";
+import { Chat } from "@kiwicom/orbit-components/lib/icons";
+import { Text } from "@kiwicom/orbit-components";
 import PropTypes from "prop-types";
 import React from "react";
+import parseHTML, { domToReact } from "html-react-parser";
 
-const Quote = ({quote}) => {
+const Quote = ({ quote }) => {
   const source = quote.elements.source.resolvedData.html
-    ? `<footer>${quote.elements.source.resolvedData.html}</footer>`
+    ? `<footer class="source">${quote.elements.source.resolvedData.html}</footer>`
     : "";
-  const quoteText = source
-    ? quote.elements.quote.resolvedData.html + source
-    : quote.elements.quote.resolvedData.html;
+  const parseSource = {
+    replace: ({ attribs, children, name, type }) => {
+      if (type === "tag") {
+        if (name === "em") {
+          return <cite>{domToReact(children, parseSource)}</cite>;
+        }
+      }
+      if (!attribs) return;
+      if (attribs.class === "source") {
+        return (
+          <footer>
+            <Text element="div" type="secondary">
+              {domToReact(children, parseSource)}
+            </Text>
+          </footer>
+        );
+      }
+    }
+  };
+  const parseQuote = {
+    replace: ({ children, name, type }) => {
+      if (type === "tag") {
+        if (name === "p") {
+          return <Text>{domToReact(children, parseQuote)}</Text>;
+        }
+      }
+    }
+  };
+  const quoteText = parseHTML(
+    quote.elements.quote.resolvedData.html,
+    parseQuote
+  );
+  const sourceText = parseHTML(source, parseSource);
   return (
     <div
       css={css`
         display: flex;
-        svg {
-          font-size: 5rem;
-        }
-        footer {
-          font-size: 2rem;
-        }
+        align-items: center;
       `}
     >
-      <FontAwesomeIcon icon={faQuoteLeft} />
-      <blockquote
-        dangerouslySetInnerHTML={{ __html: quoteText }}
-        css={css`
-          font-style: normal;
-          margin: 0 3rem;
-        `}
-      />
-      <FontAwesomeIcon icon={faQuoteRight} />
+      <Chat size="large" />
+      <blockquote>
+        {quoteText}
+        {sourceText}
+      </blockquote>
     </div>
   );
-}
+};
 
 export default Quote;
 

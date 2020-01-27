@@ -1,12 +1,14 @@
-import React from "react"
-import { shallow } from "enzyme"
-import ArticleTags from "../ArticleTags"
-import { simpleShallowRender } from "../../utilities/testHelpers"
+import React from "react";
+import ArticleTags from "../ArticleTags";
+import { clickTextLink, simpleRenderer } from "../../utilities/testHelpers";
 
-const tags = ["documentation","UX","experience mapping"]
+const tags = ["documentation", "UX", "experience mapping"];
 
 describe("ArticleTags", () => {
   it("renders tags correctly", () => {
-    simpleShallowRender(<ArticleTags tags={tags} prefix=" on " />)
-  })
-})
+    simpleRenderer(<ArticleTags tags={tags} prefix=" on " />);
+  });
+  it("has a working link", () => {
+    clickTextLink(<ArticleTags tags={tags} prefix=" on " />);
+  });
+});

@@ -1,10 +1,9 @@
-import React from "react"
-import { shallow } from "enzyme"
-import Footer from "../Footer"
-import { simpleShallowRender } from "../../utilities/testHelpers"
+import React from "react";
+import Footer from "../Footer";
+import { simpleRenderer } from "../../utilities/testHelpers";
 
 describe("Footer", () => {
   it("renders correctly", () => {
-    simpleShallowRender(<Footer author="Aaron Collier" />)
-  })
-})
+    simpleRenderer(<Footer author="Aaron Collier" />);
+  });
+});

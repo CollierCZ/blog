@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote renders a quote correctly 1`] = `
+.c0 {
+  width: 32px;
+  height: 32px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.c1 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252A31;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+.c2 {
+  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5F738C;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  color: #007F6D;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00A991;
+}
+
+<div
+  css={
+    Array [
+      "
+        display: flex;
+        align-items: center;
+      ",
+    ]
+  }
+>
+  <svg
+    className="c0"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M20.696 4.8H3.304C2.584 4.8 2 5.384 2 6.104V17.89a1.269 1.269 0 0 0 1.304 1.259h2.609v3.478a.435.435 0 0 0 .683.357l5.54-3.835h8.56c.72 0 1.304-.584 1.304-1.304V6.103c0-.72-.584-1.304-1.304-1.304zm-2.609 7.341a1.304 1.304 0 1 1-2.609 0 1.304 1.304 0 0 1 2.609 0zm-12.174 0a1.304 1.304 0 1 1 2.609 0 1.304 1.304 0 0 1-2.609 0zm4.783 0a1.304 1.304 0 1 1 2.608 0 1.304 1.304 0 0 1-2.608 0z"
+    />
+  </svg>
+  <blockquote>
+    <p
+      className="c1"
+    >
+      You never really understand a person until you consider things from [their] point of view — until you climb into [their] skin and walk around in it.
+    </p>
+    <footer>
+      <div
+        className="c2"
+      >
+        <p>
+          Atticus Finch in 
+          <cite>
+            To Kill a Mockingbird 
+          </cite>
+          by Harper Lee
+        </p>
+      </div>
+    </footer>
+  </blockquote>
+</div>
+`;

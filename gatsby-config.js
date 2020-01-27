@@ -9,12 +9,7 @@ module.exports = {
     icon: config.icon
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        // Accepts all options defined by `babel-plugin-emotion` plugin.
-      },
-    },
+    'gatsby-plugin-styled-components',
     {
       resolve: "gatsby-plugin-manifest",
       options:  {

@@ -1,10 +1,13 @@
-import React from "react"
-import AuthorInfo from "../AuthorInfo"
-import { simpleShallowRender } from "../../utilities/testHelpers"
-import { author } from "../../utilities/TestSampleData"
+import React from "react";
+import AuthorInfo from "../AuthorInfo";
+import { author } from "../../utilities/TestSampleData";
+import { clickTextLink, simpleRenderer } from "../../utilities/testHelpers";
 
 describe("AuthorInfo", () => {
   it("renders correctly", () => {
-    simpleShallowRender(<AuthorInfo author={author} />)
-  })
-})
+    simpleRenderer(<AuthorInfo author={author} />);
+  });
+  it("has a working link", () => {
+    clickTextLink(<AuthorInfo author={author} />)
+  });
+});

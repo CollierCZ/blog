@@ -1,4 +1,4 @@
-const { slugify } = require("./src/utilities/slugify")
+const { slugify } = require("./src/utilities/CaseHelpers")
 const createPaginatedPages = require("gatsby-paginate");
 const moment = require("moment");
 const path = require(`path`);

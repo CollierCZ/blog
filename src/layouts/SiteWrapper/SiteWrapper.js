@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
 
 class SiteWrapper extends React.Component {
   render() {
@@ -10,7 +10,6 @@ class SiteWrapper extends React.Component {
         z-index: 10;
         min-height: 100%;
         background: #fff;
-        -webkit-transition: -webkit-transform 0.5s ease;
         transition: transform 0.5s ease;
       `} 
     >

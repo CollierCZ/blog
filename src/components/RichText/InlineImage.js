@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import React from 'react'
 
