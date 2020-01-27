@@ -11,11 +11,11 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@babel/core": "^7.7.7",
+    "@babel/core": "^7.8.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "@kentico/gatsby-source-kontent": "4.2.0",
+    "@kentico/gatsby-source-kontent": "4.3.0",
     "@kiwicom/orbit-components": "^0.71.0",
     "@kiwicom/orbit-design-tokens": "^0.8.0",
     "babel-plugin-styled-components": "^1.10.6",
@@ -51,7 +51,7 @@
     "enzyme-to-json": "^3.4.3",
     "eslint": "^6.8.0",
     "eslint-plugin-graphql": "^3.1.1",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.18.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.0"
