@@ -10,7 +10,7 @@ const AuthorInfo = ({ author }) => {
   const bio = author.short_bio.value;
   return (
     <>
-      <Heading element="h4" type="title4" spaceAfter="small">
+      <Heading element="h2" type="title4" spaceAfter="small">
         <TextLink
           type="secondary"
           href={"/" + url}
