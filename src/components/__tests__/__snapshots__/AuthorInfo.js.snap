@@ -82,7 +82,7 @@ Array [
   margin-bottom: 8px;
 }
 
-<h4
+<h2
     className="c0"
   >
     <a
@@ -93,7 +93,7 @@ Array [
     >
       Aaron Collier
     </a>
-  </h4>,
+  </h2>,
   .c2 {
   font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
   font-weight: 500;
