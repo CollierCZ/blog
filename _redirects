@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://colliercz.netlify.com/* https://collier.cz/:splat 301!
