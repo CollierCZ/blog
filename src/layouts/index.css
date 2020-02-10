@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700");
+@font-face {
+    font-family: "Open Sans";
+    src: local("Roboto"),url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700");
+    font-display: swap;
+  }
 
 /* ==========================================================================
       normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
