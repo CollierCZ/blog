@@ -16,7 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@kentico/gatsby-source-kontent": "4.3.0",
-    "@kiwicom/orbit-components": "^0.73.0",
+    "@kiwicom/orbit-components": "^0.75.0",
     "@kiwicom/orbit-design-tokens": "^0.8.0",
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",
