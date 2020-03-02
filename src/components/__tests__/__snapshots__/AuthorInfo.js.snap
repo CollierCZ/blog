@@ -182,6 +182,7 @@ Array [
     <a
       className="c1 c2"
       href="https://en.wikipedia.org/wiki/Lexington,_Massachusetts"
+      onClick={[Function]}
       rel=""
     >
       Lexington
@@ -190,6 +191,7 @@ Array [
     <a
       className="c1 c2"
       href="https://www.gotobrno.cz/en/"
+      onClick={[Function]}
       rel=""
     >
       Brno

@@ -1,10 +1,10 @@
 import { css } from "styled-components";
 import { array, arrayOf, shape, string } from "prop-types";
 import React from "react";
-import RichText from "../RichText"
-import { Heading, Stack, Tile } from '@kiwicom/orbit-components'
+import RichText from "../RichText";
+import { Heading, Stack, Tile } from "@kiwicom/orbit-components";
 
-const Showcase = ({showcase}) => (
+const Showcase = ({ showcase }) => (
   <div
     css={css`
       display: flex;
@@ -13,8 +13,11 @@ const Showcase = ({showcase}) => (
   >
     {showcase.elements.items.linked_items.map(showcaseItem => {
       return (
-        <ShowcaseItem key={showcaseItem.fields.slug} showcaseItem={showcaseItem} />
-      )
+        <ShowcaseItem
+          key={showcaseItem.fields.slug}
+          showcaseItem={showcaseItem}
+        />
+      );
     })}
   </div>
 );
@@ -28,7 +31,7 @@ const showcaseItemProps = {
       value: string.isRequired
     }).isRequired,
     short_description: shape({
-      resolvedData: shape ({
+      resolvedData: shape({
         html: string.isRequired
       }).isRequired,
       links: array.isRequired
@@ -37,58 +40,62 @@ const showcaseItemProps = {
       value: arrayOf(
         shape({
           url: string.isRequired
-        }).isRequired        
+        }).isRequired
       ).isRequired
     }).isRequired,
     link: shape({
       value: string
     })
   }).isRequired
-}
+};
 
 Showcase.propTypes = {
   showcase: shape({
-    elements: shape ({
-      items: shape ({
-        linked_items: arrayOf(
-          shape(showcaseItemProps).isRequired
-        ).isRequired
+    elements: shape({
+      items: shape({
+        linked_items: arrayOf(shape(showcaseItemProps).isRequired).isRequired
       }).isRequired
     }).isRequired
   }).isRequired
 };
 
-const ShowcaseItem = ({showcaseItem}) => {
+const ShowcaseItem = ({ showcaseItem }) => {
   const item = showcaseItem.elements;
-  return(
-    <div 
-    css={css`
-      flex: 1 1 34ch;
-      margin: 16px;
-      > * {
-        width:100%;
-        height:100%;
-      }
-    `}>
+  return (
+    <div
+      css={css`
+        flex: 1 1 34ch;
+        margin: 16px;
+        > * {
+          width: 100%;
+          height: 100%;
+        }
+      `}
+    >
       <Tile
-        onClick={() => {document.location=item.link.value}}
-      ><Stack><Heading elment='h2'>
-            {item.name.value}</Heading>
-        <div 
-          css={css`
-            background-size: cover;
-            width: 100%;
-            height: 200px;
-            background-image: url(${ item.teaser.value[0].url });
-          `}
-        /><RichText
-        content={item.short_description.resolvedData.html}
-        links={item.short_description.links}
-      /></Stack></Tile>
-      
+        onClick={() => {
+          window.location.assign(item.link.value);
+        }}
+      >
+        <Stack>
+          <Heading elment="h2">{item.name.value}</Heading>
+          <div
+            css={css`
+              background-size: cover;
+              width: 100%;
+              height: 200px;
+              background-image: url(${item.teaser.value[0].url});
+            `}
+          />
+          <RichText
+            content={item.short_description.resolvedData.html}
+            links={item.short_description.links}
+          />
+        </Stack>
+      </Tile>
     </div>
-  )
-}
+  );
+};
 
 ShowcaseItem.propTypes = {
   showcaseItem: shape(showcaseItemProps).isRequired
