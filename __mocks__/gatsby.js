@@ -1,5 +1,5 @@
-const React = require("react")
-const gatsby = jest.requireActual("gatsby")
+const React = require("react");
+const gatsby = jest.requireActual("gatsby");
 module.exports = {
   ...gatsby,
   graphql: jest.fn(),
@@ -18,10 +18,10 @@ module.exports = {
     }) =>
       React.createElement("a", {
         ...rest,
-        href: to,
+        href: to
       })
   ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),
-  navigate: jest.fn()
-}
+  navigate: jest.fn(),
+};

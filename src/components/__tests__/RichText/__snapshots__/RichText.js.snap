@@ -367,6 +367,7 @@ exports[`RichText renders correctly with a list with links 1`] = `
       <a
         className="c5"
         href="http://www.writethedocs.org/conf/prague/2019/"
+        onClick={[Function]}
         rel=""
       >
         Write the Docs Prague 2019
@@ -705,6 +706,7 @@ exports[`RichText renders correctly with links 1`] = `
   <a
     className="c1 c2"
     href="http://www.writethedocs.org/conf/prague/2019/"
+    onClick={[Function]}
     rel=""
   >
     Write the Docs Prague 2019

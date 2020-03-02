@@ -5,6 +5,15 @@ import { simpleRenderer } from "../../../../utilities/testHelpers";
 import { mount } from "enzyme";
 
 describe("Showcase", () => {
+  beforeAll(() => {
+    delete window.location;
+    window.location = { assign: jest.fn() };
+  });
+
+  afterAll(() => {
+    window.location = location;
+  });
+
   it("renders correctly", () => {
     simpleRenderer(<Showcase showcase={sampleShowcase} />);
   });

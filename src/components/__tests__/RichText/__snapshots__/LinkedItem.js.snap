@@ -277,13 +277,13 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
     css={
       Array [
         "
-      flex: 1 1 34ch;
-      margin: 16px;
-      > * {
-        width:100%;
-        height:100%;
-      }
-    ",
+        flex: 1 1 34ch;
+        margin: 16px;
+        > * {
+          width: 100%;
+          height: 100%;
+        }
+      ",
       ]
     }
   >
@@ -309,13 +309,13 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
             css={
               Array [
                 "
-            background-size: cover;
-            width: 100%;
-            height: 200px;
-            background-image: url(",
+              background-size: cover;
+              width: 100%;
+              height: 200px;
+              background-image: url(",
                 "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/51e9be55-8502-40ca-b374-a1305b36dc56/Slide16.PNG",
                 ");
-          ",
+            ",
               ]
             }
           />
@@ -326,6 +326,7 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
             <a
               className="c5 c6"
               href="http://www.writethedocs.org/conf/prague/2019/"
+              onClick={[Function]}
               rel=""
             >
               Write the Docs Prague 2019
@@ -349,13 +350,13 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
     css={
       Array [
         "
-      flex: 1 1 34ch;
-      margin: 16px;
-      > * {
-        width:100%;
-        height:100%;
-      }
-    ",
+        flex: 1 1 34ch;
+        margin: 16px;
+        > * {
+          width: 100%;
+          height: 100%;
+        }
+      ",
       ]
     }
   >
@@ -381,13 +382,13 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
             css={
               Array [
                 "
-            background-size: cover;
-            width: 100%;
-            height: 200px;
-            background-image: url(",
+              background-size: cover;
+              width: 100%;
+              height: 200px;
+              background-image: url(",
                 "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/b0481084-18a8-4cf0-ae01-d1a0dbd766ce/structured_content.jpg",
                 ");
-          ",
+            ",
               ]
             }
           />
