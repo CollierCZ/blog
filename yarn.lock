@@ -1509,10 +1509,10 @@
     parse5 "5.1.1"
     reflect-metadata "0.1.13"
 
-"@kiwicom/orbit-components@^0.73.0":
-  version "0.73.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.73.0.tgz#2a30f5ddaeccc27806c78a0f4bb6ead650ff2d02"
-  integrity sha512-a6whYb0sUHole8gKjWvJSCLX6YJBxHe2eva+WokZRSfLm0jpj7u9LgyNk50+h3LpVwyzmYyCQOI2MyvL71/XPQ==
+"@kiwicom/orbit-components@^0.76.0":
+  version "0.76.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.76.0.tgz#62618f904d02c84485ebf10255bbb8e735125095"
+  integrity sha512-yu+fB+Ya0peesJCIkeNNtfdJ1k1tkVOO+OkvrCRBeDETdNN9zrscMgkaQ/jKYDME94fASA/jnebyo+mpfwFKSQ==
   dependencies:
     "@adeira/js" "^0.1.0"
     "@kiwicom/orbit-design-tokens" "~0.8.0"
