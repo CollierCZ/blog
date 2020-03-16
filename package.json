@@ -27,7 +27,7 @@
     "gatsby-plugin-catch-links": "^2.1.27",
     "gatsby-plugin-feed": "^2.3.27",
     "gatsby-plugin-manifest": "^2.2.44",
-    "gatsby-plugin-nprogress": "^2.1.19",
+    "gatsby-plugin-nprogress": "^2.1.20",
     "gatsby-plugin-offline": "^3.0.37",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-sharp": "^2.4.7",
