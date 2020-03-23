@@ -11,7 +11,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@babel/core": "^7.8.7",
+    "@babel/core": "^7.9.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
