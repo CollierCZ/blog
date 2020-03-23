@@ -17,7 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@kentico/gatsby-source-kontent": "4.4.0",
     "@kiwicom/orbit-components": "^0.76.0",
-    "@kiwicom/orbit-design-tokens": "^0.8.0",
+    "@kiwicom/orbit-design-tokens": "^0.9.0",
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",
     "gatsby": "^2.20.2",
