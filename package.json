@@ -14,7 +14,7 @@
     "@babel/core": "^7.9.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "@kentico/gatsby-source-kontent": "4.4.0",
     "@kiwicom/orbit-components": "^0.76.0",
     "@kiwicom/orbit-design-tokens": "^0.8.0",
