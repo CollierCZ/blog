@@ -55,7 +55,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.4.0",
     "jest-styled-components": "^7.0.2",
-    "react-test-renderer": "^16.13.0"
+    "react-test-renderer": "^16.13.1"
   },
   "version": "1.0.0",
   "main": "index.js",
