@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@adeira/js@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-0.1.0.tgz#c30444da2000cf545be7d3d99c800c3f3b234c12"
-  integrity sha512-yBDdU8r2HRu8KRv/ogJIqeIUsFO8qh3G7D9qfRmyxgzlNdZfE6TTKoW5BQ8bvmMNDkpJa+pQfSvd+U91CYSx5g==
+"@adeira/js@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.2.tgz#bdaff8b4aba8f737cc4553ad3db7a682e5243fc0"
+  integrity sha512-NYjy0O5S4j0ksJ8pxNf9fxIFIl+/HaNyqTE1QrHaN2QjcKxtzHwVhDQ2rIJBQ5VbVZt9VES8ZcSCi3xoBX+R0Q==
 
 "@babel/code-frame@7.5.5":
   version "7.5.5"
@@ -2167,27 +2167,20 @@
     parse5 "5.1.1"
     reflect-metadata "0.1.13"
 
-"@kiwicom/orbit-components@^0.76.0":
-  version "0.76.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.76.0.tgz#62618f904d02c84485ebf10255bbb8e735125095"
-  integrity sha512-yu+fB+Ya0peesJCIkeNNtfdJ1k1tkVOO+OkvrCRBeDETdNN9zrscMgkaQ/jKYDME94fASA/jnebyo+mpfwFKSQ==
+"@kiwicom/orbit-components@^0.84.2":
+  version "0.84.2"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.84.2.tgz#4d2d86301eb8d2a7af1ddd80d32fb9674514dff6"
+  integrity sha512-BHXqhjJ/NLs5pHxEIj65zaKTY/x9KPA6FX18h5jFPonlN3ICg9/hQ0V0DuttFATBXyNRJ4VfnjISSVezSU6gXw==
   dependencies:
-    "@adeira/js" "^0.1.0"
-    "@kiwicom/orbit-design-tokens" "~0.8.0"
+    "@adeira/js" "^1.2.2"
+    "@kiwicom/orbit-design-tokens" "~0.9.0"
 
-"@kiwicom/orbit-design-tokens@^0.9.0":
+"@kiwicom/orbit-design-tokens@^0.9.0", "@kiwicom/orbit-design-tokens@~0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.9.0.tgz#c031af02f46d8b67ebda16e10937a36db9377a62"
   integrity sha512-5kaZfJBUvhFqqxwDoPTKuM7VzHdWmGcTNhWvBYDveoi4th1dUNEkKewk6bL5oMLEfW63DjYiqT6bUXDhO4QQdQ==
   dependencies:
     ramda "^0.27.0"
-
-"@kiwicom/orbit-design-tokens@~0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.8.0.tgz#7eaa0d90fb40701131e1dad1091591d1e77f8490"
-  integrity sha512-Vm6XLg0lnEM5aFYPPvsXQG9/o2G8iElgmz93q8r8XZ/wwRDjEhRonVqp7WdX7KbxAgpGCjH28bBz7+71PZLSJw==
-  dependencies:
-    ramda "^0.26.1"
 
 "@mikaelkristiansson/domready@^1.0.10":
   version "1.0.10"
@@ -12286,11 +12279,6 @@ railroad-diagrams@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
-
-ramda@^0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
-  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 ramda@^0.27.0:
   version "0.27.0"
