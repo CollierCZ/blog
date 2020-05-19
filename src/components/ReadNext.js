@@ -2,7 +2,7 @@ import { css } from "styled-components";
 import React from "react";
 import { shape, string } from "prop-types";
 import Link from "gatsby-link";
-import { Button, Heading, Stack, Text } from "@kiwicom/orbit-components";
+import { Heading, Stack, Text } from "@kiwicom/orbit-components";
 
 export const ReadNextStory = ({ article, text }) => {
   const { path, cover, title, excerpt } = article;
@@ -23,7 +23,7 @@ export const ReadNextStory = ({ article, text }) => {
           background: rgba(0, 0, 0, 0.8);
           transition: all 0.2s ease;
         }
-        
+
         /*darken the image */
         ::before {
           content: \"\";
@@ -46,15 +46,17 @@ export const ReadNextStory = ({ article, text }) => {
           margin: 52px auto;
         `}
       >
-        <Stack align='center' direction='column'><Button bordered type="white" spaceAfter="small">
-          {text}
-        </Button>
-        <Heading inverted element="h2" spaceAfter="small">
-          {title}
-        </Heading>
-        <Text align="center" type="white">
-          {excerpt}&hellip;
-        </Text></Stack>
+        <Stack align="center" direction="column">
+        <Heading inverted element="h2" type="title3" spaceAfter="small">
+            {text}
+          </Heading>
+          <Heading inverted element="h3" spaceAfter="small">
+            {title}
+          </Heading>
+          <Text align="center" type="white">
+            {excerpt}&hellip;
+          </Text>
+        </Stack>
       </article>
     </Link>
   );
@@ -64,12 +66,12 @@ const articleProps = {
   path: string.isRequired,
   cover: string,
   title: string.isRequired,
-  excerpt: string.isRequired
+  excerpt: string.isRequired,
 };
 
 ReadNextStory.propTypes = {
   article: shape(articleProps).isRequired,
-  text: string.isRequired
+  text: string.isRequired,
 };
 
 /**
@@ -95,7 +97,7 @@ const ReadNext = ({ next, prev }) => {
 
 ReadNext.propTypes = {
   next: shape(articleProps).isRequired,
-  prev: shape(articleProps).isRequired
+  prev: shape(articleProps).isRequired,
 };
 
 export default ReadNext;

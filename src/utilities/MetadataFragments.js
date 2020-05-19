@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 
 export const MetadataFragment = graphql `
-  fragment MetadataFragment on KontentItemHome {
+  fragment MetadataFragment on kontent_item_home {
     elements {
       title {
         value
@@ -30,7 +30,7 @@ export const MetadataFragment = graphql `
 `
 
 export const SocialMediaFragment = graphql `
-  fragment SocialMediaFragment on KontentItemHome {
+  fragment SocialMediaFragment on kontent_item_home {
     elements {
       socialmedia {
         value

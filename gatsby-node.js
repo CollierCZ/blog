@@ -3,8 +3,8 @@ const createPaginatedPages = require("gatsby-paginate");
 const moment = require("moment");
 const path = require(`path`);
 
-const kcItemTypeIdentifier = `KontentItem`;
-const articleTypeIdentifier = `Article`;
+const kcItemTypeIdentifier = `kontent_item`;
+const articleTypeIdentifier = `article`;
 const paginationLimit = 6;
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, actions }) => {
       value: node.elements.url.value
     })
 
-    if (node.internal.type === `${kcItemTypeIdentifier}${articleTypeIdentifier}`) {
+    if (node.internal.type === `${kcItemTypeIdentifier}_${articleTypeIdentifier}`) {
       createNodeField({
         node,
         name: `date`,

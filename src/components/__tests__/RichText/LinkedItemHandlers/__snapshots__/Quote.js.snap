@@ -12,7 +12,7 @@ exports[`Quote renders a quote correctly 1`] = `
 }
 
 .c1 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -38,7 +38,7 @@ exports[`Quote renders a quote correctly 1`] = `
 }
 
 .c2 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #5F738C;
@@ -89,7 +89,7 @@ exports[`Quote renders a quote correctly 1`] = `
       You never really understand a person until you consider things from [their] point of view — until you climb into [their] skin and walk around in it.
     </p>
     <footer>
-      <div
+      <p
         className="c2"
       >
         <p>
@@ -99,7 +99,7 @@ exports[`Quote renders a quote correctly 1`] = `
           </cite>
           by Harper Lee
         </p>
-      </div>
+      </p>
     </footer>
   </blockquote>
 </div>
