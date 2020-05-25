@@ -35,7 +35,7 @@
     "gatsby-plugin-styled-components": "^3.3.2",
     "html-react-parser": "^0.10.3",
     "kentico-cloud-delivery": "^6.2.0",
-    "moment": "^2.25.3",
+    "moment": "^2.26.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
