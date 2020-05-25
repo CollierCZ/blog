@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@adeira/js@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-0.1.0.tgz#c30444da2000cf545be7d3d99c800c3f3b234c12"
-  integrity sha512-yBDdU8r2HRu8KRv/ogJIqeIUsFO8qh3G7D9qfRmyxgzlNdZfE6TTKoW5BQ8bvmMNDkpJa+pQfSvd+U91CYSx5g==
+"@adeira/js@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.2.tgz#bdaff8b4aba8f737cc4553ad3db7a682e5243fc0"
+  integrity sha512-NYjy0O5S4j0ksJ8pxNf9fxIFIl+/HaNyqTE1QrHaN2QjcKxtzHwVhDQ2rIJBQ5VbVZt9VES8ZcSCi3xoBX+R0Q==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
@@ -2316,13 +2316,13 @@
     parse5 "5.1.1"
     reflect-metadata "0.1.13"
 
-"@kiwicom/orbit-components@^0.76.0":
-  version "0.76.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.76.0.tgz#62618f904d02c84485ebf10255bbb8e735125095"
-  integrity sha512-yu+fB+Ya0peesJCIkeNNtfdJ1k1tkVOO+OkvrCRBeDETdNN9zrscMgkaQ/jKYDME94fASA/jnebyo+mpfwFKSQ==
+"@kiwicom/orbit-components@^0.85.2":
+  version "0.85.2"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.85.2.tgz#b23a94f7e482b2b6792de799fe24356096dc1b44"
+  integrity sha512-GmsmzuoW+6uTc8oYe+0MqNBw5PkePkuE8ES/qklpOg/360bP3hxelTpYIEdjDBGYMKsC0Hg9AV8HFEqdIzlLUw==
   dependencies:
-    "@adeira/js" "^0.1.0"
-    "@kiwicom/orbit-design-tokens" "~0.8.0"
+    "@adeira/js" "^1.2.2"
+    "@kiwicom/orbit-design-tokens" "~0.10.0"
 
 "@kiwicom/orbit-design-tokens@^0.9.0":
   version "0.9.0"
@@ -2331,12 +2331,12 @@
   dependencies:
     ramda "^0.27.0"
 
-"@kiwicom/orbit-design-tokens@~0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.8.0.tgz#7eaa0d90fb40701131e1dad1091591d1e77f8490"
-  integrity sha512-Vm6XLg0lnEM5aFYPPvsXQG9/o2G8iElgmz93q8r8XZ/wwRDjEhRonVqp7WdX7KbxAgpGCjH28bBz7+71PZLSJw==
+"@kiwicom/orbit-design-tokens@~0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.10.0.tgz#759fe60398003edbb5712541e59fb97b06b356c9"
+  integrity sha512-8kTLOp0KxwMwDo+no7fF4M5w1pAttW3Qs32QrFcWp0FMc8Z//qUAeBo2N+kvJYyT0+6rUPIv6arFPEyW5ZUfBw==
   dependencies:
-    ramda "^0.26.1"
+    ramda "^0.27.0"
 
 "@mdx-js/mdx@^1.6.1":
   version "1.6.1"
@@ -13036,11 +13036,6 @@ railroad-diagrams@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
-
-ramda@^0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
-  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 ramda@^0.27.0:
   version "0.27.0"
