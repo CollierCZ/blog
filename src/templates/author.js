@@ -33,7 +33,7 @@ export default ({ data }) => {
             content={bio.value}
             images={bio.images}
             links={bio.links}
-            linkedItems={bio.linked_items}
+            linkedItems={bio.modular_content}
           />
         </ArticleFormatting>
         <Footer author="Aaron Collier" />
@@ -57,15 +57,15 @@ query authorQuery($slug: String!) {
       bio {
         value
         links {
-          linkId
+          link_id
           type
-          urlSlug
+          url_slug
         }
         images {
-          imageId
+          image_id
           url
         }
-        linked_items {
+        modular_content {
           id
           system {
             type

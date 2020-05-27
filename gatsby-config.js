@@ -6,22 +6,22 @@ module.exports = {
     title: config.title,
     author: "Aaron Collier",
     description: config.description,
-    icon: config.icon
+    icon: config.icon,
   },
   plugins: [
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-manifest",
-      options:  {
-          name: config.title,
-          short_name: config.title,
-          description: config.description,
-          start_url: "/",
-          background_color: "#bf9b63",
-          theme_color: "#f3cc91",
-          display: "minimal-ui",
-          icon: config.icon
-        }    
+      options: {
+        name: config.title,
+        short_name: config.title,
+        description: config.description,
+        start_url: "/",
+        background_color: "#bf9b63",
+        theme_color: "#f3cc91",
+        display: "minimal-ui",
+        icon: config.icon,
+      },
     },
     "gatsby-plugin-offline",
     "gatsby-plugin-sitemap",
@@ -29,31 +29,35 @@ module.exports = {
     {
       resolve: `@kentico/gatsby-source-kontent`,
       options: {
-        deliveryClientConfig: {
-          projectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
-        },
-        languageCodenames: [
-          "default"
-        ],
+        projectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
+        languageCodenames: ["default"],
         queryConfig: {
-          usePreviewMode: false
-        }
-      }
+          usePreviewMode: false,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
         feeds: [
           {
-            serialize: ({ query: { kontentItemHome, allKontentItemArticle } }) => {
-              return allKontentItemArticle.edges.map(edge => ({
-                  title: edge.node.elements.title.value,
-                  description: edge.node.elements.metadata__description.value,
-                  categories: edge.node.fields.tags,
-                  date: edge.node.fields.date,
-                  url: kontentItemHome.elements.base_url.value + "/articles/" + edge.node.fields.slug,
-                  guid: kontentItemHome.elements.base_url.value + "/articles/" +  edge.node.fields.slug
-              }))
+            serialize: ({
+              query: { kontentItemHome, allKontentItemArticle },
+            }) => {
+              return allKontentItemArticle.edges.map((edge) => ({
+                title: edge.node.elements.title.value,
+                description: edge.node.elements.metadata__description.value,
+                categories: edge.node.fields.tags,
+                date: edge.node.fields.date,
+                url:
+                  kontentItemHome.elements.base_url.value +
+                  "/articles/" +
+                  edge.node.fields.slug,
+                guid:
+                  kontentItemHome.elements.base_url.value +
+                  "/articles/" +
+                  edge.node.fields.slug,
+              }));
             },
             query: `
               {
@@ -92,10 +96,10 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Feed for collier.cz"
+            title: "Feed for collier.cz",
           },
         ],
       },
-    }
-  ]
-}
+    },
+  ],
+};

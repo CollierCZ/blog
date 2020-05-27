@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 
 export const ArticleListFragment = graphql`
-  fragment ArticleListFragment on KontentItemArticle {
+  fragment ArticleListFragment on kontent_item_article {
     fields {
       slug
       tags

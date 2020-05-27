@@ -5,7 +5,7 @@ exports[`RichText correctly returns null on empty 1`] = `null`;
 exports[`RichText renders correctly with a heading 1`] = `
 Array [
   .c0 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 22px;
   font-weight: 500;
   color: #252A31;
@@ -14,13 +14,13 @@ Array [
   margin-bottom: 8px;
 }
 
-<h2
+<div
     className="c0"
   >
     An awesome heading
-  </h2>,
+  </div>,
   .c0 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -57,7 +57,7 @@ Array [
 exports[`RichText renders correctly with a linked item 1`] = `
 Array [
   .c0 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -101,7 +101,7 @@ Array [
 }
 
 .c1 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -127,7 +127,7 @@ Array [
 }
 
 .c2 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #5F738C;
@@ -178,7 +178,7 @@ Array [
         You never really understand a person until you consider things from [their] point of view — until you climb into [their] skin and walk around in it.
       </p>
       <footer>
-        <div
+        <p
           className="c2"
         >
           <p>
@@ -188,7 +188,7 @@ Array [
             </cite>
             by Harper Lee
           </p>
-        </div>
+        </p>
       </footer>
     </blockquote>
   </div>,
@@ -207,7 +207,7 @@ exports[`RichText renders correctly with a list with links 1`] = `
 }
 
 .c5 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-weight: 500;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -246,22 +246,22 @@ exports[`RichText renders correctly with a list with links 1`] = `
 .c5:focus {
   outline: none;
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c5:focus:not(:focus-visible) {
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c5:-moz-focusring,
 .c5:focus-visible {
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c1 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,10 +269,6 @@ exports[`RichText renders correctly with a list with links 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
   margin-bottom: 4px;
 }
 
@@ -414,7 +410,7 @@ exports[`RichText renders correctly with a simple list 1`] = `
 }
 
 .c1 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -422,10 +418,6 @@ exports[`RichText renders correctly with a simple list 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
   margin-bottom: 4px;
 }
 
@@ -549,7 +541,7 @@ exports[`RichText renders correctly with a simple list 1`] = `
 exports[`RichText renders correctly with an image 1`] = `
 Array [
   .c0 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -610,7 +602,7 @@ Array [
 
 exports[`RichText renders correctly with links 1`] = `
 .c2 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-weight: 500;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -649,22 +641,22 @@ exports[`RichText renders correctly with links 1`] = `
 .c2:focus {
   outline: none;
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c2:focus:not(:focus-visible) {
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c2:-moz-focusring,
 .c2:focus-visible {
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c0 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;

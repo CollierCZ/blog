@@ -6,8 +6,8 @@ import React from "react";
 import parseHTML, { domToReact } from "html-react-parser";
 
 const Quote = ({ quote }) => {
-  const source = quote.elements.source.resolvedData.html
-    ? `<footer class="source">${quote.elements.source.resolvedData.html}</footer>`
+  const source = quote.elements.source.value
+    ? `<footer class="source">${quote.elements.source.value}</footer>`
     : "";
   const parseSource = {
     replace: ({ attribs, children, name, type }) => {
@@ -38,7 +38,7 @@ const Quote = ({ quote }) => {
     }
   };
   const quoteText = parseHTML(
-    quote.elements.quote.resolvedData.html,
+    quote.elements.quote.value,
     parseQuote
   );
   const sourceText = parseHTML(source, parseSource);

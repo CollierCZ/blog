@@ -1,6 +1,6 @@
 import { useSiteMetadata } from "../hooks/use-metadata";
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
 export const PureSEO = ({ basicInfo, articleProps }) => {

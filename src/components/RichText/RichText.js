@@ -50,8 +50,8 @@ const replaceLinks = (attribs, children, links) => {
   // Replace internal links
   if (attribs["data-item-id"]) {
     const id = attribs["data-item-id"] || null;
-    const link = links.find(link => link.linkId === id);
-    const url = `/articles/${link.urlSlug}`;
+    const link = links.find(link => link.link_id === id);
+    const url = `/articles/${link.url_slug}`;
     return (
       <TextLink
         href={url}
@@ -91,7 +91,7 @@ function replaceNode(domNode, images, links, linkedItems) {
   // Replace inline assets.
   if (name === "figure") {
     const id = attribs["data-asset-id"] || null;
-    const image = images.find(image => image.imageId === id);
+    const image = images.find(image => image.image_id === id);
     return <InlineImage description={image.description} url={image.url} />;
   }
 

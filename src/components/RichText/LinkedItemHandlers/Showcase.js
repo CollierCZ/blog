@@ -11,7 +11,7 @@ const Showcase = ({ showcase }) => (
       flex-wrap: wrap;
     `}
   >
-    {showcase.elements.items.linked_items.map(showcaseItem => {
+    {showcase.elements.items.value.map(showcaseItem => {
       return (
         <ShowcaseItem
           key={showcaseItem.fields.slug}
@@ -31,9 +31,7 @@ const showcaseItemProps = {
       value: string.isRequired
     }).isRequired,
     short_description: shape({
-      resolvedData: shape({
-        html: string.isRequired
-      }).isRequired,
+      value: string.isRequired,
       links: array.isRequired
     }).isRequired,
     teaser: shape({
@@ -53,7 +51,7 @@ Showcase.propTypes = {
   showcase: shape({
     elements: shape({
       items: shape({
-        linked_items: arrayOf(shape(showcaseItemProps).isRequired).isRequired
+        value: arrayOf(shape(showcaseItemProps).isRequired).isRequired
       }).isRequired
     }).isRequired
   }).isRequired
@@ -88,7 +86,7 @@ const ShowcaseItem = ({ showcaseItem }) => {
             `}
           />
           <RichText
-            content={item.short_description.resolvedData.html}
+            content={item.short_description.value}
             links={item.short_description.links}
           />
         </Stack>

@@ -12,7 +12,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
 }
 
 .c1 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -38,7 +38,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
 }
 
 .c2 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #5F738C;
@@ -89,7 +89,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
       You never really understand a person until you consider things from [their] point of view — until you climb into [their] skin and walk around in it.
     </p>
     <footer>
-      <div
+      <p
         className="c2"
       >
         <p>
@@ -99,7 +99,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
           </cite>
           by Harper Lee
         </p>
-      </div>
+      </p>
     </footer>
   </blockquote>
 </div>
@@ -107,7 +107,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
 
 exports[`LinkedItem renders a showcase correctly 1`] = `
 .c6 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-weight: 500;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -146,22 +146,22 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
 .c6:focus {
   outline: none;
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c6:focus:not(:focus-visible) {
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c6:-moz-focusring,
 .c6:focus-visible {
   background: rgba(0,169,145,0.1);
-  box-shadow: 0px 0px 0px 4px rgba(0,169,145,0.1);
+  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
 }
 
 .c4 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #252A31;
@@ -188,7 +188,7 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
 }
 
 .c3 {
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: #252A31;
@@ -219,7 +219,7 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font-family: "Roboto",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   color: #252A31;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -261,6 +261,12 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
 
 @media (min-width:1200px) {
 
+}
+
+@media (min-width:576px) {
+  .c1 {
+    padding: 24px;
+  }
 }
 
 <div
