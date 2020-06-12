@@ -27,32 +27,12 @@ exports[`ArticleTags renders tags correctly 1`] = `
 }
 
 .c0:hover,
-.c0:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #00A991;
-}
-
-.c0:hover .TextLink__IconContainer-sc-1bvlje4-0,
-.c0:active .TextLink__IconContainer-sc-1bvlje4-0 {
-  color: #00A991;
-}
-
+.c0:active,
 .c0:focus {
   outline: none;
-  background: rgba(95,115,140,0.1);
-  box-shadow: 0 0 0 4px rgba(95,115,140,0.1);
-}
-
-.c0:focus:not(:focus-visible) {
-  background: rgba(95,115,140,0.1);
-  box-shadow: 0 0 0 4px rgba(95,115,140,0.1);
-}
-
-.c0:-moz-focusring,
-.c0:focus-visible {
-  background: rgba(95,115,140,0.1);
-  box-shadow: 0 0 0 4px rgba(95,115,140,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #009882;
 }
 
 <span>

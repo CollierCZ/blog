@@ -31,10 +31,12 @@ exports[`Quote renders a quote correctly 1`] = `
 }
 
 .c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 .c2 {
@@ -57,10 +59,12 @@ exports[`Quote renders a quote correctly 1`] = `
 }
 
 .c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <div

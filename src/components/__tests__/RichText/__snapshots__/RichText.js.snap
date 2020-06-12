@@ -40,10 +40,12 @@ Array [
 }
 
 .c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <p
@@ -77,10 +79,12 @@ Array [
 }
 
 .c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <p
@@ -120,10 +124,12 @@ Array [
 }
 
 .c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c1 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 .c2 {
@@ -146,10 +152,12 @@ Array [
 }
 
 .c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <div
@@ -232,32 +240,12 @@ exports[`RichText renders correctly with a list with links 1`] = `
 }
 
 .c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #00A991;
-}
-
-.c5:hover .TextLink__IconContainer-sc-1bvlje4-0,
-.c5:active .TextLink__IconContainer-sc-1bvlje4-0 {
-  color: #00A991;
-}
-
+.c5:active,
 .c5:focus {
   outline: none;
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c5:focus:not(:focus-visible) {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c5:-moz-focusring,
-.c5:focus-visible {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #009882;
 }
 
 .c1 {
@@ -561,10 +549,12 @@ Array [
 }
 
 .c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active {
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c0 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <p
@@ -627,32 +617,12 @@ exports[`RichText renders correctly with links 1`] = `
 }
 
 .c2:hover,
-.c2:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #00A991;
-}
-
-.c2:hover .TextLink__IconContainer-sc-1bvlje4-0,
-.c2:active .TextLink__IconContainer-sc-1bvlje4-0 {
-  color: #00A991;
-}
-
+.c2:active,
 .c2:focus {
   outline: none;
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c2:focus:not(:focus-visible) {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c2:-moz-focusring,
-.c2:focus-visible {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #009882;
 }
 
 .c0 {
@@ -676,10 +646,12 @@ exports[`RichText renders correctly with links 1`] = `
 }
 
 .c0 a:not(.c1):hover,
-.c0 a:not(.c1):active {
+.c0 a:not(.c1):active,
+.c0 a:not(.c1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <p
