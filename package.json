@@ -58,7 +58,7 @@
     "react-test-renderer": "^16.13.1"
   },
   "resolutions": {
-    "@babel/helper-call-delegate": "^7.8.7",
+    "@babel/helper-call-delegate": "^7.10.1",
     "@babel/helper-function-name": "^7.9.5",
     "@babel/helper-explode-assignable-expression": "7.8.3"
   },
