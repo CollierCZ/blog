@@ -27,32 +27,12 @@ exports[`Showcase renders correctly 1`] = `
 }
 
 .c6:hover,
-.c6:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #00A991;
-}
-
-.c6:hover .TextLink__IconContainer-sc-1bvlje4-0,
-.c6:active .TextLink__IconContainer-sc-1bvlje4-0 {
-  color: #00A991;
-}
-
+.c6:active,
 .c6:focus {
   outline: none;
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c6:focus:not(:focus-visible) {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c6:-moz-focusring,
-.c6:focus-visible {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #009882;
 }
 
 .c4 {
@@ -76,10 +56,12 @@ exports[`Showcase renders correctly 1`] = `
 }
 
 .c4 a:not(.c5):hover,
-.c4 a:not(.c5):active {
+.c4 a:not(.c5):active,
+.c4 a:not(.c5):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 .c3 {

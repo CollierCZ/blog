@@ -28,32 +28,12 @@ Array [
 }
 
 .c2:hover,
-.c2:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #00A991;
-}
-
-.c2:hover .TextLink__IconContainer-sc-1bvlje4-0,
-.c2:active .TextLink__IconContainer-sc-1bvlje4-0 {
-  color: #00A991;
-}
-
+.c2:active,
 .c2:focus {
   outline: none;
-  background: rgba(95,115,140,0.1);
-  box-shadow: 0 0 0 4px rgba(95,115,140,0.1);
-}
-
-.c2:focus:not(:focus-visible) {
-  background: rgba(95,115,140,0.1);
-  box-shadow: 0 0 0 4px rgba(95,115,140,0.1);
-}
-
-.c2:-moz-focusring,
-.c2:focus-visible {
-  background: rgba(95,115,140,0.1);
-  box-shadow: 0 0 0 4px rgba(95,115,140,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #009882;
 }
 
 .c3 a:not(.c1),
@@ -66,10 +46,12 @@ Array [
 }
 
 .c3 a:not(.c1):hover,
-.c3 a:not(.c1):active {
+.c3 a:not(.c1):active,
+.c3 a:not(.c1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 .c0 {
@@ -120,32 +102,12 @@ Array [
 }
 
 .c2:hover,
-.c2:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #00A991;
-}
-
-.c2:hover .TextLink__IconContainer-sc-1bvlje4-0,
-.c2:active .TextLink__IconContainer-sc-1bvlje4-0 {
-  color: #00A991;
-}
-
+.c2:active,
 .c2:focus {
   outline: none;
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c2:focus:not(:focus-visible) {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
-}
-
-.c2:-moz-focusring,
-.c2:focus-visible {
-  background: rgba(0,169,145,0.1);
-  box-shadow: 0 0 0 4px rgba(0,169,145,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #009882;
 }
 
 .c0 {
@@ -169,10 +131,12 @@ Array [
 }
 
 .c0 a:not(.c1):hover,
-.c0 a:not(.c1):active {
+.c0 a:not(.c1):active,
+.c0 a:not(.c1):focus {
+  outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #00A991;
+  color: #009882;
 }
 
 <p
