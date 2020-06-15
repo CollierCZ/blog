@@ -2359,10 +2359,10 @@
   resolved "https://registry.yarnpkg.com/@kentico/kontent-webhook-helper/-/kontent-webhook-helper-1.1.0.tgz#44a7860730fa64717c9e22ccdad76a24315e94c9"
   integrity sha512-osnBOf3HhogCM+aQne5JIIJFmy2jaPuwSpQCYdoL807U8jbX8F6uICP0J9aftdVyZVSowB63MyjK8kpM/nYP9w==
 
-"@kiwicom/orbit-components@^0.87.0":
-  version "0.87.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.87.0.tgz#2fb9f7211e9a2590277549440eea94a1d0405be5"
-  integrity sha512-OGIl4glbmRmO+QfeT/e1OJE7C41u9WXSzNQQRq0I8doEbItCP8W8iDOvmEKkPOoOmaXlBUBKF0UirdHBKM6HaQ==
+"@kiwicom/orbit-components@^0.87.1":
+  version "0.87.1"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.87.1.tgz#0c70e88e969d46d0a39a64090ed41098d696ded9"
+  integrity sha512-CmodJEeZkoJCzRq49cLiArQP4eD1eGHPVqD9oaYalnnQU7fRdoBGxIV+2vAKUMl6Rt6BuoDkhD4a7fT/lvbXyA==
   dependencies:
     "@adeira/js" "^1.2.2"
     "@kiwicom/orbit-design-tokens" "~0.10.0"
