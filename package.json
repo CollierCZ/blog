@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": "https://github.com/CollierCZ/CollierCZ",
   "scripts": {
-    "dev": "gatsby develop",
+    "develop": "yarn install && gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "jest",
@@ -16,7 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@kentico/gatsby-source-kontent": "6.0.1",
-    "@kiwicom/orbit-components": "^0.87.0",
+    "@kiwicom/orbit-components": "^0.87.2",
     "@kiwicom/orbit-design-tokens": "^0.10.0",
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",

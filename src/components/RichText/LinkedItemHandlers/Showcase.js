@@ -88,6 +88,7 @@ const ShowcaseItem = ({ showcaseItem }) => {
           <RichText
             content={item.short_description.value}
             links={item.short_description.links}
+            stopPropagation
           />
         </Stack>
       </Tile>
