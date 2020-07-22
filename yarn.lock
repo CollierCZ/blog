@@ -2,10 +2,12 @@
 # yarn lockfile v1
 
 
-"@adeira/js@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.2.tgz#bdaff8b4aba8f737cc4553ad3db7a682e5243fc0"
-  integrity sha512-NYjy0O5S4j0ksJ8pxNf9fxIFIl+/HaNyqTE1QrHaN2QjcKxtzHwVhDQ2rIJBQ5VbVZt9VES8ZcSCi3xoBX+R0Q==
+"@adeira/js@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.3.tgz#164e505c358b00562abde4fdedefcf77cf5d321b"
+  integrity sha512-jCXFo5PmKUuWDj8eRIVsd9twYROJLlCuaQ5c5QGPCBGzu/fDci68WJ47Pw/N3WJn/JccXqewDBr/Og2W/KA7aQ==
+  dependencies:
+    "@babel/runtime" "^7.10.4"
 
 "@ardatan/aggregate-error@0.0.1":
   version "0.0.1"
@@ -1158,6 +1160,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.10.4":
+  version "7.10.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
+  integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.10.3":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.10.4.tgz#63b9e211bee42e8ba8dfc1c0b68a856150e37bf2"
@@ -1898,12 +1907,12 @@
   resolved "https://registry.yarnpkg.com/@kentico/kontent-webhook-helper/-/kontent-webhook-helper-1.1.0.tgz#44a7860730fa64717c9e22ccdad76a24315e94c9"
   integrity sha512-osnBOf3HhogCM+aQne5JIIJFmy2jaPuwSpQCYdoL807U8jbX8F6uICP0J9aftdVyZVSowB63MyjK8kpM/nYP9w==
 
-"@kiwicom/orbit-components@^0.88.0":
-  version "0.88.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.88.0.tgz#1e6ce79cde8fd7fd145fab7aa92b85c057f3321b"
-  integrity sha512-BNqDTNC6P/G27zs/Ni9gNzY/cr5ERF/oFRwMJk/AfrDZv1mXhzPBPEYTMbAhcslWbkEZnm2g9AfRySHmb8pyUQ==
+"@kiwicom/orbit-components@^0.89.0":
+  version "0.89.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.89.0.tgz#24b4bc00e055006bf7f875ff14461c6d8e0fde62"
+  integrity sha512-7MXVdAs0HMLDCnqbHQrQWSbrMiPpmXyEDxjzVQH2SNZYZ7VxYUzFxVS1K2LE7gLU+6hisUWnH8HscR79pp3ezQ==
   dependencies:
-    "@adeira/js" "^1.2.2"
+    "@adeira/js" "^1.2.3"
     "@kiwicom/orbit-design-tokens" "~0.10.0"
 
 "@kiwicom/orbit-design-tokens@^0.10.0", "@kiwicom/orbit-design-tokens@~0.10.0":
