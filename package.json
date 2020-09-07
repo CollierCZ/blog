@@ -41,7 +41,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "rxjs": "^6.6.3",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "babel-jest": "^26.3.0",
