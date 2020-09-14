@@ -20,7 +20,7 @@
     "@kiwicom/orbit-design-tokens": "^0.11.0",
     "babel-plugin-styled-components": "^1.11.1",
     "classnames": "^2.2.6",
-    "gatsby": "^2.24.54",
+    "gatsby": "^2.24.58",
     "gatsby-image": "^2.4.17",
     "gatsby-link": "^2.4.13",
     "gatsby-paginate": "1.1.1",
