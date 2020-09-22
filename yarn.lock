@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@adeira/js@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.3.tgz#164e505c358b00562abde4fdedefcf77cf5d321b"
-  integrity sha512-jCXFo5PmKUuWDj8eRIVsd9twYROJLlCuaQ5c5QGPCBGzu/fDci68WJ47Pw/N3WJn/JccXqewDBr/Og2W/KA7aQ==
+"@adeira/js@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.4.tgz#f32b514b68963f60f3314a2e6badeeb8d8e3c52d"
+  integrity sha512-Hg5GtRtrfso3ZwZsQcTNeEb1OG8LrLUuRQtZS/XojfnLhXEFPGHMP2ysKSVp3BKL6rjF/L2p5WVbLhuuPIXXAg==
   dependencies:
-    "@babel/runtime" "^7.10.4"
+    "@babel/runtime" "^7.10.5"
 
 "@ardatan/aggregate-error@0.0.1":
   version "0.0.1"
@@ -1107,7 +1107,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -1925,25 +1925,18 @@
   resolved "https://registry.yarnpkg.com/@kentico/kontent-webhook-helper/-/kontent-webhook-helper-1.1.0.tgz#44a7860730fa64717c9e22ccdad76a24315e94c9"
   integrity sha512-osnBOf3HhogCM+aQne5JIIJFmy2jaPuwSpQCYdoL807U8jbX8F6uICP0J9aftdVyZVSowB63MyjK8kpM/nYP9w==
 
-"@kiwicom/orbit-components@^0.89.0":
-  version "0.89.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.89.0.tgz#24b4bc00e055006bf7f875ff14461c6d8e0fde62"
-  integrity sha512-7MXVdAs0HMLDCnqbHQrQWSbrMiPpmXyEDxjzVQH2SNZYZ7VxYUzFxVS1K2LE7gLU+6hisUWnH8HscR79pp3ezQ==
+"@kiwicom/orbit-components@^0.92.0":
+  version "0.92.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.92.0.tgz#c5cafcf7b8b0de7897f78b196e9f8af3d8d2a587"
+  integrity sha512-I3OPzhk2/mVaH/GzhjhSllEIX5015/EJCpSGl9THG20A1dghp/+a1F3UFNnPwJzYoyX+/FTlYYKm7CjOo3P8oA==
   dependencies:
-    "@adeira/js" "^1.2.3"
-    "@kiwicom/orbit-design-tokens" "~0.10.0"
+    "@adeira/js" "^1.2.4"
+    "@kiwicom/orbit-design-tokens" "~0.11.0"
 
-"@kiwicom/orbit-design-tokens@^0.11.0":
+"@kiwicom/orbit-design-tokens@^0.11.0", "@kiwicom/orbit-design-tokens@~0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.11.0.tgz#57419566f8cfb56b8111a2317ba2f81856cbf47d"
   integrity sha512-yrVsgaS5fiMKoiwiogw75crjKGNXzKZzJsu1e3ooyB+q1djRuWdNc9KjqywRqu+p6Y/jz20GOQ+cxiVRHpuGLw==
-  dependencies:
-    ramda "^0.27.0"
-
-"@kiwicom/orbit-design-tokens@~0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.10.0.tgz#759fe60398003edbb5712541e59fb97b06b356c9"
-  integrity sha512-8kTLOp0KxwMwDo+no7fF4M5w1pAttW3Qs32QrFcWp0FMc8Z//qUAeBo2N+kvJYyT0+6rUPIv6arFPEyW5ZUfBw==
   dependencies:
     ramda "^0.27.0"
 
