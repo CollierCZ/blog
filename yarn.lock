@@ -1908,10 +1908,10 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@kentico/gatsby-source-kontent@6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-6.0.1.tgz#f82dd879c19d8031fb0ee8aff4c9e3ea4b537c5b"
-  integrity sha512-qk4hsNwKGNnvZbfrMToc7y+QN1BbgexSSOl/omNbWnhUi9jm8/bP3/B3lVhntV9yEf0ZVVJO7Yfpl25PsVPPlg==
+"@kentico/gatsby-source-kontent@6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-6.1.0.tgz#fd9478f35e525f0b3c324ceb9699056774c128d2"
+  integrity sha512-JDoOlwvdOiX8l8Fr0ZD46DdYKeo5JgwgahRpbHcvvrBs4uRkmfdP1y4p9VTqfl3XwiLnpc0L70n6yCLHo5rM1g==
   dependencies:
     "@kentico/kontent-webhook-helper" "^1.1.0"
     "@types/fs-extra" "^8.0.1"
