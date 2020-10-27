@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@adeira/js@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.4.tgz#f32b514b68963f60f3314a2e6badeeb8d8e3c52d"
-  integrity sha512-Hg5GtRtrfso3ZwZsQcTNeEb1OG8LrLUuRQtZS/XojfnLhXEFPGHMP2ysKSVp3BKL6rjF/L2p5WVbLhuuPIXXAg==
+"@adeira/js@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.3.0.tgz#e3dbd9009570190f504b8b775ed8a77822e330bf"
+  integrity sha512-cr28wwyEhmyKZK9Y72br/DcmPthuyynq8S1nkXMbTiv3MsDuT+y18onsNc+wIqJBxwVN60Yv2JEGzT3m+zLK0A==
   dependencies:
-    "@babel/runtime" "^7.10.5"
+    "@babel/runtime" "^7.12.1"
 
 "@ardatan/aggregate-error@0.0.1":
   version "0.0.1"
@@ -1140,10 +1140,17 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
+  integrity sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1907,12 +1914,12 @@
   resolved "https://registry.yarnpkg.com/@kentico/kontent-webhook-helper/-/kontent-webhook-helper-1.1.0.tgz#44a7860730fa64717c9e22ccdad76a24315e94c9"
   integrity sha512-osnBOf3HhogCM+aQne5JIIJFmy2jaPuwSpQCYdoL807U8jbX8F6uICP0J9aftdVyZVSowB63MyjK8kpM/nYP9w==
 
-"@kiwicom/orbit-components@^0.92.0":
-  version "0.92.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.92.0.tgz#c5cafcf7b8b0de7897f78b196e9f8af3d8d2a587"
-  integrity sha512-I3OPzhk2/mVaH/GzhjhSllEIX5015/EJCpSGl9THG20A1dghp/+a1F3UFNnPwJzYoyX+/FTlYYKm7CjOo3P8oA==
+"@kiwicom/orbit-components@^0.95.0":
+  version "0.95.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.95.0.tgz#dc81cdfb5a5b467668fd816661b49814ba452e90"
+  integrity sha512-ZrhGLi3fs+Uirsz47Ugn6XfiWqXDocyd+lts2uGEmbRH+pY291goJDGsrnQFIo4Ofw0v5/ji1lQtWMZhq0bDYA==
   dependencies:
-    "@adeira/js" "^1.2.4"
+    "@adeira/js" "^1.3.0"
     "@kiwicom/orbit-design-tokens" "~0.11.0"
 
 "@kiwicom/orbit-design-tokens@^0.11.0", "@kiwicom/orbit-design-tokens@~0.11.0":
