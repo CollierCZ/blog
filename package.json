@@ -55,7 +55,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.1",
     "jest-styled-components": "^7.0.3",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.14.0"
   },
   "resolutions": {
     "@babel/helper-call-delegate": "^7.10.1",
