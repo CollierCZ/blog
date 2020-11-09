@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@adeira/js@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.2.4.tgz#f32b514b68963f60f3314a2e6badeeb8d8e3c52d"
-  integrity sha512-Hg5GtRtrfso3ZwZsQcTNeEb1OG8LrLUuRQtZS/XojfnLhXEFPGHMP2ysKSVp3BKL6rjF/L2p5WVbLhuuPIXXAg==
+"@adeira/js@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@adeira/js/-/js-1.3.0.tgz#e3dbd9009570190f504b8b775ed8a77822e330bf"
+  integrity sha512-cr28wwyEhmyKZK9Y72br/DcmPthuyynq8S1nkXMbTiv3MsDuT+y18onsNc+wIqJBxwVN60Yv2JEGzT3m+zLK0A==
   dependencies:
-    "@babel/runtime" "^7.10.5"
+    "@babel/runtime" "^7.12.1"
 
 "@ardatan/aggregate-error@0.0.1":
   version "0.0.1"
@@ -1133,10 +1133,17 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.12.1":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1900,20 +1907,27 @@
   resolved "https://registry.yarnpkg.com/@kentico/kontent-webhook-helper/-/kontent-webhook-helper-1.1.0.tgz#44a7860730fa64717c9e22ccdad76a24315e94c9"
   integrity sha512-osnBOf3HhogCM+aQne5JIIJFmy2jaPuwSpQCYdoL807U8jbX8F6uICP0J9aftdVyZVSowB63MyjK8kpM/nYP9w==
 
-"@kiwicom/orbit-components@^0.92.0":
-  version "0.92.0"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.92.0.tgz#c5cafcf7b8b0de7897f78b196e9f8af3d8d2a587"
-  integrity sha512-I3OPzhk2/mVaH/GzhjhSllEIX5015/EJCpSGl9THG20A1dghp/+a1F3UFNnPwJzYoyX+/FTlYYKm7CjOo3P8oA==
+"@kiwicom/orbit-components@^0.96.3":
+  version "0.96.3"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.96.3.tgz#d6d8f1a03627dc8bffc9bfa1e3fd4edf4cc6577a"
+  integrity sha512-EPCnkv8JO+lf0WQWOF0q7+OH/3O9uw31Y+zygbsMN4vKA0ZpTaC2jnA3T/2lZJk/hcFPRbSMjz8eOFbQHbtiNg==
   dependencies:
-    "@adeira/js" "^1.2.4"
-    "@kiwicom/orbit-design-tokens" "~0.11.0"
+    "@adeira/js" "^1.3.0"
+    "@kiwicom/orbit-design-tokens" "^0.12.2"
 
-"@kiwicom/orbit-design-tokens@^0.11.0", "@kiwicom/orbit-design-tokens@~0.11.0":
+"@kiwicom/orbit-design-tokens@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.11.0.tgz#57419566f8cfb56b8111a2317ba2f81856cbf47d"
   integrity sha512-yrVsgaS5fiMKoiwiogw75crjKGNXzKZzJsu1e3ooyB+q1djRuWdNc9KjqywRqu+p6Y/jz20GOQ+cxiVRHpuGLw==
   dependencies:
     ramda "^0.27.0"
+
+"@kiwicom/orbit-design-tokens@^0.12.2":
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.12.2.tgz#f40207b37aa567c7644bc0058990ba3f95980de9"
+  integrity sha512-mfbupFBtSj+5FmEdLs6lsaKTKW3TRPa58R0MseabrhTqtYXMOLvZjrRNikdhpjFVogXkI6jS5oleCcEm+iwO/w==
+  dependencies:
+    ramda "^0.27.1"
 
 "@mdx-js/util@^2.0.0-next.7":
   version "2.0.0-next.7"
@@ -7164,7 +7178,7 @@ gatsby-plugin-typescript@^2.4.25:
     "@babel/runtime" "^7.11.2"
     babel-plugin-remove-graphql-queries "^2.9.20"
 
-gatsby-plugin-utils@^0.2.39, gatsby-plugin-utils@^0.2.40:
+gatsby-plugin-utils@^0.2.40:
   version "0.2.40"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.2.40.tgz#20e997d10efb9a0368270f79ce2e6001346f6336"
   integrity sha512-RKjmpPhmi8TDR9hAKxmD4ZJMje3BLs6nt6mxMWT0F8gf5giCYEywplJikyCvaPfuyaFlq1hMmFaVvzmeZNussg==
@@ -12529,6 +12543,11 @@ ramda@^0.27.0:
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.0.tgz#915dc29865c0800bf3f69b8fd6c279898b59de43"
   integrity sha512-pVzZdDpWwWqEVVLshWUHjNwuVP7SfcmPraYuqocJp1yo2U1R7P+5QAfDhdItkuoGqIBnBYrtPp7rEPqDn9HlZA==
+
+ramda@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
+  integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==
 
 randexp@0.4.6:
   version "0.4.6"
