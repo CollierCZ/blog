@@ -1,6 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Showcase renders correctly 1`] = `
+.c3 {
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #252A31;
+  line-height: 36px;
+  margin: 0;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c2 > * {
+  margin: 0 0 16px 0!important;
+}
+
+.c2 > *:last-child {
+  margin: 0 !important;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 16px;
+}
+
+.c0 {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
+  color: #252A31;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0px 0px 2px 0px rgba(37,42,49,0.16),0px 1px 4px 0px rgba(37,42,49,0.12);
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.c0:hover,
+.c0:focus {
+  outline: none;
+  box-shadow: 0px 1px 4px 0px rgba(37,42,49,0.16),0px 4px 8px 0px rgba(37,42,49,0.12);
+}
+
+.c0:hover .TileHeader__StyledIconRight-sc-13kgyxb-4,
+.c0:focus .TileHeader__StyledIconRight-sc-13kgyxb-4 {
+  color: #52647A;
+}
+
 .c6 {
   font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-weight: 500;
@@ -62,60 +116,6 @@ exports[`Showcase renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #009882;
-}
-
-.c3 {
-  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #252A31;
-  line-height: 36px;
-  margin: 0;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c2 > * {
-  margin: 0 0 16px 0!important;
-}
-
-.c2 > *:last-child {
-  margin: 0 !important;
-}
-
-.c1 {
-  font-size: 14px;
-  line-height: 20px;
-  cursor: pointer;
-  padding: 16px;
-}
-
-.c0 {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
-  color: #252A31;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background: #FFFFFF;
-  border-radius: 3px;
-  box-shadow: 0px 0px 2px 0px rgba(37,42,49,0.16),0px 1px 4px 0px rgba(37,42,49,0.12);
-  -webkit-transition: box-shadow 0.15s ease-in-out;
-  transition: box-shadow 0.15s ease-in-out;
-}
-
-.c0:hover,
-.c0:focus {
-  outline: none;
-  box-shadow: 0px 1px 4px 0px rgba(37,42,49,0.16),0px 4px 8px 0px rgba(37,42,49,0.12);
-}
-
-.c0:hover .TileHeader__StyledIconRight-sc-13kgyxb-4,
-.c0:focus .TileHeader__StyledIconRight-sc-13kgyxb-4 {
-  color: #52647A;
 }
 
 @media (min-width:414px) {
@@ -210,7 +210,6 @@ exports[`Showcase renders correctly 1`] = `
               className="c5 c6"
               href="http://www.writethedocs.org/conf/prague/2019/"
               onClick={[Function]}
-              rel=""
             >
               Write the Docs Prague 2019
             </a>
@@ -219,7 +218,6 @@ exports[`Showcase renders correctly 1`] = `
               className="c5 c6"
               href="/articles/seeing-your-docs-through-different-eyes"
               onClick={[Function]}
-              rel=""
             >
               text version of the talk
             </a>

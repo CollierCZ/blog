@@ -2,7 +2,7 @@ import React from "react";
 import { navigate } from "gatsby";
 import { arrayOf, string } from "prop-types";
 import { slugify } from "../utilities/CaseHelpers";
-import { TextLink } from "@kiwicom/orbit-components";
+import TextLink from "@kiwicom/orbit-components/lib/TextLink";
 
 const ArticleTags = ({ prefix, tags }) => {
   return (

@@ -42,7 +42,6 @@ exports[`ArticleCategory renders correctly 1`] = `
       className="c0"
       href="/category/education"
       onClick={[Function]}
-      rel=""
     >
       Education
     </a>

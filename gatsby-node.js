@@ -10,7 +10,9 @@ const paginationLimit = 6;
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type.match(kcItemTypeIdentifier)) {
+  const typesWithUrlsRegex = new RegExp(kcItemTypeIdentifier + "_" + `(${articleTypeIdentifier}|category|about|author|contact|home)`)
+
+  if (node.internal.type.match(typesWithUrlsRegex)) {
     createNodeField({
       node,
       name: `slug`,

@@ -43,7 +43,6 @@ exports[`ArticleTags renders tags correctly 1`] = `
       className="c0"
       href="/tags/documentation"
       onClick={[Function]}
-      rel=""
     >
       documentation
     </a>
@@ -55,7 +54,6 @@ exports[`ArticleTags renders tags correctly 1`] = `
       className="c0"
       href="/tags/ux"
       onClick={[Function]}
-      rel=""
     >
       UX
     </a>
@@ -67,7 +65,6 @@ exports[`ArticleTags renders tags correctly 1`] = `
       className="c0"
       href="/tags/experience-mapping"
       onClick={[Function]}
-      rel=""
     >
       experience mapping
     </a>

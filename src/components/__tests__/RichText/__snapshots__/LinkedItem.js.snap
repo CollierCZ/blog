@@ -319,7 +319,6 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
               className="c5 c6"
               href="http://www.writethedocs.org/conf/prague/2019/"
               onClick={[Function]}
-              rel=""
             >
               Write the Docs Prague 2019
             </a>
@@ -328,7 +327,6 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
               className="c5 c6"
               href="/articles/seeing-your-docs-through-different-eyes"
               onClick={[Function]}
-              rel=""
             >
               text version of the talk
             </a>
