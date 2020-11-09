@@ -82,7 +82,6 @@ exports[`Footer renders correctly 1`] = `
       className="c2 c3"
       href="https://www.gatsbyjs.org/"
       onClick={[Function]}
-      rel=""
     >
       Gatsby
     </a>
@@ -91,7 +90,6 @@ exports[`Footer renders correctly 1`] = `
       className="c2 c3"
       href="https://kontent.ai"
       onClick={[Function]}
-      rel=""
     >
       Kentico Kontent
     </a>

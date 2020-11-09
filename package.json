@@ -16,8 +16,9 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.10",
     "@kentico/gatsby-source-kontent": "6.0.1",
-    "@kiwicom/orbit-components": "^0.87.2",
+    "@kiwicom/orbit-components": "^0.96.3",
     "@kiwicom/orbit-design-tokens": "^0.10.0",
+    "add": "^2.0.6",
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",
     "gatsby": "^2.22.15",
@@ -36,12 +37,14 @@
     "html-react-parser": "^0.13.0",
     "kentico-cloud-delivery": "^6.2.0",
     "moment": "^2.26.0",
+    "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "rxjs": "^6.5.5",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "babel-jest": "^26.0.1",

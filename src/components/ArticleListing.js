@@ -6,7 +6,10 @@ import ArticleTeaser from "./ArticleTeaser";
 import { css } from "styled-components";
 import { navigate } from "gatsby";
 import React from "react";
-import { Heading, Stack, Text, Tile } from "@kiwicom/orbit-components";
+import Heading from "@kiwicom/orbit-components/lib/Heading";
+import Stack from "@kiwicom/orbit-components/lib/Stack";
+import Text from "@kiwicom/orbit-components/lib/Text";
+import Tile from "@kiwicom/orbit-components/lib/Tile";
 
 const getArticleList = (articleEdges) =>
   articleEdges.map((articleEdge) => ({

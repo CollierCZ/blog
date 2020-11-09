@@ -352,7 +352,6 @@ exports[`RichText renders correctly with a list with links 1`] = `
         className="c5"
         href="http://www.writethedocs.org/conf/prague/2019/"
         onClick={[Function]}
-        rel=""
       >
         Write the Docs Prague 2019
       </a>
@@ -662,7 +661,6 @@ exports[`RichText renders correctly with links 1`] = `
     className="c1 c2"
     href="/articles/seeing-your-docs-through-different-eyes"
     onClick={[Function]}
-    rel=""
   >
     text version of the talk
   </a>
@@ -671,7 +669,6 @@ exports[`RichText renders correctly with links 1`] = `
     className="c1 c2"
     href="http://www.writethedocs.org/conf/prague/2019/"
     onClick={[Function]}
-    rel=""
   >
     Write the Docs Prague 2019
   </a>

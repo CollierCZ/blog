@@ -4,13 +4,21 @@ import LinkedItem from "./LinkedItem";
 import { navigate } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import {
-  Heading,
-  List,
-  ListItem,
-  Text,
-  TextLink,
-} from "@kiwicom/orbit-components";
+import styled from "styled-components";
+
+import { defaultTokens } from "@kiwicom/orbit-design-tokens"
+import Heading from "@kiwicom/orbit-components/lib/Heading";
+import List from "@kiwicom/orbit-components/lib/List";
+import ListItem from "@kiwicom/orbit-components/lib/List/ListItem";
+import Text from "@kiwicom/orbit-components/lib/Text";
+import TextLink from "@kiwicom/orbit-components/lib/TextLink";
+
+export const StyledInlineCode = styled.code`
+  background-color: ${defaultTokens.paletteCloudNormal};
+  border-radius: ${defaultTokens.borderRadiusNormal};
+  font-family: "Roboto Mono", "Liberation Mono", monospace;
+  padding: ${defaultTokens.spaceXXXSmall} ${defaultTokens.spaceXXSmall};
+`
 
 const RichText = ({ content, images, links, linkedItems, stopPropagation }) => {
   if (!content || !content.length) {
@@ -109,7 +117,7 @@ function replaceNode(domNode, images, links, linkedItems, stopPropagation) {
 
   // Replace paragraphs.
   if (domNode.name === "p") {
-    children.forEach((node) => {
+    children.forEach((node, index) => {
       if (node.name === "a") {
         content.push(
           replaceLinks(node.attribs, node.children, links, stopPropagation)
@@ -117,6 +125,9 @@ function replaceNode(domNode, images, links, linkedItems, stopPropagation) {
       }
       if (node.type === "text") {
         content.push(node.data);
+      }
+      if (node.name === "code" && node.type === "tag") {
+        content.push(<StyledInlineCode key={index}>{node.children[0].data}</StyledInlineCode>)
       }
       return "hi";
     });
