@@ -31,7 +31,7 @@
     "gatsby-plugin-offline": "^3.3.2",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sharp": "^2.7.1",
-    "gatsby-plugin-sitemap": "^2.4.17",
+    "gatsby-plugin-sitemap": "^2.6.0",
     "gatsby-plugin-styled-components": "^3.3.14",
     "html-react-parser": "^0.14.0",
     "kentico-cloud-delivery": "^6.2.0",
