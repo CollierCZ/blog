@@ -18,7 +18,7 @@
     "@kentico/gatsby-source-kontent": "6.2.0",
     "@kiwicom/orbit-components": "^0.96.3",
     "@kiwicom/orbit-design-tokens": "^0.11.0",
-    "babel-plugin-styled-components": "^1.11.1",
+    "babel-plugin-styled-components": "^1.12.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.6.0",
