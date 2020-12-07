@@ -33,7 +33,7 @@
     "gatsby-plugin-sharp": "^2.10.0",
     "gatsby-plugin-sitemap": "^2.8.0",
     "gatsby-plugin-styled-components": "^3.6.0",
-    "html-react-parser": "^0.14.0",
+    "html-react-parser": "^0.14.2",
     "kentico-cloud-delivery": "^6.2.0",
     "moment": "^2.29.1",
     "prism-react-renderer": "^1.1.1",
