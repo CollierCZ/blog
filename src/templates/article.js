@@ -26,22 +26,19 @@ const ArticleTemplate = ({ data, pageContext }) => {
   const { slug } = pageContext;
   const socialUrls = data.config.elements.socialmedia.value.split(",");
   const article = data.article;
-  const nextArticle = data.nextarticle;
-  const prevArticle = data.prevarticle;
   const className = article.article_class ? article.article_class : "article";
   const authorData = data.author.elements;
-  const nextData = {
-    path: `/articles/${pageContext.nextSlug}`,
-    title: nextArticle.elements.title.value,
-    cover: nextArticle.elements.teaser.value[0].url,
-    excerpt: nextArticle.elements.metadata__description.value,
+  const getArticleData = (direction) => {
+    const articlewWithDirection = data[`${direction}article`];
+    return {
+      path: `/articles/${pageContext[`${direction}slug`]}`,
+      title: articlewWithDirection.elements.title.value,
+      cover: articlewWithDirection.elements.teaser.value[0].url,
+      excerpt: articlewWithDirection.elements.metadata__description.value,
+    };
   };
-  const prevData = {
-    path: `/articles/${pageContext.prevSlug}`,
-    title: prevArticle.elements.title.value,
-    cover: prevArticle.elements.teaser.value[0].url,
-    excerpt: prevArticle.elements.metadata__description.value,
-  };
+  const nextData = getArticleData("next");
+  const prevData = getArticleData("prev");
 
   return (
     <>
