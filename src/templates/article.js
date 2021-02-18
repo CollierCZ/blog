@@ -48,7 +48,7 @@ const ArticleTemplate = ({ data, pageContext }) => {
       <SEO articlePath={slug} articleNode={article} />
       <Layout>
         <MainHeader
-          headStyle="big"
+          headStyle="small"
           cover={article.elements.teaser.value[0].url}
         >
           <MainNav>
