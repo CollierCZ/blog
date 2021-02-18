@@ -1,6 +1,5 @@
 const { slugify } = require("./src/utilities/CaseHelpers")
 const createPaginatedPages = require("gatsby-paginate");
-const moment = require("moment");
 const path = require(`path`);
 
 const kcItemTypeIdentifier = `kontent_item`;
@@ -56,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
             fields {
-              date
+              date(formatString: "YYYY-MM-DD")
               slug
               tags
             }
@@ -116,12 +115,12 @@ exports.createPages = async ({ graphql, actions }) => {
     let categoryMap = {};
 
     articleEdges.sort((articleA,articleB) => { 
-        const dateA = moment(articleA.node.fields.date, "YYYY-MM-DD");
-        const dateB = moment(articleB.node.fields.date, "YYYY-MM-DD");
+        const dateA = articleA.node.fields.date;
+        const dateB = articleB.node.fields.date;
   
-        if (dateA.isBefore(dateB)) return 1;
+        if (dateA < dateB) return 1;
   
-        if (dateB.isBefore(dateA)) return -1;
+        if (dateB < dateA) return -1;
   
         return 0;
       }
