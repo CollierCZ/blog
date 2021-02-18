@@ -1,0 +1,35 @@
+name: Test and build
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Install Dependencies
+      run: yarn install --frozen-lockfile
+    - name: Test
+      run: yarn test
+    - name: Coverage
+      uses: paambaati/codeclimate-action@v2.2.4
+      env:
+        CC_TEST_REPORTER_ID: 945dfb58a832d233a3caeb84e3e6d3be212e8c7abcb48117fce63b9adcb43647
+      with:
+        coverageCommand: yarn coverage
+
+  build:
+    needs: [ test ]
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+      run: yarn install --frozen-lockfile
+    - run: yarn build
