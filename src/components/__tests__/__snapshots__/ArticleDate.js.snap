@@ -21,7 +21,7 @@ exports[`ArticleDate renders correctly 1`] = `
     }
     dateTime="2019-06-03"
   >
-    03 June 2019
+    3 June 2019
   </time>
 </span>
 `;

@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from 'styled-components'
-import moment from "moment"
+import React from "react";
+import { css } from "styled-components";
 
 const ArticleDate = ({ date, prefix }) => {
+  const useDate = new Date(date);
   return (
     <span>
       {prefix}
@@ -18,12 +18,16 @@ const ArticleDate = ({ date, prefix }) => {
             display: none;
           }
         `}
-        dateTime={moment(new Date(date)).format("YYYY-MM-DD")}
+        dateTime={useDate.toISOString().split("T")[0]}
       >
-        {moment(new Date(date)).format("DD MMMM YYYY")}
+        {useDate.toLocaleDateString("en-GB", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
       </time>
     </span>
   );
-}
+};
 
 export default ArticleDate;
