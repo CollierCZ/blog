@@ -71,7 +71,6 @@ Array [
       className="c1 c2"
       href="/aaron-collier"
       onClick={[Function]}
-      rel=""
     >
       Aaron Collier
     </a>
@@ -147,7 +146,6 @@ Array [
       className="c1 c2"
       href="https://en.wikipedia.org/wiki/Lexington,_Massachusetts"
       onClick={[Function]}
-      rel=""
     >
       Lexington
     </a>
@@ -156,7 +154,6 @@ Array [
       className="c1 c2"
       href="https://www.gotobrno.cz/en/"
       onClick={[Function]}
-      rel=""
     >
       Brno
     </a>

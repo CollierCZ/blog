@@ -83,7 +83,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
     viewBox="0 0 24 24"
   >
     <path
-      d="M20.696 4.8H3.304C2.584 4.8 2 5.384 2 6.104V17.89a1.269 1.269 0 0 0 1.304 1.259h2.609v3.478a.435.435 0 0 0 .683.357l5.54-3.835h8.56c.72 0 1.304-.584 1.304-1.304V6.103c0-.72-.584-1.304-1.304-1.304zm-2.609 7.341a1.304 1.304 0 1 1-2.609 0 1.304 1.304 0 0 1 2.609 0zm-12.174 0a1.304 1.304 0 1 1 2.609 0 1.304 1.304 0 0 1-2.609 0zm4.783 0a1.304 1.304 0 1 1 2.608 0 1.304 1.304 0 0 1-2.608 0z"
+      d="M20.696 4.8H3.304C2.584 4.8 2 5.384 2 6.104V17.89a1.269 1.269 0 001.304 1.259h2.609v3.478a.435.435 0 00.683.357l5.54-3.835h8.56c.72 0 1.304-.584 1.304-1.304V6.103c0-.72-.584-1.304-1.304-1.304zm-2.609 7.341a1.304 1.304 0 11-2.609 0 1.304 1.304 0 012.609 0zm-12.174 0a1.304 1.304 0 112.609 0 1.304 1.304 0 01-2.609 0zm4.783 0a1.304 1.304 0 112.608 0 1.304 1.304 0 01-2.608 0z"
     />
   </svg>
   <blockquote>
@@ -319,7 +319,6 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
               className="c5 c6"
               href="http://www.writethedocs.org/conf/prague/2019/"
               onClick={[Function]}
-              rel=""
             >
               Write the Docs Prague 2019
             </a>
@@ -328,7 +327,6 @@ exports[`LinkedItem renders a showcase correctly 1`] = `
               className="c5 c6"
               href="/articles/seeing-your-docs-through-different-eyes"
               onClick={[Function]}
-              rel=""
             >
               text version of the talk
             </a>
