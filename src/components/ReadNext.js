@@ -2,7 +2,10 @@ import { css } from "styled-components";
 import React from "react";
 import { shape, string } from "prop-types";
 import Link from "gatsby-link";
-import { Heading, Stack, Text } from "@kiwicom/orbit-components";
+
+import Heading from "@kiwicom/orbit-components/lib/Heading";
+import Stack from "@kiwicom/orbit-components/lib/Stack";
+import Text from "@kiwicom/orbit-components/lib/Text";
 
 export const ReadNextStory = ({ article, text }) => {
   const { path, cover, title, excerpt } = article;

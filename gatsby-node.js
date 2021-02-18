@@ -1,6 +1,5 @@
 const { slugify } = require("./src/utilities/CaseHelpers")
 const createPaginatedPages = require("gatsby-paginate");
-const moment = require("moment");
 const path = require(`path`);
 
 const kcItemTypeIdentifier = `kontent_item`;
@@ -10,7 +9,9 @@ const paginationLimit = 6;
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type.match(kcItemTypeIdentifier)) {
+  const typesWithUrlsRegex = new RegExp(kcItemTypeIdentifier + "_" + `(${articleTypeIdentifier}|category|about|author|contact|home)`)
+
+  if (node.internal.type.match(typesWithUrlsRegex)) {
     createNodeField({
       node,
       name: `slug`,
@@ -54,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
             fields {
-              date
+              date(formatString: "YYYY-MM-DD")
               slug
               tags
             }
@@ -114,12 +115,12 @@ exports.createPages = async ({ graphql, actions }) => {
     let categoryMap = {};
 
     articleEdges.sort((articleA,articleB) => { 
-        const dateA = moment(articleA.node.fields.date, "YYYY-MM-DD");
-        const dateB = moment(articleB.node.fields.date, "YYYY-MM-DD");
+        const dateA = articleA.node.fields.date;
+        const dateB = articleB.node.fields.date;
   
-        if (dateA.isBefore(dateB)) return 1;
+        if (dateA < dateB) return 1;
   
-        if (dateB.isBefore(dateA)) return -1;
+        if (dateB < dateA) return -1;
   
         return 0;
       }

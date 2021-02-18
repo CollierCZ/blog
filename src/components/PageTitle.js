@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { titleCase } from "../utilities/CaseHelpers";
-import { Heading } from "@kiwicom/orbit-components";
+
+import Heading from "@kiwicom/orbit-components/lib/Heading";
 import { useSiteMetadata } from "../hooks/use-metadata";
 
 const StyledHeading = styled("div")`

@@ -2,7 +2,7 @@ import React from "react";
 import { navigate } from "gatsby";
 import { arrayOf, string } from "prop-types";
 import { slugify } from "../utilities/CaseHelpers";
-import { TextLink } from "@kiwicom/orbit-components";
+import TextLink from "@kiwicom/orbit-components/lib/TextLink";
 
 const ArticleTags = ({ prefix, tags }) => {
   return (
@@ -14,10 +14,11 @@ const ArticleTags = ({ prefix, tags }) => {
           <TextLink
             href={`/tags/${slugify(tag)}`}
             type="secondary"
-            onClick={event => {
+            onClick={(event) => {
               event.preventDefault();
               navigate(`/tags/${slugify(tag)}`);
             }}
+            stopPropagation
           >
             {tag}
           </TextLink>
@@ -30,7 +31,7 @@ const ArticleTags = ({ prefix, tags }) => {
 
 ArticleTags.propTypes = {
   prefix: string,
-  tags: arrayOf(string.isRequired).isRequired
+  tags: arrayOf(string.isRequired).isRequired,
 };
 
 export default ArticleTags;

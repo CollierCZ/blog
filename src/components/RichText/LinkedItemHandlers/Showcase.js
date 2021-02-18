@@ -1,8 +1,11 @@
 import { css } from "styled-components";
 import { array, arrayOf, shape, string } from "prop-types";
 import React from "react";
+
+import Heading from "@kiwicom/orbit-components/lib/Heading";
+import Stack from "@kiwicom/orbit-components/lib/Stack";
+import Tile from "@kiwicom/orbit-components/lib/Tile";
 import RichText from "../RichText";
-import { Heading, Stack, Tile } from "@kiwicom/orbit-components";
 
 const Showcase = ({ showcase }) => (
   <div
@@ -11,50 +14,43 @@ const Showcase = ({ showcase }) => (
       flex-wrap: wrap;
     `}
   >
-    {showcase.elements.items.value.map(showcaseItem => {
-      return (
-        <ShowcaseItem
-          key={showcaseItem.fields.slug}
-          showcaseItem={showcaseItem}
-        />
-      );
+    {showcase.elements.items.value.map((showcaseItem) => {
+      return <ShowcaseItem key={showcaseItem.id} showcaseItem={showcaseItem} />;
     })}
   </div>
 );
 
 const showcaseItemProps = {
-  fields: shape({
-    slug: string.isRequired
-  }).isRequired,
+  id: string.isRequired,
   elements: shape({
     name: shape({
-      value: string.isRequired
+      value: string.isRequired,
     }).isRequired,
     short_description: shape({
       value: string.isRequired,
-      links: array.isRequired
+      links: array.isRequired,
     }).isRequired,
     teaser: shape({
       value: arrayOf(
         shape({
-          url: string.isRequired
+          url: string.isRequired,
         }).isRequired
-      ).isRequired
+      ).isRequired,
     }).isRequired,
     link: shape({
-      value: string
-    })
-  }).isRequired
+      value: string,
+    }),
+  }).isRequired,
 };
 
 Showcase.propTypes = {
   showcase: shape({
     elements: shape({
       items: shape({
-        value: arrayOf(shape(showcaseItemProps).isRequired).isRequired
-      }).isRequired
-    }).isRequired
-  }).isRequired
+        value: arrayOf(shape(showcaseItemProps).isRequired).isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 const ShowcaseItem = ({ showcaseItem }) => {
@@ -88,6 +84,7 @@ const ShowcaseItem = ({ showcaseItem }) => {
           <RichText
             content={item.short_description.value}
             links={item.short_description.links}
+            stopPropagation
           />
         </Stack>
       </Tile>
@@ -96,7 +93,7 @@ const ShowcaseItem = ({ showcaseItem }) => {
 };
 
 ShowcaseItem.propTypes = {
-  showcaseItem: shape(showcaseItemProps).isRequired
+  showcaseItem: shape(showcaseItemProps).isRequired,
 };
 
 export default Showcase;

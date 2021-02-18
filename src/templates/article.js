@@ -1,4 +1,6 @@
 import { graphql } from "gatsby";
+import React from "react";
+
 import ArticleCategory from "../components/ArticleCategory";
 import ArticleDate from "../components/ArticleDate";
 import ArticleHeader from "../components/ArticleHeader";
@@ -9,15 +11,16 @@ import AuthorImage from "../components/AuthorImage";
 import AuthorInfo from "../components/AuthorInfo";
 import BlogLogo from "../components/BlogLogo";
 import Footer from "../components/Footer";
-import { Heading, Text } from "@kiwicom/orbit-components";
 import Layout from "../layouts/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader";
 import MainNav from "../components/MainNav";
-import React from "react";
 import ReadNext from "../components/ReadNext";
 import RichText from "../components/RichText/RichText";
 import SEO from "../components/SEO";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+
+import Heading from "@kiwicom/orbit-components/lib/Heading";
+import Text from "@kiwicom/orbit-components/lib/Text";
 
 const ArticleTemplate = ({ data, pageContext }) => {
   const { slug } = pageContext;
@@ -45,7 +48,7 @@ const ArticleTemplate = ({ data, pageContext }) => {
       <SEO articlePath={slug} articleNode={article} />
       <Layout>
         <MainHeader
-          headStyle="big"
+          headStyle="small"
           cover={article.elements.teaser.value[0].url}
         >
           <MainNav>
@@ -146,6 +149,22 @@ export const query = graphql`
             url
           }
           modular_content {
+            ... on kontent_item_code_block {
+              system {
+                codename
+                type
+              }
+              elements {
+                language {
+                  value {
+                    name
+                  }
+                }
+                code {
+                  value
+                }
+              }
+            }
             ... on kontent_item_quote {
               system {
                 codename
@@ -165,9 +184,7 @@ export const query = graphql`
                 items {
                   value {
                     ... on kontent_item_showcased_thing {
-                      fields {
-                        slug
-                      }
+                      id
                       elements {
                         name {
                           value

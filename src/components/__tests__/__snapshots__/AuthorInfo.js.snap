@@ -2,7 +2,17 @@
 
 exports[`AuthorInfo renders correctly 1`] = `
 Array [
-  .c2 {
+  .c0 {
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #252A31;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.c2 {
   font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-weight: 500;
   cursor: pointer;
@@ -52,16 +62,6 @@ Array [
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #009882;
-}
-
-.c0 {
-  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #252A31;
-  line-height: 20px;
-  margin: 0;
-  margin-bottom: 8px;
 }
 
 <div
