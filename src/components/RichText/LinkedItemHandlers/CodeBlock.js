@@ -1,4 +1,5 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
+import github from 'prism-react-renderer/themes/dracula';
 import React from "react";
 import styled from "styled-components";
 
@@ -25,7 +26,7 @@ export default ({ codeblock }) => {
   const code = codeblock.elements.code.value;
   const language = codeblock.elements.language.value[0].name;
   return (
-    <Highlight {...defaultProps} code={code} language={language}>
+    <Highlight {...defaultProps} theme={github} code={code} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <StyledPre className={className} style={style}>
           <Box
