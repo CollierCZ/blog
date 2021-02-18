@@ -57,7 +57,7 @@ export const ReadNextStory = ({ article, text }) => {
             {title}
           </Heading>
           <Text align="center" type="white">
-            {excerpt}&hellip;
+            {excerpt}
           </Text>
         </Stack>
       </article>
