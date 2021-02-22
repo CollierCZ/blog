@@ -14,7 +14,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "prism-react-renderer": "^1.1.1"
+    "prism-react-renderer": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
