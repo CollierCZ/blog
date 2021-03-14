@@ -8,7 +8,7 @@ import MainHeader from "../components/MainHeader"
 import MainNav from "../components/MainNav"
 import SEO from "../components/SEO"
 
-export default ({ data }) => {
+const NotFoundPage = ({ data }) => {
   return (
     <>
       <SEO />
@@ -29,3 +29,5 @@ export default ({ data }) => {
     </>
 )
 }
+
+export default NotFoundPage;

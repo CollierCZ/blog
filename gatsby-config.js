@@ -31,6 +31,7 @@ module.exports = {
       options: {
         projectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
         languageCodenames: ["default"],
+        includeTaxonomies: true,
       },
     },
     {

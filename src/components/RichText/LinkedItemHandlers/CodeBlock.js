@@ -22,7 +22,7 @@ const StyledPre = styled.pre`
   }
 `;
 
-export default ({ codeblock }) => {
+const CodeBlock = ({ codeblock }) => {
   const code = codeblock.elements.code.value;
   const language = codeblock.elements.language.value[0].name;
   return (
@@ -53,3 +53,5 @@ export default ({ codeblock }) => {
     </Highlight>
   );
 };
+
+export default CodeBlock;
