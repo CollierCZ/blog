@@ -30,7 +30,7 @@
     "enzyme-to-json": "^3.6.1",
     "eslint": "^7.22.0",
     "eslint-plugin-graphql": "^4.0.0",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react": "^7.23.1",
     "gatsby": "^2.32.11",
     "gatsby-image": "^2.11.0",
     "gatsby-link": "^2.7.0",
