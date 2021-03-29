@@ -1897,10 +1897,10 @@
     "@adeira/js" "^1.3.0"
     "@kiwicom/orbit-design-tokens" "^0.13.3"
 
-"@kiwicom/orbit-design-tokens@^0.13.2", "@kiwicom/orbit-design-tokens@^0.13.3":
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.13.3.tgz#add11266c9749b9f15f74a3647ee0eec92847b90"
-  integrity sha512-SyYF/5k3H39NhV3dFfOpPRYNzpBPSXgTk02EwrsXvtWC8NFcZQxpdtRVj5hx3OyDEeC87W/JNeQlaIpOPo/uJQ==
+"@kiwicom/orbit-design-tokens@^0.13.3", "@kiwicom/orbit-design-tokens@^0.13.5":
+  version "0.13.5"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.13.5.tgz#07f48cde349acb4640e9a747e71e2808ac7e57fd"
+  integrity sha512-ibi4bIRpDKnJBtshSuBd18oNk8iualv6vU1ZWWMt36DD3wxdJ/lp3pAe1QiylKJYp9pJ1IW4lwiNOxBmLQkZfA==
   dependencies:
     ramda "^0.27.1"
 
