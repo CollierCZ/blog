@@ -9,6 +9,7 @@ module.exports = {
     icon: config.icon,
   },
   plugins: [
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-manifest",
