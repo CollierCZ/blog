@@ -30,10 +30,11 @@ const ArticleTemplate = ({ data, pageContext }) => {
   const authorData = data.author.elements;
   const getArticleData = (direction) => {
     const articlewWithDirection = data[`${direction}article`];
+    const coverURL = articlewWithDirection.elements.teaser.value[0].url
     return {
-      path: `/articles/${pageContext[`${direction}slug`]}`,
+      path: `/articles/${pageContext[`${direction}Slug`]}`,
       title: articlewWithDirection.elements.title.value,
-      cover: articlewWithDirection.elements.teaser.value[0].url,
+      cover: coverURL ? `${coverURL}?auto=format` : undefined,
       excerpt: articlewWithDirection.elements.metadata__description.value,
     };
   };
@@ -46,7 +47,7 @@ const ArticleTemplate = ({ data, pageContext }) => {
       <Layout>
         <MainHeader
           headStyle="small"
-          cover={article.elements.teaser.value[0].url}
+          cover={`${article.elements.teaser.value[0].url}?auto=format`}
         >
           <MainNav>
             <BlogLogo />

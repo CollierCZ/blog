@@ -40,7 +40,7 @@ exports[`AuthorImage renders correctly with all info 1`] = `
             background-position: center center;
             border-radius: 100%;
             background-image: url(\\"",
-        "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/f7377b84-8ff0-4b77-bc0f-cfdc34d379cc/quixote.jpg?w=100&h=100",
+        "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/f7377b84-8ff0-4b77-bc0f-cfdc34d379cc/quixote.jpg?w=100&h=100&auto=format",
         "\\");
           ",
       ]
@@ -96,7 +96,7 @@ exports[`AuthorImage renders correctly without url 1`] = `
           ",
       ]
     }
-    src="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/f7377b84-8ff0-4b77-bc0f-cfdc34d379cc/quixote.jpg?w=100&h=100"
+    src="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/f7377b84-8ff0-4b77-bc0f-cfdc34d379cc/quixote.jpg?w=100&h=100&auto=format"
   />
 </figure>
 `;

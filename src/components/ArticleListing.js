@@ -36,7 +36,7 @@ const ArticleListing = ({ articleEdges, count, index }) => {
     >
       {ArticleList.map((article) => {
         const { category, description, path, date, tags, title } = article;
-        const cover = article.cover + "?w=800&fit=clip";
+        const cover = `${article.cover}?w=800&fit=clip&auto=format`;
 
         return (
           <ArticleFormatting

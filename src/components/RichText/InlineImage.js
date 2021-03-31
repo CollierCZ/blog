@@ -5,17 +5,17 @@ import React from 'react'
 const InlineImage = ({ description, url }) => {
   return (
     <picture>
-      <source srcSet={url+'?w=1200&fit=scale'}
+      <source srcSet={url+'?w=1200&fit=scale&auto=format'}
         media="(min-width: 1500px)" />
-      <source srcSet={url+'?w=1100&fit=scale'}
+      <source srcSet={url+'?w=1100&fit=scale&auto=format'}
         media="(min-width: 720px)" />
-      <source srcSet={url+'?w=500&fit=scale'}
+      <source srcSet={url+'?w=500&fit=scale&auto=format'}
         media="(min-width: 400px)" />
       <img 
         css={css`
           max-width: 100%;
         `}
-        src={url+'?w=300&fit=scale'}
+        src={url+'?w=300&fit=scale&auto=format'}
         alt={description}
         />
     </picture>

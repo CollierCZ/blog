@@ -22,9 +22,7 @@ const Listing = ({ context, data, headStyle }) => {
     : data.header
     ? data.header.elements.metadata__description.value
     : null;
-  const cover = data.header
-    ? data.header.elements.banner_image.value[0].url
-    : null;
+  const cover = data.header ? `${data.header.elements.banner_image.value[0].url}?auto=format`: undefined;
 
   return (
     <>
