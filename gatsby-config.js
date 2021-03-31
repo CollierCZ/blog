@@ -9,6 +9,7 @@ module.exports = {
     icon: config.icon,
   },
   plugins: [
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-manifest",
@@ -31,6 +32,7 @@ module.exports = {
       options: {
         projectId: `3fcf700a-30e8-4d1d-9e64-43193a89fe7a`,
         languageCodenames: ["default"],
+        includeTaxonomies: true,
       },
     },
     {

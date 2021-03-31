@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../layouts/SiteWrapper/SiteWrapper"
 
-export default () => (
+const ContactPage = () => (
   <Layout>
   <div>
     <h1>I'd love to talk! Email me at the address below</h1>
@@ -11,3 +11,5 @@ export default () => (
   </div>
   </Layout>
 )
+
+export default ContactPage;

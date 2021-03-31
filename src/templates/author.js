@@ -11,7 +11,7 @@ import MainNav from "../components/MainNav"
 import RichText from "../components/RichText/RichText"
 import SEO from "../components/SEO"
 
-export default ({ data }) => {
+const Author = ({ data }) => {
   const author = data.author
   const bio = author.elements.bio
   const name = author.elements.name.value
@@ -83,3 +83,5 @@ query authorQuery($slug: String!) {
   }
 }
 `
+
+export default Author;
