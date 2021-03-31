@@ -11,14 +11,14 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "prism-react-renderer": "^1.1.1"
+    "prism-react-renderer": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@kentico/gatsby-source-kontent": "6.3.1",
+    "@babel/core": "^7.13.13",
+    "@kentico/gatsby-source-kontent": "6.3.5",
     "@kiwicom/orbit-components": "^0.109.1",
     "@kiwicom/orbit-design-tokens": "^0.13.2",
     "babel-jest": "^26.6.3",
@@ -28,9 +28,9 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.1",
-    "eslint": "^7.20.0",
+    "eslint": "^7.23.0",
     "eslint-plugin-graphql": "^4.0.0",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react": "^7.23.1",
     "gatsby": "^3.0.4",
     "gatsby-image": "^2.11.0",
     "gatsby-link": "^3.0.0",
@@ -54,7 +54,7 @@
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-test-renderer": "^16.14.0",
-    "rxjs": "^6.6.3",
+    "rxjs": "^6.6.7",
     "styled-components": "^5.2.1"
   },
   "version": "1.0.1",
