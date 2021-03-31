@@ -16,7 +16,7 @@ export const PureMainHeader = ({props, siteMetadata}) => {
     height = 40;
   }
 
-  const backgroundImage = cover || siteMetadata.elements.splash_image.value[0].url;
+  const backgroundImage = cover || `${siteMetadata.elements.splash_image.value[0].url}?auto=format`;
 
   return (
       <header
