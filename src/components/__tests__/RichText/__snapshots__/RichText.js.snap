@@ -564,15 +564,15 @@ Array [
   <picture>
     <source
       media="(min-width: 1500px)"
-      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=1200&fit=scale"
+      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=1200&fit=scale&auto=format"
     />
     <source
       media="(min-width: 720px)"
-      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=1100&fit=scale"
+      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=1100&fit=scale&auto=format"
     />
     <source
       media="(min-width: 400px)"
-      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=500&fit=scale"
+      srcSet="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=500&fit=scale&auto=format"
     />
     <img
       alt="A map of an experience of a plane trip from London To New York."
@@ -583,7 +583,7 @@ Array [
         ",
         ]
       }
-      src="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=300&fit=scale"
+      src="https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/18b254b8-ee42-42ca-9c5a-9105fa9a473d/Slide6.PNG?w=300&fit=scale&auto=format"
     />
   </picture>,
 ]

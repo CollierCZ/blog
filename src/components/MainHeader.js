@@ -16,6 +16,8 @@ export const PureMainHeader = ({props, siteMetadata}) => {
     height = 40;
   }
 
+  const backgroundImage = cover || siteMetadata.elements.splash_image.value[0].url;
+
   return (
       <header
         className="main-header"
@@ -27,7 +29,7 @@ export const PureMainHeader = ({props, siteMetadata}) => {
           min-height: 180px;
           text-align: center;
           overflow: hidden;
-          background: url(${cover ? cover : siteMetadata.elements.splash_image.value[0].url}) #000 no-repeat center;
+          background: url(${backgroundImage}) #000 no-repeat center;
           background-size: cover;
           .main-header-content {
             width: 100%;

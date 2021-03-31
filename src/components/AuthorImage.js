@@ -4,7 +4,7 @@ import React from 'react'
 
 const AuthorImage = ({author}) => {
   const name = author.name.value;
-  const image = author.picture ? author.picture.value[0].url+'?w=100&h=100' : undefined;
+  const image = author.picture ? `${author.picture?.value[0].url}?w=100&h=100&auto=format` : undefined;
   const url = author.url ? author.url.value : '';
   if (image && url) {
     return (

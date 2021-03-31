@@ -22,7 +22,7 @@ export const ReadNextStory = ({ article, text }) => {
         background: #222 no-repeat center center;
         background-size: cover;
         overflow: hidden;
-        ${cover ? `background-image: url(${cover});` : null} :hover::before {
+        ${cover && `background-image: url(${cover}&w=1200);`} :hover::before {
           background: rgba(0, 0, 0, 0.8);
           transition: all 0.2s ease;
         }

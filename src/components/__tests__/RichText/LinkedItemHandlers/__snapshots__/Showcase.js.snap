@@ -197,7 +197,7 @@ exports[`Showcase renders correctly 1`] = `
               height: 200px;
               background-image: url(",
                 "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/51e9be55-8502-40ca-b374-a1305b36dc56/Slide16.PNG",
-                ");
+                "?auto=format);
             ",
               ]
             }
@@ -268,7 +268,7 @@ exports[`Showcase renders correctly 1`] = `
               height: 200px;
               background-image: url(",
                 "https://assets-us-01.kc-usercontent.com:443/3fcf700a-30e8-4d1d-9e64-43193a89fe7a/b0481084-18a8-4cf0-ae01-d1a0dbd766ce/structured_content.jpg",
-                ");
+                "?auto=format);
             ",
               ]
             }

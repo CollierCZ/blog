@@ -78,7 +78,7 @@ const ShowcaseItem = ({ showcaseItem }) => {
               background-size: cover;
               width: 100%;
               height: 200px;
-              background-image: url(${item.teaser.value[0].url});
+              background-image: url(${item.teaser.value[0].url}?auto=format);
             `}
           />
           <RichText

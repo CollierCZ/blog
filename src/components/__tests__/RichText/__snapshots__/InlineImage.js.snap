@@ -4,15 +4,15 @@ exports[`InlineImage renders correctly 1`] = `
 <picture>
   <source
     media="(min-width: 1500px)"
-    srcSet="https://example.com/?w=1200&fit=scale"
+    srcSet="https://example.com/?w=1200&fit=scale&auto=format"
   />
   <source
     media="(min-width: 720px)"
-    srcSet="https://example.com/?w=1100&fit=scale"
+    srcSet="https://example.com/?w=1100&fit=scale&auto=format"
   />
   <source
     media="(min-width: 400px)"
-    srcSet="https://example.com/?w=500&fit=scale"
+    srcSet="https://example.com/?w=500&fit=scale&auto=format"
   />
   <img
     alt="A cool picture"
@@ -23,7 +23,7 @@ exports[`InlineImage renders correctly 1`] = `
         ",
       ]
     }
-    src="https://example.com/?w=300&fit=scale"
+    src="https://example.com/?w=300&fit=scale&auto=format"
   />
 </picture>
 `;
