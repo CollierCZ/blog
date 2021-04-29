@@ -1,0 +1,69 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gatsby-link
+    versions:
+    - 2.10.0
+    - 2.11.0
+    - 3.3.0
+  - dependency-name: "@kiwicom/orbit-design-tokens"
+    versions:
+    - 0.13.1
+    - 0.13.2
+    - 0.13.4
+    - 0.13.5
+    - 0.13.6
+  - dependency-name: "@kiwicom/orbit-components"
+    versions:
+    - 0.108.0
+    - 0.108.2
+    - 0.109.0
+    - 0.109.1
+    - 0.110.0
+    - 0.111.0
+    - 0.112.0
+  - dependency-name: gatsby-image
+    versions:
+    - 2.10.0
+    - 3.0.0
+    - 3.1.0
+  - dependency-name: babel-preset-gatsby
+    versions:
+    - 0.11.0
+    - 0.12.1
+    - 0.12.2
+    - 1.0.0
+    - 1.1.0
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.13.1
+    - 2.13.4
+  - dependency-name: gatsby
+    versions:
+    - 2.31.1
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-catch-links
+    versions:
+    - 2.9.0
+  - dependency-name: gatsby-plugin-styled-components
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-nprogress
+    versions:
+    - 2.9.0
+  - dependency-name: gatsby-plugin-feed
+    versions:
+    - 2.12.0
+  - dependency-name: socket.io
+    versions:
+    - 2.4.1
+  - dependency-name: "@kentico/gatsby-source-kontent"
+    versions:
+    - 6.3.0
