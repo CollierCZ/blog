@@ -45,7 +45,7 @@
     "gatsby-plugin-sharp": "^3.3.1",
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-plugin-styled-components": "^4.3.0",
-    "html-react-parser": "^1.2.4",
+    "html-react-parser": "^1.2.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.3",
