@@ -6786,10 +6786,10 @@ gatsby-plugin-feed@^3.4.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-gatsby-cloud@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.4.1.tgz#e2c5aba4af92c850c3206578f2b1a5730e6c9364"
-  integrity sha512-6qzFTApuu9S85WxMeGTy5eOzPGWdP1EM6wXWG6zi24GkFqVqrhXsD3YF21k0KVDN7A/AR01nHQFCsTvY/BQ4/w==
+gatsby-plugin-gatsby-cloud@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.5.0.tgz#b4e8c2d0e356e9dfbdae4d8f2d1b72e3f8ed45a5"
+  integrity sha512-dVxqkNQ+s0EDyK0C2ClhAmMmztO8a2BSs0pdA6NJh0dz1pCltNo/jmoaC4/Yv+IU/a3Un9YI+2Yl4H7E3mghuw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     fs-extra "^8.1.0"
