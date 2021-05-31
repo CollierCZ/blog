@@ -4763,10 +4763,10 @@ dataloader@2.0.0:
   resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-2.0.0.tgz#41eaf123db115987e21ca93c005cd7753c55fe6f"
   integrity sha512-YzhyDAwA4TaQIhM5go+vCLmU0UikghC/t9DTQYZR2M/UvZ1MdOhPezSDZcjj9uqQJOMqjLcpWtyW2iNINdlatQ==
 
-date-fns@^2.14.0:
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
-  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+date-fns@^2.14.0, date-fns@^2.21.1:
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
+  integrity sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==
 
 debug@2, debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -6800,12 +6800,13 @@ gatsby-plugin-feed@^3.5.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-gatsby-cloud@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.5.0.tgz#b4e8c2d0e356e9dfbdae4d8f2d1b72e3f8ed45a5"
-  integrity sha512-dVxqkNQ+s0EDyK0C2ClhAmMmztO8a2BSs0pdA6NJh0dz1pCltNo/jmoaC4/Yv+IU/a3Un9YI+2Yl4H7E3mghuw==
+gatsby-plugin-gatsby-cloud@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.6.1.tgz#497f4a4bf1472c9d5189cc8e0a0671da62c709d8"
+  integrity sha512-68f5NqjOXZZryD11RXPaSmSW6X0jqcKkjx3BOim2WnAwa+0kiJHkyrC2eTYlQNHOOzf7ysUkWA/xZRl+SJ+IRw==
   dependencies:
     "@babel/runtime" "^7.12.5"
+    date-fns "^2.21.1"
     fs-extra "^8.1.0"
     kebab-hash "^0.1.2"
     lodash "^4.17.21"
