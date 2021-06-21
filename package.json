@@ -32,7 +32,7 @@
     "eslint-plugin-graphql": "^4.0.0",
     "eslint-plugin-react": "^7.23.2",
     "gatsby": "^3.7.1",
-    "gatsby-image": "^3.6.0",
+    "gatsby-image": "^3.7.1",
     "gatsby-link": "^3.7.1",
     "gatsby-paginate": "1.1.1",
     "gatsby-plugin-catch-links": "^3.7.1",
