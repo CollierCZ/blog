@@ -3,7 +3,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
-export const PureSEO = ({ basicInfo, articleProps }) => {
+export const PureSeo = ({ basicInfo, articleProps }) => {
   const articleNode = articleProps ? articleProps.articleNode : null;
   const articlePath = articleProps ? articleProps.articlePath : null;
   const siteTitle = basicInfo.elements.title.value;
@@ -106,14 +106,14 @@ export const PureSEO = ({ basicInfo, articleProps }) => {
   );
 };
 
-export const SEO = props => {
+export const Seo = props => {
   const siteMetadata = useSiteMetadata();
-  return <PureSEO articleProps={props} basicInfo={siteMetadata} />;
+  return <PureSeo articleProps={props} basicInfo={siteMetadata} />;
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   articlePath: PropTypes.string,
   articleNode: PropTypes.object
 };
 
-export default SEO;
+export default Seo;

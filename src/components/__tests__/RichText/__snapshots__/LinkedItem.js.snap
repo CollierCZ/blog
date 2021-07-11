@@ -52,7 +52,7 @@ exports[`LinkedItem renders a quote correctly 1`] = `
 .c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
 .c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
 .c2 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  color: #007F6D;
+  color: #252A31;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-weight: 500;

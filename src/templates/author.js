@@ -9,7 +9,7 @@ import Layout from "../layouts/SiteWrapper/SiteWrapper"
 import MainHeader from "../components/MainHeader"
 import MainNav from "../components/MainNav"
 import RichText from "../components/RichText/RichText"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Author = ({ data }) => {
   const author = data.author
@@ -17,7 +17,7 @@ const Author = ({ data }) => {
   const name = author.elements.name.value
   return (
     <>
-      <SEO />
+      <Seo />
       <Layout>
         <MainHeader headStyle="small">
           <MainNav>

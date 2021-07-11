@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seo renders correctly with article data 1`] = `null`;
+
+exports[`Seo renders correctly with no article data 1`] = `null`;
