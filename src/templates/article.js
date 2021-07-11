@@ -19,8 +19,7 @@ import RichText from "../components/RichText/RichText";
 import Seo from "../components/Seo";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
-import Heading from "@kiwicom/orbit-components/lib/Heading";
-import Text from "@kiwicom/orbit-components/lib/Text";
+import { Heading, Text } from "@kiwicom/orbit-components";
 
 const ArticleTemplate = ({ data, pageContext }) => {
   const { slug } = pageContext;

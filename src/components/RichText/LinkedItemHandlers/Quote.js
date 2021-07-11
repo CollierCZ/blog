@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import parseHTML, { domToReact } from "html-react-parser";
 
-import Text from "@kiwicom/orbit-components/lib/Text";
+import { Text } from "@kiwicom/orbit-components";
 
 const Quote = ({ quote }) => {
   const source = quote.elements.source.value

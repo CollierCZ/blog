@@ -1,10 +1,8 @@
 import { css } from "styled-components";
 import { array, arrayOf, shape, string } from "prop-types";
 import React from "react";
+import { Heading, Stack, Tile } from "@kiwicom/orbit-components";
 
-import Heading from "@kiwicom/orbit-components/lib/Heading";
-import Stack from "@kiwicom/orbit-components/lib/Stack";
-import Tile from "@kiwicom/orbit-components/lib/Tile";
 import RichText from "../RichText";
 
 const Showcase = ({ showcase }) => (

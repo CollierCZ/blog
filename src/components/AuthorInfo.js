@@ -1,9 +1,8 @@
 import { shape, string } from "prop-types";
 import React from "react";
 import { navigate } from "gatsby";
+import { Heading, TextLink } from "@kiwicom/orbit-components";
 
-import Heading from "@kiwicom/orbit-components/lib/Heading";
-import TextLink from "@kiwicom/orbit-components/lib/TextLink";
 import RichText from "./RichText/RichText";
 
 const AuthorInfo = ({ author }) => {

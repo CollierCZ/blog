@@ -1,25 +1,14 @@
 import React from "react";
-import { navigate } from "gatsby";
 import { string } from "prop-types";
-import { slugify } from "../utilities/CaseHelpers";
-import TextLink from "@kiwicom/orbit-components/lib/TextLink";
+
+import ArticleMetadataLink from "./ArticleMetadataLink";
 
 const ArticleCategory = ({ prefix, category }) => {
   return (
     <span>
       {prefix}
       <span key={category}>
-        <TextLink
-          href={`/category/${slugify(category)}`}
-          type="secondary"
-          onClick={(event) => {
-            event.preventDefault();
-            navigate(`/category/${slugify(category)}`);
-          }}
-          stopPropagation
-        >
-          {category}
-        </TextLink>
+        <ArticleMetadataLink target={category} type="category" />
       </span>
     </span>
   );

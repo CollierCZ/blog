@@ -1,10 +1,9 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
-import github from 'prism-react-renderer/themes/dracula';
+import github from "prism-react-renderer/themes/github";
 import React from "react";
 import styled from "styled-components";
 
-import Box from "@kiwicom/orbit-components/lib/Box";
-import Badge from "@kiwicom/orbit-components/lib/Badge";
+import { Box, Badge } from "@kiwicom/orbit-components";
 
 import Copy from "../../CopyToClipboard";
 

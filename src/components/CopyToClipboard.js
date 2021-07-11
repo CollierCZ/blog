@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Button from "@kiwicom/orbit-components/lib/Button"
+import { Button } from "@kiwicom/orbit-components"
 
 const copyToClipboard = (str) => {
   const clipboard = window.navigator.clipboard
