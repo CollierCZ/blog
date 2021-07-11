@@ -16,7 +16,7 @@ import MainHeader from "../components/MainHeader";
 import MainNav from "../components/MainNav";
 import ReadNext from "../components/ReadNext";
 import RichText from "../components/RichText/RichText";
-import SEO from "../components/SEO";
+import Seo from "../components/Seo";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 import Heading from "@kiwicom/orbit-components/lib/Heading";
@@ -43,7 +43,7 @@ const ArticleTemplate = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO articlePath={slug} articleNode={article} />
+      <Seo articlePath={slug} articleNode={article} />
       <Layout>
         <MainHeader
           headStyle="small"

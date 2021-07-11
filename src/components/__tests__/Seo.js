@@ -1,5 +1,5 @@
 import React from "react";
-import { PureSEO as SEO } from "../SEO";
+import { PureSeo as Seo } from "../Seo";
 import { simpleRenderer } from "../../utilities/testHelpers";
 
 const homeQuery = {
@@ -57,11 +57,11 @@ const articleProps = {
   }
 };
 
-describe("SEO", () => {
+describe("Seo", () => {
   it("renders correctly with no article data", () => {
-    simpleRenderer(<SEO basicInfo={homeQuery} />);
+    simpleRenderer(<Seo basicInfo={homeQuery} />);
   });
   it("renders correctly with article data", () => {
-    simpleRenderer(<SEO basicInfo={homeQuery} articleProps={articleProps} />);
+    simpleRenderer(<Seo basicInfo={homeQuery} articleProps={articleProps} />);
   });
 });

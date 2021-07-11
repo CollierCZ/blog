@@ -6,12 +6,12 @@ import Footer from "../components/Footer"
 import Layout from "../layouts/SiteWrapper/SiteWrapper"
 import MainHeader from "../components/MainHeader"
 import MainNav from "../components/MainNav"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const NotFoundPage = ({ data }) => {
   return (
     <>
-      <SEO />
+      <Seo />
       <Layout>
         <MainHeader headStyle="small">
           <MainNav>

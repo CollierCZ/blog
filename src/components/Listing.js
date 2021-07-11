@@ -8,7 +8,7 @@ import MainNav from "../components/MainNav";
 import PageTitle from "../components/PageTitle";
 import PageDescription from "../components/PageDescription";
 import PaginatedContent from "../components/PaginatedContent";
-import SEO from "../components/SEO";
+import Seo from "../components/Seo";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import "../layouts/index.css";
 
@@ -26,7 +26,7 @@ const Listing = ({ context, data, headStyle }) => {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <Layout>
         <MainHeader cover={cover} headStyle={headStyle}>
           <MainNav>

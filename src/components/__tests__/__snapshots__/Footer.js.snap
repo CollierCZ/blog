@@ -48,7 +48,7 @@ exports[`Footer renders correctly 1`] = `
 .c1 a:not(.c2),
 .c1 a:not(.c2):link,
 .c1 a:not(.c2):visited {
-  color: #007F6D;
+  color: #252A31;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-weight: 500;

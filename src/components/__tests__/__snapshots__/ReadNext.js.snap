@@ -74,7 +74,6 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  color: #007F6D;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-weight: 500;
@@ -86,7 +85,6 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
   outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #009882;
 }
 
 @media (min-width:414px) {
@@ -345,7 +343,6 @@ exports[`ReadNextStory renders correctly with articles with cover 1`] = `
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  color: #007F6D;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-weight: 500;
@@ -357,7 +354,6 @@ exports[`ReadNextStory renders correctly with articles with cover 1`] = `
   outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #009882;
 }
 
 @media (min-width:414px) {
@@ -530,7 +526,6 @@ exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
 .c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  color: #007F6D;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-weight: 500;
@@ -542,7 +537,6 @@ exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
   outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #009882;
 }
 
 @media (min-width:414px) {
