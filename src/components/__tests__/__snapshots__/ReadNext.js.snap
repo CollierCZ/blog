@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ReadNext renders correctly with articles with and without covers 1`] = `
+.c3 {
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 {
   font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 16px;
@@ -59,32 +85,6 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
 
 .c0 > *:last-child {
   margin: 0 !important;
-}
-
-.c3 {
-  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #FFFFFF;
-  line-height: 20px;
-  text-align: center;
-  margin: 0;
-}
-
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 @media (min-width:414px) {
@@ -270,6 +270,32 @@ exports[`ReadNext renders correctly with articles with and without covers 1`] = 
 `;
 
 exports[`ReadNextStory renders correctly with articles with cover 1`] = `
+.c3 {
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 {
   font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 16px;
@@ -328,32 +354,6 @@ exports[`ReadNextStory renders correctly with articles with cover 1`] = `
 
 .c0 > *:last-child {
   margin: 0 !important;
-}
-
-.c3 {
-  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #FFFFFF;
-  line-height: 20px;
-  text-align: center;
-  margin: 0;
-}
-
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 @media (min-width:414px) {
@@ -453,6 +453,32 @@ exports[`ReadNextStory renders correctly with articles with cover 1`] = `
 `;
 
 exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
+.c3 {
+  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
+.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 {
   font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
   font-size: 16px;
@@ -511,32 +537,6 @@ exports[`ReadNextStory renders correctly with articles with no cover 1`] = `
 
 .c0 > *:last-child {
   margin: 0 !important;
-}
-
-.c3 {
-  font-family: 'Roboto',-apple-system,'.SFNSText-Regular','San Francisco','Segoe UI','Helvetica Neue','Lucida Grande',sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #FFFFFF;
-  line-height: 20px;
-  text-align: center;
-  margin: 0;
-}
-
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1),
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):link,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):visited {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):hover,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):active,
-.c3 a:not(.TextLink__StyledTextLink-sc-1bvlje4-1):focus {
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 @media (min-width:414px) {
