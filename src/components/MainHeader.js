@@ -56,7 +56,7 @@ export const PureMainHeader = ({props, siteMetadata}) => {
 
 export const MainHeader = props => {
   const siteMetadata = useSiteMetadata();
-  return <PureMainHeader props={props} siteMetadata={siteMetadata} />;
+  return <PureMainHeader siteMetadata={siteMetadata} props={props} />;
 }
 
 MainHeader.propTypes = {

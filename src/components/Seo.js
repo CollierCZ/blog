@@ -3,102 +3,104 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
-export const PureSeo = ({ basicInfo, articleProps }) => {
-  const articleNode = articleProps ? articleProps.articleNode : null;
-  const articlePath = articleProps ? articleProps.articlePath : null;
-  const siteTitle = basicInfo.elements.title.value;
-  const title = articleNode ? articleNode.elements.title.value : "";
-  const description = articleNode
-    ? articleNode.elements.metadata__description.value
-    : basicInfo.elements.metadata__description.value;
-  const image = articleNode
-    ? articleNode.elements.teaser.value[0].url
-    : basicInfo.elements.splash_image.value[0].url;
-  const blogURL = basicInfo.elements.base_url.value;
-  const logo = basicInfo.elements.blog_logo.value[0].url;
-  const articleURL = articleNode
-    ? blogURL + "/articles/" + articlePath + "/"
-    : null;
+const getJsonLd = (blogUrl, title, isArticle, image, description) => {
+  const basicData = {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    url: blogUrl,
+    name: title,
+  };
 
-  var schemaOrgJSONLD = [
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      url: blogURL,
-      name: title,
-      alternateName: ""
-    }
-  ];
-  if (articleNode) {
-    schemaOrgJSONLD.push(
-      {
-        "@context": "http://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            item: {
-              "@id": articleURL,
-              name: title,
-              image
-            }
-          }
-        ]
-      },
+  if (isArticle) {
+    return [
+      basicData,
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        url: blogURL,
+        url: blogUrl,
         name: title,
         alternateName: "",
         headline: title,
         image: {
           "@type": "ImageObject",
-          url: image
+          url: image,
         },
-        description
-      }
-    );
+        description,
+      },
+    ];
   }
+  return [basicData];
+};
+
+const getMetadata = (isArticle, articleProps, basicInfo) => {
+  const articleNode = articleProps?.articleNode;
+  const siteTitle = basicInfo.elements.title.value;
+  const blogUrl = basicInfo.elements.base_url.value;
+  const logo = basicInfo.elements.blog_logo.value[0].url;
+
+  const getArticleMetaData = () => {
+    if (isArticle) {
+      return {
+        articleUrl: `${blogUrl}/articles/${articleProps.articlePath}/`,
+        description: articleNode.elements.metadata__description.value,
+        image: articleNode.elements.teaser.value[0].url,
+        title: articleNode?.elements.title.value,
+      };
+    }
+    return {
+      description: basicInfo.elements.metadata__description.value,
+      image: basicInfo.elements.splash_image.value[0].url,
+      title: siteTitle,
+    };
+  };
+
+  const articleMetadata = getArticleMetaData();
+
+  return { blogUrl, logo, ...articleMetadata };
+};
+
+export const PureSeo = ({ basicInfo, articleProps }) => {
+  const articleNode = articleProps?.articleNode;
+  const isArticle = Boolean(articleNode);
+  const siteTitle = basicInfo.elements.title.value;
+  const { articleUrl, blogUrl, description, image, logo, title } = getMetadata(
+    isArticle,
+    articleProps,
+    basicInfo
+  );
+
+  const schemaOrgJSONLD = getJsonLd(
+    blogUrl,
+    title,
+    isArticle,
+    image,
+    description
+  );
+
   return (
     <Helmet
       defaultTitle={siteTitle}
       titleTemplate={"%s | " + siteTitle}
       htmlAttributes={{
-        lang: "en-US"
+        lang: "en-US",
       }}
       link={[{ rel: "shortcut icon", type: "image/png", href: `${logo}` }]}
     >
-      {/* General tags */}
-      <title lang="en">{title}</title>
+      {isArticle && <title lang="en">{title}</title>}
       <meta name="description" content={description} />
       <meta name="image" content={image} />
 
-      {/* Schema.org tags */}
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
 
-      <meta property="og:url" content={articleURL ? articleURL : blogURL} />
-      {articleURL ? <meta property="og:type" content="article" /> : null}
+      <meta property="og:url" content={articleUrl ? articleUrl : blogUrl} />
+      {articleUrl ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      {/* no Facebook app
-          <meta
-            property="fb:app_id"
-            content={config.siteFBAppID ? config.siteFBAppID : ""}
-          />
-        */}
 
       <meta name="twitter:card" content="summary_large_image" />
-      {/* no Twitter creator
-          <meta
-            name="twitter:creator"
-            content={config.userTwitter ? config.userTwitter : ""}
-          />
-         */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
@@ -106,14 +108,14 @@ export const PureSeo = ({ basicInfo, articleProps }) => {
   );
 };
 
-export const Seo = props => {
+export const Seo = (props) => {
   const siteMetadata = useSiteMetadata();
   return <PureSeo articleProps={props} basicInfo={siteMetadata} />;
 };
 
 Seo.propTypes = {
   articlePath: PropTypes.string,
-  articleNode: PropTypes.object
+  articleNode: PropTypes.object,
 };
 
 export default Seo;
